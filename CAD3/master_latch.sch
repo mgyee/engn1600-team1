@@ -282,9 +282,9 @@ C {lab_wire.sym} 290 -420 0 0 {name=p39 sig_type=std_logic lab=VDD}
 C {ipin.sym} -40 -300 0 0 {name=p4 lab=WEMb}
 C {ipin.sym} -40 -340 0 0 {name=p19 lab=WEM
 }
-C {ipin.sym} -40 -380 0 0 {name=p7 lab=VSS
+C {iopin.sym} -40 -380 2 0 {name=p7 lab=VSS
 }
-C {ipin.sym} -40 -420 0 0 {name=p9 lab=VDD
+C {iopin.sym} -40 -420 2 0 {name=p9 lab=VDD
 
 }
 C {lab_wire.sym} 0 -420 0 0 {name=p17 sig_type=std_logic lab=VDD}
