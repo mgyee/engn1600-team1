@@ -353,11 +353,6 @@ C {ipin.sym} 400 -660 0 0 {name=p18 lab=WECLKb}
 C {ipin.sym} 400 -700 0 0 {name=p19 lab=WECLK
 }
 C {lab_wire.sym} 940 -680 0 0 {name=p20 sig_type=std_logic lab=VDD}
-C {ipin.sym} 400 -740 0 0 {name=p21 lab=VSS
-}
-C {ipin.sym} 400 -780 0 0 {name=p22 lab=VDD
-
-}
 C {lab_wire.sym} 440 -780 0 0 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 440 -740 0 0 {name=p24 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 440 -700 0 0 {name=p25 sig_type=std_logic lab=WECLK}
@@ -489,3 +484,5 @@ C {lab_wire.sym} 1110 -990 0 0 {name=p34 sig_type=std_logic lab=RA
 }
 C {opin.sym} 1380 -720 0 0 {name=p43 lab=QA}
 C {opin.sym} 1370 -260 0 0 {name=p44 lab=QB}
+C {iopin.sym} 400 -780 2 0 {name=p12 lab=VDD}
+C {iopin.sym} 400 -740 2 0 {name=p21 lab=VSS}
