@@ -54,3 +54,14 @@ C {ipin.sym} 140 -500 0 0 {name=p31 lab=WE14}
 C {ipin.sym} 140 -480 0 0 {name=p32 lab=WE15}
 C {lab_wire.sym} 160 -500 0 0 {name=p33 sig_type=std_logic lab=WE14}
 C {lab_wire.sym} 160 -480 0 0 {name=p34 sig_type=std_logic lab=WE15}
+C {engn1600-team1/CAD3/slave_latch.sym} 630 -620 0 0 {name=x1}
+C {lab_wire.sym} 160 -780 0 0 {name=p35 sig_type=std_logic lab=WE0}
+C {lab_wire.sym} 610 -710 0 0 {name=p36 sig_type=std_logic lab=WE0CLK}
+C {lab_wire.sym} 610 -690 0 0 {name=p37 sig_type=std_logic lab=WE0CLKb}
+C {lab_wire.sym} 610 -670 0 0 {name=p38 sig_type=std_logic lab=RA0}
+C {lab_wire.sym} 610 -650 0 0 {name=p39 sig_type=std_logic lab=RB0}
+C {lab_wire.sym} 610 -630 0 0 {name=p40 sig_type=std_logic lab=N0}
+C {lab_wire.sym} 680 -740 0 0 {name=p41 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 680 -600 0 0 {name=p42 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 750 -700 0 0 {name=p43 sig_type=std_logic lab=QA0}
+C {lab_wire.sym} 750 -680 0 0 {name=p44 sig_type=std_logic lab=QB0}
