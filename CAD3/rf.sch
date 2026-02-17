@@ -65,33 +65,33 @@ C {lab_wire.sym} 680 -740 0 0 {name=p41 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 680 -600 0 0 {name=p42 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 750 -700 0 0 {name=p43 sig_type=std_logic lab=QA0}
 C {lab_wire.sym} 750 -680 0 0 {name=p44 sig_type=std_logic lab=QB0}
-C {engn1600-team1/CAD3/slave_latch.sym} 870 -620 0 0 {name=x2}
-C {lab_wire.sym} 850 -720 0 0 {name=p45 sig_type=std_logic lab=WE0CLK}
-C {lab_wire.sym} 850 -700 0 0 {name=p46 sig_type=std_logic lab=WE0CLKb}
-C {lab_wire.sym} 850 -680 0 0 {name=p47 sig_type=std_logic lab=RA0}
-C {lab_wire.sym} 850 -660 0 0 {name=p48 sig_type=std_logic lab=RB0}
-C {lab_wire.sym} 850 -640 0 0 {name=p49 sig_type=std_logic lab=N0}
-C {lab_wire.sym} 920 -750 0 0 {name=p50 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 920 -610 0 0 {name=p51 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 990 -710 0 0 {name=p52 sig_type=std_logic lab=QA0}
-C {lab_wire.sym} 990 -690 0 0 {name=p53 sig_type=std_logic lab=QB0}
-C {engn1600-team1/CAD3/slave_latch.sym} 630 -800 0 0 {name=x3}
-C {lab_wire.sym} 610 -890 0 0 {name=p54 sig_type=std_logic lab=WE0CLK}
-C {lab_wire.sym} 610 -870 0 0 {name=p55 sig_type=std_logic lab=WE0CLKb}
-C {lab_wire.sym} 610 -850 0 0 {name=p56 sig_type=std_logic lab=RA0}
-C {lab_wire.sym} 610 -830 0 0 {name=p57 sig_type=std_logic lab=RB0}
-C {lab_wire.sym} 610 -810 0 0 {name=p58 sig_type=std_logic lab=N0}
-C {lab_wire.sym} 680 -920 0 0 {name=p59 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 680 -780 0 0 {name=p60 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 750 -880 0 0 {name=p61 sig_type=std_logic lab=QA0}
-C {lab_wire.sym} 750 -860 0 0 {name=p62 sig_type=std_logic lab=QB0}
-C {engn1600-team1/CAD3/slave_latch.sym} 870 -800 0 0 {name=x4}
-C {lab_wire.sym} 850 -900 0 0 {name=p63 sig_type=std_logic lab=WE0CLK}
-C {lab_wire.sym} 850 -880 0 0 {name=p64 sig_type=std_logic lab=WE0CLKb}
-C {lab_wire.sym} 850 -860 0 0 {name=p65 sig_type=std_logic lab=RA0}
-C {lab_wire.sym} 850 -840 0 0 {name=p66 sig_type=std_logic lab=RB0}
-C {lab_wire.sym} 850 -820 0 0 {name=p67 sig_type=std_logic lab=N0}
-C {lab_wire.sym} 920 -930 0 0 {name=p68 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 920 -790 0 0 {name=p69 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 990 -890 0 0 {name=p70 sig_type=std_logic lab=QA0}
-C {lab_wire.sym} 990 -870 0 0 {name=p71 sig_type=std_logic lab=QB0}
+C {engn1600-team1/CAD3/slave_latch.sym} 890 -620 0 0 {name=x2}
+C {lab_wire.sym} 870 -710 0 0 {name=p45 sig_type=std_logic lab=WE0CLK}
+C {lab_wire.sym} 870 -690 0 0 {name=p46 sig_type=std_logic lab=WE0CLKb}
+C {lab_wire.sym} 870 -670 0 0 {name=p47 sig_type=std_logic lab=RA0}
+C {lab_wire.sym} 870 -650 0 0 {name=p48 sig_type=std_logic lab=RB0}
+C {lab_wire.sym} 870 -630 0 0 {name=p49 sig_type=std_logic lab=N1}
+C {lab_wire.sym} 940 -740 0 0 {name=p50 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 940 -600 0 0 {name=p51 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1010 -700 0 0 {name=p52 sig_type=std_logic lab=QA1}
+C {lab_wire.sym} 1010 -680 0 0 {name=p53 sig_type=std_logic lab=QB1}
+C {engn1600-team1/CAD3/slave_latch.sym} 630 -450 0 0 {name=x3}
+C {lab_wire.sym} 610 -540 0 0 {name=p54 sig_type=std_logic lab=WE1CLK}
+C {lab_wire.sym} 610 -520 0 0 {name=p55 sig_type=std_logic lab=WE1CLKb}
+C {lab_wire.sym} 610 -500 0 0 {name=p56 sig_type=std_logic lab=RA1}
+C {lab_wire.sym} 610 -480 0 0 {name=p57 sig_type=std_logic lab=RB1}
+C {lab_wire.sym} 610 -460 0 0 {name=p58 sig_type=std_logic lab=N0}
+C {lab_wire.sym} 680 -570 0 0 {name=p59 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 680 -430 0 0 {name=p60 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 750 -530 0 0 {name=p61 sig_type=std_logic lab=QA0}
+C {lab_wire.sym} 750 -510 0 0 {name=p62 sig_type=std_logic lab=QB0}
+C {engn1600-team1/CAD3/slave_latch.sym} 890 -450 0 0 {name=x4}
+C {lab_wire.sym} 870 -540 0 0 {name=p63 sig_type=std_logic lab=WE1CLK}
+C {lab_wire.sym} 870 -520 0 0 {name=p64 sig_type=std_logic lab=WE1CLKb}
+C {lab_wire.sym} 870 -500 0 0 {name=p65 sig_type=std_logic lab=RA1}
+C {lab_wire.sym} 870 -480 0 0 {name=p66 sig_type=std_logic lab=RB1}
+C {lab_wire.sym} 870 -460 0 0 {name=p67 sig_type=std_logic lab=N1}
+C {lab_wire.sym} 940 -570 0 0 {name=p68 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 940 -430 0 0 {name=p69 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1010 -530 0 0 {name=p70 sig_type=std_logic lab=QA1}
+C {lab_wire.sym} 1010 -510 0 0 {name=p71 sig_type=std_logic lab=QB1}
