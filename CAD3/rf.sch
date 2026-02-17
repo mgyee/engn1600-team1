@@ -65,3 +65,13 @@ C {lab_wire.sym} 680 -740 0 0 {name=p41 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 680 -600 0 0 {name=p42 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 750 -700 0 0 {name=p43 sig_type=std_logic lab=QA0}
 C {lab_wire.sym} 750 -680 0 0 {name=p44 sig_type=std_logic lab=QB0}
+C {engn1600-team1/CAD3/slave_latch.sym} 890 -620 0 0 {name=x2}
+C {lab_wire.sym} 870 -720 0 0 {name=p45 sig_type=std_logic lab=WE0CLK}
+C {lab_wire.sym} 870 -700 0 0 {name=p46 sig_type=std_logic lab=WE0CLKb}
+C {lab_wire.sym} 870 -680 0 0 {name=p47 sig_type=std_logic lab=RA0}
+C {lab_wire.sym} 870 -660 0 0 {name=p48 sig_type=std_logic lab=RB0}
+C {lab_wire.sym} 870 -640 0 0 {name=p49 sig_type=std_logic lab=N0}
+C {lab_wire.sym} 940 -750 0 0 {name=p50 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 940 -610 0 0 {name=p51 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1010 -710 0 0 {name=p52 sig_type=std_logic lab=QA0}
+C {lab_wire.sym} 1010 -690 0 0 {name=p53 sig_type=std_logic lab=QB0}
