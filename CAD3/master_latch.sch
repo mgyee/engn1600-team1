@@ -139,7 +139,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 270 -350 0 0 {name=M9
 L=0.28u
-W=0.36u
+W=0.72u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -153,7 +153,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 310 -850 2 0 {name=M10
 L=0.28u
-W=0.36u
+W=1.44u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -167,7 +167,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 310 -770 2 0 {name=M12
 L=0.28u
-W=0.36u
+W=1.44u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -237,7 +237,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 310 -670 2 0 {name=M23
 L=0.28u
-W=0.36u
+W=0.72u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -251,7 +251,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 310 -590 2 0 {name=M24
 L=0.28u
-W=0.36u
+W=0.72u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
