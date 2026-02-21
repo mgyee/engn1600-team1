@@ -157,7 +157,9 @@ C {lab_wire.sym} 470 -250 0 0 {name=p2313 sig_type=std_logic lab=WEMb}
 C {devices/lab_wire.sym} 110 -240 0 0 {name=lw_rA lab=RA}
 C {devices/lab_wire.sym} 110 -220 0 0 {name=lw_rB lab=RB}
 C {devices/lab_wire.sym} 110 -260 0 0 {name=lw_wE lab=WE}
-C {engn1600-team1/CAD3/driver_cell.sym} 230 -200 0 0 {name=x17}
+C {engn1600-team1/CAD3/driver_cell.sym} 230 -200 0 0 {name=x17
+kWECLK="'kWECLK'"
+kWECLKb="'kWECLKb'"}
 C {lab_wire.sym} 280 -280 0 0 {name=p2402 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 280 -180 0 0 {name=p2403 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 210 -240 0 0 {name=lw_we17 lab=CLK}
@@ -490,3 +492,7 @@ C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {devices/ipin.sym} 50 -700 0 0 {name=pin_we1 lab=D}
 C {devices/lab_wire.sym} 70 -700 0 0 {name=lw_we1 lab=D}
+C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
+.param kWECLKb=1
+.param kWECLK=1
+"}
