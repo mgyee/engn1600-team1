@@ -137,7 +137,7 @@ C {devices/lab_wire.sym} 230 -440 0 0 {name=lw_we83 lab=WEMb}
 C {devices/ipin.sym} 110 -240 0 0 {name=pin_rA lab=RA}
 C {devices/ipin.sym} 110 -220 0 0 {name=pin_rB lab=RB}
 C {devices/ipin.sym} 110 -260 0 0 {name=pin_wE lab=WE}
-C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0}
+C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0 kQb="'kQb'"}
 C {lab_wire.sym} 770 -270 0 0 {name=p2161 sig_type=std_logic lab=WECLK}
 C {lab_wire.sym} 770 -250 0 0 {name=p2162 sig_type=std_logic lab=WECLKb}
 C {lab_wire.sym} 770 -230 0 0 {name=p2163 sig_type=std_logic lab=RA}
@@ -496,4 +496,5 @@ C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
 .param kWECLKb=1
 .param kWECLK=1
 .param kWEMb=1
+.param kQb=1
 "}

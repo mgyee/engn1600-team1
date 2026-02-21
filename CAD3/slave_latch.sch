@@ -359,7 +359,7 @@ C {lab_wire.sym} 440 -700 0 0 {name=p25 sig_type=std_logic lab=WECLK}
 C {lab_wire.sym} 440 -660 0 0 {name=p26 sig_type=std_logic lab=WECLKb}
 C {symbols/pfet_03v3.sym} 1260 -320 1 0 {name=M13
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -373,7 +373,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1260 -200 3 0 {name=M14
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -419,7 +419,7 @@ C {lab_wire.sym} 1140 -450 3 1 {name=p29 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1380 -450 3 1 {name=p30 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 1270 -780 1 0 {name=M21
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -433,7 +433,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1270 -660 3 0 {name=M22
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -486,3 +486,6 @@ C {opin.sym} 1380 -720 0 0 {name=p43 lab=QAb}
 C {opin.sym} 1370 -260 0 0 {name=p44 lab=QBb}
 C {iopin.sym} 400 -780 2 0 {name=p12 lab=VDD}
 C {iopin.sym} 400 -740 2 0 {name=p21 lab=VSS}
+C {code_shown.sym} 300 -1090 0 0 {name=s1 only_toplevel=false value="
+.param kQb=1
+"}
