@@ -3447,7 +3447,7 @@ C {devices/lab_wire.sym} -340 -50 0 0 {name=lw_we80 lab=WE0CLKb}
 C {devices/ipin.sym} -360 -380 0 0 {name=pin_we17 lab=WEM}
 C {symbols/pfet_03v3.sym} -260 -430 0 0 {name=M1
 L=0.28u
-W=0.72u
+W="'kWEMb*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -3461,7 +3461,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} -260 -330 0 0 {name=M2
 L=0.28u
-W=0.36u
+W="'kWEMb*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -4537,4 +4537,5 @@ C {opin.sym} 4010 -620 0 0 {name=p2563 lab=QA15}
 C {code_shown.sym} -320 -730 0 0 {name=s1 only_toplevel=false value="
 .param kWECLKb=1
 .param kWECLK=1
+.param kWEMb=1
 "}
