@@ -146,7 +146,7 @@ C {lab_wire.sym} 840 -300 0 0 {name=p2166 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 840 -160 0 0 {name=p2167 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 910 -260 0 0 {name=p2168 sig_type=std_logic lab=QAb}
 C {lab_wire.sym} 910 -240 0 0 {name=p2169 sig_type=std_logic lab=QBb}
-C {engn1600-team1/CAD3/master_latch.sym} 490 -180 0 0 {name=x1}
+C {engn1600-team1/CAD3/master_latch.sym} 490 -180 0 0 {name=x1 kN="'kN'"}
 C {lab_wire.sym} 470 -190 0 0 {name=p2305 sig_type=std_logic lab=D}
 C {lab_wire.sym} 610 -260 0 0 {name=p2308 sig_type=std_logic lab=N}
 C {lab_wire.sym} 770 -190 0 0 {name=p2309 sig_type=std_logic lab=N}
@@ -497,4 +497,5 @@ C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
 .param kWECLK=1
 .param kWEMb=1
 .param kQb=1
+.param kN=1
 "}

@@ -3121,22 +3121,22 @@ C {lab_wire.sym} 3880 2520 0 0 {name=p2299 sig_type=std_logic lab=RB15}
 C {lab_wire.sym} 3880 2540 0 0 {name=p2300 sig_type=std_logic lab=N15}
 C {lab_wire.sym} 4020 2470 0 0 {name=p2303 sig_type=std_logic lab=QA15b}
 C {lab_wire.sym} 4020 2490 0 0 {name=p2304 sig_type=std_logic lab=QB15b}
-C {engn1600-team1/CAD3/master_latch.sym} 0 2720 0 0 {name=x1}
-C {engn1600-team1/CAD3/master_latch.sym} 260 2720 0 0 {name=x2}
-C {engn1600-team1/CAD3/master_latch.sym} 520 2720 0 0 {name=x3}
-C {engn1600-team1/CAD3/master_latch.sym} 780 2720 0 0 {name=x4}
-C {engn1600-team1/CAD3/master_latch.sym} 1040 2720 0 0 {name=x5}
-C {engn1600-team1/CAD3/master_latch.sym} 1300 2720 0 0 {name=x6}
-C {engn1600-team1/CAD3/master_latch.sym} 1560 2720 0 0 {name=x7}
-C {engn1600-team1/CAD3/master_latch.sym} 1820 2720 0 0 {name=x8}
-C {engn1600-team1/CAD3/master_latch.sym} 2080 2720 0 0 {name=x9}
-C {engn1600-team1/CAD3/master_latch.sym} 2340 2720 0 0 {name=x10}
-C {engn1600-team1/CAD3/master_latch.sym} 2600 2720 0 0 {name=x11}
-C {engn1600-team1/CAD3/master_latch.sym} 2860 2720 0 0 {name=x12}
-C {engn1600-team1/CAD3/master_latch.sym} 3120 2720 0 0 {name=x13}
-C {engn1600-team1/CAD3/master_latch.sym} 3380 2720 0 0 {name=x14}
-C {engn1600-team1/CAD3/master_latch.sym} 3640 2720 0 0 {name=x15}
-C {engn1600-team1/CAD3/master_latch.sym} 3900 2720 0 0 {name=x16}
+C {engn1600-team1/CAD3/master_latch.sym} 0 2720 0 0 {name=x1 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 260 2720 0 0 {name=x2 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 520 2720 0 0 {name=x3 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 780 2720 0 0 {name=x4 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 1040 2720 0 0 {name=x5 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 1300 2720 0 0 {name=x6 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 1560 2720 0 0 {name=x7 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 1820 2720 0 0 {name=x8 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 2080 2720 0 0 {name=x9 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 2340 2720 0 0 {name=x10 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 2600 2720 0 0 {name=x11 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 2860 2720 0 0 {name=x12 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 3120 2720 0 0 {name=x13 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 3380 2720 0 0 {name=x14 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 3640 2720 0 0 {name=x15 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 3900 2720 0 0 {name=x16 kN="'kN'"}
 C {lab_wire.sym} -20 2710 0 0 {name=p2305 sig_type=std_logic lab=D0}
 C {lab_wire.sym} 240 2710 0 0 {name=p2306 sig_type=std_logic lab=D1}
 C {lab_wire.sym} 500 2710 0 0 {name=p2307 sig_type=std_logic lab=D2}
@@ -4539,4 +4539,5 @@ C {code_shown.sym} -320 -730 0 0 {name=s1 only_toplevel=false value="
 .param kWECLK=1
 .param kWEMb=1
 .param kQb=1
+.param kN=1
 "}
