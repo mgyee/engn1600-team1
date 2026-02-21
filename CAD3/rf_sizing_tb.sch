@@ -4,8 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 50 -640 70 -640 {lab=CLK}
-N 70 -440 130 -440 {lab=WEM}
 N 130 -490 150 -490 {lab=WEM}
 N 130 -490 130 -390 {lab=WEM}
 N 130 -390 150 -390 {lab=WEM}
@@ -98,9 +96,22 @@ N 1460 -320 1480 -320 {lab=VDD}
 N 1460 -170 1480 -170 {lab=VSS}
 N 1510 -380 1510 -360 {lab=N}
 N 1510 -130 1510 -110 {lab=N}
-N 50 -700 70 -700 {lab=D}
-C {devices/ipin.sym} 50 -640 0 0 {name=pin_we16 lab=CLK}
-C {devices/ipin.sym} 70 -440 0 0 {name=pin_we17 lab=WEM}
+N -360 -600 -360 -560 {lab=GND}
+N -360 -710 -360 -660 {lab=VDD}
+N -300 -600 -300 -560 {lab=GND}
+N -300 -710 -300 -660 {lab=VSS}
+N -70 -700 -30 -700 {lab=GND}
+N 30 -700 80 -700 {lab=D}
+N -70 -640 -30 -640 {lab=GND}
+N 30 -640 80 -640 {lab=CLK}
+N -70 -440 -30 -440 {lab=GND}
+N 30 -440 80 -440 {lab=WEM}
+N -70 -320 -30 -320 {lab=GND}
+N 30 -320 80 -320 {lab=WE}
+N -70 -260 -30 -260 {lab=GND}
+N 30 -260 80 -260 {lab=RA}
+N -70 -200 -30 -200 {lab=GND}
+N 30 -200 80 -200 {lab=RB}
 C {symbols/pfet_03v3.sym} 170 -490 0 0 {name=M1
 L=0.28u
 W="'kWEMb*0.72u'"
@@ -131,12 +142,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 190 -560 0 0 {name=p2434 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 190 -320 0 0 {name=p2435 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 70 -640 0 0 {name=lw_we81 lab=CLK}
-C {devices/lab_wire.sym} 110 -440 0 0 {name=lw_we82 lab=WEM}
 C {devices/lab_wire.sym} 230 -440 0 0 {name=lw_we83 lab=WEMb}
-C {devices/ipin.sym} 110 -240 0 0 {name=pin_rA lab=RA}
-C {devices/ipin.sym} 110 -220 0 0 {name=pin_rB lab=RB}
-C {devices/ipin.sym} 110 -260 0 0 {name=pin_wE lab=WE}
 C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0 kQb="'kQb'"}
 C {lab_wire.sym} 770 -270 0 0 {name=p2161 sig_type=std_logic lab=WECLK}
 C {lab_wire.sym} 770 -250 0 0 {name=p2162 sig_type=std_logic lab=WECLKb}
@@ -154,9 +160,9 @@ C {lab_wire.sym} 540 -300 0 0 {name=p2310 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 540 -160 0 0 {name=p2311 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 470 -270 0 0 {name=p2312 sig_type=std_logic lab=WEM}
 C {lab_wire.sym} 470 -250 0 0 {name=p2313 sig_type=std_logic lab=WEMb}
-C {devices/lab_wire.sym} 110 -240 0 0 {name=lw_rA lab=RA}
-C {devices/lab_wire.sym} 110 -220 0 0 {name=lw_rB lab=RB}
-C {devices/lab_wire.sym} 110 -260 0 0 {name=lw_wE lab=WE}
+C {devices/lab_wire.sym} 80 -260 0 0 {name=lw_rA lab=RA}
+C {devices/lab_wire.sym} 80 -200 0 0 {name=lw_rB lab=RB}
+C {devices/lab_wire.sym} 80 -320 0 0 {name=lw_wE lab=WE}
 C {engn1600-team1/CAD3/driver_cell.sym} 230 -200 0 0 {name=x17
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"}
@@ -490,12 +496,38 @@ C {lab_wire.sym} 1560 -170 0 0 {name=p67 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1510 -190 0 0 {name=p68 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
-C {devices/ipin.sym} 50 -700 0 0 {name=pin_we1 lab=D}
-C {devices/lab_wire.sym} 70 -700 0 0 {name=lw_we1 lab=D}
+C {devices/lab_wire.sym} 80 -700 0 0 {name=lw_we1 lab=D}
 C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
 .param kWECLKb=1
 .param kWECLK=1
 .param kWEMb=1
 .param kQb=1
 .param kN=1
+"}
+C {vsource.sym} -360 -630 0 0 {name=V1 value=3.3 savecurrent=false}
+C {gnd.sym} -360 -560 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} -360 -710 2 0 {name=p71 sig_type=std_logic lab=VDD}
+C {vsource.sym} -300 -630 0 0 {name=V2 value=0 savecurrent=false}
+C {gnd.sym} -300 -560 0 0 {name=l2 lab=GND}
+C {lab_wire.sym} -300 -710 2 0 {name=p72 sig_type=std_logic lab=VSS}
+C {vsource.sym} 0 -700 1 0 {name=VD value=0 savecurrent=false}
+C {gnd.sym} -70 -700 1 0 {name=l3 lab=GND}
+C {devices/lab_wire.sym} 80 -640 0 0 {name=lw_we2 lab=CLK}
+C {vsource.sym} 0 -640 1 0 {name=VCLK value=0 savecurrent=false}
+C {gnd.sym} -70 -640 1 0 {name=l4 lab=GND}
+C {devices/lab_wire.sym} 130 -440 0 0 {name=lw_we3 lab=WEM}
+C {vsource.sym} 0 -440 1 0 {name=VWEM value=0 savecurrent=false}
+C {gnd.sym} -70 -440 1 0 {name=l5 lab=GND}
+C {vsource.sym} 0 -320 1 0 {name=VWE value=0 savecurrent=false}
+C {gnd.sym} -70 -320 1 0 {name=l6 lab=GND}
+C {vsource.sym} 0 -260 1 0 {name=VRA value=0 savecurrent=false}
+C {gnd.sym} -70 -260 1 0 {name=l7 lab=GND}
+C {devices/lab_wire.sym} 80 -440 0 0 {name=lw_we4 lab=WEM}
+C {vsource.sym} 0 -200 1 0 {name=VRB value=0 savecurrent=false}
+C {gnd.sym} -70 -200 1 0 {name=l8 lab=GND}
+C {devices/code_shown.sym} -400 -130 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
