@@ -168,7 +168,7 @@ C {devices/lab_wire.sym} 350 -240 0 0 {name=lw_we19 lab=WECLK}
 C {devices/lab_wire.sym} 350 -220 0 0 {name=lw_we20 lab=WECLKb}
 C {symbols/pfet_03v3.sym} 1130 -690 1 0 {name=M13
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -182,7 +182,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1130 -470 3 0 {name=M14
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -203,7 +203,7 @@ C {lab_wire.sym} 1130 -430 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1080 -490 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 1350 -690 1 0 {name=M3
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -217,7 +217,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1350 -470 3 0 {name=M4
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -325,7 +325,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 780 -490 3 0 {name=M10
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=30
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -361,7 +361,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 940 -490 3 0 {name=M12
 L=0.28u
-W=0.36u
+W="'kQb*0.36u'"
 nf=1
 m=30
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
