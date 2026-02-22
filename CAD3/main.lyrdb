@@ -3985,31 +3985,7 @@
  <items>
   <item>
    <tags/>
-   <category>'DF.12'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-6.245,2.145;-6.245,2.505;-2.56,2.505;-2.56,2.145)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'DF.12'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-2.27,2.145;-2.27,2.505;-0.185,2.505;-0.185,2.145)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'DF.12'</category>
+   <category>'DF.13_LV'</category>
    <cell>slave_latch</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
@@ -4021,14 +3997,110 @@
   </item>
   <item>
    <tags/>
-   <category>'DF.12'</category>
+   <category>'DF.13_LV'</category>
    <cell>slave_latch</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-1.45,4.305;-1.45,4.665;-2.27,4.665;-2.27,5.025;-0.23,5.025;-0.23,4.305)</value>
+    <value>polygon: (-1.46,4.305;-1.46,4.665;-2.28,4.665;-2.28,5.025;-0.24,5.025;-0.24,4.305)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'DF.13_LV'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (0.04,4.305;0.04,5.025;1.32,5.025;1.32,4.305)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'DF.13_LV'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1.6,4.665;1.6,5.025;3.68,5.025;3.68,4.665)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'DF.13_LV'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (3.96,4.305;3.96,5.025;5.195,5.025;5.195,4.305)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'DF.14_LV'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-6.245,2.145;-6.245,2.505;-2.56,2.505;-2.56,2.145)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'DF.14_LV'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-2.28,2.145;-2.28,2.505;-0.24,2.505;-0.24,2.145)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'DF.14_LV'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (0.04,2.605;0.04,2.965;1.32,2.965;1.32,2.605)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'DF.14_LV'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (1.6,2.605;1.6,2.965;3.68,2.965;3.68,2.605)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'DF.14_LV'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (3.96,2.605;3.96,2.965;5.195,2.965;5.195,2.605)</value>
    </values>
   </item>
  </items>

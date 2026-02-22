@@ -8,13 +8,6 @@
  </tags>
  <categories>
   <category>
-   <name>PL.8</name>
-   <description>PL.8 : Poly2 coverage over the entire die shall be 14%.
-                Dummy poly2 lines must be added to meet the minimum poly2 density requirement. : 14%</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
    <name>M2.4</name>
    <description>M2.4 : Metal2 coverage over the entire die shall be &gt;30%
                 (Refer to section 13.0 for Dummy Metal fill guidelines.
@@ -67,98 +60,14 @@
  <items>
   <item>
    <tags/>
-   <category>'PL.8'</category>
+   <category>'M2.4'</category>
    <cell>slave_latch</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-3.28,1.925;-3.28,2.635;-3.32,2.635;-3.32,2.995;-2.96,2.995;-2.96,2.635;-3,2.635;-3,1.925)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.8'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-4.865,1.925;-4.865,2.65;-4.905,2.65;-4.905,3.01;-4.545,3.01;-4.545,2.65;-4.585,2.65;-4.585,1.925)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.8'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-5.805,1.925;-5.805,3.375;-5.845,3.375;-5.845,3.735;-5.805,3.735;-5.805,5.245;-5.525,5.245;-5.525,3.735;-5.485,3.735;-5.485,3.375;-5.525,3.375;-5.525,1.925)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.8'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-4.905,4.205;-4.905,4.565;-4.865,4.565;-4.865,5.245;-4.585,5.245;-4.585,4.565;-4.545,4.565;-4.545,4.205)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.8'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-3.875,1.925;-3.875,3.715;-3.915,3.715;-3.915,4.075;-3.875,4.075;-3.875,5.245;-3.595,5.245;-3.595,4.075;-3.555,4.075;-3.555,3.715;-3.595,3.715;-3.595,1.925)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.8'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-3.32,4.175;-3.32,4.535;-3.28,4.535;-3.28,5.245;-3,5.245;-3,4.535;-2.96,4.535;-2.96,4.175)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.8'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-1.83,1.925;-1.83,3.11;-1.87,3.11;-1.87,3.47;-1.83,3.47;-1.83,5.245;-1.55,5.245;-1.55,3.47;-1.51,3.47;-1.51,3.11;-1.55,3.11;-1.55,1.925)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.8'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-1.01,1.925;-1.01,3.715;-1.05,3.715;-1.05,4.075;-1.01,4.075;-1.01,5.245;-0.73,5.245;-0.73,4.075;-0.69,4.075;-0.69,3.715;-0.73,3.715;-0.73,1.925)</value>
+    <value>polygon: (-4.865,2.51;-4.865,3.03;-4.585,3.03;-4.585,2.51)</value>
    </values>
   </item>
   <item>
@@ -170,7 +79,19 @@
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-4.865,2.51;-4.865,3.03;-4.585,3.03;-4.585,2.51)</value>
+    <value>polygon: (4.475,3.14;4.475,3.66;4.755,3.66;4.755,3.14)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M2.4'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (0.5,3.7;0.5,4.22;0.78,4.22;0.78,3.7)</value>
    </values>
   </item>
   <item>
@@ -194,7 +115,7 @@
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-3.185,2.57;-3.185,4.645;-2.905,4.645;-2.905,2.57)</value>
+    <value>polygon: (-3.045,2.58;-3.045,4.645;-2.765,4.645;-2.765,2.58)</value>
    </values>
   </item>
   <item>
@@ -223,14 +144,26 @@
   </item>
   <item>
    <tags/>
-   <category>'M3.4'</category>
+   <category>'M2.4'</category>
    <cell>slave_latch</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-6.41,2.63;-6.41,2.91;1.755,2.91;1.755,2.63)</value>
+    <value>polygon: (1.64,1.325;1.64,5.845;1.92,5.845;1.92,1.325)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M2.4'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (3.36,1.325;3.36,5.845;3.64,5.845;3.64,1.325)</value>
    </values>
   </item>
   <item>
@@ -242,7 +175,7 @@
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-6.41,3.19;-6.41,3.47;1.755,3.47;1.755,3.19)</value>
+    <value>polygon: (-6.41,2.63;-6.41,2.91;5.355,2.91;5.355,2.63)</value>
    </values>
   </item>
   <item>
@@ -254,7 +187,7 @@
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-6.41,3.75;-6.41,4.03;1.755,4.03;1.755,3.75)</value>
+    <value>polygon: (-6.41,3.19;-6.41,3.47;5.355,3.47;5.355,3.19)</value>
    </values>
   </item>
   <item>
@@ -266,7 +199,19 @@
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-6.41,4.31;-6.41,4.59;1.755,4.59;1.755,4.31)</value>
+    <value>polygon: (-6.41,3.75;-6.41,4.03;5.355,4.03;5.355,3.75)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M3.4'</category>
+   <cell>slave_latch</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-6.41,4.31;-6.41,4.59;5.355,4.59;5.355,4.31)</value>
    </values>
   </item>
  </items>
