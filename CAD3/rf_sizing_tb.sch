@@ -498,7 +498,7 @@ C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 80 -700 0 0 {name=lw_we1 lab=D}
 C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
-** kN SWEEP
+** kWECLKb SWEEP
 
 .param kWECLKb=1
 .param kWECLK=1
@@ -518,25 +518,25 @@ let tstop = 2 * T
 let tstep = 0.001 * T
 let NTRIALS = 20
 
-compose kVALS start=1 stop=5 lin=$&NTRIALS
+compose kVALS start=1 stop=10 lin=$&NTRIALS
 compose TRISE start=0 stop=0 lin=$&NTRIALS
 compose TFALL start=0 stop=0 lin=$&NTRIALS
 
 let idx = 0
 while idx < NTRIALS
 	let kVAL = kVALS[idx]
-	alterparam kN = $&kVAL
+	alterparam kWECLKb = $&kVAL
 	reset
 
-	** Enable WEM
-	alter @VWEM[DC] = 3.3
+	** Enable WE
+	alter @VWE[DC] = 3.3
 
 	** Test pulses
-	alter @VD[PWL] = [ 0 0 $&PW 0 $&PW 3.3 $&T 3.3 $&T 0 ]
+	alter @VCLK[PWL] = [ 0 0 $&PW 0 $&PW 3.3 $&T 3.3 $&T 0 ]
 
 	tran $&tstep $&tstop
-	meas tran TPLH TRIG V(D) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 RISE=1
-	meas tran TPHL TRIG V(D) VAL=1.65 FALL=1 TARG V(N) VAL=1.65 FALL=1
+	meas tran TPLH TRIG V(CLK) VAL=1.65 RISE=1 TARG V(WECLKb) VAL=1.65 FALL=1
+	meas tran TPHL TRIG V(CLK) VAL=1.65 FALL=1 TARG V(WECLKb) VAL=1.65 RISE=1
 	let TRISE[idx] = $&TPLH
 	let TFALL[idx] = $&TPHL
 	let idx = idx + 1

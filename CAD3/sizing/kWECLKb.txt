@@ -1,0 +1,64 @@
+"
+** kWECLKb SWEEP
+
+.param kWECLKb=1
+.param kWECLK=1
+.param kWEMb=1
+.param kQb=1
+.param kN=1
+
+.control
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+let INF = 5 * T
+
+let tstop = 2 * T
+let tstep = 0.001 * T
+let NTRIALS = 20
+
+compose kVALS start=1 stop=5 lin=$&NTRIALS
+compose TRISE start=0 stop=0 lin=$&NTRIALS
+compose TFALL start=0 stop=0 lin=$&NTRIALS
+
+let idx = 0
+while idx < NTRIALS
+	let kVAL = kVALS[idx]
+	alterparam kWECLKb = $&kVAL
+	reset
+
+	** Enable WE
+	alter @VWE[DC] = 3.3
+
+	** Test pulses
+	alter @VCLK[PWL] = [ 0 0 $&PW 0 $&PW 3.3 $&T 3.3 $&T 0 ]
+
+	tran $&tstep $&tstop
+	meas tran TPLH TRIG V(D) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 RISE=1
+	meas tran TPHL TRIG V(D) VAL=1.65 FALL=1 TARG V(N) VAL=1.65 FALL=1
+	let TRISE[idx] = $&TPLH
+	let TFALL[idx] = $&TPHL
+	let idx = idx + 1
+end
+
+plot TRISE vs kVALS
+plot TFALL vs kVALS
+
+let minval = minimum(TRISE)
+let idxR = 0
+while TRISE[idxR] > minval
+  let idxR = idxR + 1
+end
+print kVALS[idxR]
+
+let minval = minimum(TFALL)
+let idxF = 0
+while TFALL[idxF] > minval
+  let idxF = idxF + 1
+end
+print kVALS[idxF]
+
+.endc
+"
