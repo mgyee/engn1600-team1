@@ -244,7 +244,7 @@ C {lab_wire.sym} 1350 -430 0 0 {name=p13 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1300 -490 0 0 {name=p14 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 470 -680 1 0 {name=M5
 L=0.28u
-W=1.44u
+W=0.36u
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -294,7 +294,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 630 -490 3 0 {name=M7
 L=0.28u
-W=0.72u
+W=0.36u
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -390,7 +390,7 @@ C {lab_wire.sym} 890 -660 0 0 {name=p49 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 990 -660 0 0 {name=p50 sig_type=std_logic lab=VDD}
 C {symbols/pfet_03v3.sym} 1150 -330 1 0 {name=M15
 L=0.28u
-W=1.44u
+W=0.36u
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -440,7 +440,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1330 -140 3 0 {name=M18
 L=0.28u
-W=0.72u
+W=0.36u
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -498,7 +498,7 @@ C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 80 -700 0 0 {name=lw_we1 lab=D}
 C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
-** kWEMb SWEEP
+** kWECLKb SWEEP
 
 .param kWECLKb=1
 .param kWECLK=1
@@ -518,22 +518,25 @@ let tstop = 2 * T
 let tstep = 0.001 * T
 let NTRIALS = 20
 
-compose kVALS start=1 stop=5 lin=$&NTRIALS
+compose kVALS start=1 stop=10 lin=$&NTRIALS
 compose TRISE start=0 stop=0 lin=$&NTRIALS
 compose TFALL start=0 stop=0 lin=$&NTRIALS
 
 let idx = 0
 while idx < NTRIALS
 	let kVAL = kVALS[idx]
-	alterparam kWEMb = $&kVAL
+	alterparam kWECLKb = $&kVAL
 	reset
 
+	** Enable WE
+	alter @VWE[DC] = 3.3
+
 	** Test pulses
-	alter @VWEM[PWL] = [ 0 0 $&PW 0 $&PW 3.3 $&T 3.3 $&T 0 ]
+	alter @VCLK[PWL] = [ 0 0 $&PW 0 $&PW 3.3 $&T 3.3 $&T 0 ]
 
 	tran $&tstep $&tstop
-	meas tran TPLH TRIG V(WEM) VAL=1.65 RISE=1 TARG V(WEMb) VAL=1.65 FALL=1
-	meas tran TPHL TRIG V(WEM) VAL=1.65 FALL=1 TARG V(WEMb) VAL=1.65 RISE=1
+	meas tran TPLH TRIG V(CLK) VAL=1.65 RISE=1 TARG V(WECLKb) VAL=1.65 FALL=1
+	meas tran TPHL TRIG V(CLK) VAL=1.65 FALL=1 TARG V(WECLKb) VAL=1.65 RISE=1
 	let TRISE[idx] = $&TPLH
 	let TFALL[idx] = $&TPHL
 	let idx = idx + 1
