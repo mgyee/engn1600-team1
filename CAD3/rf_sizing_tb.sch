@@ -532,7 +532,7 @@ while idx < NTRIALS
 	alter @VWEM[DC] = 3.3
 
 	** Test pulses
-	alter @VD[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+	alter @VD[PWL] = [ 0 0 $&PW 0 $&PW 3.3 $&T 3.3 $&T 0 ]
 
 	tran $&tstep $&tstop
 	meas tran TPLH TRIG V(D) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 RISE=1
