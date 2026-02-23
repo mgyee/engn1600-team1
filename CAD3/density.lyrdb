@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
  <description>GF180 DENSITY DRC Run Report at</description>
- <original-file>/foss/designs/engn1600-team1/CAD3/slave_latch.gds</original-file>
+ <original-file>/foss/designs/engn1600-team1/CAD3/driver_cell.gds</original-file>
  <generator>drc: script='/foss/pdks/gf180mcuD/libs.tech/klayout/macros/gf180mcu_drc.lydrc'</generator>
- <top-cell>slave_latch</top-cell>
+ <top-cell>driver_cell</top-cell>
  <tags>
  </tags>
  <categories>
@@ -50,7 +50,7 @@
  </categories>
  <cells>
   <cell>
-   <name>slave_latch</name>
+   <name>driver_cell</name>
    <variant/>
    <layout-name/>
    <references>
@@ -61,157 +61,49 @@
   <item>
    <tags/>
    <category>'M2.4'</category>
-   <cell>slave_latch</cell>
+   <cell>driver_cell</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-4.865,2.51;-4.865,3.03;-4.585,3.03;-4.585,2.51)</value>
+    <value>polygon: (-1.09,-2.3;-1.09,-1.78;-0.81,-1.78;-0.81,-2.3)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M2.4'</category>
-   <cell>slave_latch</cell>
+   <cell>driver_cell</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (4.475,3.14;4.475,3.66;4.755,3.66;4.755,3.14)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M2.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (0.5,3.7;0.5,4.22;0.78,4.22;0.78,3.7)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M2.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-3.745,2.58;-3.745,4.595;-3.465,4.595;-3.465,2.58)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M2.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-3.045,2.58;-3.045,4.645;-2.765,4.645;-2.765,2.58)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M2.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-4.865,4.13;-4.865,4.65;-4.585,4.65;-4.585,4.13)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M2.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-5.99,1.325;-5.99,5.845;-5.71,5.845;-5.71,1.325)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M2.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (1.64,1.325;1.64,5.845;1.92,5.845;1.92,1.325)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M2.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (3.36,1.325;3.36,5.845;3.64,5.845;3.64,1.325)</value>
+    <value>polygon: (-0.925,-0.555;-0.925,-0.275;-0.405,-0.275;-0.405,-0.555)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M3.4'</category>
-   <cell>slave_latch</cell>
+   <cell>driver_cell</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-6.41,2.63;-6.41,2.91;5.355,2.91;5.355,2.63)</value>
+    <value>polygon: (-1.14,-2.235;-1.14,-1.955;0.175,-1.955;0.175,-2.235)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M3.4'</category>
-   <cell>slave_latch</cell>
+   <cell>driver_cell</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-6.41,3.19;-6.41,3.47;5.355,3.47;5.355,3.19)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-6.41,3.75;-6.41,4.03;5.355,4.03;5.355,3.75)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.4'</category>
-   <cell>slave_latch</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-6.41,4.31;-6.41,4.59;5.355,4.59;5.355,4.31)</value>
+    <value>polygon: (-0.895,-0.555;-0.895,-0.275;0.175,-0.275;0.175,-0.555)</value>
    </values>
   </item>
  </items>
