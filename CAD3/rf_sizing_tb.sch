@@ -498,11 +498,54 @@ C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 80 -700 0 0 {name=lw_we1 lab=D}
 C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
+** kN SWEEP
+
 .param kWECLKb=1
 .param kWECLK=1
 .param kWEMb=1
 .param kQb=1
 .param kN=1
+
+.control
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+let INF = 5 * T
+
+let tstop = 2 * T
+let tstep = 0.001 * T
+let NTRIALS = 20
+
+compose kVALS start=1 stop=5 lin=$&NTRIALS
+compose TRISE start=0 stop=0 lin=$&NTRIALS
+compose TFALL start=0 stop=0 lin=$&NTRIALS
+
+let idx = 0
+while idx < NTRIALS
+	let kVAL = kVALS[idx]
+	alterparam kN = $&kVAL
+	reset
+
+	** Enable WEM
+	alter @VWEM[DC] = 3.3
+
+	** Test pulses
+	alter @VD[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+
+	tran $&tstep $&tstop
+	meas tran TQLH WHEN V(N)=1.65 RISE=1
+	meas tran TQHL WHEN V(N)=1.65 FALL=1
+	let TRISE[idx] = $&TQLH - PW
+	let TFALL[idx] = $&TQHL - T
+	let idx = idx + 1
+end
+
+plot TRISE vs kVALS
+plot TFALL vs kVALS
+
+.endc
 "}
 C {vsource.sym} -360 -630 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} -360 -560 0 0 {name=l1 lab=GND}

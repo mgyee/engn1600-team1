@@ -2,10 +2,7 @@ v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {type=subcircuit
 format="@name @pinlist @symname kWECLK=@kWECLK kWECLKb=@kWECLKb"
-template="name=x1
-kWECLK=1
-kWECLKb=1
-"}
+template="name=x1 kWECLK=1 kWECLKb=1"}
 V {}
 S {}
 E {}
