@@ -1,0 +1,8 @@
+** sch_path: /foss/designs/engn1600-team1/CAD3/output_inverter.sch
+.subckt output_inverter VDD VSS QA QAb QBb QB
+*.PININFO QB:O QA:O VDD:B VSS:B QAb:I QBb:I
+M3 QB QBb VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M4 QB QBb VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M35 QA QAb VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M36 QA QAb VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+.ends

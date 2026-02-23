@@ -52,7 +52,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 250 -160 0 0 {name=M4
 L=0.28u
-W=0.36
+W=0.36u
 u
 nf=1
 m=1
