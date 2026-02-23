@@ -535,15 +535,29 @@ while idx < NTRIALS
 	alter @VD[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
 
 	tran $&tstep $&tstop
-	meas tran TQLH WHEN V(N)=1.65 RISE=1
-	meas tran TQHL WHEN V(N)=1.65 FALL=1
-	let TRISE[idx] = $&TQLH - PW
-	let TFALL[idx] = $&TQHL - T
+	meas tran TPLH TRIG V(D) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 RISE=1
+	meas tran TPHL TRIG V(D) VAL=1.65 FALL=1 TARG V(N) VAL=1.65 FALL=1
+	let TRISE[idx] = $&TPLH
+	let TFALL[idx] = $&TPHL
 	let idx = idx + 1
 end
 
 plot TRISE vs kVALS
 plot TFALL vs kVALS
+
+let minval = minimum(TRISE)
+let idxR = 0
+while TRISE[idxR] > minval
+  let idxR = idxR + 1
+end
+print kVALS[idxR]
+
+let minval = minimum(TFALL)
+let idxF = 0
+while TFALL[idxF] > minval
+  let idxF = idxF + 1
+end
+print kVALS[idxF]
 
 .endc
 "}
