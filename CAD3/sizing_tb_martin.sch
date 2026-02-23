@@ -10,7 +10,6 @@ N -108.125 94.375 -108.125 144.375 {lab=vss}
 N 81.875 -51.875 101.875 -51.875 {lab=vout}
 N 81.875 -51.875 81.875 48.125 {lab=vout}
 N 81.875 48.125 101.875 48.125 {lab=vout}
-N 141.875 -21.875 141.875 18.125 {lab=vdd}
 N 141.875 48.125 161.875 48.125 {lab=vss}
 N 161.875 48.125 161.875 98.125 {lab=vss}
 N 141.875 98.125 161.875 98.125 {lab=vss}
@@ -28,14 +27,22 @@ N -212.8125 -15.625 -178.125 -15.625 {lab=WEM}
 N -484.375 -69.0625 -484.375 -39.6875 {lab=WEM}
 N -361.875 21.5625 -361.875 37.5 {lab=GND}
 N -361.875 -67.8125 -361.875 -38.4375 {lab=WEMb}
-C {engn1600-team1/CAD3/master_latch.sym} -158.125 74.375 0 0 {name=x4 kN=1}
+N 160 -20 161.875 -51.875 {lab=vdd}
+N 160 20 161.875 48.125 {lab=vss}
+N 141.875 -21.875 160 -20 {lab=vdd}
+N 141.875 18.125 160 20 {lab=vss}
+N -474.375 210.3125 -474.375 226.25 {lab=GND}
+N -474.375 120.9375 -474.375 150.3125 {lab=vdd}
+N -351.875 211.5625 -351.875 227.5 {lab=GND}
+N -351.875 122.1875 -351.875 151.5625 {lab=vss}
+C {engn1600-team1/CAD3/master_latch.sym} -158.125 74.375 0 0 {name=x4 kN="'kN'"}
 C {lab_wire.sym} 141.875 115.625 0 0 {name=p11 sig_type=std_logic lab=vss}
 C {lab_wire.sym} -108.125 125.625 0 0 {name=p16 sig_type=std_logic lab=vss}
 C {lab_wire.sym} -108.125 -60.625 0 0 {name=p17 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} 141.875 -111.875 0 0 {name=p18 sig_type=std_logic lab=vdd}
 C {symbols/pfet_03v3.sym} 121.875 -51.875 0 0 {name=M4
 L=0.28u
-W="'0.72u'"
+W=0.72u
 nf=1
 m=16
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -61,7 +68,6 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_wire.sym} 141.875 1.875 0 0 {name=p19 sig_type=std_logic lab=vdd}
 C {devices/code_shown.sym} 373.75 -486.25 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -77,7 +83,7 @@ C {code_shown.sym} 354.6875 -350 0 0 {name=s1 only_toplevel=false value="
 .control 
 save all
 
-let fsig = 1e3
+let fsig = 1e8
 let tper = 1/fsig
 let tfr = 0.01*tper
 let ton = 0.5*tper - 2*tfr
@@ -85,20 +91,20 @@ let ton = 0.5*tper - 2*tfr
 let tstop = 2*tper
 let tstep = 0.001 * tper
 
-let Rvals = vector(6)
-let rise_times = vector(6)
+let Rvals = vector(10)
+let rise_times = vector(10)
 let i = 0
 
 let rval = 1
-let Rstep = 0.1
-let Rstop = 2
+let Rstep = 0.5
+let Rstop = 5.5
 
 while rval <= Rstop
 	alterparam kN = $&rval
 	reset
 	
 	alter @v3[DC] = 0
-	alter @v3[PULSE] = [ 0 3.3 0.1m 1n 1n $&ton $&tper 0 ]
+	alter @v3[PULSE] = [ 0 3.3 $&ton $&tfr $&tfr $&ton $&tper 0 ]
 	tran $&tstep $&tstop
 
 	meas tran t1 TRIG V(vout) VAL=0.3 RISE=1 TARG V(vout) VAL=0.4 RISE=1
@@ -129,3 +135,9 @@ C {lab_wire.sym} -187.5 64.375 0 0 {name=p7 sig_type=std_logic lab=D}
 C {lab_wire.sym} 43.125 -5.625 0 0 {name=p8 sig_type=std_logic lab=vout}
 C {vsource.sym} -361.875 -8.4375 0 0 {name=V2 value=0 savecurrent=false}
 C {gnd.sym} -361.875 37.5 0 0 {name=l2 lab=GND}
+C {vsource.sym} -474.375 180.3125 0 0 {name=V4 value=3.3 savecurrent=false}
+C {gnd.sym} -474.375 226.25 0 0 {name=l4 lab=GND}
+C {lab_wire.sym} -474.375 134.6875 0 0 {name=p5 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} -351.875 130.9375 0 0 {name=p6 sig_type=std_logic lab=vss}
+C {vsource.sym} -351.875 181.5625 0 0 {name=V5 value=0 savecurrent=false}
+C {gnd.sym} -351.875 227.5 0 0 {name=l5 lab=GND}
