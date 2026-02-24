@@ -1,0 +1,12 @@
+** sch_path: /foss/designs/engn1600-team1/CAD3/driver_cell.sch
+.subckt driver_cell CLK WE WECLKb VDD VSS WECLK
+*.PININFO CLK:I WE:I VSS:B VDD:B WECLKb:O WECLK:O
+M13 WECLK net1 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M14 WECLK net1 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M1 WECLKb WECLK VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M2 WECLKb WECLK VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M3 net1 CLK VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M4 net1 WE VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M5 net2 WE VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M6 net1 CLK net2 VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
+.ends
