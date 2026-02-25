@@ -3,13 +3,13 @@
 *.PININFO D:I WEMb:I WEM:I VSS:B VDD:B Q:O
 M3 net1 WEMb net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M7 net1 D VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M8 Q net2 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M8 Q net2 VDD VDD pfet_03v3 L=0.28u W=2.88u nf=1 m=1
 M9 net3 net2 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M10 VDD WEM net5 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M12 net5 net3 net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M19 net1 D VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M20 net1 WEM net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M21 Q net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M21 Q net2 VSS VSS nfet_03v3 L=0.28u W=1.44u nf=1 m=1
 M22 net3 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M23 net4 net3 net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M24 VSS WEMb net4 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
