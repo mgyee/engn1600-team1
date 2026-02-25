@@ -3100,8 +3100,8 @@ C {lab_wire.sym} 3890 2810 0 0 {name=p2522 sig_type=std_logic lab=QA15b}
 C {lab_wire.sym} 3890 2830 0 0 {name=p2523 sig_type=std_logic lab=QB15b}
 C {opin.sym} 4010 2810 0 0 {name=p2524 lab=QA15}
 C {opin.sym} 4010 2830 0 0 {name=p2525 lab=QB15}
-C {engn1600-team1/CAD3/wem_inverter.sym} -270 2620 0 0 {name=x49}
-C {code_shown.sym} -320 -730 0 0 {name=s1 only_toplevel=false value="
+C {engn1600-team1/CAD3/wem_inverter.sym} -270 2620 0 0 {name=x49 kWEMb="'kWEMb'"}
+C {code_shown.sym} -340 2840 0 0 {name=s1 only_toplevel=false value="
 .param kWECLKb=1
 .param kWECLK=1
 .param kWEMb=1

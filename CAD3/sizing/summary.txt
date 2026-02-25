@@ -15,3 +15,6 @@ kvals[idxf] = 3.959596
 
 kWEMb
 Does not converge
+
+kQb
+TBD
