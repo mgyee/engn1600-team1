@@ -125,8 +125,8 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 270 -50 0 0 {name=M8
 L=0.28u
-W=0.72u
-nf=4
+W=2.48u
+nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
@@ -209,8 +209,8 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 270 50 0 0 {name=M21
 L=0.28u
-W=0.36u
-nf=4
+W=1.24u
+nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
