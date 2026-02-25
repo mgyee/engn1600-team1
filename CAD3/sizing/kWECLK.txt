@@ -1,7 +1,7 @@
 "
 ** kWECLK SWEEP
 
-.param kWECLKb=5.27
+.param kWECLKb=3.73
 .param kWECLK=1
 .param kWEMb=1
 .param kQb=1
@@ -19,7 +19,7 @@ let tstop = 2 * T
 let tstep = 0.001 * T
 let NTRIALS = 100
 
-compose kVALS start=4.5 stop=6 lin=$&NTRIALS
+compose kVALS start=3 stop=4.25 lin=$&NTRIALS
 compose TRISE start=0 stop=0 lin=$&NTRIALS
 compose TFALL start=0 stop=0 lin=$&NTRIALS
 

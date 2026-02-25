@@ -17,9 +17,9 @@ let INF = 5 * T
 
 let tstop = 2 * T
 let tstep = 0.001 * T
-let NTRIALS = 20
+let NTRIALS = 100
 
-compose kVALS start=1 stop=5 lin=$&NTRIALS
+compose kVALS start=3 stop=4 lin=$&NTRIALS
 compose TRISE start=0 stop=0 lin=$&NTRIALS
 compose TFALL start=0 stop=0 lin=$&NTRIALS
 
