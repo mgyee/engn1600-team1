@@ -4,20 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 130 -490 150 -490 {lab=WEM}
-N 130 -490 130 -390 {lab=WEM}
-N 130 -390 150 -390 {lab=WEM}
-N 190 -460 190 -420 {lab=WEMb}
-N 190 -390 210 -390 {lab=VSS}
-N 210 -390 210 -340 {lab=VSS}
-N 190 -340 210 -340 {lab=VSS}
-N 190 -360 190 -340 {lab=VSS}
-N 190 -340 190 -320 {lab=VSS}
-N 190 -560 190 -520 {lab=VDD}
-N 190 -540 210 -540 {lab=VDD}
-N 210 -540 210 -490 {lab=VDD}
-N 190 -490 210 -490 {lab=VDD}
-N 190 -440 230 -440 {lab=WEMb}
 N 1130 -670 1130 -650 {lab=VDD}
 N 1130 -510 1130 -490 {lab=VSS}
 N 1160 -670 1180 -670 {lab=QAb}
@@ -112,37 +98,8 @@ N -70 -260 -30 -260 {lab=GND}
 N 30 -260 80 -260 {lab=RA}
 N -70 -200 -30 -200 {lab=GND}
 N 30 -200 80 -200 {lab=RB}
-C {symbols/pfet_03v3.sym} 170 -490 0 0 {name=M1
-L=0.28u
-W="'kWEMb*0.72u'"
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 170 -390 0 0 {name=M2
-L=0.28u
-W="'kWEMb*0.36u'"
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 190 -560 0 0 {name=p2434 sig_type=std_logic lab=VDD}
+N 170 -440 210 -440 {lab=WEM}
 C {lab_wire.sym} 190 -320 0 0 {name=p2435 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 230 -440 0 0 {name=lw_we83 lab=WEMb}
 C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0 kQb="'kQb'"}
 C {lab_wire.sym} 770 -270 0 0 {name=p2161 sig_type=std_logic lab=WECLK}
 C {lab_wire.sym} 770 -250 0 0 {name=p2162 sig_type=std_logic lab=WECLKb}
@@ -572,7 +529,6 @@ C {gnd.sym} -70 -700 1 0 {name=l3 lab=GND}
 C {devices/lab_wire.sym} 80 -640 0 0 {name=lw_we2 lab=CLK}
 C {vsource.sym} 0 -640 1 0 {name=VCLK value=0 savecurrent=false}
 C {gnd.sym} -70 -640 1 0 {name=l4 lab=GND}
-C {devices/lab_wire.sym} 130 -440 0 0 {name=lw_we3 lab=WEM}
 C {vsource.sym} 0 -440 1 0 {name=VWEM value=0 savecurrent=false}
 C {gnd.sym} -70 -440 1 0 {name=l5 lab=GND}
 C {vsource.sym} 0 -320 1 0 {name=VWE value=0 savecurrent=false}
@@ -588,3 +544,13 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
+C {engn1600-team1/CAD3/output_inverter.sym} 780 -50 0 0 {name=x33}
+C {lab_wire.sym} 840 -50 0 0 {name=p2165 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 840 80 0 0 {name=p2301 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 780 -10 0 0 {name=p2302 sig_type=std_logic lab=QAb}
+C {lab_wire.sym} 780 10 0 0 {name=p2564 sig_type=std_logic lab=QBb}
+C {lab_wire.sym} 250 -490 0 0 {name=p73 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 250 -380 0 0 {name=p74 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 200 -440 0 0 {name=lw_we82 lab=WEM}
+C {devices/lab_wire.sym} 300 -440 0 0 {name=lw_we5 lab=WEMb}
+C {engn1600-team1/CAD3/wem_inverter.sym} 210 -490 0 0 {name=x49 kWEMb="'kWEMb'"}
