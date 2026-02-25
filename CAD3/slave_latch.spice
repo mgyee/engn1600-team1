@@ -1,0 +1,24 @@
+** sch_path: /foss/designs/engn1600-team1/CAD3/slave_latch.sch
+.subckt slave_latch VDD VSS QAb WECLK WECLKb RA RB QBb D
+*.PININFO D:I RA:I RB:I WECLKb:I WECLK:I QAb:O QBb:O VDD:B VSS:B
+M1 net1 WECLKb net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M2 net1 D VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M3 net3 net2 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M4 net4 net2 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M5 VDD WECLK net8 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M6 net8 net4 net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M7 net1 D VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M8 net1 WECLK net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M9 net3 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M10 net4 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M11 net7 net4 net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M12 VSS WECLKb net7 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M13 net3 net5 QBb VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M14 net3 RB QBb VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M15 net5 RB VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M16 net5 RB VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M21 net3 net6 QAb VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M22 net3 RA QAb VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M23 net6 RA VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M24 net6 RA VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+.ends
