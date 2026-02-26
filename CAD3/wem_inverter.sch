@@ -22,7 +22,7 @@ N 200 -190 240 -190 {lab=WEMb}
 C {devices/ipin.sym} 80 -190 0 0 {name=pin_we17 lab=WEM}
 C {symbols/pfet_03v3.sym} 180 -240 0 0 {name=M1
 L=0.28u
-W="'kWEMb*0.72u'"
+W=2.52u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -36,7 +36,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 180 -140 0 0 {name=M2
 L=0.28u
-W="'kWEMb*0.36u'"
+W=1.26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -52,6 +52,3 @@ C {devices/opin.sym} 240 -190 0 0 {name=pin_we1 lab=WEMb
 }
 C {devices/iopin.sym} 200 -310 3 0 {name=pin_we2 lab=VDD}
 C {devices/iopin.sym} 200 -70 1 0 {name=pin_we3 lab=VSS}
-C {code_shown.sym} 0 -360 0 0 {name=s1 only_toplevel=false value="
-.param kWEMb=1
-"}

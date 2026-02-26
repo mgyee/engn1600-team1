@@ -1,6 +1,6 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 23/02/2026 04:25
+* Extracted by KLayout with GF180MCU LVS runset on : 26/02/2026 12:04
 
-.SUBCKT output_inverter VSS VDD QA QB QAb QBb
+.SUBCKT output_inverter VDD QA QB QBb QAb VSS
 M$1 VDD QAb QA VDD pfet_03v3 L=0.28U W=0.72U AS=0.4104P AD=0.2484P PS=2.58U
 + PD=1.41U
 M$2 QB QBb VDD VDD pfet_03v3 L=0.28U W=0.72U AS=0.2484P AD=0.4104P PS=1.41U

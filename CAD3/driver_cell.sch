@@ -75,7 +75,7 @@ C {lab_wire.sym} 100 -200 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 100 -220 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {symbols/pfet_03v3.sym} 620 -390 0 0 {name=M13
 L=0.28u
-W="'kWECLK*0.72u'"
+W=2.54u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -89,7 +89,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 620 -290 0 0 {name=M14
 L=0.28u
-W="'kWECLK*0.36u'"
+W=1.27u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -105,7 +105,7 @@ C {lab_wire.sym} 640 -460 0 0 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 640 -220 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 820 -390 0 0 {name=M1
 L=0.28u
-W="'kWECLKb*0.72u'"
+W=2.68u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -119,7 +119,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 820 -290 0 0 {name=M2
 L=0.28u
-W="'kWECLKb*0.36u'"
+W=1.34u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -129,8 +129,7 @@ ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
 nrd="'0.18u / W'" nrs="'0.18u / W'"
 sa=0 sb=0 sd=0
 model=nfet_03v3
-spiceprefix=X
-q}
+spiceprefix=X}
 C {lab_wire.sym} 840 -460 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 840 -220 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 310 -410 0 0 {name=M3
@@ -193,7 +192,3 @@ C {lab_wire.sym} 410 -500 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 410 -120 0 0 {name=p13 sig_type=std_logic lab=VSS}
 C {opin.sym} 940 -340 0 0 {name=p5 lab=WECLKb}
 C {opin.sym} 780 -180 0 0 {name=p6 lab=WECLK}
-C {code_shown.sym} 40 -130 0 0 {name=s1 only_toplevel=false value="
-.param kWECLKb=1
-.param kWECLK=1
-"}
