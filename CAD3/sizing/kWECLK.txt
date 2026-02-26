@@ -13,7 +13,6 @@
 let f = 1e8
 let T = 1/f
 let PW = T/2
-let INF = 5 * T
 
 let tstop = 2 * T
 let tstep = 0.001 * T

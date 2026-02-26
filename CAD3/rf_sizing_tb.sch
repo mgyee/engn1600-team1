@@ -455,7 +455,7 @@ C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 80 -700 0 0 {name=lw_we1 lab=D}
 C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
-** kN SWEEP
+** kQb SWEEP
 
 .param kWECLKb=1
 .param kWECLK=1
@@ -469,31 +469,43 @@ C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
 let f = 1e8
 let T = 1/f
 let PW = T/2
-let INF = 5 * T
 
-let tstop = 2 * T
+let DT = T * 2
+let QT = T/4
+let FQT = QT * 5
+
+let tstop = 3.5 * T
 let tstep = 0.001 * T
-let NTRIALS = 100
+let NTRIALS = 20
 
-compose kVALS start=3 stop=4 lin=$&NTRIALS
+compose kVALS start=1 stop=5 lin=$&NTRIALS
 compose TRISE start=0 stop=0 lin=$&NTRIALS
 compose TFALL start=0 stop=0 lin=$&NTRIALS
 
 let idx = 0
 while idx < NTRIALS
 	let kVAL = kVALS[idx]
-	alterparam kN = $&kVAL
+	alterparam kQb = $&kVAL
 	reset
 
 	** Enable WEM
 	alter @VWEM[DC] = 3.3
 
-	** Test pulses
-	alter @VD[PWL] = [ 0 0 $&PW 0 $&PW 3.3 $&T 3.3 $&T 0 ]
+    ** Enable WE
+	alter @VWE[DC] = 3.3
+
+	** Assert D = N
+	alter @VD[PULSE] = [ 3.3 0 $&T 0 0 $&T $&DT 0 ]
+
+    ** Assert CLK = WECLK
+    alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+
+    ** Time RA
+    alter @VRA[PULSE] = [ 3.3 0 $&FQT 0 0 $&PW $&T 0 ]
 
 	tran $&tstep $&tstop
-	meas tran TPLH TRIG V(D) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 RISE=1
-	meas tran TPHL TRIG V(D) VAL=1.65 FALL=1 TARG V(N) VAL=1.65 FALL=1
+	meas tran TPLH TRIG V(RA) VAL=1.65 RISE=1 TARG V(QA) VAL=1.65 RISE=1 TD=$&T
+    meas tran TPHL TRIG V(RA) VAL=1.65 RISE=2 TARG V(QA) VAL=1.65 FALL=1 TD=$&T
 	let TRISE[idx] = $&TPLH
 	let TFALL[idx] = $&TPHL
 	let idx = idx + 1
@@ -546,7 +558,6 @@ value="
 "}
 C {engn1600-team1/CAD3/output_inverter.sym} 780 -50 0 0 {name=x33}
 C {lab_wire.sym} 840 -50 0 0 {name=p2165 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 840 80 0 0 {name=p2301 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 780 -10 0 0 {name=p2302 sig_type=std_logic lab=QAb}
 C {lab_wire.sym} 780 10 0 0 {name=p2564 sig_type=std_logic lab=QBb}
 C {lab_wire.sym} 250 -490 0 0 {name=p73 sig_type=std_logic lab=VDD}
@@ -554,3 +565,6 @@ C {lab_wire.sym} 250 -380 0 0 {name=p74 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 200 -440 0 0 {name=lw_we82 lab=WEM}
 C {devices/lab_wire.sym} 300 -440 0 0 {name=lw_we5 lab=WEMb}
 C {engn1600-team1/CAD3/wem_inverter.sym} 210 -490 0 0 {name=x49 kWEMb="'kWEMb'"}
+C {lab_wire.sym} 900 10 0 0 {name=p75 sig_type=std_logic lab=QB}
+C {lab_wire.sym} 900 -10 0 0 {name=p76 sig_type=std_logic lab=QA}
+C {lab_wire.sym} 840 80 0 0 {name=p77 sig_type=std_logic lab=VSS}
