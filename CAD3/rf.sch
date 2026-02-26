@@ -2990,112 +2990,112 @@ C {devices/ipin.sym} 3940 2970 0 0 {name=pin_we33 lab=D15}
 C {devices/lab_wire.sym} 3960 2970 0 0 {name=lw_we98 lab=D15}
 C {engn1600-team1/CAD3/output_inverter.sym} -10 2770 0 0 {name=x33}
 C {lab_wire.sym} 50 2770 0 0 {name=p2165 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 50 2900 0 0 {name=p2301 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 50 2900 0 0 {name=p2301 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -10 2810 0 0 {name=p2302 sig_type=std_logic lab=QA0b}
 C {lab_wire.sym} -10 2830 0 0 {name=p2564 sig_type=std_logic lab=QB0b}
 C {opin.sym} 110 2810 0 0 {name=p2565 lab=QA0}
 C {opin.sym} 110 2830 0 0 {name=p2566 lab=QB0}
 C {engn1600-team1/CAD3/output_inverter.sym} 250 2770 0 0 {name=x34}
 C {lab_wire.sym} 310 2770 0 0 {name=p2436 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 310 2900 0 0 {name=p2437 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 310 2900 0 0 {name=p2437 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 250 2810 0 0 {name=p2438 sig_type=std_logic lab=QA1b}
 C {lab_wire.sym} 250 2830 0 0 {name=p2439 sig_type=std_logic lab=QB1b}
 C {opin.sym} 370 2810 0 0 {name=p2440 lab=QA1}
 C {opin.sym} 370 2830 0 0 {name=p2441 lab=QB1}
 C {engn1600-team1/CAD3/output_inverter.sym} 510 2770 0 0 {name=x35}
 C {lab_wire.sym} 570 2770 0 0 {name=p2442 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 570 2900 0 0 {name=p2443 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 570 2900 0 0 {name=p2443 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 510 2810 0 0 {name=p2444 sig_type=std_logic lab=QA2b}
 C {lab_wire.sym} 510 2830 0 0 {name=p2445 sig_type=std_logic lab=QB2b}
 C {opin.sym} 630 2810 0 0 {name=p2446 lab=QA2}
 C {opin.sym} 630 2830 0 0 {name=p2447 lab=QB2}
 C {engn1600-team1/CAD3/output_inverter.sym} 770 2770 0 0 {name=x36}
 C {lab_wire.sym} 830 2770 0 0 {name=p2448 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 830 2900 0 0 {name=p2449 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 830 2900 0 0 {name=p2449 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 770 2810 0 0 {name=p2450 sig_type=std_logic lab=QA3b}
 C {lab_wire.sym} 770 2830 0 0 {name=p2451 sig_type=std_logic lab=QB3b}
 C {opin.sym} 890 2810 0 0 {name=p2452 lab=QA3}
 C {opin.sym} 890 2830 0 0 {name=p2453 lab=QB3}
 C {engn1600-team1/CAD3/output_inverter.sym} 1030 2770 0 0 {name=x37}
 C {lab_wire.sym} 1090 2770 0 0 {name=p2454 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1090 2900 0 0 {name=p2455 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1090 2900 0 0 {name=p2455 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1030 2810 0 0 {name=p2456 sig_type=std_logic lab=QA4b}
 C {lab_wire.sym} 1030 2830 0 0 {name=p2457 sig_type=std_logic lab=QB4b}
 C {opin.sym} 1150 2810 0 0 {name=p2458 lab=QA4}
 C {opin.sym} 1150 2830 0 0 {name=p2459 lab=QB4}
 C {engn1600-team1/CAD3/output_inverter.sym} 1290 2770 0 0 {name=x38}
 C {lab_wire.sym} 1350 2770 0 0 {name=p2460 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1350 2900 0 0 {name=p2461 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1350 2900 0 0 {name=p2461 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1290 2810 0 0 {name=p2462 sig_type=std_logic lab=QA5b}
 C {lab_wire.sym} 1290 2830 0 0 {name=p2463 sig_type=std_logic lab=QB5b}
 C {opin.sym} 1410 2810 0 0 {name=p2464 lab=QA5}
 C {opin.sym} 1410 2830 0 0 {name=p2465 lab=QB5}
 C {engn1600-team1/CAD3/output_inverter.sym} 1550 2770 0 0 {name=x39}
 C {lab_wire.sym} 1610 2770 0 0 {name=p2466 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1610 2900 0 0 {name=p2467 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1610 2900 0 0 {name=p2467 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1550 2810 0 0 {name=p2468 sig_type=std_logic lab=QA6b}
 C {lab_wire.sym} 1550 2830 0 0 {name=p2469 sig_type=std_logic lab=QB6b}
 C {opin.sym} 1670 2810 0 0 {name=p2470 lab=QA6}
 C {opin.sym} 1670 2830 0 0 {name=p2471 lab=QB6}
 C {engn1600-team1/CAD3/output_inverter.sym} 1810 2770 0 0 {name=x40}
 C {lab_wire.sym} 1870 2770 0 0 {name=p2472 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1870 2900 0 0 {name=p2473 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1870 2900 0 0 {name=p2473 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1810 2810 0 0 {name=p2474 sig_type=std_logic lab=QA7b}
 C {lab_wire.sym} 1810 2830 0 0 {name=p2475 sig_type=std_logic lab=QB7b}
 C {opin.sym} 1930 2810 0 0 {name=p2476 lab=QA7}
 C {opin.sym} 1930 2830 0 0 {name=p2477 lab=QB7}
 C {engn1600-team1/CAD3/output_inverter.sym} 2070 2770 0 0 {name=x41}
 C {lab_wire.sym} 2130 2770 0 0 {name=p2478 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2130 2900 0 0 {name=p2479 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2130 2900 0 0 {name=p2479 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2070 2810 0 0 {name=p2480 sig_type=std_logic lab=QA8b}
 C {lab_wire.sym} 2070 2830 0 0 {name=p2481 sig_type=std_logic lab=QB8b}
 C {opin.sym} 2190 2810 0 0 {name=p2482 lab=QA8}
 C {opin.sym} 2190 2830 0 0 {name=p2483 lab=QB8}
 C {engn1600-team1/CAD3/output_inverter.sym} 2330 2770 0 0 {name=x42}
 C {lab_wire.sym} 2390 2770 0 0 {name=p2484 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2390 2900 0 0 {name=p2485 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2390 2900 0 0 {name=p2485 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2330 2810 0 0 {name=p2486 sig_type=std_logic lab=QA9b}
 C {lab_wire.sym} 2330 2830 0 0 {name=p2487 sig_type=std_logic lab=QB9b}
 C {opin.sym} 2450 2810 0 0 {name=p2488 lab=QA9}
 C {opin.sym} 2450 2830 0 0 {name=p2489 lab=QB9}
 C {engn1600-team1/CAD3/output_inverter.sym} 2590 2770 0 0 {name=x43}
 C {lab_wire.sym} 2650 2770 0 0 {name=p2490 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2650 2900 0 0 {name=p2491 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2650 2900 0 0 {name=p2491 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2590 2810 0 0 {name=p2492 sig_type=std_logic lab=QA10b}
 C {lab_wire.sym} 2590 2830 0 0 {name=p2493 sig_type=std_logic lab=QB10b}
 C {opin.sym} 2710 2810 0 0 {name=p2494 lab=QA10}
 C {opin.sym} 2710 2830 0 0 {name=p2495 lab=QB10}
 C {engn1600-team1/CAD3/output_inverter.sym} 2850 2770 0 0 {name=x44}
 C {lab_wire.sym} 2910 2770 0 0 {name=p2496 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2910 2900 0 0 {name=p2497 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2910 2900 0 0 {name=p2497 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2850 2810 0 0 {name=p2498 sig_type=std_logic lab=QA11b}
 C {lab_wire.sym} 2850 2830 0 0 {name=p2499 sig_type=std_logic lab=QB11b}
 C {opin.sym} 2970 2810 0 0 {name=p2500 lab=QA11}
 C {opin.sym} 2970 2830 0 0 {name=p2501 lab=QB11}
 C {engn1600-team1/CAD3/output_inverter.sym} 3110 2770 0 0 {name=x45}
 C {lab_wire.sym} 3170 2770 0 0 {name=p2502 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 3170 2900 0 0 {name=p2503 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 3170 2900 0 0 {name=p2503 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 3110 2810 0 0 {name=p2504 sig_type=std_logic lab=QA12b}
 C {lab_wire.sym} 3110 2830 0 0 {name=p2505 sig_type=std_logic lab=QB12b}
 C {opin.sym} 3230 2810 0 0 {name=p2506 lab=QA12}
 C {opin.sym} 3230 2830 0 0 {name=p2507 lab=QB12}
 C {engn1600-team1/CAD3/output_inverter.sym} 3370 2770 0 0 {name=x46}
 C {lab_wire.sym} 3430 2770 0 0 {name=p2508 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 3430 2900 0 0 {name=p2509 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 3430 2900 0 0 {name=p2509 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 3370 2810 0 0 {name=p2510 sig_type=std_logic lab=QA13b}
 C {lab_wire.sym} 3370 2830 0 0 {name=p2511 sig_type=std_logic lab=QB13b}
 C {opin.sym} 3490 2810 0 0 {name=p2512 lab=QA13}
 C {opin.sym} 3490 2830 0 0 {name=p2513 lab=QB13}
 C {engn1600-team1/CAD3/output_inverter.sym} 3630 2770 0 0 {name=x47}
 C {lab_wire.sym} 3690 2770 0 0 {name=p2514 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 3690 2900 0 0 {name=p2515 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 3690 2900 0 0 {name=p2515 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 3630 2810 0 0 {name=p2516 sig_type=std_logic lab=QA14b}
 C {lab_wire.sym} 3630 2830 0 0 {name=p2517 sig_type=std_logic lab=QB14b}
 C {opin.sym} 3750 2810 0 0 {name=p2518 lab=QA14}
 C {opin.sym} 3750 2830 0 0 {name=p2519 lab=QB14}
 C {engn1600-team1/CAD3/output_inverter.sym} 3890 2770 0 0 {name=x48}
 C {lab_wire.sym} 3950 2770 0 0 {name=p2520 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 3950 2900 0 0 {name=p2521 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 3950 2900 0 0 {name=p2521 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 3890 2810 0 0 {name=p2522 sig_type=std_logic lab=QA15b}
 C {lab_wire.sym} 3890 2830 0 0 {name=p2523 sig_type=std_logic lab=QB15b}
 C {opin.sym} 4010 2810 0 0 {name=p2524 lab=QA15}
