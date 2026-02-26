@@ -292,3 +292,6 @@ C {lab_wire.sym} 0 -380 0 0 {name=p26 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 0 -340 0 0 {name=p27 sig_type=std_logic lab=WEM}
 C {lab_wire.sym} 0 -300 0 0 {name=p28 sig_type=std_logic lab=WEMb}
 C {opin.sym} 350 0 0 0 {name=p44 lab=Q}
+C {code_shown.sym} -120 -690 0 0 {name=s1 only_toplevel=false value="
+.param kN=3.444444444
+"}

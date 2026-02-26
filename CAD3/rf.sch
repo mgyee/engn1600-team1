@@ -21,7 +21,7 @@ N 3160 2970 3180 2970 {lab=D12}
 N 3420 2970 3440 2970 {lab=D13}
 N 3680 2970 3700 2970 {lab=D14}
 N 3940 2970 3960 2970 {lab=D15}
-N -310 2670 -270 2670 {lab=WEM}
+N -310 2670 -280 2670 {lab=WEM}
 C {devices/ipin.sym} -200 -50 0 0 {name=pin_ra0 lab=RA0}
 C {devices/ipin.sym} -200 -30 0 0 {name=pin_rb0 lab=RB0}
 C {devices/ipin.sym} -200 -70 0 0 {name=pin_we0 lab=WE0}
@@ -2903,11 +2903,10 @@ C {devices/lab_wire.sym} -340 -70 0 0 {name=lw_we79 lab=WE0CLK}
 C {devices/lab_wire.sym} -340 -50 0 0 {name=lw_we80 lab=WE0CLKb}
 C {devices/ipin.sym} -470 2620 0 0 {name=pin_we16 lab=CLK}
 C {devices/ipin.sym} -310 2670 0 0 {name=pin_we17 lab=WEM}
-C {lab_wire.sym} -230 2620 0 0 {name=p2434 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} -230 2730 0 0 {name=p2435 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} -220 2600 0 0 {name=p2434 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} -220 2740 0 0 {name=p2435 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} -450 2620 0 0 {name=lw_we81 lab=CLK}
-C {devices/lab_wire.sym} -280 2670 0 0 {name=lw_we82 lab=WEM}
-C {devices/lab_wire.sym} -180 2670 0 0 {name=lw_we83 lab=WEMb}
+C {devices/lab_wire.sym} -160 2670 0 0 {name=lw_we83 lab=WEMb}
 C {devices/ipin.sym} 40 2970 0 0 {name=pin_we18 lab=D0}
 C {devices/lab_wire.sym} 60 2970 0 0 {name=lw_we16 lab=D0}
 C {devices/ipin.sym} 300 2970 0 0 {name=pin_we19 lab=D1}
@@ -3052,8 +3051,11 @@ C {lab_wire.sym} 3890 2810 0 0 {name=p2522 sig_type=std_logic lab=QA15b}
 C {lab_wire.sym} 3890 2830 0 0 {name=p2523 sig_type=std_logic lab=QB15b}
 C {opin.sym} 4010 2810 0 0 {name=p2524 lab=QA15}
 C {opin.sym} 4010 2830 0 0 {name=p2525 lab=QB15}
-C {engn1600-team1/CAD3/wem_inverter.sym} -270 2620 0 0 {name=x49}
 C {iopin.sym} -360 2800 0 0 {name=p2526 lab=VDD}
 C {iopin.sym} -360 2860 0 0 {name=p2527 lab=VSS}
 C {lab_wire.sym} -360 2860 0 0 {name=p2528 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -360 2800 0 0 {name=p2529 sig_type=std_logic lab=VDD}
+C {engn1600-team1/CAD3/wem_inverter.sym} -310 2810 0 0 {name=x49 kWEMb=1}
+C {lab_wire.sym} -280 2670 0 0 {name=p2530 sig_type=std_logic lab=WEM}
+C {lab_wire.sym} 2650 2600 0 0 {name=p2531 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2650 2740 0 0 {name=p2532 sig_type=std_logic lab=VSS}

@@ -274,7 +274,7 @@ x7 VDD VSS N6 WEM WEMb D6 master_latch kN=1
 x8 VDD VSS N7 WEM WEMb D7 master_latch kN=1
 x9 VDD VSS N8 WEM WEMb D8 master_latch kN=1
 x10 VDD VSS N9 WEM WEMb D9 master_latch kN=1
-x11 net1 net2 N10 WEM WEMb D10 master_latch kN=1
+x11 VDD VSS N10 WEM WEMb D10 master_latch kN=1
 x12 VDD VSS N11 WEM WEMb D11 master_latch kN=1
 x13 VDD VSS N12 WEM WEMb D12 master_latch kN=1
 x14 VDD VSS N13 WEM WEMb D13 master_latch kN=1
@@ -312,7 +312,7 @@ x45 VDD VSS QA12 QA12b QB12b QB12 output_inverter
 x46 VDD VSS QA13 QA13b QB13b QB13 output_inverter
 x47 VDD VSS QA14 QA14b QB14b QB14 output_inverter
 x48 VDD VSS QA15 QA15b QB15b QB15 output_inverter
-x49 VDD WEM WEMb VSS wem_inverter kWEMb=1
+x49 VDD WEM WEMb VSS wem_inverter
 .ends
 
 * expanding   symbol:  engn1600-team1/CAD3/slave_latch.sym # of pins=9
@@ -367,6 +367,13 @@ M21 Q net2 VSS VSS nfet_03v3 L=0.28u W=1.24u nf=1 m=1
 M22 net3 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M23 net4 net3 net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M24 VSS WEMb net4 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+**** begin user architecture code
+
+
+.param kN=3.444444444
+
+
+**** end user architecture code
 .ends
 
 
@@ -401,7 +408,7 @@ M36 QA QAb VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 * expanding   symbol:  engn1600-team1/CAD3/wem_inverter.sym # of pins=4
 ** sym_path: /foss/designs/engn1600-team1/CAD3/wem_inverter.sym
 ** sch_path: /foss/designs/engn1600-team1/CAD3/wem_inverter.sch
-.subckt wem_inverter VDD WEM WEMb VSS  kWEMb=1
+.subckt wem_inverter VDD WEM WEMb VSS
 *.PININFO WEM:I WEMb:O VDD:B VSS:B
 M1 WEMb WEM VDD VDD pfet_03v3 L=0.28u W=2.52u nf=1 m=1
 M2 WEMb WEM VSS VSS nfet_03v3 L=0.28u W=1.26u nf=1 m=1
