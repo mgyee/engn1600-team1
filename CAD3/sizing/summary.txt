@@ -17,4 +17,6 @@ kWEMb
 Does not converge
 
 kQb
-TBD
+kvals[idxr] = 1.000000
+kvals[idxf] = 1.000000
+=> 1
