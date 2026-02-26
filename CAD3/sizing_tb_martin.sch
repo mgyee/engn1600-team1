@@ -35,7 +35,7 @@ N -474.375 210.3125 -474.375 226.25 {lab=GND}
 N -474.375 120.9375 -474.375 150.3125 {lab=vdd}
 N -351.875 211.5625 -351.875 227.5 {lab=GND}
 N -351.875 122.1875 -351.875 151.5625 {lab=vss}
-C {engn1600-team1/CAD3/master_latch.sym} -158.125 74.375 0 0 {name=x4 kN="'kN'"}
+C {CAD3/master_latch.sym} -158.125 74.375 0 0 {name=x4 kN="'kN'"}
 C {lab_wire.sym} 141.875 115.625 0 0 {name=p11 sig_type=std_logic lab=vss}
 C {lab_wire.sym} -108.125 125.625 0 0 {name=p16 sig_type=std_logic lab=vss}
 C {lab_wire.sym} -108.125 -60.625 0 0 {name=p17 sig_type=std_logic lab=vdd}
