@@ -125,7 +125,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 270 -50 0 0 {name=M8
 L=0.28u
-W=2.48u
+W="'kN*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -209,7 +209,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 270 50 0 0 {name=M21
 L=0.28u
-W=1.24u
+W="'kN*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -292,3 +292,6 @@ C {lab_wire.sym} 0 -380 0 0 {name=p26 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 0 -340 0 0 {name=p27 sig_type=std_logic lab=WEM}
 C {lab_wire.sym} 0 -300 0 0 {name=p28 sig_type=std_logic lab=WEMb}
 C {opin.sym} 350 0 0 0 {name=p44 lab=Q}
+C {code_shown.sym} -120 -690 0 0 {name=s1 only_toplevel=false value="
+.param kN=1
+"}

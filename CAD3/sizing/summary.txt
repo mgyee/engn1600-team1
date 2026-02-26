@@ -1,0 +1,22 @@
+kN
+kvals[idxr] = 3.494949
+kvals[idxf] = 3.404040
+=> 3.45
+
+kWECLKb
+kvals[idxr] = 3.722222
+kvals[idxf] = 3.737374
+=> 3.73
+
+kWECLK
+kvals[idxr] = 3.101010
+kvals[idxf] = 3.959596
+=> 3.53
+
+kWEMb
+Does not converge
+
+kQb
+kvals[idxr] = 1.000000
+kvals[idxf] = 1.000000
+=> 1

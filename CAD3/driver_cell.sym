@@ -1,9 +1,8 @@
 v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {type=subcircuit
-format="@name @pinlist @symname"
-template="name=x1"
-}
+format="@name @pinlist @symname kWECLK=@kWECLK kWECLKb=@kWECLKb"
+template="name=x1 kWECLK=1 kWECLKb=1"}
 V {}
 S {}
 E {}
@@ -28,3 +27,5 @@ T {WECLKb} 95 -24 0 1 0.2 0.2 {}
 T {VDD} 46 -55 3 1 0.2 0.2 {}
 T {VSS} 54 -5 1 1 0.2 0.2 {}
 T {WECLK} 95 -44 0 1 0.2 0.2 {}
+T {kWECLK=@kWECLK} 110 -60 0 0 0.2 0.2 { layer=13}
+T {kWECLKb=@kWECLKb} 110 -10 0 0 0.2 0.2 { layer=13}
