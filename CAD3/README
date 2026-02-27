@@ -1,1 +1,2 @@
-Martin was here
+### Note on SPICE netlist generation
+We parameterized our schematic to help with transistor sizing. Unfortunately, LVS does not properly decode parameter expressions in the SPICE netlist. We use `spice_params.py` to overwrite bottom-level transistors in `rf.spice` with corresponding parameter values.

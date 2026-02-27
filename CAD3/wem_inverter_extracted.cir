@@ -1,8 +1,0 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 25/02/2026 08:21
-
-.SUBCKT wem_inverter VSS VDD WEMb
-M$1 WEMb \$5 VDD VDD pfet_03v3 L=0.28U W=2.52U AS=0.882P AD=0.882P PS=5.18U
-+ PD=5.18U
-M$3 WEMb \$5 VSS VSS nfet_03v3 L=0.28U W=1.26U AS=0.441P AD=0.441P PS=3.29U
-+ PD=3.29U
-.ENDS wem_inverter

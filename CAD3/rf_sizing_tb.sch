@@ -98,8 +98,6 @@ N -70 -260 -30 -260 {lab=GND}
 N 30 -260 80 -260 {lab=RA}
 N -70 -200 -30 -200 {lab=GND}
 N 30 -200 80 -200 {lab=RB}
-N 170 -440 210 -440 {lab=WEM}
-C {lab_wire.sym} 190 -320 0 0 {name=p2435 sig_type=std_logic lab=VSS}
 C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0 kQb="'kQb'"}
 C {lab_wire.sym} 770 -270 0 0 {name=p2161 sig_type=std_logic lab=WECLK}
 C {lab_wire.sym} 770 -250 0 0 {name=p2162 sig_type=std_logic lab=WECLKb}
@@ -560,11 +558,11 @@ C {engn1600-team1/CAD3/output_inverter.sym} 780 -50 0 0 {name=x33}
 C {lab_wire.sym} 840 -50 0 0 {name=p2165 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 780 -10 0 0 {name=p2302 sig_type=std_logic lab=QAb}
 C {lab_wire.sym} 780 10 0 0 {name=p2564 sig_type=std_logic lab=QBb}
-C {lab_wire.sym} 250 -490 0 0 {name=p73 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 250 -380 0 0 {name=p74 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 200 -440 0 0 {name=lw_we82 lab=WEM}
-C {devices/lab_wire.sym} 300 -440 0 0 {name=lw_we5 lab=WEMb}
-C {engn1600-team1/CAD3/wem_inverter.sym} 210 -490 0 0 {name=x49 kWEMb="'kWEMb'"}
+C {lab_wire.sym} 240 -730 0 0 {name=p73 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 240 -590 0 0 {name=p74 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 180 -660 0 0 {name=lw_we82 lab=WEM}
+C {devices/lab_wire.sym} 300 -660 0 0 {name=lw_we5 lab=WEMb}
+C {engn1600-team1/CAD3/wem_inverter.sym} 150 -520 0 0 {name=x49 kWEMb="'kWEMb'"}
 C {lab_wire.sym} 900 10 0 0 {name=p75 sig_type=std_logic lab=QB}
 C {lab_wire.sym} 900 -10 0 0 {name=p76 sig_type=std_logic lab=QA}
 C {lab_wire.sym} 840 80 0 0 {name=p77 sig_type=std_logic lab=VSS}

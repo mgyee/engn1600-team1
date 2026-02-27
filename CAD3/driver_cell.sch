@@ -129,8 +129,7 @@ ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
 nrd="'0.18u / W'" nrs="'0.18u / W'"
 sa=0 sb=0 sd=0
 model=nfet_03v3
-spiceprefix=X
-q}
+spiceprefix=X}
 C {lab_wire.sym} 840 -460 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 840 -220 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 310 -410 0 0 {name=M3
