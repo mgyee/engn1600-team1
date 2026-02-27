@@ -296,7 +296,7 @@ x29 CLK WE3 WE3CLKb VDD VSS WE3CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
 x30 CLK WE2 WE2CLKb VDD VSS WE2CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
 x31 CLK WE1 WE1CLKb VDD VSS WE1CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
 x32 CLK WE0 WE0CLKb VDD VSS WE0CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x33 VDD VDD QA0 QA0b QB0b QB0 output_inverter
+x33 VDD VSS QA0 QA0b QB0b QB0 output_inverter
 x34 VDD VSS QA1 QA1b QB1b QB1 output_inverter
 x35 VDD VSS QA2 QA2b QB2b QB2 output_inverter
 x36 VDD VSS QA3 QA3b QB3b QB3 output_inverter
@@ -312,15 +312,15 @@ x45 VDD VSS QA12 QA12b QB12b QB12 output_inverter
 x46 VDD VSS QA13 QA13b QB13b QB13 output_inverter
 x47 VDD VSS QA14 QA14b QB14b QB14 output_inverter
 x48 VDD VSS QA15 QA15b QB15b QB15 output_inverter
-x49 VDD WEM WEMb VSS wem_inverter
+x49 VDD WEM WEMb VSS wem_inverter kWEMb='kWEMb'
 **** begin user architecture code
 
 
-.param kWECLKb=3.72222
-.param kWECLK=3.52777
-.param kWEMb=3.50000
-.param kQb=1
-.param kN=3.44444
+.param kWECLKb=1.34/0.36
+.param kWECLK=1.27/0.36
+.param kWEMb=1.26/0.36
+.param kQb=0.36/0.36
+.param kN=1.24/0.36
 
 
 **** end user architecture code
@@ -343,12 +343,12 @@ M9 net3 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M10 net4 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M11 net7 net4 net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M12 VSS WECLKb net7 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M13 net3 net5 QBb VDD pfet_03v3 L=0.28u W='kQb*0.36u' nf=1 m=1
-M14 net3 RB QBb VSS nfet_03v3 L=0.28u W='kQb*0.36u' nf=1 m=1
+M13 net3 net5 QBb VDD pfet_03v3 L=0.28u W='0.36/0.36*0.36u' nf=1 m=1
+M14 net3 RB QBb VSS nfet_03v3 L=0.28u W='0.36/0.36*0.36u' nf=1 m=1
 M15 net5 RB VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M16 net5 RB VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M21 net3 net6 QAb VDD pfet_03v3 L=0.28u W='kQb*0.36u' nf=1 m=1
-M22 net3 RA QAb VSS nfet_03v3 L=0.28u W='kQb*0.36u' nf=1 m=1
+M21 net3 net6 QAb VDD pfet_03v3 L=0.28u W='0.36/0.36*0.36u' nf=1 m=1
+M22 net3 RA QAb VSS nfet_03v3 L=0.28u W='0.36/0.36*0.36u' nf=1 m=1
 M23 net6 RA VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M24 net6 RA VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 **** begin user architecture code
@@ -368,13 +368,13 @@ M24 net6 RA VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 *.PININFO D:I WEMb:I WEM:I VSS:B VDD:B Q:O
 M3 net1 WEMb net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M7 net1 D VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M8 Q net2 VDD VDD pfet_03v3 L=0.28u W='kN*0.72u' nf=1 m=1
+M8 Q net2 VDD VDD pfet_03v3 L=0.28u W='1.24/0.36*0.72u' nf=1 m=1
 M9 net3 net2 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M10 VDD WEM net5 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M12 net5 net3 net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M19 net1 D VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M20 net1 WEM net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M21 Q net2 VSS VSS nfet_03v3 L=0.28u W='kN*0.36u' nf=1 m=1
+M21 Q net2 VSS VSS nfet_03v3 L=0.28u W='1.24/0.36*0.36u' nf=1 m=1
 M22 net3 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M23 net4 net3 net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M24 VSS WEMb net4 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
@@ -393,10 +393,10 @@ M24 VSS WEMb net4 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 ** sch_path: /foss/designs/engn1600-team1/CAD3/driver_cell.sch
 .subckt driver_cell CLK WE WECLKb VDD VSS WECLK  kWECLK=1 kWECLKb=1
 *.PININFO CLK:I WE:I VSS:B VDD:B WECLKb:O WECLK:O
-M13 WECLK net1 VDD VDD pfet_03v3 L=0.28u W='kWECLK*0.72u' nf=1 m=1
-M14 WECLK net1 VSS VSS nfet_03v3 L=0.28u W='kWECLK*0.36u' nf=1 m=1
-M1 WECLKb WECLK VDD VDD pfet_03v3 L=0.28u W='kWECLKb*0.72u' nf=1 m=1
-M2 WECLKb WECLK VSS VSS nfet_03v3 L=0.28u W='kWECLKb*0.36u' nf=1 m=1
+M13 WECLK net1 VDD VDD pfet_03v3 L=0.28u W='1.27/0.36*0.72u' nf=1 m=1
+M14 WECLK net1 VSS VSS nfet_03v3 L=0.28u W='1.27/0.36*0.36u' nf=1 m=1
+M1 WECLKb WECLK VDD VDD pfet_03v3 L=0.28u W='1.34/0.36*0.72u' nf=1 m=1
+M2 WECLKb WECLK VSS VSS nfet_03v3 L=0.28u W='1.34/0.36*0.36u' nf=1 m=1
 M3 net1 CLK VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M4 net1 WE VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M5 net2 WE VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
@@ -427,10 +427,10 @@ M36 QA QAb VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 * expanding   symbol:  engn1600-team1/CAD3/wem_inverter.sym # of pins=4
 ** sym_path: /foss/designs/engn1600-team1/CAD3/wem_inverter.sym
 ** sch_path: /foss/designs/engn1600-team1/CAD3/wem_inverter.sch
-.subckt wem_inverter VDD WEM WEMb VSS
+.subckt wem_inverter VDD WEM WEMb VSS  kWEMb=1
 *.PININFO WEM:I WEMb:O VDD:B VSS:B
-M1 WEMb WEM VDD VDD pfet_03v3 L=0.28u W='kWEMb*0.72u' nf=1 m=1
-M2 WEMb WEM VSS VSS nfet_03v3 L=0.28u W='kWEMb*0.36u' nf=1 m=1
+M1 WEMb WEM VDD VDD pfet_03v3 L=0.28u W='1.26/0.36*0.72u' nf=1 m=1
+M2 WEMb WEM VSS VSS nfet_03v3 L=0.28u W='1.26/0.36*0.36u' nf=1 m=1
 **** begin user architecture code
 
 
