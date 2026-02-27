@@ -2992,7 +2992,7 @@ C {devices/ipin.sym} 3940 2970 0 0 {name=pin_we33 lab=D15}
 C {devices/lab_wire.sym} 3960 2970 0 0 {name=lw_we98 lab=D15}
 C {engn1600-team1/CAD3/output_inverter.sym} -10 2770 0 0 {name=x33}
 C {lab_wire.sym} 50 2770 0 0 {name=p2165 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 50 2900 0 0 {name=p2301 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 50 2900 0 0 {name=p2301 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -10 2810 0 0 {name=p2302 sig_type=std_logic lab=QA0b}
 C {lab_wire.sym} -10 2830 0 0 {name=p2564 sig_type=std_logic lab=QB0b}
 C {opin.sym} 110 2810 0 0 {name=p2565 lab=QA0}
@@ -3110,9 +3110,9 @@ C {iopin.sym} -470 2690 2 0 {name=p2529 lab=VSS}
 C {lab_wire.sym} -450 2660 0 0 {name=p2530 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} -450 2690 0 0 {name=p2531 sig_type=std_logic lab=VSS}
 C {code_shown.sym} -340 2840 0 0 {name=s1 only_toplevel=false value="
-.param kWECLKb=3.72222
-.param kWECLK=3.52777
-.param kWEMb=3.50000
-.param kQb=1
-.param kN=3.44444
+.param kWECLKb=1.34/0.36
+.param kWECLK=1.27/0.36
+.param kWEMb=1.26/0.36
+.param kQb=0.36/0.36
+.param kN=1.24/0.36
 "}
