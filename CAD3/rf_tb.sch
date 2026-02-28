@@ -270,7 +270,7 @@ C {devices/vsource.sym} -570 -750 1 0 {name=VD0 value=0}
 C {devices/lab_pin.sym} -540 -750 2 0 {name=pD0 lab=D0}
 C {devices/gnd.sym} -600 -750 1 0 {name=gD0}
 C {code_shown.sym} 320 130 0 0 {name=s1 only_toplevel=false value="
-** SETUP TIME RISING
+** HOLD TIME RISING
 
 .control
 
@@ -282,34 +282,34 @@ let PW = T/2
 let DT = T * 2
 let QT = T/4
 let ET = T/8
-let SM = T/80
+let SM = -T/68
 
 let tstop = 2.5 * T
 let tstep = 0.001 * T
 let NTRIALS = 64
 
-compose TDCLK start=$&ET stop=$&SM lin=$&NTRIALS
+compose TCLKD start=$&ET stop=$&SM lin=$&NTRIALS
 compose TCLKQ start=0 stop=0 lin=$&NTRIALS
 
 let idx = 0
 while idx < NTRIALS
     ** Exchange times
-    let TDX0 = DT - TDCLK[idx + 0]
-    let TDX1 = DT - TDCLK[idx + 1]
-    let TDX2 = DT - TDCLK[idx + 2]
-    let TDX3 = DT - TDCLK[idx + 3]
-    let TDX4 = DT - TDCLK[idx + 4]
-    let TDX5 = DT - TDCLK[idx + 5]
-    let TDX6 = DT - TDCLK[idx + 6]
-    let TDX7 = DT - TDCLK[idx + 7]
-    let TDX8 = DT - TDCLK[idx + 8]
-    let TDX9 = DT - TDCLK[idx + 9]
-    let TDX10 = DT - TDCLK[idx + 10]
-    let TDX11 = DT - TDCLK[idx + 11]
-    let TDX12 = DT - TDCLK[idx + 12]
-    let TDX13 = DT - TDCLK[idx + 13]
-    let TDX14 = DT - TDCLK[idx + 14]
-    let TDX15 = DT - TDCLK[idx + 15]
+    let TDX0 = DT + TCLKD[idx + 0]
+    let TDX1 = DT + TCLKD[idx + 1]
+    let TDX2 = DT + TCLKD[idx + 2]
+    let TDX3 = DT + TCLKD[idx + 3]
+    let TDX4 = DT + TCLKD[idx + 4]
+    let TDX5 = DT + TCLKD[idx + 5]
+    let TDX6 = DT + TCLKD[idx + 6]
+    let TDX7 = DT + TCLKD[idx + 7]
+    let TDX8 = DT + TCLKD[idx + 8]
+    let TDX9 = DT + TCLKD[idx + 9]
+    let TDX10 = DT + TCLKD[idx + 10]
+    let TDX11 = DT + TCLKD[idx + 11]
+    let TDX12 = DT + TCLKD[idx + 12]
+    let TDX13 = DT + TCLKD[idx + 13]
+    let TDX14 = DT + TCLKD[idx + 14]
+    let TDX15 = DT + TCLKD[idx + 15]
 
     ** Enable RA0
     alter @VRA0[DC] = 3.3
@@ -324,22 +324,22 @@ while idx < NTRIALS
     alter @VWEM[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
 
     ** Time D
-    alter @VD0[PWL] = [ 0 3.3 $&TDX0 3.3 $&TDX0 0 ]
-    alter @VD1[PWL] = [ 0 3.3 $&TDX1 3.3 $&TDX1 0 ]
-    alter @VD2[PWL] = [ 0 3.3 $&TDX2 3.3 $&TDX2 0 ]
-    alter @VD3[PWL] = [ 0 3.3 $&TDX3 3.3 $&TDX3 0 ]
-    alter @VD4[PWL] = [ 0 3.3 $&TDX4 3.3 $&TDX4 0 ]
-    alter @VD5[PWL] = [ 0 3.3 $&TDX5 3.3 $&TDX5 0 ]
-    alter @VD6[PWL] = [ 0 3.3 $&TDX6 3.3 $&TDX6 0 ]
-    alter @VD7[PWL] = [ 0 3.3 $&TDX7 3.3 $&TDX7 0 ]
-    alter @VD8[PWL] = [ 0 3.3 $&TDX8 3.3 $&TDX8 0 ]
-    alter @VD9[PWL] = [ 0 3.3 $&TDX9 3.3 $&TDX9 0 ]
-    alter @VD10[PWL] = [ 0 3.3 $&TDX10 3.3 $&TDX10 0 ]
-    alter @VD11[PWL] = [ 0 3.3 $&TDX11 3.3 $&TDX11 0 ]
-    alter @VD12[PWL] = [ 0 3.3 $&TDX12 3.3 $&TDX12 0 ]
-    alter @VD13[PWL] = [ 0 3.3 $&TDX13 3.3 $&TDX13 0 ]
-    alter @VD14[PWL] = [ 0 3.3 $&TDX14 3.3 $&TDX14 0 ]
-    alter @VD15[PWL] = [ 0 3.3 $&TDX15 3.3 $&TDX15 0 ]
+    alter @VD0[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX0 0 $&TDX0 3.3 ]
+    alter @VD1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX1 0 $&TDX1 3.3 ]
+    alter @VD2[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX2 0 $&TDX2 3.3 ]
+    alter @VD3[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX3 0 $&TDX3 3.3 ]
+    alter @VD4[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX4 0 $&TDX4 3.3 ]
+    alter @VD5[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX5 0 $&TDX5 3.3 ]
+    alter @VD6[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX6 0 $&TDX6 3.3 ]
+    alter @VD7[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX7 0 $&TDX7 3.3 ]
+    alter @VD8[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX8 0 $&TDX8 3.3 ]
+    alter @VD9[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX9 0 $&TDX9 3.3 ]
+    alter @VD10[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX10 0 $&TDX10 3.3 ]
+    alter @VD11[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX11 0 $&TDX11 3.3 ]
+    alter @VD12[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX12 0 $&TDX12 3.3 ]
+    alter @VD13[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX13 0 $&TDX13 3.3 ]
+    alter @VD14[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX14 0 $&TDX14 3.3 ]
+    alter @VD15[PWL] = [ 0 3.3 $&T 3.3 $&T 0 $&TDX15 0 $&TDX15 3.3 ]
 
     tran $&tstep $&tstop
 
@@ -379,7 +379,7 @@ while idx < NTRIALS
 	let idx = idx + 16
 end
 
-plot TCLKQ vs TDCLK
+plot TCLKQ vs TCLKD
 
 .endc
 "}
