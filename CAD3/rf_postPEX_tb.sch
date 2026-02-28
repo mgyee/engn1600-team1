@@ -269,7 +269,7 @@ C {devices/vsource.sym} 810 -1620 1 0 {name=VD0 value=0}
 C {devices/lab_pin.sym} 840 -1620 2 0 {name=pD0 lab=D0}
 C {devices/gnd.sym} 780 -1620 1 0 {name=gD0}
 C {code_shown.sym} 1700 -740 0 0 {name=s1 only_toplevel=false value="
-** WRITE PROPAGATION DELAY
+** SETUP TIME RISING
 
 .control
 
@@ -280,31 +280,105 @@ let PW = T/2
 
 let DT = T * 2
 let QT = T/4
-let FQT = QT * 5
+let ET = T/8
+let SM = T/80
 
-let tstop = 3 * T
+let tstop = 2.5 * T
 let tstep = 0.001 * T
+let NTRIALS = 64
 
-** Enable RA0
-alter @VRA0[DC] = 3.3
+compose TDCLK start=$&ET stop=$&SM lin=$&NTRIALS
+compose TCLKQ start=0 stop=0 lin=$&NTRIALS
 
-** Enable WE0
-alter @VWE0[DC] = 3.3
+let idx = 0
+while idx < NTRIALS
+    ** Exchange times
+    let TDX0 = DT - TDCLK[idx + 0]
+    let TDX1 = DT - TDCLK[idx + 1]
+    let TDX2 = DT - TDCLK[idx + 2]
+    let TDX3 = DT - TDCLK[idx + 3]
+    let TDX4 = DT - TDCLK[idx + 4]
+    let TDX5 = DT - TDCLK[idx + 5]
+    let TDX6 = DT - TDCLK[idx + 6]
+    let TDX7 = DT - TDCLK[idx + 7]
+    let TDX8 = DT - TDCLK[idx + 8]
+    let TDX9 = DT - TDCLK[idx + 9]
+    let TDX10 = DT - TDCLK[idx + 10]
+    let TDX11 = DT - TDCLK[idx + 11]
+    let TDX12 = DT - TDCLK[idx + 12]
+    let TDX13 = DT - TDCLK[idx + 13]
+    let TDX14 = DT - TDCLK[idx + 14]
+    let TDX15 = DT - TDCLK[idx + 15]
 
-** Enable CLK
-alter @VCLK[DC] = 3.3
+    ** Enable RA0
+    alter @VRA0[DC] = 3.3
 
-** Pulse WEM
-alter @VWEM[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+    ** Enable WE0
+    alter @VWE0[DC] = 3.3
 
-** Pulse D0
-alter @VD0[PULSE] = [ 0 3.3 $&T 0 0 $&T $&DT 0 ]
+    ** Pulse CLK
+    alter @VCLK[PULSE] = [ 3.3 0 $&PW 0 0 $&PW $&T 0 ]
 
-tran $&tstep $&tstop
-meas tran TPLH TRIG V(WEM) VAL=1.65 RISE=3 TARG V(QA0b) VAL=1.65 RISE=1 TD=$&T
-meas tran TPHL TRIG V(WEM) VAL=1.65 RISE=2 TARG V(QA0b) VAL=1.65 FALL=1 TD=$&T
+    ** Pulse WEM
+    alter @VWEM[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
 
-plot QA0b WEM+4 D0+8
+    ** Time D
+    alter @VD0[PWL] = [ 0 3.3 $&TDX0 3.3 $&TDX0 0 ]
+    alter @VD1[PWL] = [ 0 3.3 $&TDX1 3.3 $&TDX1 0 ]
+    alter @VD2[PWL] = [ 0 3.3 $&TDX2 3.3 $&TDX2 0 ]
+    alter @VD3[PWL] = [ 0 3.3 $&TDX3 3.3 $&TDX3 0 ]
+    alter @VD4[PWL] = [ 0 3.3 $&TDX4 3.3 $&TDX4 0 ]
+    alter @VD5[PWL] = [ 0 3.3 $&TDX5 3.3 $&TDX5 0 ]
+    alter @VD6[PWL] = [ 0 3.3 $&TDX6 3.3 $&TDX6 0 ]
+    alter @VD7[PWL] = [ 0 3.3 $&TDX7 3.3 $&TDX7 0 ]
+    alter @VD8[PWL] = [ 0 3.3 $&TDX8 3.3 $&TDX8 0 ]
+    alter @VD9[PWL] = [ 0 3.3 $&TDX9 3.3 $&TDX9 0 ]
+    alter @VD10[PWL] = [ 0 3.3 $&TDX10 3.3 $&TDX10 0 ]
+    alter @VD11[PWL] = [ 0 3.3 $&TDX11 3.3 $&TDX11 0 ]
+    alter @VD12[PWL] = [ 0 3.3 $&TDX12 3.3 $&TDX12 0 ]
+    alter @VD13[PWL] = [ 0 3.3 $&TDX13 3.3 $&TDX13 0 ]
+    alter @VD14[PWL] = [ 0 3.3 $&TDX14 3.3 $&TDX14 0 ]
+    alter @VD15[PWL] = [ 0 3.3 $&TDX15 3.3 $&TDX15 0 ]
+
+    tran $&tstep $&tstop
+
+    meas tran PD0 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA0b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD1 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA1b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD2 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA2b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD3 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA3b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD4 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA4b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD5 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA5b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD6 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA6b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD7 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA7b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD8 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA8b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD9 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA9b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD10 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA10b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD11 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA11b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD12 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA12b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD13 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA13b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD14 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA14b) VAL=1.65 RISE=1 TD=$&T
+    meas tran PD15 TRIG V(WEM) VAL=1.65 FALL=2 TARG V(QA15b) VAL=1.65 RISE=1 TD=$&T
+
+    let TCLKQ[idx + 0] = $&PD0
+    let TCLKQ[idx + 1] = $&PD1
+    let TCLKQ[idx + 2] = $&PD2
+    let TCLKQ[idx + 3] = $&PD3
+    let TCLKQ[idx + 4] = $&PD4
+    let TCLKQ[idx + 5] = $&PD5
+    let TCLKQ[idx + 6] = $&PD6
+    let TCLKQ[idx + 7] = $&PD7
+    let TCLKQ[idx + 8] = $&PD8
+    let TCLKQ[idx + 9] = $&PD9
+    let TCLKQ[idx + 10] = $&PD10
+    let TCLKQ[idx + 11] = $&PD11
+    let TCLKQ[idx + 12] = $&PD12
+    let TCLKQ[idx + 13] = $&PD13
+    let TCLKQ[idx + 14] = $&PD14
+    let TCLKQ[idx + 15] = $&PD15
+	let idx = idx + 16
+end
+
+plot TCLKQ vs TDCLK
 
 .endc
 "
