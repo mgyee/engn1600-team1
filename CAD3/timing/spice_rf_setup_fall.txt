@@ -109,6 +109,8 @@ while idx < NTRIALS
 end
 
 plot TCLKQ vs TDCLK
+set filetype=ascii
+write /foss/designs/engn1600-team1/CAD3/timing/setup_fall.txt TDCLK TCLKQ
 
 .endc
 "
