@@ -269,6 +269,7 @@ C {devices/gnd.sym} -600 -650 1 0 {name=gD1}
 C {devices/vsource.sym} -570 -750 1 0 {name=VD0 value=0}
 C {devices/lab_pin.sym} -540 -750 2 0 {name=pD0 lab=D0}
 C {devices/gnd.sym} -600 -750 1 0 {name=gD0}
+<<<<<<< HEAD
 C {code_shown.sym} 320 130 0 0 {name=s1 only_toplevel=false value="
 
 ** READ PROPAGATION DELAY
@@ -279,6 +280,11 @@ C {code_shown.sym} 320 130 0 0 {name=s1 only_toplevel=false value="
 .param kQ=0.36/0.36
 .param kN=1.24/0.36
 
+=======
+C {code_shown.sym} 70 250 0 0 {name=s1 only_toplevel=false value="
+** READ PROPAGATION DELAY
+
+>>>>>>> 8997f19bfb97132a991d8c2662a79e75867248f1
 .control
 
 ** Define input signals
@@ -290,6 +296,7 @@ let DT = T * 2
 let QT = T/4
 let FQT = QT * 5
 
+<<<<<<< HEAD
 let tstop = 5.5 * T
 let tstep = 0.001 * T
 
@@ -336,6 +343,43 @@ plot CLK WEM+4 D0+8 WE0+12 QA0b+16 RA0+20
 "
 }
 C {devices/code_shown.sym} 330 -20 0 0 {name=MODELS only_toplevel=true
+=======
+let tstop = 3 * T
+let tstep = 0.01 * T
+
+** Enable WEM
+alter @VWEM[DC] = 3.3
+
+** Assert D = N
+alter @VD0[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
+alter @VD1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+
+** Enable WE
+alter @VWE0[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VWE1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VWE2[PWL] = [ 0 0 $&T 0 $&T 3.3 $&DT 3.3 $&DT 0 ]
+
+** Assert CLK
+alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+
+** Time RA
+alter @VRA0[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
+alter @VRA2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
+
+** Time RB
+alter @VRB1[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
+alter @VRB2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
+
+tran $&tstep $&tstop
+meas tran TPLH TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA0b) VAL=1.65 FALL=1 TD=$&DT
+meas tran TPHL TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA1b) VAL=1.65 RISE=1 TD=$&DT
+
+plot QA0b QA1b+4 RA2+8
+
+.endc
+"}
+C {devices/code_shown.sym} -420 250 0 0 {name=MODELS only_toplevel=true
+>>>>>>> 8997f19bfb97132a991d8c2662a79e75867248f1
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
