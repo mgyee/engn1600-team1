@@ -63,8 +63,8 @@ C {lab_pin.sym} -150 -10 0 0 {name=p5 lab=WE[15..0]}
 C {lab_pin.sym} -150 10 0 0 {name=p6 lab=RA[15..0]}
 C {lab_pin.sym} -150 30 0 0 {name=p7 lab=RB[15..0]}
 C {lab_pin.sym} -20 80 1 1 {name=p8 lab=D[15..0]}
-C {lab_pin.sym} 0 80 1 1 {name=p9 lab=QAb[15..0]}
-C {lab_pin.sym} 20 80 1 1 {name=p10 lab=QBb[15..0]}
+C {lab_pin.sym} 0 80 1 1 {name=p9 lab=QA[15..0]b}
+C {lab_pin.sym} 20 80 1 1 {name=p10 lab=QB[15..0]b}
 C {devices/vsource.sym} -1170 750 1 0 {name=VCLK value=0}
 C {devices/lab_pin.sym} -1140 750 2 0 {name=pCLK lab=CLK}
 C {devices/gnd.sym} -1200 750 1 0 {name=gCLK}

@@ -10,9 +10,9 @@ bus=true}
 N -330 2660 -290 2660 {lab=WEM}
 N -470 2660 -450 2660 {lab=VDD}
 N -470 2690 -450 2690 {lab=VSS}
-N -470 2840 -450 2840 {lab=QAb[15..0]
+N -470 2840 -450 2840 {lab=QA[15..0]b
 bus=true}
-N -470 2870 -450 2870 {lab=QBb[15..0]
+N -470 2870 -450 2870 {lab=QB[15..0]b
 bus=true}
 N -470 2780 -450 2780 {lab=RB[15..0]
 bus=true}
@@ -2992,7 +2992,7 @@ C {code_shown.sym} -340 2770 0 0 {name=s1 only_toplevel=false value="
 .param kQ=0.36/0.36
 .param kN=1.24/0.36
 "}
-C {devices/opin.sym} -470 2840 2 0 {name=pin_we1 lab=QAb[15..0]}
-C {devices/lab_wire.sym} -450 2840 2 0 {name=lw_we1 lab=QAb[15..0]}
-C {devices/opin.sym} -470 2870 2 0 {name=pin_we2 lab=QBb[15..0]}
-C {devices/lab_wire.sym} -450 2870 2 0 {name=lw_we2 lab=QBb[15..0]}
+C {devices/opin.sym} -470 2840 2 0 {name=pin_we1 lab=QA[15..0]b}
+C {devices/lab_wire.sym} -450 2840 2 0 {name=lw_we1 lab=QA[15..0]b}
+C {devices/opin.sym} -470 2870 2 0 {name=pin_we2 lab=QB[15..0]b}
+C {devices/lab_wire.sym} -450 2870 2 0 {name=lw_we2 lab=QB[15..0]b}
