@@ -20,8 +20,8 @@ xlabmag=1.0
 ylabmag=1.0
 node="RA15;ra15,ra14,ra13,ra12,ra11,ra10,ra9,ra8,ra7,ra6,ra5,ra4,ra3,ra2,ra1,ra0
 RB15;rb15,rb14,rb13,rb12,rb11,rb10,rb9,rb8,rb7,rb6,rb5,rb4,rb3,rb2,rb1,rb0
-QA15;qa15,qa14,qa13,qa12,qa11,qa10,qa9,qa8,qa7,qa6,qa5,qa4,qa3,qa2,qa1,qa0
-QB15;qb15,qb14,qb13,qb12,qb11,qb10,qb9,qb8,qb7,qb6,qb5,qb4,qb3,qb2,qb1,qb0"
+QA15b;qa15,qa14,qa13,qa12,qa11,qa10,qa9,qa8,qa7,qa6,qa5,qa4,qa3,qa2,qa1,qa0
+QB15b;qb15,qb14,qb13,qb12,qb11,qb10,qb9,qb8,qb7,qb6,qb5,qb4,qb3,qb2,qb1,qb0"
 color="4 5 6 7"
 dataset=-1
 unitx=1
@@ -63,8 +63,8 @@ C {lab_pin.sym} -150 -10 0 0 {name=p5 lab=WE[15..0]}
 C {lab_pin.sym} -150 10 0 0 {name=p6 lab=RA[15..0]}
 C {lab_pin.sym} -150 30 0 0 {name=p7 lab=RB[15..0]}
 C {lab_pin.sym} -20 80 1 1 {name=p8 lab=D[15..0]}
-C {lab_pin.sym} 0 80 1 1 {name=p9 lab=QA[15..0]}
-C {lab_pin.sym} 20 80 1 1 {name=p10 lab=QB[15..0]}
+C {lab_pin.sym} 0 80 1 1 {name=p9 lab=QAb[15..0]}
+C {lab_pin.sym} 20 80 1 1 {name=p10 lab=QBb[15..0]}
 C {devices/vsource.sym} -1170 750 1 0 {name=VCLK value=0}
 C {devices/lab_pin.sym} -1140 750 2 0 {name=pCLK lab=CLK}
 C {devices/gnd.sym} -1200 750 1 0 {name=gCLK}

@@ -88,9 +88,9 @@ N 400 -780 440 -780 {lab=VDD}
 N 400 -740 440 -740 {lab=VSS}
 N 1260 -300 1260 -280 {lab=VDD}
 N 1260 -240 1260 -220 {lab=VSS}
-N 1290 -300 1310 -300 {lab=QBb}
-N 1310 -300 1310 -220 {lab=QBb}
-N 1290 -220 1310 -220 {lab=QBb}
+N 1290 -300 1310 -300 {lab=QB}
+N 1310 -300 1310 -220 {lab=QB}
+N 1290 -220 1310 -220 {lab=QB}
 N 1210 -300 1230 -300 {lab=#net3}
 N 1210 -300 1210 -220 {lab=#net3}
 N 1210 -220 1230 -220 {lab=#net3}
@@ -118,9 +118,9 @@ N 1120 -530 1120 -160 {lab=RB}
 N 1120 -160 1260 -160 {lab=RB}
 N 1270 -760 1270 -740 {lab=VDD}
 N 1270 -700 1270 -680 {lab=VSS}
-N 1300 -760 1320 -760 {lab=QAb}
-N 1320 -760 1320 -680 {lab=QAb}
-N 1300 -680 1320 -680 {lab=QAb}
+N 1300 -760 1320 -760 {lab=QA}
+N 1320 -760 1320 -680 {lab=QA}
+N 1300 -680 1320 -680 {lab=QA}
 N 1220 -760 1240 -760 {lab=#net3}
 N 1220 -760 1220 -680 {lab=#net3}
 N 1220 -680 1240 -680 {lab=#net3}
@@ -153,8 +153,8 @@ N 940 -260 1210 -260 {lab=#net3}
 N 1090 -720 1220 -720 {lab=#net3}
 N 1090 -720 1090 -260 {lab=#net3}
 N 1110 -990 1130 -990 {lab=RA}
-N 1310 -260 1370 -260 {lab=QBb}
-N 1320 -720 1380 -720 {lab=QAb}
+N 1310 -260 1370 -260 {lab=QB}
+N 1320 -720 1380 -720 {lab=QA}
 N 940 -680 940 -660 {lab=VDD}
 N 940 -900 940 -880 {lab=#net7}
 N 920 -930 940 -930 {lab=VSS}
@@ -482,8 +482,8 @@ C {lab_wire.sym} 440 -580 0 0 {name=p32 sig_type=std_logic lab=RB}
 C {lab_wire.sym} 1100 -160 0 0 {name=p33 sig_type=std_logic lab=RB}
 C {lab_wire.sym} 1110 -990 0 0 {name=p34 sig_type=std_logic lab=RA
 }
-C {opin.sym} 1380 -720 0 0 {name=p43 lab=QAb}
-C {opin.sym} 1370 -260 0 0 {name=p44 lab=QBb}
+C {opin.sym} 1380 -720 0 0 {name=p43 lab=QA}
+C {opin.sym} 1370 -260 0 0 {name=p44 lab=QB}
 C {iopin.sym} 400 -780 2 0 {name=p12 lab=VDD}
 C {iopin.sym} 400 -740 2 0 {name=p21 lab=VSS}
 C {code_shown.sym} 300 -1090 0 0 {name=s1 only_toplevel=false value="

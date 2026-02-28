@@ -48,8 +48,8 @@ while idx < NTRIALS
     alter @VRA[PULSE] = [ 3.3 0 $&FQT 0 0 $&PW $&T 0 ]
 
 	tran $&tstep $&tstop
-	meas tran TPLH TRIG V(RA) VAL=1.65 RISE=1 TARG V(QA) VAL=1.65 RISE=1 TD=$&T
-    meas tran TPHL TRIG V(RA) VAL=1.65 RISE=2 TARG V(QA) VAL=1.65 FALL=1 TD=$&T
+	meas tran TPLH TRIG V(RA) VAL=1.65 RISE=1 TARG V(QAb) VAL=1.65 RISE=1 TD=$&T
+    meas tran TPHL TRIG V(RA) VAL=1.65 RISE=2 TARG V(QAb) VAL=1.65 FALL=1 TD=$&T
 	let TRISE[idx] = $&TPLH
 	let TFALL[idx] = $&TPHL
 	let idx = idx + 1

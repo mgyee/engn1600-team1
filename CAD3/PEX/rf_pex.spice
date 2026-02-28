@@ -3,9 +3,9 @@
 .subckt rf_flat VSS VDD CLK WE6 WE7 WE5 WE8 WE4 WE9 WE10 WE11 WE12 WE1 WE2 WE3 WE13
 + WE14 WE15 WE0 RA8 RB8 RB14 RA14 RB12 RA12 RA10 RB10 RB6 RA6 RB4 RA4 RB2 RA2 RB0
 + RA0 WEM RB1 RA1 RA3 RB3 RA5 RB5 RA7 RB7 RA9 RB9 RA11 RB11 RA13 RB13 RA15 RB15 D10
-+ D14 D15 D8 D9 D12 D13 D11 D0 D1 D2 D3 D4 D5 D6 D7 QB0 QB1 QB2 QB3 QB4 QB5 QB6 QB7
-+ QA0 QA1 QA2 QA3 QA4 QA5 QA6 QA7 QA8 QA9 QA10 QA11 QA12 QA13 QA14 QA15 QB8 QB9 QB10
-+ QB11 QB12 QB13 QB14 QB15
++ D14 D15 D8 D9 D12 D13 D11 D0 D1 D2 D3 D4 D5 D6 D7 QB0b QB1b QB2b QB3b QB4b QB5b QB6b QB7b
++ QA0b QA1b QA2b QA3b QA4b QA5b QA6b QA7b QA8b QA9b QA10b QA11b QA12b QA13b QA14b QA15b QB8b QB9b QB10b
++ QB11b QB12b QB13b QB14b QB15b
 X0 a_22909_10022# a_22140_10022# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X1 a_22909_6102# a_23213_6102# a_23377_n862.t15 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2 a_9780_9238# a_n884_9238.t4 a_9592_9238# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
@@ -16,7 +16,7 @@ X6 a_4648_614# a_4584_n708.t4 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p p
 X7 VDD a_n1204_9238.t4 a_90_9238# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X8 a_29556_6886# a_n1204_6886.t4 a_29368_6886# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X9 a_37170_7390# a_37106_7200# a_36972_6886# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
-X10 QB12.t1 a_31063_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X10 QB12b.t1 a_31063_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X11 VSS RB3.t0 a_3866_8800# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X12 a_37170_4254# a_37106_4064# a_36972_3750# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X13 a_24424_614# a_24360_n708.t5 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
@@ -90,12 +90,12 @@ X80 a_26119_n2146.t2 RB11.t0 a_25381_2182# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0
 X81 a_18269_n862# RA15.t0 VSS.t130 VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X82 a_30629_10806# RA0.t0 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2.36u w=0.72u l=0.28u
 X83 a_15493_6102# a_14724_6102# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
-X84 VSS a_15961_n862.t32 QA6.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X84 VSS a_15961_n862.t32 QA6b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X85 a_24424_n954# a_24360_n708.t6 VSS.t1963 VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X86 VDD RB4.t0 a_28586_7828# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X87 a_9780_6886# a_n1204_6886.t5 a_9592_6886# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X88 VDD a_32028_6102# a_32162_6292# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X89 QB10.t1 a_26119_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X89 QB10b.t1 a_26119_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X90 VSS RB14.t1 a_21170_n12# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X91 VDD RB8.t0 a_28586_4692# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X92 a_12252_2966# a_n1204_2966.t5 a_12064_2966# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
@@ -124,7 +124,7 @@ X114 a_17394_614# a_17330_928# a_17196_614# VSS nfet_03v3 ad=56.7f pd=0.675u as=
 X115 a_13021_8454# a_12252_8454# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X116 a_29754_6886# a_29690_7200# a_29556_6886# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X117 VSS a_2364_3750# a_2498_4064# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X118 VSS a_33265_n862.t32 QA13.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X118 VSS a_33265_n862.t32 QA13b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X119 a_n296_9238# a_n360_n708.t4 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X120 a_13021_5318# a_12252_5318# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X121 VDD a_n1204_10806.t4 a_12450_10806# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
@@ -247,7 +247,7 @@ X237 a_32226_5822# a_32162_5632# a_32028_5318# VDD pfet_03v3 ad=56.7f pd=0.675u 
 X238 a_n1652_2966# WE10.t0 VDD VDD pfet_03v3 ad=0.1872p pd=1.24u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X239 a_30325_2966# a_29556_2966# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X240 a_32797_n170# RA14.t1 a_33265_n862.t9 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X241 QB8.t0 a_21175_n2146.t32 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X241 QB8b.t0 a_21175_n2146.t32 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X242 a_31063_n2146.t26 a_31058_960# a_30325_614# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X243 a_9978_6886# a_9914_7200# a_9780_6886# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X244 a_661_5318# a_n108_5318# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
@@ -322,7 +322,7 @@ X312 VSS a_n884_8454.t8 a_32226_8454# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f 
 X313 a_n1652_7670# CLK a_n1652_8110# VSS nfet_03v3 ad=0.3168p pd=2.32u as=0.1872p ps=1.24u w=0.72u l=0.28u
 X314 a_3871_n2146.t3 RB9.t2 a_3133_3750# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X315 VDD.t501 a_n1204_n954.t9 a_37170_n450# VDD.t500 pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
-X316 QB6.t0 a_16231_n2146.t32 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X316 QB6b.t0 a_16231_n2146.t32 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X317 VDD RB10.t5 a_21170_3124# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X318 a_14536_n170# a_14472_n708.t6 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X319 VSS a_n884_5318.t8 a_32226_5318# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
@@ -619,7 +619,7 @@ X609 a_14724_7670# a_n1204_7670.t13 a_14536_7670# VSS nfet_03v3 ad=0.1278p pd=1.
 X610 a_22909_6102# RA6.t5 a_23377_n862.t27 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X611 a_8381_1398# RA12.t8 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X612 a_21888_n708.t1 a_21896_n1782# VDD VDD pfet_03v3 ad=0.3224p pd=1.76u as=0.5456p ps=3.36u w=1.24u l=0.28u
-X613 VSS a_6073_n862.t32 QA2.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X613 VSS a_6073_n862.t32 QA2b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X614 a_19668_n170# a_n884_n170.t4 a_19480_n170# VDD.t1238 pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X615 VDD RB0.t6 a_38474_10964# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X616 a_661_2182# RA11.t7 a_1129_n862.t13 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -845,7 +845,7 @@ X835 VDD RB3.t5 a_18698_8800# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.
 X836 a_1399_n2146.t14 RB1.t8 a_661_10022# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X837 VDD a_n1204_6102.t10 a_24810_6102# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X838 a_36007_n2146.t17 a_36002_9396# a_35269_9238# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
-X839 QB14.t1 a_36007_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X839 QB14b.t1 a_36007_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X840 VSS a_n884_6886.t5 a_19866_6886# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X841 VDD RB7.t4 a_26114_5664# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X842 VSS a_n884_2182.t8 a_7506_2182# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
@@ -927,7 +927,7 @@ X917 VDD RB0.t10 a_23642_10964# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=
 X918 a_33101_3842# RA9.t6 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2.36u w=0.72u l=0.28u
 X919 a_2364_1398# a_n1204_1398.t8 a_2176_1398# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X920 a_24368_n1782# a_24872_n1738# a_25160_n1738# VDD pfet_03v3 ad=0.1278p pd=1.07u as=56.7f ps=0.675u w=0.36u l=0.28u
-X921 QB0.t1 a_1399_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X921 QB0b.t1 a_1399_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X922 a_26896_10806# a_26832_n708.t8 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X923 VDD a_24612_7670# a_24746_7860# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X924 a_11287_n2146.t11 RB7.t6 a_10549_5318# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
@@ -994,7 +994,7 @@ X984 a_20437_2182# a_20741_2274# a_20905_n862.t31 VDD pfet_03v3 ad=0.1152p pd=1u
 X985 VDD a_4836_10022# a_4970_10336# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X986 VSS a_19668_7670# a_19802_7860# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X987 VDD RB11.t9 a_3866_2528# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
-X988 QB12.t0 a_31063_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X988 QB12b.t0 a_31063_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X989 a_n1204_8454.t3 a_n1652_8886# VSS VSS nfet_03v3 ad=0.1651p pd=1.155u as=0.2794p ps=2.15u w=0.635u l=0.28u
 X990 VSS a_19668_4534# a_19802_4724# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X991 a_7120_2966# a_7056_n708.t9 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
@@ -1065,8 +1065,8 @@ X1055 a_23213_8546# RA3.t6 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2
 X1056 a_28157_5410# RA7.t12 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X1057 VSS RB11.t11 a_23642_2528# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X1058 VSS.t2695 a_27084_n954# a_27218_n640# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X1059 QB10.t0 a_26119_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
-X1060 VDD a_15961_n862.t33 QA6.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X1059 QB10b.t0 a_26119_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X1060 VDD a_15961_n862.t33 QA6b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X1061 a_16231_n2146.t20 a_16226_n608# a_15493_n954# VDD.t2200 pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X1062 a_37741_2182# a_36972_2182# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X1063 a_21952_n954# a_21888_n708.t13 VDD.t1029 VDD.t1028 pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
@@ -1096,7 +1096,7 @@ X1086 a_8077_10022# a_7308_10022# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f p
 X1087 VSS a_n884_6886.t11 a_27282_6886# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X1088 VDD RB6.t6 a_6338_6260# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X1089 a_29556_3750# a_n884_3750.t8 a_29368_3750# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
-X1090 VDD a_33265_n862.t33 QA13.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X1090 VDD a_33265_n862.t33 QA13b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X1091 a_37741_7670# a_38045_7670# a_38209_n862.t22 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1092 a_18269_n862# RA15.t6 VDD.t105 VDD.t104 pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2.36u w=0.72u l=0.28u
 X1093 a_29556_614# a_n884_614.t13 a_29368_614# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
@@ -1163,7 +1163,7 @@ X1153 a_2176_9238# a_2112_n708.t18 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.15
 X1154 VDD RB6.t8 a_3866_6260# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X1155 a_15493_3750# a_15797_3842# a_15961_n862.t31 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1156 a_n296_2182# a_n360_n708.t11 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
-X1157 VSS a_11017_n862.t32 QA4.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X1157 VSS a_11017_n862.t32 QA4b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X1158 a_7120_n170# a_7056_n708.t10 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1159 a_2176_6102# a_2112_n708.t19 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1160 a_3133_2966# a_3437_2966# a_3601_n862.t21 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -1482,7 +1482,7 @@ X1472 VSS RB2.t11 a_16226_9396# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1
 X1473 VDD RB5.t13 a_26114_7232# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X1474 a_25381_6102# a_24612_6102# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X1475 VSS RB6.t14 a_16226_6260# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
-X1476 QB7.t1 a_18703_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X1476 QB7b.t1 a_18703_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X1477 a_12450_n450# a_12386_n640# a_12252_n954# VDD.t2456 pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X1478 VSS a_n884_2966.t11 a_32226_3470# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X1479 a_11287_n2146.t7 a_11282_3124# a_10549_2966# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
@@ -1502,7 +1502,7 @@ X1492 a_26896_n954# a_26832_n708.t13 VSS.t1465 VSS nfet_03v3 ad=0.1188p pd=1.02u
 X1493 a_9780_8454# a_n884_8454.t13 a_9592_8454# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X1494 VDD a_n1204_1398.t9 a_n884_1398.t0 VDD pfet_03v3 ad=0.5896p pd=3.56u as=0.3886p ps=1.92u w=1.34u l=0.28u
 X1495 a_14536_10806# a_14472_n708.t12 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
-X1496 VSS a_25849_n862.t32 QA10.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X1496 VSS a_25849_n862.t32 QA10b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X1497 VDD a_n1204_8454.t10 a_90_8958# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X1498 VSS RB14.t15 a_33530_n12# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X1499 VSS a_n884_9238.t12 a_27282_9742# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
@@ -1619,7 +1619,7 @@ X1609 a_27853_9238# a_27084_9238# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f p
 X1610 a_14536_8454# a_14472_n708.t15 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X1611 a_20741_5410# RA7.t16 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X1612 a_12252_4534# a_n884_4534.t7 a_12064_4534# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
-X1613 VDD a_6073_n862.t33 QA2.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X1613 VDD a_6073_n862.t33 QA2b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X1614 VDD a_4836_9238# a_4970_9428# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1615 a_6343_n2146.t11 a_6338_4692# a_5605_4534# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X1616 a_38479_n2146.t1 RB11.t15 a_37741_2182# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
@@ -1716,7 +1716,7 @@ X1706 VSS a_4836_6886# a_4970_7200# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps
 X1707 VDD a_n1204_6102.t14 a_90_6102# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X1708 VSS RB7.t18 a_3866_5664# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X1709 a_29556_3750# a_n1204_3750.t12 a_29368_3750# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
-X1710 VSS a_1129_n862.t32 QA0.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X1710 VSS a_1129_n862.t32 QA0b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X1711 VDD RB0.t15 a_33530_10964# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X1712 a_37741_9238# a_38045_9238# a_38209_n862.t16 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1713 a_9592_2966# a_9528_n708.t10 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -1756,7 +1756,7 @@ X1746 VDD a_9780_7670# a_9914_7860# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p
 X1747 VSS a_36972_6886# a_37106_7200# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1748 a_5605_4534# RA8.t16 a_6073_n862.t4 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1749 a_15272_n1738# WEM.t9 VDD VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X1750 QB11.t1 a_28591_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X1750 QB11b.t1 a_28591_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X1751 a_661_10806# RA0.t18 a_1129_n862.t4 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1752 VDD a_9780_4534# a_9914_4724# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1753 VSS RB13.t14 a_33530_960# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
@@ -1858,7 +1858,7 @@ X1848 a_10549_4534# a_10853_4534# a_11017_n862.t17 VDD pfet_03v3 ad=0.1152p pd=1
 X1849 a_7308_3750# a_n1204_3750.t15 a_7120_3750# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X1850 a_36972_7670# a_n884_7670.t12 a_36784_7670# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X1851 a_9978_6102# a_9914_6292# a_9780_6102# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
-X1852 QB14.t0 a_36007_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X1852 QB14b.t0 a_36007_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X1853 VSS RB0.t17 a_23642_10964# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X1854 a_3871_n2146.t21 a_3866_8800# a_3133_8454# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X1855 a_27282_5822# a_27218_5632# a_27084_5318# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
@@ -1927,7 +1927,7 @@ X1917 VSS.t3204 a_31784_n1782# a_31776_n708.t3 VSS nfet_03v3 ad=0.2728p pd=2.12u
 X1918 VDD a_n1204_1398.t15 a_5034_1398# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X1919 VDD a_19668_4534# a_19802_4724# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X1920 a_4648_1398# a_4584_n708.t15 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X1921 QB0.t0 a_1399_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X1921 QB0b.t0 a_1399_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X1922 a_24612_n954# a_n1204_n954.t14 a_24424_n954# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X1923 a_15493_n170# a_14724_n170# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X1924 a_2364_n170# a_n884_n170.t10 a_2176_n170# VDD.t1228 pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
@@ -2021,7 +2021,7 @@ X2011 a_n296_5318# a_n360_n708.t16 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.15
 X2012 VDD a_n1204_3750.t18 a_17394_4254# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X2013 a_27853_n170# a_27084_n170# VDD.t2993 VDD.t2916 pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X2014 a_37741_7670# RA4.t16 a_38209_n862.t29 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X2015 QB3.t1 a_8815_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X2015 QB3b.t1 a_8815_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X2016 VDD a_n1204_614.t20 a_17394_1118# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X2017 VSS a_n884_7670.t15 a_2562_8174# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X2018 a_5605_7670# RA4.t17 a_6073_n862.t15 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -2054,7 +2054,7 @@ X2044 a_3133_6886# a_2364_6886# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p p
 X2045 a_14724_1398# a_n1204_1398.t17 a_14536_1398# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X2046 VSS a_7308_6102# a_7442_6292# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2047 a_n1652_3406# WE10.t1 VSS VSS nfet_03v3 ad=0.1872p pd=1.24u as=0.3168p ps=2.32u w=0.72u l=0.28u
-X2048 QB5.t1 a_13759_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X2048 QB5b.t1 a_13759_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X2049 a_15493_10806# a_14724_10806# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X2050 a_34698_7670# a_34634_7860# a_34500_7670# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X2051 a_19480_7670# a_19416_n708.t11 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -2074,7 +2074,7 @@ X2064 a_27084_2966# a_n1204_2966.t19 a_26896_2966# VSS nfet_03v3 ad=0.1278p pd=1
 X2065 a_14922_2182# a_14858_2496# a_14724_2182# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X2066 VSS.t2507 D4.t1 a_10645_n1738# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X2067 a_3133_2966# RA10.t15 a_3601_n862.t5 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X2068 VSS a_20905_n862.t32 QA8.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X2068 VSS a_20905_n862.t32 QA8b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X2069 a_24810_n954# a_24746_n640# a_24612_n954# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X2070 a_2562_n170# a_2498_20# a_2364_n170# VDD.t2236 pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X2071 VDD a_17196_1398# a_17330_1588# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -2146,7 +2146,7 @@ X2136 a_25381_8454# a_24612_8454# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f p
 X2137 VSS a_36972_6102# a_37106_6292# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2138 a_25381_5318# a_24612_5318# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X2139 VDD D0.t0 a_757_n1738# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.2097p ps=1.38u w=0.72u l=0.28u
-X2140 VDD a_11017_n862.t33 QA4.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X2140 VDD a_11017_n862.t33 QA4b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X2141 a_27282_11310# a_27218_10996# a_27084_10806# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X2142 a_14724_9238# a_n884_9238.t16 a_14536_9238# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X2143 a_37170_10806# a_37106_10996# a_36972_10806# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
@@ -2267,7 +2267,7 @@ X2257 VDD a_n1204_3750.t21 a_7506_4254# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7
 X2258 VDD a_17196_10806# a_17330_10996# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2259 a_24424_3750# a_24360_n708.t21 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2260 a_18269_2274# RA11.t21 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
-X2261 VSS a_35737_n862.t32 QA14.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X2261 VSS a_35737_n862.t32 QA14b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X2262 a_14536_9238# a_14472_n708.t20 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2263 VDD a_n1204_614.t23 a_7506_1118# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X2264 a_965_10114# RA1.t23 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
@@ -2464,7 +2464,7 @@ X2454 a_18703_n2146.t8 RB3.t14 a_17965_8454# VSS nfet_03v3 ad=0.1584p pd=1.6u as
 X2455 a_2176_3750# a_2112_n708.t26 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2456 VSS RB3.t15 a_31058_8800# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X2457 a_19480_10022# a_19416_n708.t14 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
-X2458 QB7.t0 a_18703_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X2458 QB7b.t0 a_18703_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X2459 VDD.t505 a_n1204_n954.t19 a_9978_n450# VDD.t504 pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X2460 a_19866_334# a_19802_20# a_19668_n170# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X2461 a_8815_n2146.t18 RB4.t18 a_8077_7670# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
@@ -2488,7 +2488,7 @@ X2478 a_5605_1398# a_5909_1398# a_6073_n862.t11 VDD pfet_03v3 ad=0.1152p pd=1u a
 X2479 a_36784_10022# a_36720_n708.t23 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X2480 a_21175_n2146.t2 RB11.t20 a_20437_2182# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X2481 a_32226_2182# a_32162_2496# a_32028_2182# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
-X2482 VDD a_25849_n862.t33 QA10.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X2482 VDD a_25849_n862.t33 QA10b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X2483 a_15797_n170# RA14.t20 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X2484 a_n296_10022# a_n360_n708.t19 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2485 VSS a_2364_4534# a_2498_4724# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -2512,7 +2512,7 @@ X2502 VDD a_n108_10022# a_26_10336# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p
 X2503 a_34500_9238# a_n884_9238.t21 a_34312_9238# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X2504 a_16231_n2146.t8 RB3.t16 a_15493_8454# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X2505 a_25160_n1738# WEM.t13 VDD VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X2506 QB15.t1 a_38479_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X2506 QB15b.t1 a_38479_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X2507 a_23213_n170# RA14.t21 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X2508 a_n1652_7670# WE4.t0 VDD VDD pfet_03v3 ad=0.1872p pd=1.24u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X2509 VDD a_n1204_5318.t19 a_34698_5822# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
@@ -2608,7 +2608,7 @@ X2598 a_13325_5410# RA7.t22 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=
 X2599 VSS a_22140_n170# a_22274_20# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2600 a_17196_2966# a_n884_2966.t14 a_17008_2966# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X2601 a_26840_n1782# a_27344_n1738# a_27632_n1738# VDD pfet_03v3 ad=0.1278p pd=1.07u as=56.7f ps=0.675u w=0.36u l=0.28u
-X2602 QB1.t1 a_3871_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X2602 QB1b.t1 a_3871_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X2603 a_5605_n170# a_5909_n170# a_6073_n862.t13 VDD.t2233 pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2604 VSS a_29556_1398# a_29690_1588# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X2605 a_5605_10806# a_4836_10806# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
@@ -2705,7 +2705,7 @@ X2695 a_3133_2966# a_2364_2966# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p p
 X2696 VDD a_n1204_4534.t23 a_12450_4534# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X2697 a_26119_n2146.t17 RB3.t18 a_25381_8454# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X2698 a_661_9238# a_965_9238# a_1129_n862.t21 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X2699 VDD a_1129_n862.t33 QA0.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X2699 VDD a_1129_n862.t33 QA0b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X2700 a_8077_3750# a_7308_3750# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X2701 a_n884_n1738.t0 WEM.t15 VSS.t490 VSS nfet_03v3 ad=0.1827p pd=1.21u as=0.2772p ps=2.14u w=0.63u l=0.28u
 X2702 a_12252_9238# a_n1204_9238.t22 a_12064_9238# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
@@ -2746,7 +2746,7 @@ X2736 a_35269_2966# a_34500_2966# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p
 X2737 a_15797_706# RA13.t21 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X2738 a_3437_3842# RA9.t27 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X2739 VSS a_n884_3750.t17 a_29754_3750# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
-X2740 QB11.t0 a_28591_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X2740 QB11b.t0 a_28591_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X2741 VSS RB12.t26 a_18698_1556# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X2742 a_17965_n170# a_17196_n170# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X2743 VDD.t1445 RB14.t28 a_1394_n12# VDD.t756 pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
@@ -2832,12 +2832,12 @@ X2822 a_27282_8174# a_27218_7860# a_27084_7670# VSS nfet_03v3 ad=56.7f pd=0.675u
 X2823 a_29556_n170# a_n1204_n170.t25 a_29368_n170# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X2824 a_24612_9238# a_n1204_9238.t23 a_24424_9238# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X2825 a_8077_6886# a_8381_6978# a_8545_n862.t19 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X2826 VSS a_13489_n862.t32 QA5.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X2826 VSS a_13489_n862.t32 QA5b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X2827 a_15493_10806# a_14724_10806# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X2828 a_27282_5038# a_27218_4724# a_27084_4534# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X2829 VSS RB11.t26 a_13754_2528# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X2830 VDD a_2120_n1782# a_2112_n708.t0 VDD pfet_03v3 ad=0.5456p pd=3.36u as=0.3224p ps=1.76u w=1.24u l=0.28u
-X2831 QB9.t1 a_23647_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X2831 QB9b.t1 a_23647_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X2832 a_25381_10806# a_24612_10806# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X2833 a_24612_6102# a_n1204_6102.t24 a_24424_6102# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X2834 a_2364_3750# a_n1204_3750.t26 a_2176_3750# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
@@ -2863,7 +2863,7 @@ X2853 a_37741_5318# a_36972_5318# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p
 X2854 VDD RB13.t28 a_33530_960# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X2855 a_30325_6102# a_29556_6102# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X2856 a_7308_2966# a_n884_2966.t18 a_7120_2966# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
-X2857 VSS a_30793_n862.t32 QA12.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X2857 VSS a_30793_n862.t32 QA12b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X2858 a_16231_n2146.t10 a_16226_n12# a_15493_n170# VDD.t2200 pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X2859 a_12450_9742# a_12386_9428# a_12252_9238# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X2860 a_30325_8454# RA3.t23 a_30793_n862.t22 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -3015,7 +3015,7 @@ X3005 a_20437_n170# a_20741_n170# a_20905_n862.t26 VDD.t2543 pfet_03v3 ad=0.1152
 X3006 a_9592_10022# a_9528_n708.t15 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X3007 VDD RB5.t27 a_38474_7232# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X3008 a_34500_6102# a_n1204_6102.t30 a_34312_6102# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
-X3009 QB3.t0 a_8815_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X3009 QB3b.t0 a_8815_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X3010 a_2562_11310# a_2498_10996# a_2364_10806# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X3011 VSS RB2.t22 a_28586_9396# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X3012 a_37741_6102# a_36972_6102# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
@@ -3048,7 +3048,7 @@ X3038 a_8815_n2146.t23 a_8810_n12# a_8077_n170# VDD.t2562 pfet_03v3 ad=0.1584p p
 X3039 a_5034_9742# a_4970_9428# a_4836_9238# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X3040 VDD RB3.t23 a_21170_8800# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X3041 VSS RB4.t23 a_8810_7828# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
-X3042 QB5.t0 a_13759_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X3042 QB5b.t0 a_13759_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X3043 a_29754_10806# a_29690_10996# a_29556_10806# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X3044 a_20437_7670# a_19668_7670# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X3045 VSS.t3186 D0.t1 a_757_n1738# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1188p ps=1.02u w=0.36u l=0.28u
@@ -3070,7 +3070,7 @@ X3060 a_36784_n954# a_36720_n708.t28 VDD.t1730 VDD.t1714 pfet_03v3 ad=0.2097p pd
 X3061 VDD a_14724_6102# a_14858_6292# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3062 VSS.t1130 a_n884_n954.t22 a_22338_n954# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X3063 a_10549_n954# a_9780_n954# VSS.t2916 VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
-X3064 VDD a_20905_n862.t33 QA8.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X3064 VDD a_20905_n862.t33 QA8b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X3065 a_20741_2966# RA10.t25 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X3066 a_8077_1398# a_7308_1398# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X3067 a_30325_1398# a_30629_1398# a_30793_n862.t9 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -3286,7 +3286,7 @@ X3276 VSS RB7.t28 a_18698_5664# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1
 X3277 VSS RB5.t31 a_26114_7232# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X3278 VDD a_n108_2966# a_26_3156# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3279 a_17008_2182# a_16944_n708.t24 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
-X3280 VDD a_35737_n862.t33 QA14.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X3280 VDD a_35737_n862.t33 QA14b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X3281 a_n1204_n954.t1 a_n1652_n522# VDD.t3327 VDD.t3326 pfet_03v3 ad=0.3302p pd=1.79u as=0.5588p ps=3.42u w=1.27u l=0.28u
 X3282 VSS a_19668_n170# a_19802_20# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3283 a_8077_6886# a_7308_6886# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
@@ -3312,7 +3312,7 @@ X3302 a_34500_1398# a_n884_1398.t25 a_34312_1398# VDD pfet_03v3 ad=0.1278p pd=1.
 X3303 VSS RB3.t25 a_8810_8800# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
 X3304 VDD a_22140_7670# a_22274_7860# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3305 a_32797_3750# a_32028_3750# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
-X3306 VSS a_38209_n862.t32 QA15.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X3306 VSS a_38209_n862.t32 QA15b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X3307 a_29368_614# a_29304_n708.t19 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X3308 a_20437_6886# a_20741_6978# a_20905_n862.t18 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3309 VDD a_22140_4534# a_22274_4724# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -3405,7 +3405,7 @@ X3395 VSS a_n884_1398.t26 a_22338_1902# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7
 X3396 a_17196_2966# a_n1204_2966.t25 a_17008_2966# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X3397 a_5605_10806# a_4836_10806# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X3398 a_23647_n2146.t18 a_23642_2528# a_22909_2182# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
-X3399 VSS a_3601_n862.t32 QA1.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X3399 VSS a_3601_n862.t32 QA1b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X3400 a_33101_706# RA13.t24 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X3401 VSS a_n884_2182.t24 a_32226_2182# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X3402 a_36728_n1782# a_37232_n1738# a_37520_n1738# VDD pfet_03v3 ad=0.1278p pd=1.07u as=56.7f ps=0.675u w=0.36u l=0.28u
@@ -3554,7 +3554,7 @@ X3544 a_24612_6886# a_n884_6886.t23 a_24424_6886# VDD pfet_03v3 ad=0.1278p pd=1.
 X3545 VSS a_n1204_6102.t31 a_n884_6102.t3 VSS nfet_03v3 ad=0.2948p pd=2.22u as=0.1943p ps=1.25u w=0.67u l=0.28u
 X3546 a_35269_4534# a_35573_4534# a_35737_n862.t20 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3547 VSS a_n1204_2966.t27 a_n884_2966.t2 VSS nfet_03v3 ad=0.2948p pd=2.22u as=0.1943p ps=1.25u w=0.67u l=0.28u
-X3548 QB15.t0 a_38479_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X3548 QB15b.t0 a_38479_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X3549 a_24612_3750# a_n884_3750.t24 a_24424_3750# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X3550 VDD a_n1204_2966.t28 a_n884_2966.t0 VDD pfet_03v3 ad=0.5896p pd=3.56u as=0.3886p ps=1.92u w=1.34u l=0.28u
 X3551 VDD RB12.t27 a_8810_1556# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
@@ -3628,7 +3628,7 @@ X3618 a_2562_5318# a_2498_5632# a_2364_5318# VSS nfet_03v3 ad=56.7f pd=0.675u as
 X3619 VSS a_7308_10806# a_7442_10996# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3620 VSS a_n884_5318.t27 a_37170_5318# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X3621 a_19480_9238# a_19416_n708.t24 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
-X3622 QB1.t0 a_3871_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X3622 QB1b.t0 a_3871_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X3623 a_27853_n954# a_27084_n954# VDD.t2917 VDD.t2916 pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X3624 a_8815_n2146.t3 RB15.t33 a_8077_n954# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X3625 VDD.t3272 a_29556_n170# a_29690_20# VDD.t2402 pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -3636,8 +3636,8 @@ X3626 a_8381_706# RA13.t29 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.
 X3627 a_22909_9238# a_22140_9238# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X3628 a_25381_10806# a_24612_10806# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X3629 a_27084_7670# a_n884_7670.t22 a_26896_7670# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
-X3630 QB13.t1 a_33535_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
-X3631 VSS a_23377_n862.t32 QA9.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X3630 QB13b.t1 a_33535_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X3631 VSS a_23377_n862.t32 QA9b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X3632 a_35269_10806# a_34500_10806# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X3633 VDD a_n1652_8886# a_n1204_8454.t0 VDD pfet_03v3 ad=0.3386p pd=1.86u as=0.3302p ps=1.79u w=1.27u l=0.28u
 X3634 a_26896_6102# a_26832_n708.t27 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
@@ -3710,7 +3710,7 @@ X3700 a_7120_2182# a_7056_n708.t20 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.15
 X3701 a_3437_n170# RA14.t33 VDD.t364 VDD.t133 pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2.36u w=0.72u l=0.28u
 X3702 a_8077_9238# a_7308_9238# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X3703 VDD a_7064_n1782# a_7056_n708.t1 VDD pfet_03v3 ad=0.5456p pd=3.36u as=0.3224p ps=1.76u w=1.24u l=0.28u
-X3704 VSS a_18433_n862.t32 QA7.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X3704 VSS a_18433_n862.t32 QA7b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X3705 a_22909_6886# a_22140_6886# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X3706 a_8077_6102# a_7308_6102# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X3707 a_35573_9238# RA2.t28 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
@@ -3839,8 +3839,8 @@ X3829 a_35573_n862# RA15.t30 VDD.t124 VDD.t123 pfet_03v3 ad=0.3888p pd=2.52u as=
 X3830 VDD a_36972_10806# a_37106_10996# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3831 a_90_5318# a_26_5632# a_n108_5318# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X3832 a_24424_10022# a_24360_n708.t28 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
-X3833 QB9.t0 a_23647_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
-X3834 VDD a_13489_n862.t33 QA5.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X3833 QB9b.t0 a_23647_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X3834 VDD a_13489_n862.t33 QA5b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X3835 a_3871_n2146.t5 RB14.t36 a_3133_n170# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X3836 a_29754_11310# a_29690_10996# a_29556_10806# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X3837 a_28591_n2146.t1 RB4.t28 a_27853_7670# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
@@ -3861,7 +3861,7 @@ X3851 a_32028_5318# a_n884_5318.t28 a_31840_5318# VDD pfet_03v3 ad=0.1278p pd=1.
 X3852 VSS a_32028_2182# a_32162_2496# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X3853 a_34698_1118# a_34634_928# a_34500_614# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X3854 VDD a_9780_8454# a_9914_8768# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X3855 VDD a_30793_n862.t33 QA12.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X3855 VDD a_30793_n862.t33 QA12b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X3856 VSS a_n884_9238.t24 a_9978_9742# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X3857 a_9592_9238# a_9528_n708.t25 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X3858 VSS a_12252_6886# a_12386_7200# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -4128,7 +4128,7 @@ X4118 a_661_10806# a_n108_10806# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p 
 X4119 a_32797_3750# RA9.t36 a_33265_n862.t3 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X4120 a_27282_2182# a_27218_2496# a_27084_2182# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X4121 a_13021_7670# RA4.t32 a_13489_n862.t31 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
-X4122 QB2.t1 a_6343_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X4122 QB2b.t1 a_6343_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X4123 a_8381_706# RA13.t34 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2.36u w=0.72u l=0.28u
 X4124 a_8077_10806# a_7308_10806# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X4125 VSS a_12252_10806# a_12386_10996# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -4156,7 +4156,7 @@ X4146 a_12450_3750# a_12386_4064# a_12252_3750# VSS nfet_03v3 ad=56.7f pd=0.675u
 X4147 a_38045_n862# RA15.t35 VSS.t143 VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X4148 a_12064_3750# a_12000_n708.t23 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X4149 a_661_2182# a_n108_2182# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
-X4150 QB4.t1 a_11287_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X4150 QB4b.t1 a_11287_n2146.t32 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X4151 a_34698_8958# a_34634_8768# a_34500_8454# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X4152 a_36972_6102# a_n884_6102.t29 a_36784_6102# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X4153 a_18703_n2146.t7 RB7.t32 a_17965_5318# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
@@ -4218,7 +4218,7 @@ X4208 a_5096_n1738# a_4592_n1782# VSS.t2753 VSS nfet_03v3 ad=0.1584p pd=1.6u as=
 X4209 a_34500_6102# a_n884_6102.t30 a_34312_6102# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X4210 a_32226_8958# a_32162_8768# a_32028_8454# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X4211 a_16231_n2146.t7 RB7.t34 a_15493_5318# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
-X4212 VSS a_8545_n862.t32 QA3.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X4212 VSS a_8545_n862.t32 QA3b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X4213 a_3437_n862# RA15.t37 VSS.t145 VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X4214 a_661_8454# a_n108_8454# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X4215 a_14536_614# a_14472_n708.t32 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -4278,7 +4278,7 @@ X4268 a_10853_7670# RA4.t34 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=
 X4269 a_17196_10022# a_n884_10022.t26 a_17008_10022# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X4270 a_10853_4534# RA8.t38 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2.36u w=0.72u l=0.28u
 X4271 VDD RB11.t35 a_8810_2528# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
-X4272 VDD a_38209_n862.t33 QA15.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X4272 VDD a_38209_n862.t33 QA15b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X4273 VDD a_n1204_5318.t31 a_7506_5822# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X4274 a_28591_n2146.t20 a_28586_1556# a_27853_1398# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X4275 a_26896_8454# a_26832_n708.t30 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -4347,7 +4347,7 @@ X4337 VDD RB13.t36 a_16226_960# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=
 X4338 a_13021_8454# RA3.t32 a_13489_n862.t21 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X4339 a_19480_1398# a_19416_n708.t28 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X4340 a_34698_6102# a_34634_6292# a_34500_6102# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
-X4341 VDD a_3601_n862.t33 QA1.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X4341 VDD a_3601_n862.t33 QA1b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X4342 a_22909_1398# a_22140_1398# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X4343 a_18269_4534# RA8.t39 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X4344 VDD a_14724_10806# a_14858_10996# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -4420,7 +4420,7 @@ X4410 a_23647_n2146.t4 RB9.t33 a_22909_3750# VSS nfet_03v3 ad=0.1584p pd=1.6u as
 X4411 a_8077_2966# a_8381_2966# a_8545_n862.t21 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X4412 VSS a_n884_10022.t29 a_14922_10022# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X4413 a_34698_3750# a_34634_4064# a_34500_3750# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
-X4414 VSS a_28321_n862.t32 QA11.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
+X4414 VSS a_28321_n862.t32 QA11b.t1 VSS nfet_03v3 ad=0.1242p pd=1.05u as=0.2052p ps=1.86u w=0.36u l=0.28u
 X4415 a_n1652_n522# CLK a_n1652_n962# VSS nfet_03v3 ad=0.3168p pd=2.32u as=0.1872p ps=1.24u w=0.72u l=0.28u
 X4416 a_38045_1398# RA12.t39 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X4417 a_20437_9238# RA2.t35 a_20905_n862.t3 VSS nfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
@@ -4546,8 +4546,8 @@ X4536 VSS a_n1204_10806.t34 a_n884_10806.t3 VSS nfet_03v3 ad=0.2948p pd=2.22u as
 X4537 VDD a_7308_10022# a_7442_10336# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X4538 a_34312_10022# a_34248_n708.t31 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X4539 VDD RB8.t38 a_36002_4692# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
-X4540 QB13.t0 a_33535_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
-X4541 VDD a_23377_n862.t33 QA9.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X4540 QB13b.t0 a_33535_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X4541 VDD a_23377_n862.t33 QA9b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X4542 a_17965_5318# a_18269_5410# a_18433_n862.t0 VDD pfet_03v3 ad=0.1152p pd=1u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X4543 a_8381_9238# RA2.t37 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2.36u w=0.72u l=0.28u
 X4544 a_757_n1738# a_n884_n1738.t25 a_n352_n1782# VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.1278p ps=1.07u w=0.36u l=0.28u
@@ -4615,7 +4615,7 @@ X4605 a_17394_6606# a_17330_6292# a_17196_6102# VSS nfet_03v3 ad=56.7f pd=0.675u
 X4606 VDD a_n1204_9238.t36 a_14922_9238# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X4607 a_n1652_5750# WE7.t1 VDD VDD pfet_03v3 ad=0.1872p pd=1.24u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X4608 a_13759_n2146.t19 a_13754_2528# a_13021_2182# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
-X4609 VDD a_18433_n862.t33 QA7.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X4609 VDD a_18433_n862.t33 QA7b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X4610 VDD a_22140_1398# a_22274_1588# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X4611 VSS a_2364_10806# a_2498_10996# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X4612 a_n1652_2614# WE11.t1 VDD VDD pfet_03v3 ad=0.1872p pd=1.24u as=0.3168p ps=2.32u w=0.72u l=0.28u
@@ -4867,7 +4867,7 @@ X4857 VSS a_19668_8454# a_19802_8768# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p 
 X4858 VSS a_19668_5318# a_19802_5632# VSS nfet_03v3 ad=97.2f pd=0.9u as=0.1584p ps=1.6u w=0.36u l=0.28u
 X4859 a_3871_n2146.t30 a_3866_2528# a_3133_2182# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X4860 VSS RB8.t43 a_13754_4692# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1854p ps=1.75u w=0.36u l=0.28u
-X4861 QB8.t1 a_21175_n2146.t33 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X4861 QB8b.t1 a_21175_n2146.t33 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X4862 VDD RB3.t35 a_6338_8800# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X4863 a_5605_7670# a_4836_7670# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
 X4864 VSS a_n884_6886.t32 a_24810_6886# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
@@ -4943,7 +4943,7 @@ X4933 a_20741_10806# RA0.t45 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps
 X4934 VSS a_n884_7670.t27 a_17394_8174# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X4935 a_13325_6978# RA5.t39 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X4936 VDD a_n1204_6102.t35 a_12450_6102# VDD pfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
-X4937 QB6.t1 a_16231_n2146.t33 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
+X4937 QB6b.t1 a_16231_n2146.t33 VSS VSS nfet_03v3 ad=0.2052p pd=1.86u as=0.1242p ps=1.05u w=0.36u l=0.28u
 X4938 VDD a_n1204_614.t37 a_n884_614.t0 VDD pfet_03v3 ad=0.5896p pd=3.56u as=0.3886p ps=1.92u w=1.34u l=0.28u
 X4939 VSS a_n884_4534.t27 a_17394_5038# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X4940 a_28591_n2146.t18 a_28586_8800# a_27853_8454# VDD pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
@@ -5057,7 +5057,7 @@ X5047 a_23647_n2146.t26 a_23642_10368# a_22909_10022# VDD pfet_03v3 ad=0.1584p p
 X5048 a_21175_n2146.t17 RB3.t40 a_20437_8454# VSS nfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
 X5049 a_32226_8454# a_32162_8768# a_32028_8454# VSS nfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
 X5050 a_29754_7670# a_29690_7860# a_29556_7670# VDD pfet_03v3 ad=56.7f pd=0.675u as=0.1278p ps=1.07u w=0.36u l=0.28u
-X5051 QB2.t0 a_6343_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X5051 QB2b.t0 a_6343_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X5052 a_18269_1398# RA12.t42 VDD VDD pfet_03v3 ad=0.3888p pd=2.52u as=0.3312p ps=2.36u w=0.72u l=0.28u
 X5053 a_3437_9238# RA2.t46 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X5054 a_13021_6102# a_12252_6102# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
@@ -5096,7 +5096,7 @@ X5086 VDD a_24612_10806# a_24746_10996# VDD pfet_03v3 ad=0.1764p pd=1.26u as=0.1
 X5087 a_8381_8546# RA3.t44 VSS VSS nfet_03v3 ad=0.1944p pd=1.8u as=0.1656p ps=1.64u w=0.36u l=0.28u
 X5088 VSS a_n884_3750.t31 a_9978_3750# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X5089 a_30325_2966# a_29556_2966# VDD VDD pfet_03v3 ad=0.36p pd=2.44u as=0.1764p ps=1.26u w=0.72u l=0.28u
-X5090 QB4.t0 a_11287_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
+X5090 QB4b.t0 a_11287_n2146.t33 VDD VDD pfet_03v3 ad=0.4104p pd=2.58u as=0.2484p ps=1.41u w=0.72u l=0.28u
 X5091 VSS a_n884_9238.t30 a_14922_9742# VSS nfet_03v3 ad=0.1584p pd=1.6u as=56.7f ps=0.675u w=0.36u l=0.28u
 X5092 a_n296_8454# a_n360_n708.t30 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X5093 a_7308_7670# a_n884_7670.t31 a_7120_7670# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
@@ -5162,7 +5162,7 @@ X5152 a_n296_1398# a_n360_n708.t31 VSS VSS nfet_03v3 ad=0.1188p pd=1.02u as=0.15
 X5153 a_17008_10022# a_16944_n708.t34 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X5154 a_2364_7670# a_n1204_7670.t37 a_2176_7670# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X5155 a_29556_n954# a_n1204_n954.t33 a_29368_n954# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
-X5156 VDD a_8545_n862.t33 QA3.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X5156 VDD a_8545_n862.t33 QA3b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X5157 VDD RB0.t41 a_13754_10964# VDD pfet_03v3 ad=0.3168p pd=2.32u as=0.3708p ps=2.47u w=0.72u l=0.28u
 X5158 a_2364_4534# a_n1204_4534.t38 a_2176_4534# VSS nfet_03v3 ad=0.1278p pd=1.07u as=0.1188p ps=1.02u w=0.36u l=0.28u
 X5159 a_32028_2182# a_n884_2182.t33 a_31840_2182# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
@@ -5377,7 +5377,7 @@ X5367 a_n1652_4974# WE8.t1 VSS VSS nfet_03v3 ad=0.1872p pd=1.24u as=0.3168p ps=2
 X5368 a_19668_9238# a_n884_9238.t32 a_19480_9238# VDD pfet_03v3 ad=0.1278p pd=1.07u as=0.2097p ps=1.38u w=0.36u l=0.28u
 X5369 a_20437_3750# a_19668_3750# VSS VSS nfet_03v3 ad=0.18p pd=1.72u as=97.2f ps=0.9u w=0.36u l=0.28u
 X5370 a_n1652_1838# WE12.t1 VSS VSS nfet_03v3 ad=0.1872p pd=1.24u as=0.3168p ps=2.32u w=0.72u l=0.28u
-X5371 VDD a_28321_n862.t33 QA11.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
+X5371 VDD a_28321_n862.t33 QA11b.t0 VDD pfet_03v3 ad=0.2484p pd=1.41u as=0.4104p ps=2.58u w=0.72u l=0.28u
 X5372 a_n884_n954.t2 a_n1204_n954.t36 VSS.t489 VSS nfet_03v3 ad=0.1943p pd=1.25u as=0.1693p ps=1.19u w=0.67u l=0.28u
 X5373 a_7120_5318# a_7056_n708.t32 VDD VDD pfet_03v3 ad=0.2097p pd=1.38u as=0.3168p ps=2.32u w=0.72u l=0.28u
 X5374 a_21175_n2146.t23 a_21170_n12# a_20437_n170# VDD.t2180 pfet_03v3 ad=0.1584p pd=1.6u as=0.1152p ps=1u w=0.36u l=0.28u
@@ -7090,9 +7090,9 @@ R1476 a_31063_n2146.n30 a_31063_n2146.n29 0.4505
 R1477 a_31063_n2146.n26 a_31063_n2146.n25 0.4505
 R1478 a_31063_n2146.n22 a_31063_n2146.n21 0.4505
 R1479 a_31063_n2146.n18 a_31063_n2146.n17 0.4505
-R1480 QB12.n0 QB12.t1 13.1454
-R1481 QB12.n0 QB12.t0 9.29658
-R1482 QB12 QB12.n0 4.69014
+R1480 QB12b.n0 QB12b.t1 13.1454
+R1481 QB12b.n0 QB12b.t0 9.29658
+R1482 QB12b QB12b.n0 4.69014
 R1483 RB3.t13 RB3.t42 69.3795
 R1484 RB3.t0 RB3.t6 69.3795
 R1485 RB3.t47 RB3.t20 69.3795
@@ -9933,9 +9933,9 @@ R4319 RA0.n26 RA0.n24 3.97336
 R4320 RA0.n28 RA0.n26 3.97336
 R4321 RA0.n30 RA0.n28 3.97336
 R4322 RA0 RA0.n30 2.33407
-R4323 QA6.n0 QA6.t1 13.1454
-R4324 QA6.n0 QA6.t0 9.29658
-R4325 QA6 QA6.n0 4.69014
+R4323 QA6b.n0 QA6b.t1 13.1454
+R4324 QA6b.n0 QA6b.t0 9.29658
+R4325 QA6b QA6b.n0 4.69014
 R4326 RB4.t12 RB4.t40 69.3795
 R4327 RB4.t46 RB4.t4 69.3795
 R4328 RB4.t45 RB4.t19 69.3795
@@ -10015,9 +10015,9 @@ R4401 RB4.n26 RB4.n24 3.97336
 R4402 RB4.n28 RB4.n26 3.97336
 R4403 RB4.n30 RB4.n28 3.97336
 R4404 RB4 RB4.n30 3.61818
-R4405 QB10.n0 QB10.t1 13.1454
-R4406 QB10.n0 QB10.t0 9.29658
-R4407 QB10 QB10.n0 4.69014
+R4405 QB10b.n0 QB10b.t1 13.1454
+R4406 QB10b.n0 QB10b.t0 9.29658
+R4407 QB10b QB10b.n0 4.69014
 R4408 RB8.t11 RB8.t40 69.3795
 R4409 RB8.t46 RB8.t3 69.3795
 R4410 RB8.t45 RB8.t18 69.3795
@@ -10973,9 +10973,9 @@ R5359 a_33265_n862.n17 a_33265_n862.n16 0.4505
 R5360 a_33265_n862.n30 a_33265_n862.n29 0.4505
 R5361 a_33265_n862.n26 a_33265_n862.n25 0.4505
 R5362 a_33265_n862.n22 a_33265_n862.n21 0.4505
-R5363 QA13.n0 QA13.t1 13.1454
-R5364 QA13.n0 QA13.t0 9.29658
-R5365 QA13 QA13.n0 4.69014
+R5363 QA13b.n0 QA13b.t1 13.1454
+R5364 QA13b.n0 QA13b.t0 9.29658
+R5365 QA13b QA13b.n0 4.69014
 R5366 a_n360_n708.n1 a_n360_n708.t8 31.0255
 R5367 a_n360_n708.n2 a_n360_n708.t19 31.0255
 R5368 a_n360_n708.n4 a_n360_n708.t4 31.0255
@@ -13279,9 +13279,9 @@ R7665 a_n884_6102.n31 a_n884_6102.n30 0.5855
 R7666 WE10.n0 WE10.t1 38.1951
 R7667 WE10.n0 WE10.t0 17.0773
 R7668 WE10 WE10.n0 8.10903
-R7669 QB8.n0 QB8.t1 13.1454
-R7670 QB8.n0 QB8.t0 9.29658
-R7671 QB8 QB8.n0 4.69014
+R7669 QB8b.n0 QB8b.t1 13.1454
+R7670 QB8b.n0 QB8b.t0 9.29658
+R7671 QB8b QB8b.n0 4.69014
 R7672 a_30793_n862.n15 a_30793_n862.t32 18.9023
 R7673 a_30793_n862.n0 a_30793_n862.t3 16.1132
 R7674 a_30793_n862.n15 a_30793_n862.t33 15.6434
@@ -13895,9 +13895,9 @@ R8281 a_3871_n2146.n31 a_3871_n2146.n16 0.4505
 R8282 a_3871_n2146.n28 a_3871_n2146.n27 0.4505
 R8283 a_3871_n2146.n24 a_3871_n2146.n23 0.4505
 R8284 a_3871_n2146.n20 a_3871_n2146.n19 0.4505
-R8285 QB6.n0 QB6.t1 13.1454
-R8286 QB6.n0 QB6.t0 9.29658
-R8287 QB6 QB6.n0 4.69014
+R8285 QB6b.n0 QB6b.t1 13.1454
+R8286 QB6b.n0 QB6b.t0 9.29658
+R8287 QB6b QB6b.n0 4.69014
 R8288 WE2.n0 WE2.t0 38.1951
 R8289 WE2.n0 WE2.t1 17.0773
 R8290 WE2 WE2.n0 8.10903
@@ -14604,9 +14604,9 @@ R8990 a_38209_n862.n15 a_38209_n862.n14 0.4505
 R8991 D6.n0 D6.t1 31.0255
 R8992 D6.n0 D6.t0 27.8969
 R8993 D6 D6.n0 13.1714
-R8994 QA2.n0 QA2.t1 13.1454
-R8995 QA2.n0 QA2.t0 9.29658
-R8996 QA2 QA2.n0 4.69014
+R8994 QA2b.n0 QA2b.t1 13.1454
+R8995 QA2b.n0 QA2b.t0 9.29658
+R8996 QA2b QA2b.n0 4.69014
 R8997 WE1.n0 WE1.t1 38.1951
 R8998 WE1.n0 WE1.t0 17.0773
 R8999 WE1 WE1.n0 8.10903
@@ -14679,21 +14679,21 @@ R9065 a_n884_3750.n25 a_n884_3750.n24 0.5855
 R9066 a_n884_3750.n27 a_n884_3750.n26 0.5855
 R9067 a_n884_3750.n29 a_n884_3750.n28 0.5855
 R9068 a_n884_3750.n31 a_n884_3750.n30 0.5855
-R9069 QB14.n0 QB14.t1 13.1454
-R9070 QB14.n0 QB14.t0 9.29658
-R9071 QB14 QB14.n0 4.69014
+R9069 QB14b.n0 QB14b.t1 13.1454
+R9070 QB14b.n0 QB14b.t0 9.29658
+R9071 QB14b QB14b.n0 4.69014
 R9072 D13.n0 D13.t0 31.0255
 R9073 D13.n0 D13.t1 27.8969
 R9074 D13 D13.n0 13.1714
-R9075 QB0.n0 QB0.t1 13.1454
-R9076 QB0.n0 QB0.t0 9.29658
-R9077 QB0 QB0.n0 4.69014
+R9075 QB0b.n0 QB0b.t1 13.1454
+R9076 QB0b.n0 QB0b.t0 9.29658
+R9077 QB0b QB0b.n0 4.69014
 R9078 D2.n0 D2.t1 31.0255
 R9079 D2.n0 D2.t0 27.8969
 R9080 D2 D2.n0 13.1698
-R9081 QA4.n0 QA4.t1 13.1454
-R9082 QA4.n0 QA4.t0 9.29658
-R9083 QA4 QA4.n0 4.69014
+R9081 QA4b.n0 QA4b.t1 13.1454
+R9082 QA4b.n0 QA4b.t0 9.29658
+R9083 QA4b QA4b.n0 4.69014
 R9084 D4.n0 D4.t1 31.0255
 R9085 D4.n0 D4.t0 27.8969
 R9086 D4 D4.n0 13.1843
@@ -14703,12 +14703,12 @@ R9089 WE13 WE13.n0 8.10903
 R9090 WE7.n0 WE7.t0 38.1951
 R9091 WE7.n0 WE7.t1 17.0773
 R9092 WE7 WE7.n0 8.10903
-R9093 QB7.n0 QB7.t1 13.1454
-R9094 QB7.n0 QB7.t0 9.29658
-R9095 QB7 QB7.n0 4.69014
-R9096 QA10.n0 QA10.t1 13.1454
-R9097 QA10.n0 QA10.t0 9.29658
-R9098 QA10 QA10.n0 4.69014
+R9093 QB7b.n0 QB7b.t1 13.1454
+R9094 QB7b.n0 QB7b.t0 9.29658
+R9095 QB7b QB7b.n0 4.69014
+R9096 QA10b.n0 QA10b.t1 13.1454
+R9097 QA10b.n0 QA10b.t0 9.29658
+R9098 QA10b QA10b.n0 4.69014
 R9099 WE14.n0 WE14.t0 38.1951
 R9100 WE14.n0 WE14.t1 17.0773
 R9101 WE14 WE14.n0 8.10903
@@ -14718,48 +14718,48 @@ R9104 D7 D7.n0 13.1779
 R9105 D14.n0 D14.t1 31.0255
 R9106 D14.n0 D14.t0 27.8969
 R9107 D14 D14.n0 13.1618
-R9108 QA0.n0 QA0.t1 13.1454
-R9109 QA0.n0 QA0.t0 9.29658
-R9110 QA0 QA0.n0 4.69014
-R9111 QB11.n0 QB11.t1 13.1454
-R9112 QB11.n0 QB11.t0 9.29658
-R9113 QB11 QB11.n0 4.69014
+R9108 QA0b.n0 QA0b.t1 13.1454
+R9109 QA0b.n0 QA0b.t0 9.29658
+R9110 QA0b QA0b.n0 4.69014
+R9111 QB11b.n0 QB11b.t1 13.1454
+R9112 QB11b.n0 QB11b.t0 9.29658
+R9113 QB11b QB11b.n0 4.69014
 R9114 D8.n0 D8.t1 31.0255
 R9115 D8.n0 D8.t0 27.8969
 R9116 D8 D8.n0 13.1602
-R9117 QB3.n0 QB3.t1 13.1454
-R9118 QB3.n0 QB3.t0 9.29658
-R9119 QB3 QB3.n0 4.69014
+R9117 QB3b.n0 QB3b.t1 13.1454
+R9118 QB3b.n0 QB3b.t0 9.29658
+R9119 QB3b QB3b.n0 4.69014
 R9120 WE6.n0 WE6.t0 38.1951
 R9121 WE6.n0 WE6.t1 17.0773
 R9122 WE6 WE6.n0 8.10903
-R9123 QB5.n0 QB5.t1 13.1454
-R9124 QB5.n0 QB5.t0 9.29658
-R9125 QB5 QB5.n0 4.69014
-R9126 QA8.n0 QA8.t1 13.1454
-R9127 QA8.n0 QA8.t0 9.29658
-R9128 QA8 QA8.n0 4.69014
+R9123 QB5b.n0 QB5b.t1 13.1454
+R9124 QB5b.n0 QB5b.t0 9.29658
+R9125 QB5b QB5b.n0 4.69014
+R9126 QA8b.n0 QA8b.t1 13.1454
+R9127 QA8b.n0 QA8b.t0 9.29658
+R9128 QA8b QA8b.n0 4.69014
 R9129 D0.n0 D0.t1 31.0255
 R9130 D0.n0 D0.t0 27.8969
 R9131 D0 D0.n0 13.1682
-R9132 QA14.n0 QA14.t1 13.1454
-R9133 QA14.n0 QA14.t0 9.29658
-R9134 QA14 QA14.n0 4.69014
+R9132 QA14b.n0 QA14b.t1 13.1454
+R9133 QA14b.n0 QA14b.t0 9.29658
+R9134 QA14b QA14b.n0 4.69014
 R9135 D11.n0 D11.t1 31.0255
 R9136 D11.n0 D11.t0 27.8969
 R9137 D11 D11.n0 13.1763
-R9138 QB15.n0 QB15.t1 13.1454
-R9139 QB15.n0 QB15.t0 9.29658
-R9140 QB15 QB15.n0 4.69014
+R9138 QB15b.n0 QB15b.t1 13.1454
+R9139 QB15b.n0 QB15b.t0 9.29658
+R9140 QB15b QB15b.n0 4.69014
 R9141 WE4.n0 WE4.t1 38.1951
 R9142 WE4.n0 WE4.t0 17.0773
 R9143 WE4 WE4.n0 8.10903
 R9144 WE8.n0 WE8.t1 38.1951
 R9145 WE8.n0 WE8.t0 17.0773
 R9146 WE8 WE8.n0 8.10903
-R9147 QB1.n0 QB1.t1 13.1454
-R9148 QB1.n0 QB1.t0 9.29658
-R9149 QB1 QB1.n0 4.69014
+R9147 QB1b.n0 QB1b.t1 13.1454
+R9148 QB1b.n0 QB1b.t0 9.29658
+R9149 QB1b QB1b.n0 4.69014
 R9150 WE9.n0 WE9.t1 38.1951
 R9151 WE9.n0 WE9.t0 17.0773
 R9152 WE9 WE9.n0 8.10903
@@ -14775,15 +14775,15 @@ R9161 WE15 WE15.n0 8.10903
 R9162 WE11.n0 WE11.t0 38.1951
 R9163 WE11.n0 WE11.t1 17.0773
 R9164 WE11 WE11.n0 8.10903
-R9165 QA5.n0 QA5.t1 13.1454
-R9166 QA5.n0 QA5.t0 9.29658
-R9167 QA5 QA5.n0 4.69014
-R9168 QB9.n0 QB9.t1 13.1454
-R9169 QB9.n0 QB9.t0 9.29658
-R9170 QB9 QB9.n0 4.69014
-R9171 QA12.n0 QA12.t1 13.1454
-R9172 QA12.n0 QA12.t0 9.29658
-R9173 QA12 QA12.n0 4.69014
+R9165 QA5b.n0 QA5b.t1 13.1454
+R9166 QA5b.n0 QA5b.t0 9.29658
+R9167 QA5b QA5b.n0 4.69014
+R9168 QB9b.n0 QB9b.t1 13.1454
+R9169 QB9b.n0 QB9b.t0 9.29658
+R9170 QB9b QB9b.n0 4.69014
+R9171 QA12b.n0 QA12b.t1 13.1454
+R9172 QA12b.n0 QA12b.t0 9.29658
+R9173 QA12b QA12b.n0 4.69014
 R9174 WE3.n0 WE3.t1 38.1951
 R9175 WE3.n0 WE3.t0 17.0773
 R9176 WE3 WE3.n0 8.10903
@@ -14793,42 +14793,42 @@ R9179 WE5 WE5.n0 8.10903
 R9180 D1.n0 D1.t1 31.0255
 R9181 D1.n0 D1.t0 27.8969
 R9182 D1 D1.n0 13.1682
-R9183 QA15.n0 QA15.t1 13.1454
-R9184 QA15.n0 QA15.t0 9.29658
-R9185 QA15 QA15.n0 4.69014
-R9186 QA1.n0 QA1.t1 13.1454
-R9187 QA1.n0 QA1.t0 9.29658
-R9188 QA1 QA1.n0 4.69014
-R9189 QB13.n0 QB13.t1 13.1454
-R9190 QB13.n0 QB13.t0 9.29658
-R9191 QB13 QB13.n0 4.69014
-R9192 QA9.n0 QA9.t1 13.1454
-R9193 QA9.n0 QA9.t0 9.29658
-R9194 QA9 QA9.n0 4.69014
-R9195 QA7.n0 QA7.t1 13.1454
-R9196 QA7.n0 QA7.t0 9.29658
-R9197 QA7 QA7.n0 4.69014
+R9183 QA15b.n0 QA15b.t1 13.1454
+R9184 QA15b.n0 QA15b.t0 9.29658
+R9185 QA15b QA15b.n0 4.69014
+R9186 QA1b.n0 QA1b.t1 13.1454
+R9187 QA1b.n0 QA1b.t0 9.29658
+R9188 QA1b QA1b.n0 4.69014
+R9189 QB13b.n0 QB13b.t1 13.1454
+R9190 QB13b.n0 QB13b.t0 9.29658
+R9191 QB13b QB13b.n0 4.69014
+R9192 QA9b.n0 QA9b.t1 13.1454
+R9193 QA9b.n0 QA9b.t0 9.29658
+R9194 QA9b QA9b.n0 4.69014
+R9195 QA7b.n0 QA7b.t1 13.1454
+R9196 QA7b.n0 QA7b.t0 9.29658
+R9197 QA7b QA7b.n0 4.69014
 R9198 WE12.n0 WE12.t1 38.1951
 R9199 WE12.n0 WE12.t0 17.0773
 R9200 WE12 WE12.n0 8.10903
 R9201 D3.n0 D3.t1 31.0255
 R9202 D3.n0 D3.t0 27.8969
 R9203 D3 D3.n0 13.1698
-R9204 QB2.n0 QB2.t1 13.1454
-R9205 QB2.n0 QB2.t0 9.29658
-R9206 QB2 QB2.n0 4.69014
+R9204 QB2b.n0 QB2b.t1 13.1454
+R9205 QB2b.n0 QB2b.t0 9.29658
+R9206 QB2b QB2b.n0 4.69014
 R9207 D5.n0 D5.t1 31.0255
 R9208 D5.n0 D5.t0 27.8969
 R9209 D5 D5.n0 13.173
-R9210 QB4.n0 QB4.t1 13.1454
-R9211 QB4.n0 QB4.t0 9.29658
-R9212 QB4 QB4.n0 4.69014
-R9213 QA3.n0 QA3.t1 13.1454
-R9214 QA3.n0 QA3.t0 9.29658
-R9215 QA3 QA3.n0 4.69014
-R9216 QA11.n0 QA11.t1 13.1454
-R9217 QA11.n0 QA11.t0 9.29658
-R9218 QA11 QA11.n0 4.69014
+R9210 QB4b.n0 QB4b.t1 13.1454
+R9211 QB4b.n0 QB4b.t0 9.29658
+R9212 QB4b QB4b.n0 4.69014
+R9213 QA3b.n0 QA3b.t1 13.1454
+R9214 QA3b.n0 QA3b.t0 9.29658
+R9215 QA3b QA3b.n0 4.69014
+R9216 QA11b.n0 QA11b.t1 13.1454
+R9217 QA11b.n0 QA11b.t0 9.29658
+R9218 QA11b QA11b.n0 4.69014
 C0 a_18269_2966# RA10 0.1633f
 C1 a_10549_9238# a_10853_9238# 0.40203f
 C2 a_27218_7860# a_27084_7670# 0.68196f
@@ -18157,38 +18157,38 @@ C3324 VDD RB4 2.78894f
 C3325 a_18269_2274# RA11 0.1633f
 C3326 a_29690_10996# VDD 0.41954f
 C3327 a_30629_8546# VDD 0.26764f
-C3328 QB15 VSS 0.22657f
-C3329 QA15 VSS 0.21525f
-C3330 QB14 VSS 0.21476f
-C3331 QA14 VSS 0.21525f
-C3332 QB13 VSS 0.21532f
-C3333 QA13 VSS 0.21525f
-C3334 QB12 VSS 0.21476f
-C3335 QA12 VSS 0.21525f
-C3336 QB11 VSS 0.21532f
-C3337 QA11 VSS 0.21525f
-C3338 QB10 VSS 0.21532f
-C3339 QA10 VSS 0.21525f
-C3340 QB9 VSS 0.21476f
-C3341 QA9 VSS 0.21525f
-C3342 QB8 VSS 0.21532f
-C3343 QA8 VSS 0.21525f
-C3344 QB7 VSS 0.21532f
-C3345 QA7 VSS 0.21525f
-C3346 QB6 VSS 0.21476f
-C3347 QA6 VSS 0.21525f
-C3348 QB5 VSS 0.21532f
-C3349 QA5 VSS 0.21525f
-C3350 QB4 VSS 0.21532f
-C3351 QA4 VSS 0.21525f
-C3352 QB3 VSS 0.21476f
-C3353 QA3 VSS 0.21525f
-C3354 QB2 VSS 0.21532f
-C3355 QA2 VSS 0.21525f
-C3356 QB1 VSS 0.21532f
-C3357 QA1 VSS 0.21525f
-C3358 QB0 VSS 0.21476f
-C3359 QA0 VSS 0.21525f
+C3328 QB15b VSS 0.22657f
+C3329 QA15b VSS 0.21525f
+C3330 QB14b VSS 0.21476f
+C3331 QA14b VSS 0.21525f
+C3332 QB13b VSS 0.21532f
+C3333 QA13b VSS 0.21525f
+C3334 QB12b VSS 0.21476f
+C3335 QA12b VSS 0.21525f
+C3336 QB11b VSS 0.21532f
+C3337 QA11b VSS 0.21525f
+C3338 QB10b VSS 0.21532f
+C3339 QA10b VSS 0.21525f
+C3340 QB9b VSS 0.21476f
+C3341 QA9b VSS 0.21525f
+C3342 QB8b VSS 0.21532f
+C3343 QA8b VSS 0.21525f
+C3344 QB7b VSS 0.21532f
+C3345 QA7b VSS 0.21525f
+C3346 QB6b VSS 0.21476f
+C3347 QA6b VSS 0.21525f
+C3348 QB5b VSS 0.21532f
+C3349 QA5b VSS 0.21525f
+C3350 QB4b VSS 0.21532f
+C3351 QA4b VSS 0.21525f
+C3352 QB3b VSS 0.21476f
+C3353 QA3b VSS 0.21525f
+C3354 QB2b VSS 0.21532f
+C3355 QA2b VSS 0.21525f
+C3356 QB1b VSS 0.21532f
+C3357 QA1b VSS 0.21525f
+C3358 QB0b VSS 0.21476f
+C3359 QA0b VSS 0.21525f
 C3360 D15 VSS 0.24856f
 C3361 D14 VSS 0.24111f
 C3362 D13 VSS 0.24111f
