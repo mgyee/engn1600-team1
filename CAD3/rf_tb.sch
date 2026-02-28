@@ -269,3 +269,57 @@ C {devices/gnd.sym} -600 -650 1 0 {name=gD1}
 C {devices/vsource.sym} -570 -750 1 0 {name=VD0 value=0}
 C {devices/lab_pin.sym} -540 -750 2 0 {name=pD0 lab=D0}
 C {devices/gnd.sym} -600 -750 1 0 {name=gD0}
+C {code_shown.sym} 70 250 0 0 {name=s1 only_toplevel=false value="
+** READ PROPAGATION DELAY
+
+.control
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+
+let DT = T * 2
+let QT = T/4
+let FQT = QT * 5
+
+let tstop = 3 * T
+let tstep = 0.01 * T
+
+** Enable WEM
+alter @VWEM[DC] = 3.3
+
+** Assert D = N
+alter @VD0[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
+alter @VD1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+
+** Enable WE
+alter @VWE0[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VWE1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VWE2[PWL] = [ 0 0 $&T 0 $&T 3.3 $&DT 3.3 $&DT 0 ]
+
+** Assert CLK
+alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+
+** Time RA
+alter @VRA0[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
+alter @VRA2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
+
+** Time RB
+alter @VRB1[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
+alter @VRB2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
+
+tran $&tstep $&tstop
+meas tran TPLH TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA0b) VAL=1.65 FALL=1 TD=$&DT
+meas tran TPHL TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA1b) VAL=1.65 RISE=1 TD=$&DT
+
+plot QA0b QA1b+4 RA2+8
+
+.endc
+"}
+C {devices/code_shown.sym} -420 250 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+"}
