@@ -98,7 +98,7 @@ N -70 -260 -30 -260 {lab=GND}
 N 30 -260 80 -260 {lab=RA}
 N -70 -200 -30 -200 {lab=GND}
 N 30 -200 80 -200 {lab=RB}
-C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0 kQb="'kQb'"}
+C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0 kQ="'kQ'"}
 C {lab_wire.sym} 770 -270 0 0 {name=p2161 sig_type=std_logic lab=WECLK}
 C {lab_wire.sym} 770 -250 0 0 {name=p2162 sig_type=std_logic lab=WECLKb}
 C {lab_wire.sym} 770 -230 0 0 {name=p2163 sig_type=std_logic lab=RA}
@@ -129,7 +129,7 @@ C {devices/lab_wire.sym} 350 -240 0 0 {name=lw_we19 lab=WECLK}
 C {devices/lab_wire.sym} 350 -220 0 0 {name=lw_we20 lab=WECLKb}
 C {symbols/pfet_03v3.sym} 1130 -690 1 0 {name=M13
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -143,7 +143,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1130 -470 3 0 {name=M14
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -164,7 +164,7 @@ C {lab_wire.sym} 1130 -430 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1080 -490 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 1350 -690 1 0 {name=M3
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -178,7 +178,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1350 -470 3 0 {name=M4
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -286,7 +286,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 780 -490 3 0 {name=M10
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=30
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -322,7 +322,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 940 -490 3 0 {name=M12
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=30
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -453,12 +453,12 @@ C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 80 -700 0 0 {name=lw_we1 lab=D}
 C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
-** kQb SWEEP
+** kQ SWEEP
 
 .param kWECLKb=1
 .param kWECLK=1
 .param kWEMb=1
-.param kQb=1
+.param kQ=1
 .param kN=1
 
 .control
@@ -483,7 +483,7 @@ compose TFALL start=0 stop=0 lin=$&NTRIALS
 let idx = 0
 while idx < NTRIALS
 	let kVAL = kVALS[idx]
-	alterparam kQb = $&kVAL
+	alterparam kQ = $&kVAL
 	reset
 
 	** Enable WEM

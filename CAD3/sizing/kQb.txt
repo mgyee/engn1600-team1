@@ -1,10 +1,10 @@
 "
-** kQb SWEEP
+** kQ SWEEP
 
 .param kWECLKb=1
 .param kWECLK=1
 .param kWEMb=1
-.param kQb=1
+.param kQ=1
 .param kN=1
 
 .control
@@ -29,7 +29,7 @@ compose TFALL start=0 stop=0 lin=$&NTRIALS
 let idx = 0
 while idx < NTRIALS
 	let kVAL = kVALS[idx]
-	alterparam kQb = $&kVAL
+	alterparam kQ = $&kVAL
 	reset
 
 	** Enable WEM

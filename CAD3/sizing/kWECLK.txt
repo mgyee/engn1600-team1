@@ -4,7 +4,7 @@
 .param kWECLKb=3.73
 .param kWECLK=1
 .param kWEMb=1
-.param kQb=1
+.param kQ=1
 .param kN=1
 
 .control

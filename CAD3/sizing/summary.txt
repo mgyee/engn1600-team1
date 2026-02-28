@@ -16,7 +16,7 @@ kvals[idxf] = 3.959596
 kWEMb
 Does not converge
 
-kQb
+kQ
 kvals[idxr] = 1.000000
 kvals[idxf] = 1.000000
 => 1
