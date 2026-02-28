@@ -453,13 +453,13 @@ C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 80 -700 0 0 {name=lw_we1 lab=D}
 C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
-** READ PROPAGATION DELAY
+** kQ SWEEP
 
-.param kWECLKb=1.34/0.36
-.param kWECLK=1.27/0.36
-.param kWEMb=1.26/0.36
-.param kQ=0.36/0.36
-.param kN=1.24/0.36
+.param kWECLKb=1
+.param kWECLK=1
+.param kWEMb=1
+.param kQ=1
+.param kN=1
 
 .control
 
@@ -474,27 +474,57 @@ let FQT = QT * 5
 
 let tstop = 3.5 * T
 let tstep = 0.001 * T
+let NTRIALS = 20
 
-** Enable WEM
-alter @VWEM[DC] = 3.3
+compose kVALS start=1 stop=5 lin=$&NTRIALS
+compose TRISE start=0 stop=0 lin=$&NTRIALS
+compose TFALL start=0 stop=0 lin=$&NTRIALS
 
-** Enable WE
-alter @VWE[DC] = 3.3
+let idx = 0
+while idx < NTRIALS
+	let kVAL = kVALS[idx]
+	alterparam kQ = $&kVAL
+	reset
 
-** Assert D = N
-alter @VD[PULSE] = [ 3.3 0 $&T 0 0 $&T $&DT 0 ]
+	** Enable WEM
+	alter @VWEM[DC] = 3.3
 
-** Assert CLK = WECLK
-alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+    ** Enable WE
+	alter @VWE[DC] = 3.3
 
-** Time RA
-alter @VRA[PULSE] = [ 3.3 0 $&FQT 0 0 $&PW $&T 0 ]
+	** Assert D = N
+	alter @VD[PULSE] = [ 3.3 0 $&T 0 0 $&T $&DT 0 ]
 
-tran $&tstep $&tstop
-meas tran TPLH TRIG V(RA) VAL=1.65 RISE=1 TARG V(QAb) VAL=1.65 RISE=1 TD=$&T
-meas tran TPHL TRIG V(RA) VAL=1.65 RISE=2 TARG V(QAb) VAL=1.65 FALL=1 TD=$&T
+    ** Assert CLK = WECLK
+    alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
 
-plot RA+4 QAb
+    ** Time RA
+    alter @VRA[PULSE] = [ 3.3 0 $&FQT 0 0 $&PW $&T 0 ]
+
+	tran $&tstep $&tstop
+	meas tran TPLH TRIG V(RA) VAL=1.65 RISE=1 TARG V(QAb) VAL=1.65 RISE=1 TD=$&T
+    meas tran TPHL TRIG V(RA) VAL=1.65 RISE=2 TARG V(QAb) VAL=1.65 FALL=1 TD=$&T
+	let TRISE[idx] = $&TPLH
+	let TFALL[idx] = $&TPHL
+	let idx = idx + 1
+end
+
+plot TRISE vs kVALS
+plot TFALL vs kVALS
+
+let minval = minimum(TRISE)
+let idxR = 0
+while TRISE[idxR] > minval
+  let idxR = idxR + 1
+end
+print kVALS[idxR]
+
+let minval = minimum(TFALL)
+let idxF = 0
+while TFALL[idxF] > minval
+  let idxF = idxF + 1
+end
+print kVALS[idxF]
 
 .endc
 "}
