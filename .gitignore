@@ -1,2 +1,3 @@
 *.lyrdb
 *.cir
+.DS_Store
