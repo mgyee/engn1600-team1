@@ -20,8 +20,8 @@ xlabmag=1.0
 ylabmag=1.0
 node="RA15;ra15,ra14,ra13,ra12,ra11,ra10,ra9,ra8,ra7,ra6,ra5,ra4,ra3,ra2,ra1,ra0
 RB15;rb15,rb14,rb13,rb12,rb11,rb10,rb9,rb8,rb7,rb6,rb5,rb4,rb3,rb2,rb1,rb0
-QA15;qa15,qa14,qa13,qa12,qa11,qa10,qa9,qa8,qa7,qa6,qa5,qa4,qa3,qa2,qa1,qa0
-QB15;qb15,qb14,qb13,qb12,qb11,qb10,qb9,qb8,qb7,qb6,qb5,qb4,qb3,qb2,qb1,qb0"
+QA15b;qa15,qa14,qa13,qa12,qa11,qa10,qa9,qa8,qa7,qa6,qa5,qa4,qa3,qa2,qa1,qa0
+QB15b;qb15,qb14,qb13,qb12,qb11,qb10,qb9,qb8,qb7,qb6,qb5,qb4,qb3,qb2,qb1,qb0"
 color="4 5 6 7"
 dataset=-1
 unitx=1
@@ -63,8 +63,8 @@ C {lab_pin.sym} -150 -10 0 0 {name=p5 lab=WE[15..0]}
 C {lab_pin.sym} -150 10 0 0 {name=p6 lab=RA[15..0]}
 C {lab_pin.sym} -150 30 0 0 {name=p7 lab=RB[15..0]}
 C {lab_pin.sym} -20 80 1 1 {name=p8 lab=D[15..0]}
-C {lab_pin.sym} 0 80 1 1 {name=p9 lab=QA[15..0]}
-C {lab_pin.sym} 20 80 1 1 {name=p10 lab=QB[15..0]}
+C {lab_pin.sym} 0 80 1 1 {name=p9 lab=QA[15..0]b}
+C {lab_pin.sym} 20 80 1 1 {name=p10 lab=QB[15..0]b}
 C {devices/vsource.sym} -1170 750 1 0 {name=VCLK value=0}
 C {devices/lab_pin.sym} -1140 750 2 0 {name=pCLK lab=CLK}
 C {devices/gnd.sym} -1200 750 1 0 {name=gCLK}
@@ -269,3 +269,54 @@ C {devices/gnd.sym} -600 -650 1 0 {name=gD1}
 C {devices/vsource.sym} -570 -750 1 0 {name=VD0 value=0}
 C {devices/lab_pin.sym} -540 -750 2 0 {name=pD0 lab=D0}
 C {devices/gnd.sym} -600 -750 1 0 {name=gD0}
+C {code_shown.sym} 320 130 0 0 {name=s1 only_toplevel=false value="
+** WRITE PROPAGATION DELAY
+
+.control
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+
+let DT = T * 2
+let QT = T/4
+let FQT = QT * 5
+
+let tstop = 5.5 * T
+let tstep = 0.01 * T
+
+** Assert CLK = WECLK
+alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+
+** Enable WEM
+alter @VWEM[PULSE] = [ 3.3 0 $&PW 0 0 $&PW $&T 0 ]
+
+** Create a D[15:0] pulse
+let Ddelay = 15n
+alter @VD0[PULSE] = [ 0 3.3 22n 0 0 6n 50n 0 ]
+alter @VD4[PULSE] = [ 0 3.3 17n 0 0 $&PW $&T 0 ]
+alter @VD8[PULSE] = [ 0 3.3 17n 0 0 $&PW $&T 0 ]
+
+** Write enable the first bit
+alter @VWE0[PULSE] = [ 0 3.3 14n 0 0 $&PW $&T 0 ]
+
+
+** Time RA0
+alter @VRA0[PULSE] = [ 0 3.3 1n 0 0 100n 100n 0 ]
+
+tran $&tstep $&tstop
+meas tran Tfall TRIG V(CLK) VAL=1.65 RISE=3 TARG V(QA0b) VAL=1.65 FALL=1 TD=0
+meas tran Trise TRIG V(CLK) VAL=1.65 RISE=4 TARG V(QA0b) VAL=1.65 RISE=2 TD=0
+
+
+plot CLK WEM+4 D0+8 WE0+12 QA0b+16 RA0+20
+
+.endc
+"}
+C {devices/code_shown.sym} 330 -20 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+"}

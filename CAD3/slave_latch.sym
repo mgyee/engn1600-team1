@@ -1,8 +1,8 @@
 v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {type=subcircuit
-format="@name @pinlist @symname kQb=@kQb"
-template="name=x1 kQb=1"
+format="@name @pinlist @symname kQ=@kQ"
+template="name=x1 kQ=1"
 }
 V {}
 S {}
@@ -19,22 +19,22 @@ L 7 50 -120 50 -100 {}
 B 4 -0 -100 100 -0 {fill=false}
 B 5 47.5 -122.5 52.5 -117.5 {name=VDD dir=inout}
 B 5 47.5 17.5 52.5 22.5 {name=VSS dir=inout}
-B 5 117.5 -82.5 122.5 -77.5 {name=QAb dir=out}
+B 5 117.5 -82.5 122.5 -77.5 {name=QA dir=out}
 B 5 -22.5 -92.5 -17.5 -87.5 {name=WECLK dir=in}
 B 5 -22.5 -72.5 -17.5 -67.5 {name=WECLKb dir=in}
 B 5 -22.5 -52.5 -17.5 -47.5 {name=RA dir=in}
 B 5 -22.5 -32.5 -17.5 -27.5 {name=RB dir=in}
-B 5 117.5 -62.5 122.5 -57.5 {name=QBb dir=out}
+B 5 117.5 -62.5 122.5 -57.5 {name=QB dir=out}
 B 5 -22.5 -12.5 -17.5 -7.5 {name=D dir=in}
 T {@symname} 62.5 -126 0 0 0.3 0.3 {}
 T {@name} 5 -122 0 0 0.2 0.2 {}
 T {VDD} 54 -95 1 0 0.2 0.2 {}
 T {VSS} 46 -5 3 0 0.2 0.2 {}
-T {QAb} 95 -84 0 1 0.2 0.2 {}
+T {QA} 95 -84 0 1 0.2 0.2 {}
 T {WECLK} 5 -94 0 0 0.2 0.2 {}
 T {WECLKb} 5 -74 0 0 0.2 0.2 {}
 T {RA} 5 -54 0 0 0.2 0.2 {}
 T {RB} 5 -34 0 0 0.2 0.2 {}
-T {QBb} 95 -64 0 1 0.2 0.2 {}
+T {QB} 95 -64 0 1 0.2 0.2 {}
 T {D} 5 -14 0 0 0.2 0.2 {}
-T {kQb=@kQb} 120 -100 0 0 0.2 0.2 { layer=13}
+T {kQ=@kQ} 120 -100 0 0 0.2 0.2 { layer=13}

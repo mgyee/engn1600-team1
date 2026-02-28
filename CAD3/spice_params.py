@@ -15,7 +15,7 @@ PARAM_RE = re.compile(
     re.IGNORECASE,
 )
 
-# W='kQb*0.36u'
+# W='kQ*0.36u'
 WIDTH_RE = re.compile(
     r"(W\s*=\s*')([^']*)(')",
     re.IGNORECASE,
@@ -25,7 +25,7 @@ WIDTH_RE = re.compile(
 def parse_params(lines):
     """
     Find FIRST architecture block and return dict:
-        { "kQb": "0.36/0.36", ... }
+        { "kQ": "0.36/0.36", ... }
     """
     begin = None
     end = None
@@ -58,7 +58,7 @@ def substitute_width(expr: str, params: dict):
     Replace kXXX tokens with parameter values.
 
     Example:
-        kQb*0.36u -> 0.36/0.36*0.36u
+        kQ*0.36u -> 0.36/0.36*0.36u
     """
     def repl(match):
         name = match.group(0)

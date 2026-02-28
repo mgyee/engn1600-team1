@@ -6,24 +6,24 @@ S {}
 E {}
 N 1130 -670 1130 -650 {lab=VDD}
 N 1130 -510 1130 -490 {lab=VSS}
-N 1160 -670 1180 -670 {lab=QAb}
-N 1180 -570 1180 -490 {lab=QAb}
-N 1160 -490 1180 -490 {lab=QAb}
+N 1160 -670 1180 -670 {lab=QA}
+N 1180 -570 1180 -490 {lab=QA}
+N 1160 -490 1180 -490 {lab=QA}
 N 1080 -670 1100 -670 {lab=VDD}
 N 1080 -490 1100 -490 {lab=VSS}
-N 1180 -530 1240 -530 {lab=QAb}
-N 1180 -670 1180 -570 {lab=QAb}
+N 1180 -530 1240 -530 {lab=QA}
+N 1180 -670 1180 -570 {lab=QA}
 N 1130 -730 1130 -710 {lab=VDD}
 N 1130 -450 1130 -430 {lab=VSS}
 N 1350 -670 1350 -650 {lab=VDD}
 N 1350 -510 1350 -490 {lab=VSS}
-N 1380 -670 1400 -670 {lab=QBb}
-N 1400 -570 1400 -490 {lab=QBb}
-N 1380 -490 1400 -490 {lab=QBb}
+N 1380 -670 1400 -670 {lab=QB}
+N 1400 -570 1400 -490 {lab=QB}
+N 1380 -490 1400 -490 {lab=QB}
 N 1300 -670 1320 -670 {lab=VDD}
 N 1300 -490 1320 -490 {lab=VSS}
-N 1400 -530 1460 -530 {lab=QBb}
-N 1400 -670 1400 -570 {lab=QBb}
+N 1400 -530 1460 -530 {lab=QB}
+N 1400 -670 1400 -570 {lab=QB}
 N 1350 -730 1350 -710 {lab=VDD}
 N 1350 -450 1350 -430 {lab=VSS}
 N 470 -660 470 -640 {lab=VDD}
@@ -98,15 +98,15 @@ N -70 -260 -30 -260 {lab=GND}
 N 30 -260 80 -260 {lab=RA}
 N -70 -200 -30 -200 {lab=GND}
 N 30 -200 80 -200 {lab=RB}
-C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0 kQb="'kQb'"}
+C {engn1600-team1/CAD3/slave_latch.sym} 790 -180 0 0 {name=x15_0 kQ="'kQ'"}
 C {lab_wire.sym} 770 -270 0 0 {name=p2161 sig_type=std_logic lab=WECLK}
 C {lab_wire.sym} 770 -250 0 0 {name=p2162 sig_type=std_logic lab=WECLKb}
 C {lab_wire.sym} 770 -230 0 0 {name=p2163 sig_type=std_logic lab=RA}
 C {lab_wire.sym} 770 -210 0 0 {name=p2164 sig_type=std_logic lab=RB}
 C {lab_wire.sym} 840 -300 0 0 {name=p2166 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 840 -160 0 0 {name=p2167 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 910 -260 0 0 {name=p2168 sig_type=std_logic lab=QAb}
-C {lab_wire.sym} 910 -240 0 0 {name=p2169 sig_type=std_logic lab=QBb}
+C {lab_wire.sym} 910 -260 0 0 {name=p2168 sig_type=std_logic lab=QA}
+C {lab_wire.sym} 910 -240 0 0 {name=p2169 sig_type=std_logic lab=QB}
 C {engn1600-team1/CAD3/master_latch.sym} 490 -180 0 0 {name=x1 kN="'kN'"}
 C {lab_wire.sym} 470 -190 0 0 {name=p2305 sig_type=std_logic lab=D}
 C {lab_wire.sym} 610 -260 0 0 {name=p2308 sig_type=std_logic lab=N}
@@ -129,7 +129,7 @@ C {devices/lab_wire.sym} 350 -240 0 0 {name=lw_we19 lab=WECLK}
 C {devices/lab_wire.sym} 350 -220 0 0 {name=lw_we20 lab=WECLKb}
 C {symbols/pfet_03v3.sym} 1130 -690 1 0 {name=M13
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -143,7 +143,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1130 -470 3 0 {name=M14
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -157,14 +157,14 @@ spiceprefix=X
 }
 C {lab_wire.sym} 1130 -650 0 0 {name=p27 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1130 -510 0 0 {name=p28 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 1230 -530 0 0 {name=p1 sig_type=std_logic lab=QAb}
+C {lab_wire.sym} 1230 -530 0 0 {name=p1 sig_type=std_logic lab=QA}
 C {lab_wire.sym} 1130 -730 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1080 -670 0 0 {name=p3 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1130 -430 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1080 -490 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 1350 -690 1 0 {name=M3
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -178,7 +178,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1350 -470 3 0 {name=M4
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=15
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -192,7 +192,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 1350 -650 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1350 -510 0 0 {name=p9 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 1450 -530 0 0 {name=p10 sig_type=std_logic lab=QBb}
+C {lab_wire.sym} 1450 -530 0 0 {name=p10 sig_type=std_logic lab=QB}
 C {lab_wire.sym} 1350 -730 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1300 -670 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1350 -430 0 0 {name=p13 sig_type=std_logic lab=VSS}
@@ -286,7 +286,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 780 -490 3 0 {name=M10
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=30
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -322,7 +322,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 940 -490 3 0 {name=M12
 L=0.28u
-W="'kQb*0.36u'"
+W="'kQ*0.36u'"
 nf=1
 m=30
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -453,12 +453,12 @@ C {lab_wire.sym} 1460 -320 0 0 {name=p69 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1560 -320 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 80 -700 0 0 {name=lw_we1 lab=D}
 C {code_shown.sym} 60 -130 0 0 {name=s1 only_toplevel=false value="
-** kQb SWEEP
+** kQ SWEEP
 
 .param kWECLKb=1
 .param kWECLK=1
 .param kWEMb=1
-.param kQb=1
+.param kQ=1
 .param kN=1
 
 .control
@@ -483,7 +483,7 @@ compose TFALL start=0 stop=0 lin=$&NTRIALS
 let idx = 0
 while idx < NTRIALS
 	let kVAL = kVALS[idx]
-	alterparam kQb = $&kVAL
+	alterparam kQ = $&kVAL
 	reset
 
 	** Enable WEM
@@ -502,8 +502,8 @@ while idx < NTRIALS
     alter @VRA[PULSE] = [ 3.3 0 $&FQT 0 0 $&PW $&T 0 ]
 
 	tran $&tstep $&tstop
-	meas tran TPLH TRIG V(RA) VAL=1.65 RISE=1 TARG V(QA) VAL=1.65 RISE=1 TD=$&T
-    meas tran TPHL TRIG V(RA) VAL=1.65 RISE=2 TARG V(QA) VAL=1.65 FALL=1 TD=$&T
+	meas tran TPLH TRIG V(RA) VAL=1.65 RISE=1 TARG V(QAb) VAL=1.65 RISE=1 TD=$&T
+    meas tran TPHL TRIG V(RA) VAL=1.65 RISE=2 TARG V(QAb) VAL=1.65 FALL=1 TD=$&T
 	let TRISE[idx] = $&TPLH
 	let TFALL[idx] = $&TPHL
 	let idx = idx + 1
@@ -556,13 +556,13 @@ value="
 "}
 C {engn1600-team1/CAD3/output_inverter.sym} 780 -50 0 0 {name=x33}
 C {lab_wire.sym} 840 -50 0 0 {name=p2165 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 780 -10 0 0 {name=p2302 sig_type=std_logic lab=QAb}
-C {lab_wire.sym} 780 10 0 0 {name=p2564 sig_type=std_logic lab=QBb}
+C {lab_wire.sym} 780 -10 0 0 {name=p2302 sig_type=std_logic lab=QA}
+C {lab_wire.sym} 780 10 0 0 {name=p2564 sig_type=std_logic lab=QB}
 C {lab_wire.sym} 240 -730 0 0 {name=p73 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 240 -590 0 0 {name=p74 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 180 -660 0 0 {name=lw_we82 lab=WEM}
 C {devices/lab_wire.sym} 300 -660 0 0 {name=lw_we5 lab=WEMb}
 C {engn1600-team1/CAD3/wem_inverter.sym} 150 -520 0 0 {name=x49 kWEMb="'kWEMb'"}
-C {lab_wire.sym} 900 10 0 0 {name=p75 sig_type=std_logic lab=QB}
-C {lab_wire.sym} 900 -10 0 0 {name=p76 sig_type=std_logic lab=QA}
+C {lab_wire.sym} 900 10 0 0 {name=p75 sig_type=std_logic lab=QBb}
+C {lab_wire.sym} 900 -10 0 0 {name=p76 sig_type=std_logic lab=QAb}
 C {lab_wire.sym} 840 80 0 0 {name=p77 sig_type=std_logic lab=VSS}
