@@ -270,7 +270,7 @@ C {devices/vsource.sym} -570 -750 1 0 {name=VD0 value=0}
 C {devices/lab_pin.sym} -540 -750 2 0 {name=pD0 lab=D0}
 C {devices/gnd.sym} -600 -750 1 0 {name=gD0}
 C {code_shown.sym} 320 130 0 0 {name=s1 only_toplevel=false value="
-** WRITE PROPAGATION DELAY
+** READ PROPAGATION DELAY
 
 .control
 
@@ -283,38 +283,41 @@ let DT = T * 2
 let QT = T/4
 let FQT = QT * 5
 
-let tstop = 5.5 * T
-let tstep = 0.01 * T
-
-** Assert CLK = WECLK
-alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+let tstop = 3 * T
+let tstep = 0.001 * T
 
 ** Enable WEM
-alter @VWEM[PULSE] = [ 3.3 0 $&PW 0 0 $&PW $&T 0 ]
+alter @VWEM[DC] = 3.3
 
-** Create a D[15:0] pulse
-let Ddelay = 15n
-alter @VD0[PULSE] = [ 0 3.3 22n 0 0 6n 50n 0 ]
-alter @VD4[PULSE] = [ 0 3.3 17n 0 0 $&PW $&T 0 ]
-alter @VD8[PULSE] = [ 0 3.3 17n 0 0 $&PW $&T 0 ]
+** Assert D = N
+alter @VD0[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
+alter @VD1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
 
-** Write enable the first bit
-alter @VWE0[PULSE] = [ 0 3.3 14n 0 0 $&PW $&T 0 ]
+** Enable WE
+alter @VWE0[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VWE1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VWE2[PWL] = [ 0 0 $&T 0 $&T 3.3 $&DT 3.3 $&DT 0 ]
 
+** Assert CLK
+alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
 
-** Time RA0
-alter @VRA0[PULSE] = [ 0 3.3 1n 0 0 100n 100n 0 ]
+** Time RA
+alter @VRA0[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
+alter @VRA2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
+
+** Time RB
+alter @VRB1[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
+alter @VRB2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
 
 tran $&tstep $&tstop
-meas tran Tfall TRIG V(CLK) VAL=1.65 RISE=3 TARG V(QA0b) VAL=1.65 FALL=1 TD=0
-meas tran Trise TRIG V(CLK) VAL=1.65 RISE=4 TARG V(QA0b) VAL=1.65 RISE=2 TD=0
+meas tran TPLH TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA0b) VAL=1.65 FALL=1 TD=$&DT
+meas tran TPHL TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA1b) VAL=1.65 RISE=1 TD=$&DT
 
-
-plot CLK WEM+4 D0+8 WE0+12 QA0b+16 RA0+20
+plot QA0b QA1b+4 RA2+8
 
 .endc
 "}
-C {devices/code_shown.sym} 330 -20 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 320 -20 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
