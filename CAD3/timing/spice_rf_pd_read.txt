@@ -13,7 +13,7 @@ let QT = T/4
 let FQT = QT * 5
 
 let tstop = 3 * T
-let tstep = 0.01 * T
+let tstep = 0.001 * T
 
 ** Enable WEM
 alter @VWEM[DC] = 3.3
