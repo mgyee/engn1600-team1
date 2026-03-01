@@ -55,13 +55,13 @@ README:
  	Pre-PEX
  		Setup Time Rise:	142.9ps	
  		Setup Time Fall:	156.2ps	
- 		Hold Time Rise:		127.1ps
- 		Hold Time Fall:		119.0ps
+ 		Hold Time Rise:		-147.1ps
+ 		Hold Time Fall:		-119.0ps
   	Post-PEX
  		Setup Time Rise:	178.6ps
  		Setup Time Fall:	225.7ps
- 		Hold Time Rise:		TODO
- 		Hold Time Fall:		TODO
+ 		Hold Time Rise:		-218.3ps
+ 		Hold Time Fall:		-168.7ps
  			
  	
  	-Estimate all input pin capacitance (WE, CLK, D, WE_MASTER, READ_A, READ_B) and
