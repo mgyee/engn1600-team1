@@ -25,8 +25,8 @@ README:
  	
  		Layout of the RF:	/SUBMIT/RF_layout.gds
  		Schematic of the RF: 	/SUBMIT/RF_schematic.sch
+		Testbenches: /SUBMIT/Testbenches
  		
- 	
  	
  	-Estimated parasitic capacitance (wire cap) you added to the speed path and the PEX
 	capacitance after layout. How do they compare?
@@ -72,7 +72,8 @@ README:
 	
  	-Measure the clock delay after PEX (from CLK to WE0_CLK)
  	
- 		50.4ps
+ 		Rising edge PD: 401.0ps
+		Falling edge PD: 385.2ps
  	
  	-Discuss the considerations that went into the choice of your RF design (floor planning,
 	slice width, hierarchy partition, etc).
