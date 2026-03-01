@@ -379,11 +379,10 @@ while idx < NTRIALS
 end
 
 plot TCLKQ vs TDCLK
-set filetype=ascii
-write /foss/designs/engn1600-team1/CAD3/timing/setup_rise.txt TDCLK TCLKQ
 
 .endc
-"}
+"
+}
 C {devices/code_shown.sym} 1700 -890 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
