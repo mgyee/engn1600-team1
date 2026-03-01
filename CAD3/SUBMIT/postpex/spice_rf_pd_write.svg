@@ -1,480 +1,127 @@
-%!PS-Adobe-3.0 EPSF-3.0
-%%Creator: ngspice
-%%BoundingBox: 22 22 594 612
-/Re-encode { % inFont outFont encoding | -
-   /MyEncoding exch def
-      exch findfont
-      dup length dict
-      begin
-         {def} forall
-         /Encoding MyEncoding def
-         currentdict
-      end
-      definefont
-} def
-/Helvetica /HelveticaLatin1 ISOLatin1Encoding Re-encode
-1 1 scale
-/HelveticaLatin1 findfont 10 scalefont setfont
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  width="100%" height="100%" viewBox="0 0 1024 768"
+  style="fill: none; font-family: Helvetica;
+ font: Helvetica;
+">
 
-[] 0 setdash
-[1 2] 0 setdash
-[] 0 setdash
-243 66 moveto
-0 rotate
-(time) show
--0 rotate
-[1 2] 0 setdash
-[] 0 setdash
-54 596 moveto
-0 rotate
-(tran1: ** sch_path: /foss/designs/engn1600-team1/cad3/rf_postpex_tb.sch) show
--0 rotate
-[1 2] 0 setdash
-[] 0 setdash
-newpath
-84 104 moveto
-84 545 lineto
-1.000000 setlinewidth
-stroke
-[1 2] 0 setdash
-[] 0 setdash
-75 87 moveto
-0 rotate
-(0.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-165 104 moveto
-165 545 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-156 87 moveto
-0 rotate
-(5.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-246 104 moveto
-246 545 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-234 87 moveto
-0 rotate
-(10.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-327 104 moveto
-327 545 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-315 87 moveto
-0 rotate
-(15.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-408 104 moveto
-408 545 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-396 87 moveto
-0 rotate
-(20.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-489 104 moveto
-489 545 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-477 87 moveto
-0 rotate
-(25.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-570 104 moveto
-570 545 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-558 87 moveto
-0 rotate
-(30.0) show
--0 rotate
-[1 2] 0 setdash
-[] 0 setdash
-382 66 moveto
-0 rotate
-(ns) show
--0 rotate
-[1 2] 0 setdash
-newpath
-84 104 moveto
-570 104 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-58 101 moveto
-0 rotate
-(-2.0) show
--0 rotate
-[1 2] 0 setdash
-[] 0 setdash
-newpath
-84 167 moveto
-570 167 lineto
-1.000000 setlinewidth
-stroke
-[1 2] 0 setdash
-[] 0 setdash
-64 164 moveto
-0 rotate
-(0.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-84 230 moveto
-570 230 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-64 227 moveto
-0 rotate
-(2.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-84 293 moveto
-570 293 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-64 290 moveto
-0 rotate
-(4.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-84 356 moveto
-570 356 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-64 353 moveto
-0 rotate
-(6.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-84 419 moveto
-570 419 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-64 416 moveto
-0 rotate
-(8.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-84 482 moveto
-570 482 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-58 479 moveto
-0 rotate
-(10.0) show
--0 rotate
-[1 2] 0 setdash
-newpath
-84 545 moveto
-570 545 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-58 542 moveto
-0 rotate
-(12.0) show
--0 rotate
-[1 2] 0 setdash
-[] 0 setdash
-54 582 moveto
-0 rotate
-(     ) show
--0 rotate
-[1 2] 0 setdash
-[7 7] 0 setdash
-newpath
-291 586 moveto
-315 586 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-321 582 moveto
-0 rotate
-(qa0b) show
--0 rotate
-[7 7] 0 setdash
-newpath
-84 167 moveto
-179 167 lineto
-1.000000 setlinewidth
-180 168 lineto
-1.000000 setlinewidth
-180 170 lineto
-1.000000 setlinewidth
-181 171 lineto
-1.000000 setlinewidth
-181 176 lineto
-1.000000 setlinewidth
-182 177 lineto
-1.000000 setlinewidth
-182 192 lineto
-1.000000 setlinewidth
-183 197 lineto
-1.000000 setlinewidth
-183 235 lineto
-1.000000 setlinewidth
-184 243 lineto
-1.000000 setlinewidth
-184 265 lineto
-1.000000 setlinewidth
-185 266 lineto
-1.000000 setlinewidth
-185 269 lineto
-1.000000 setlinewidth
-186 270 lineto
-1.000000 setlinewidth
-187 270 lineto
-1.000000 setlinewidth
-187 271 lineto
-1.000000 setlinewidth
-337 271 lineto
-1.000000 setlinewidth
-337 272 lineto
-1.000000 setlinewidth
-338 272 lineto
-1.000000 setlinewidth
-stroke
-newpath
-338 271 moveto
-338 272 lineto
-1.000000 setlinewidth
-stroke
-newpath
-338 271 moveto
-339 271 lineto
-1.000000 setlinewidth
-stroke
-newpath
-339 268 moveto
-339 271 lineto
-1.000000 setlinewidth
-stroke
-newpath
-339 268 moveto
-340 267 lineto
-1.000000 setlinewidth
-stroke
-newpath
-340 262 moveto
-340 267 lineto
-1.000000 setlinewidth
-stroke
-newpath
-340 262 moveto
-341 261 lineto
-1.000000 setlinewidth
-stroke
-newpath
-341 252 moveto
-341 261 lineto
-1.000000 setlinewidth
-stroke
-newpath
-341 252 moveto
-342 249 lineto
-1.000000 setlinewidth
-stroke
-newpath
-342 221 moveto
-342 249 lineto
-1.000000 setlinewidth
-stroke
-newpath
-342 221 moveto
-343 215 lineto
-1.000000 setlinewidth
-stroke
-newpath
-343 181 moveto
-343 215 lineto
-1.000000 setlinewidth
-stroke
-newpath
-343 181 moveto
-344 177 lineto
-1.000000 setlinewidth
-stroke
-newpath
-344 171 moveto
-344 177 lineto
-1.000000 setlinewidth
-stroke
-newpath
-344 171 moveto
-345 171 lineto
-1.000000 setlinewidth
-stroke
-newpath
-345 169 moveto
-345 171 lineto
-1.000000 setlinewidth
-stroke
-newpath
-345 169 moveto
-346 169 lineto
-1.000000 setlinewidth
-stroke
-newpath
-346 168 moveto
-346 169 lineto
-1.000000 setlinewidth
-stroke
-newpath
-346 168 moveto
-348 168 lineto
-1.000000 setlinewidth
-stroke
-newpath
-348 167 moveto
-348 168 lineto
-1.000000 setlinewidth
-stroke
-newpath
-348 167 moveto
-504 167 lineto
-1.000000 setlinewidth
-504 169 lineto
-1.000000 setlinewidth
-505 170 lineto
-1.000000 setlinewidth
-505 174 lineto
-1.000000 setlinewidth
-506 175 lineto
-1.000000 setlinewidth
-506 186 lineto
-1.000000 setlinewidth
-507 190 lineto
-1.000000 setlinewidth
-507 224 lineto
-1.000000 setlinewidth
-508 233 lineto
-1.000000 setlinewidth
-508 261 lineto
-1.000000 setlinewidth
-509 263 lineto
-1.000000 setlinewidth
-509 269 lineto
-1.000000 setlinewidth
-510 269 lineto
-1.000000 setlinewidth
-510 270 lineto
-1.000000 setlinewidth
-511 270 lineto
-1.000000 setlinewidth
-511 271 lineto
-1.000000 setlinewidth
-570 271 lineto
-1.000000 setlinewidth
-stroke
-[3 3] 0 setdash
-newpath
-84 586 moveto
-108 586 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-114 582 moveto
-0 rotate
-(wem+4) show
--0 rotate
-[3 3] 0 setdash
-newpath
-84 293 moveto
-165 293 lineto
-1.000000 setlinewidth
-165 397 lineto
-1.000000 setlinewidth
-246 397 lineto
-1.000000 setlinewidth
-stroke
-newpath
-246 293 moveto
-246 397 lineto
-1.000000 setlinewidth
-stroke
-newpath
-246 293 moveto
-327 293 lineto
-1.000000 setlinewidth
-327 397 lineto
-1.000000 setlinewidth
-408 397 lineto
-1.000000 setlinewidth
-stroke
-newpath
-408 293 moveto
-408 397 lineto
-1.000000 setlinewidth
-stroke
-newpath
-408 293 moveto
-489 293 lineto
-1.000000 setlinewidth
-489 397 lineto
-1.000000 setlinewidth
-570 397 lineto
-1.000000 setlinewidth
-stroke
-[7 2 2 2] 0 setdash
-newpath
-291 572 moveto
-315 572 lineto
-1.000000 setlinewidth
-stroke
-[] 0 setdash
-321 568 moveto
-0 rotate
-(d0+8) show
--0 rotate
-[7 2 2 2] 0 setdash
-newpath
-84 419 moveto
-246 419 lineto
-1.000000 setlinewidth
-246 523 lineto
-1.000000 setlinewidth
-408 523 lineto
-1.000000 setlinewidth
-stroke
-newpath
-408 419 moveto
-408 523 lineto
-1.000000 setlinewidth
-stroke
-newpath
-408 419 moveto
-570 419 lineto
-1.000000 setlinewidth
-stroke
-showpage
-%%EOF
+<!-- Creator: NGspice -->
+
+<rect x="0" y="0" width="1024" height="768" fill="black" stroke="none"/>
+<text stroke="none" fill="white" font-size="16" x="358" y="752">
+time
+</text>
+<text stroke="none" fill="white" font-size="16" x="10" y="16">
+tran1: ** sch_path: /foss/designs/engn1600-team1/cad3/rf_postpex_tb.sch
+</text>
+<path stroke="white" d="M60 720l0 -663"/>
+<text stroke="none" fill="white" font-size="16" x="45" y="728">
+0.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M210 720l0 -663"/>
+<text stroke="none" fill="white" font-size="16" x="195" y="728">
+5.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M360 720l0 -663"/>
+<text stroke="none" fill="white" font-size="16" x="340" y="728">
+10.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M510 720l0 -663"/>
+<text stroke="none" fill="white" font-size="16" x="490" y="728">
+15.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M660 720l0 -663"/>
+<text stroke="none" fill="white" font-size="16" x="640" y="728">
+20.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M810 720l0 -663"/>
+<text stroke="none" fill="white" font-size="16" x="790" y="728">
+25.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M960 720l0 -663"/>
+<text stroke="none" fill="white" font-size="16" x="940" y="728">
+30.0
+</text>
+<text stroke="none" fill="white" font-size="16" x="614" y="752">
+ns
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 720l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="18" y="728">
+-1.0
+</text>
+<path stroke="white" d="M60 669l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="677">
+0.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 618l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="626">
+1.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 567l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="575">
+2.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 516l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="524">
+3.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 465l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="473">
+4.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 414l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="422">
+5.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 363l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="371">
+6.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 312l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="320">
+7.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 261l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="269">
+8.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 210l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="28" y="218">
+9.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 159l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="18" y="167">
+10.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 108l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="18" y="116">
+11.0
+</text>
+<path stroke="white" stroke-dasharray="1,2" d="M60 57l900 0"/>
+<text stroke="none" fill="white" font-size="16" x="18" y="65">
+12.0
+</text>
+<text stroke="none" fill="white" font-size="16" x="10" y="32">
+     
+</text>
+<path stroke="red" d="M450 23l45 0"/>
+<text stroke="none" fill="white" font-size="16" x="505" y="32">
+qa0b
+</text>
+<path stroke="red" d="M60 669l174 0M234 670l0 -1M234 670l2 0 0 -1 1 -1 0 -1 1 0 0 -2 1 -1 0 -3 1 -2 0 -4 1 -2 0 -7 1 -4 0 -22 1 -10 0 -24 1 -13 0 -27 1 -11 0 -19 1 -3 0 -5 1 -1 0 -2 1 -1 0 -1 1 -1 1 0 0 -1 275 0 1 -1 5 0M531 501l0 -1M531 501l1 1"/>
+<path stroke="red" d="M532 503l0 -1M532 503l1 1M533 507l0 -3M533 507l1 1M534 513l0 -5M534 513l1 2M535 519l0 -4M535 519l1 3M536 528l0 -6M536 528l1 3M537 547l0 -16M537 547l1 7M538 571l0 -17M538 571l1 10M539 603l0 -22M539 603l1 12M540 647l0 -32"/>
+<path stroke="red" d="M540 647l1 6M541 659l0 -6M541 659l1 2M542 663l0 -2M542 663l1 0M543 665l0 -2M543 665l1 0M544 666l0 -1M544 666l1 0 1 1 1 0M547 668l0 -1M547 668l3 0M550 669l0 -1M550 669l285 0M835 670l0 -1M835 670l1 0 0 -1 1 0 0 -1 1 0 0 -2"/>
+<path stroke="red" d="M838 666l1 -1 0 -2 1 -1 0 -4 1 -2 0 -5 1 -4 0 -9 1 -7 0 -29 1 -12 0 -27 1 -14 0 -20 1 -7 0 -11 1 -2 0 -3 1 -1 0 -1 1 -1 0 -1 1 0 0 -1 110 0"/>
+<path stroke="blue" d="M60 23l45 0"/>
+<text stroke="none" fill="white" font-size="16" x="115" y="32">
+wem+4
+</text>
+<path stroke="blue" d="M60 465l150 0 0 -168 150 0M360 358l0 -61M360 358l1 70M361 465l0 -37M361 465l149 0 0 -168 150 0M660 357l0 -60M660 357l1 68M661 465l0 -40M661 465l149 0 0 -168 150 0"/>
+<path stroke="#FFA500" d="M450 39l45 0"/>
+<text stroke="none" fill="white" font-size="16" x="505" y="48">
+d0+8
+</text>
+<path stroke="#FFA500" d="M60 261l300 0 0 -168 300 0M660 153l0 -60M660 153l1 68M661 261l0 -40M661 261l299 0"/>
+</svg>
