@@ -1,2 +1,88 @@
+Speedpath:
+	- Schematic of the RF speedpath
+	-Saved testbenches for speedpath read/write rise & fall delay simulations, named
+	“RFspeed_[read/write]_[rise/fall].spice”.
+	
+You should submit 4 RF speed testbenches in total (read rise, read fall, write rise, write fall).
+
+	- SPICE waveforms of the speedpath for delay measurement with estimated parasitic
+	capacitance, for all 4 testbenches
+	- SPICE waveforms of the speedpath for delay measurement with PEX capacitance OR of
+	the entire RF, for all 4 testbenches
+	- SPICE waveforms of the speedpath for setup time / hold time measurement with PEX
+	capacitance OR of the entire RF
+- RF:
+
+	-Schematic and layout of RF
+	-Screenshots of clean DRC/LVS reports
+	-SPICE waveforms of the entire RF with setup time/hold time/C-Q delay added (write
+	data to all locations in RF & read them out)
+	
+README:
+	
+	
+ 	-List all the full paths of your designs
+ 	
+ 		Layout of the RF:	/SUBMIT/RF_layout.gds
+ 		Schematic of the RF: 	/SUBMIT/RF_schematic.sch
+		Testbenches: /SUBMIT/Testbenches
+ 		
+ 	
+ 	-Estimated parasitic capacitance (wire cap) you added to the speed path and the PEX
+	capacitance after layout. How do they compare?
+	
+	I believe we were told to ignore the wire capactitance???
+		
+	
+ 	-List the delays for your speedpath (all 4 testbenches, with estimated capacitance and
+	PEX capacitance) and start/end points of the delay you measured.
+	
+	Pre-PEX:
+		Delay Read Rise:	280.7ps
+		Delay Read Fall:	295.9ps
+		Delay Write Rise:	771.2ps
+		Delay Write Fall:	665.4ps
+	
+	Post-PEX:
+		Delay Read Rise:	494ps
+		Delay Read Fall:	515.9ps
+		Delay Write Rise:	1123.5ps
+		Delay Write Fall:	955ps
+	
+	
+ 	-Setup time/hold time for speedpath (with PEX capacitance)
+ 	
+ 	Pre-PEX
+ 		Setup Time Rise:	142.9ps	
+ 		Setup Time Fall:	156.2ps	
+ 		Hold Time Rise:		127.1ps
+ 		Hold Time Fall:		119.0ps
+  	Post-PEX
+ 		Setup Time Rise:	178.6ps
+ 		Setup Time Fall:	225.7ps
+ 		Hold Time Rise:		TODO
+ 		Hold Time Fall:		TODO
+ 			
+ 	
+ 	-Estimate all input pin capacitance (WE, CLK, D, WE_MASTER, READ_A, READ_B) and
+	explain how you estimated those numbers. Compare those to the actual values obtained
+	from PEX.
+	
+	
+	
+ 	-Measure the clock delay after PEX (from CLK to WE0_CLK)
+ 	
+ 		Rising edge PD: 401.0ps
+		Falling edge PD: 385.2ps
+ 	
+ 	-Discuss the considerations that went into the choice of your RF design (floor planning,
+	slice width, hierarchy partition, etc).
+
+Based on the provided schematics, we performed extensive transistor sizing on the heavily loaded nodes along the critical speed path. In particular, we optimised the output inverters of the driver cell, the output inverter of the master latch, the output transmission gate of the slave latch, and the inverter driving WEM. The NMOS width was fixed at 0.36 µm, while the corresponding PMOS devices were scaled by factors of 3.53 (kWECLK), 3.45 (kWECLKb), 3.73, and 1, respectively, to balance rise and fall delays under load.
+
+These sizing factors were iteratively refined based on transient simulation results. The values reported above reflect the final optimised dimensions.
+
+For the layout, alternating VDD and VSS rails were implemented to achieve a compact and routing-efficient floor-plan. Additionally, bulk ties were inserted at 20 µm intervals to ensure proper substrate biasing and improve latch-up robustness.
+
 ### Note on SPICE netlist generation
 We parameterized our schematic to help with transistor sizing. Unfortunately, LVS does not properly decode parameter expressions in the SPICE netlist. We use `spice_params.py` to overwrite bottom-level transistors in `rf.spice` with corresponding parameter values.
