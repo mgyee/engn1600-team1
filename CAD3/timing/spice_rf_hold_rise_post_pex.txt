@@ -10,12 +10,13 @@ let PW = T/2
 
 let DT = T * 2
 let QT = T/4
-let ET = T/8
-let SM = -T/68
+let ET = T/16
+let SM = -T/24
 
 let tstop = 2.5 * T
 let tstep = 0.001 * T
 let NTRIALS = 64
+
 
 compose TCLKD start=$&ET stop=$&SM lin=$&NTRIALS
 compose TCLKQ start=0 stop=0 lin=$&NTRIALS

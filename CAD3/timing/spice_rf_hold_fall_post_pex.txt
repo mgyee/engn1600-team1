@@ -10,8 +10,8 @@ let PW = T/2
 
 let DT = T * 2
 let QT = T/4
-let ET = T/8
-let SM = -T/84
+let ET = T/16
+let SM = -T/24
 
 let tstop = 2.5 * T
 let tstep = 0.001 * T
