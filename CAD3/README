@@ -67,6 +67,10 @@ README:
  	-Estimate all input pin capacitance (WE, CLK, D, WE_MASTER, READ_A, READ_B) and
 	explain how you estimated those numbers. Compare those to the actual values obtained
 	from PEX.
+
+	We looked at the transistors that each signal went into and created dummy transistors for those in our speedpath testbench schematic to simulate the
+	parasitic capacitance onto the input pins. We did not model any wire capacitance. Our postPEX numbers are slower, indicating we underestimated the
+	capacitance.
 	
 	
 	
