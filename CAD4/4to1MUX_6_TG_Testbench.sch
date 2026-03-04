@@ -81,19 +81,21 @@ let S1on = 0.5*perS1
 let tstop = 2.5*perA
 let tstep = 0.001*perA
 
-alter @V1[PULSE] = [ 0 3.3 0 0 0 $&Aon $&perA 0 ]
-alter @V2[PULSE] = [ 0 3.3 0 0 0 $&Bon $&perB 0 ]
-alter @V11[PULSE] = [ 0 3.3 0 0 0 $&Con $&perC 0 ]
-alter @V12[PULSE] = [ 0 3.3 0 0 0 $&Don $&perD 0 ]
-alter @V3[PULSE] = [ 0 3.3 0 0 0 $&S0on $&perS0 0 ]
-alter @V4[PULSE] = [ 0 3.3 0 0 0 $&S1on $&perS1 0 ]
-alter @V5[PULSE] = [ 0 3.3 $&S0on 0 0 $&S0on $&perS0 0 ]
-alter @V6[PULSE] = [ 0 3.3 $&S1on 0 0 $&S1on $&perS1 0 ]
+alter @V1[PULSE] = [ 0 3.3 0 1n 1n $&Aon $&perA 0 ]
+alter @V2[PULSE] = [ 0 3.3 0 1n 1n $&Bon $&perB 0 ]
+alter @V11[PULSE] = [ 0 3.3 0 1n 1n $&Con $&perC 0 ]
+alter @V12[PULSE] = [ 0 3.3 0 1n 1n $&Don $&perD 0 ]
+alter @V3[PULSE] = [ 0 3.3 0 1n 1n $&S0on $&perS0 0 ]
+alter @V4[PULSE] = [ 0 3.3 0 1n 1n $&S1on $&perS1 0 ]
+alter @V5[PULSE] = [ 0 3.3 $&S0on 1n 1n $&S0on $&perS0 0 ]
+alter @V6[PULSE] = [ 0 3.3 $&S1on 1n 1n $&S1on $&perS1 0 ]
 alter @V7[DC] = 3.3
-alter @V8[DC] = 3.3
+alter @V8[DC] = 0
 
-tran $&tstep $&tstop
+tran $&tstep 1u
 
+plot A B+4 C+8 D+12 S0+16 S1+20 OUT+24
+plot OUT
 .endc
 "}
 C {devices/code_shown.sym} -270 -290 0 0 {name=MODELS only_toplevel=true

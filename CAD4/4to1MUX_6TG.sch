@@ -56,7 +56,7 @@ N 570 50 570 410 {lab=#net1}
 N 570 230 640 230 {lab=#net1}
 N 680 320 680 380 {lab=VSS}
 N -250 430 -170 430 {lab=M1}
-N -250 470 -170 470 {lab=OUT}
+N -250 470 -170 470 {lab=M2}
 C {ipin.sym} -250 -100 0 0 {name=p1 lab=A
 }
 C {ipin.sym} -250 -50 0 0 {name=p2 lab=B}
@@ -282,8 +282,8 @@ C {ipin.sym} -250 250 0 0 {name=p25 lab=S1_bar}
 C {lab_wire.sym} -170 250 0 0 {name=p26 sig_type=std_logic lab=S1_bar}
 C {lab_wire.sym} 220 70 0 0 {name=p27 sig_type=std_logic lab=S0_bar}
 C {lab_wire.sym} 220 260 0 0 {name=p29 sig_type=std_logic lab=S0}
-C {lab_wire.sym} 490 340 0 0 {name=p31 sig_type=std_logic lab=S1}
-C {lab_wire.sym} 490 480 0 0 {name=p32 sig_type=std_logic lab=S1_bar}
+C {lab_wire.sym} 490 480 0 0 {name=p31 sig_type=std_logic lab=S1}
+C {lab_wire.sym} 490 340 0 0 {name=p32 sig_type=std_logic lab=S1_bar}
 C {lab_wire.sym} 220 430 0 0 {name=p28 sig_type=std_logic lab=S0_bar}
 C {lab_wire.sym} 220 590 0 0 {name=p33 sig_type=std_logic lab=S0}
 C {lab_wire.sym} 220 -100 0 0 {name=p34 sig_type=std_logic lab=S0}
