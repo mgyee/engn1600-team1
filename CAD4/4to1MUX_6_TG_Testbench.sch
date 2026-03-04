@@ -92,7 +92,10 @@ alter @V6[PULSE] = [ 0 3.3 $&S1on 1n 1n $&S1on $&perS1 0 ]
 alter @V7[DC] = 3.3
 alter @V8[DC] = 0
 
-tran $&tstep 1u
+tran $&tstep $&tstop
+
+meas tran AtoOUT TRIG v(A) VAL=1.65 RISE = 1 TD=0.98u TARG v(OUT) VAL = 1.65 FALL=1 TD = 0.98u
+print AtOUT
 
 plot A B+4 C+8 D+12 S0+16 S1+20 OUT+24
 plot OUT
