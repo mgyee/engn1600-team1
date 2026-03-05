@@ -8,8 +8,8 @@ C {vsource.sym} -220 -110 0 0 {name=VA value=0 savecurrent=false}
 C {vsource.sym} -170 -110 0 0 {name=VB value=0 savecurrent=false}
 C {gnd.sym} -220 -80 0 0 {name=l1 lab=GND}
 C {gnd.sym} -170 -80 0 0 {name=l2 lab=GND}
-C {vsource.sym} -220 0 0 0 {name=VSEL value=3.3 savecurrent=false}
-C {vsource.sym} -170 0 0 0 {name=VSELb value=3.3 savecurrent=false}
+C {vsource.sym} -220 0 0 0 {name=VSEL value=0 savecurrent=false}
+C {vsource.sym} -170 0 0 0 {name=VSELb value=0 savecurrent=false}
 C {gnd.sym} -220 30 0 0 {name=l3 lab=GND}
 C {gnd.sym} -170 30 0 0 {name=l4 lab=GND}
 C {vsource.sym} -220 110 0 0 {name=VDD value=3.3 savecurrent=false}
