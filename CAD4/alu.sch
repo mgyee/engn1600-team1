@@ -646,3 +646,76 @@ C {lab_pin.sym} 5050 -840 3 0 {name=p552 lab=COUT11}
 C {lab_pin.sym} 5070 -850 3 0 {name=p553 lab=COUT11b}
 C {lab_pin.sym} 5330 -840 3 0 {name=p554 lab=COUT11}
 C {lab_pin.sym} 5350 -850 3 0 {name=p555 lab=COUT11b}
+C {engn1600-team1/CAD4/2:4_decoder.sym} 520 0 0 0 {name=x88}
+C {lab_pin.sym} 670 -50 0 1 {name=p556 lab=VDD}
+C {lab_pin.sym} 670 -30 0 1 {name=p557 lab=VSS}
+C {lab_wire.sym} 370 -50 0 0 {name=p558 sig_type=std_logic lab=SEL0}
+C {lab_wire.sym} 370 -30 0 0 {name=p559 sig_type=std_logic lab=SEL1}
+C {lab_wire.sym} 670 -10 2 0 {name=p560 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 670 10 2 0 {name=p561 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 670 30 2 0 {name=p563 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 670 50 2 0 {name=p562 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 1600 -300 2 0 {name=p564 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 410 -300 2 0 {name=p565 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 690 -300 2 0 {name=p566 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 970 -300 2 0 {name=p567 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 1250 -300 2 0 {name=p568 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 1880 -300 2 0 {name=p569 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 2160 -300 2 0 {name=p570 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 2440 -300 2 0 {name=p571 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 3020 -320 2 0 {name=p572 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 3300 -320 2 0 {name=p573 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 3580 -320 2 0 {name=p574 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 3860 -320 2 0 {name=p575 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 4460 -340 2 0 {name=p576 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 4740 -340 2 0 {name=p577 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 5020 -340 2 0 {name=p578 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 5300 -340 2 0 {name=p579 sig_type=std_logic lab=SA}
+C {lab_wire.sym} 430 -310 2 0 {name=p580 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 710 -310 2 0 {name=p581 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 990 -310 2 0 {name=p582 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 1270 -310 2 0 {name=p583 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 1620 -310 2 0 {name=p584 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 1900 -310 2 0 {name=p585 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 2180 -310 2 0 {name=p586 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 2460 -310 2 0 {name=p587 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 3040 -330 2 0 {name=p588 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 3320 -330 2 0 {name=p589 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 3600 -330 2 0 {name=p590 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 3880 -330 2 0 {name=p591 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 4480 -350 2 0 {name=p592 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 4760 -350 2 0 {name=p593 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 5040 -350 2 0 {name=p594 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 5320 -350 2 0 {name=p595 sig_type=std_logic lab=SB}
+C {lab_wire.sym} 450 -320 2 0 {name=p596 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 730 -320 2 0 {name=p597 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 1010 -320 2 0 {name=p598 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 1290 -320 2 0 {name=p599 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 1640 -320 2 0 {name=p600 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 1920 -320 2 0 {name=p601 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 2200 -320 2 0 {name=p602 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 2480 -320 2 0 {name=p603 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 3060 -340 2 0 {name=p604 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 3340 -340 2 0 {name=p605 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 3620 -340 2 0 {name=p606 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 3900 -340 2 0 {name=p607 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 4500 -360 2 0 {name=p608 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 4780 -360 2 0 {name=p609 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 5060 -360 2 0 {name=p610 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 5340 -360 2 0 {name=p611 sig_type=std_logic lab=SC}
+C {lab_wire.sym} 470 -330 2 0 {name=p612 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 750 -330 2 0 {name=p613 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 1030 -330 2 0 {name=p614 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 1310 -330 2 0 {name=p615 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 1660 -330 2 0 {name=p616 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 1940 -330 2 0 {name=p617 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 2220 -330 2 0 {name=p618 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 2500 -330 2 0 {name=p619 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 3080 -350 2 0 {name=p620 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 3360 -350 2 0 {name=p621 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 3640 -350 2 0 {name=p622 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 3920 -350 2 0 {name=p623 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 4520 -370 2 0 {name=p624 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 4800 -370 2 0 {name=p625 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 5080 -370 2 0 {name=p626 sig_type=std_logic lab=SD}
+C {lab_wire.sym} 5360 -370 2 0 {name=p627 sig_type=std_logic lab=SD}
