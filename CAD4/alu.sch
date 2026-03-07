@@ -44,9 +44,9 @@ C {lab_pin.sym} 1210 -790 0 0 {name=p34 lab=A3}
 C {lab_pin.sym} 1210 -770 0 0 {name=p35 lab=B3}
 C {lab_pin.sym} 1350 -780 0 1 {name=p37 lab=SUM3b}
 C {engn1600-team1/CAD4/logic.sym} 440 -590 0 0 {name=x5}
-C {lab_pin.sym} 440 -520 0 1 {name=p17 lab=VSS}
+C {lab_pin.sym} 440 -510 0 1 {name=p17 lab=VSS}
 C {lab_pin.sym} 500 -600 0 1 {name=p22 lab=NOR0}
-C {lab_pin.sym} 440 -660 0 1 {name=p24 lab=VDD}
+C {lab_pin.sym} 440 -670 0 1 {name=p24 lab=VDD}
 C {lab_pin.sym} 500 -580 0 1 {name=p29 lab=XNOR0}
 C {lab_pin.sym} 380 -600 0 0 {name=p31 lab=A0}
 C {lab_pin.sym} 380 -580 0 0 {name=p36 lab=B0}
@@ -64,9 +64,9 @@ C {lab_pin.sym} 440 -250 0 1 {name=p46 lab=VDD}
 C {lab_pin.sym} 400 -210 0 0 {name=p47 lab=Y0b}
 C {lab_pin.sym} 510 -210 0 1 {name=p48 lab=Y0}
 C {engn1600-team1/CAD4/logic.sym} 720 -590 0 0 {name=x8}
-C {lab_pin.sym} 720 -520 0 1 {name=p49 lab=VSS}
+C {lab_pin.sym} 720 -510 0 1 {name=p49 lab=VSS}
 C {lab_pin.sym} 780 -600 0 1 {name=p50 lab=NOR1}
-C {lab_pin.sym} 720 -660 0 1 {name=p51 lab=VDD}
+C {lab_pin.sym} 720 -670 0 1 {name=p51 lab=VDD}
 C {lab_pin.sym} 780 -580 0 1 {name=p52 lab=XNOR1}
 C {lab_pin.sym} 660 -600 0 0 {name=p53 lab=A1}
 C {lab_pin.sym} 660 -580 0 0 {name=p54 lab=B1}
@@ -84,9 +84,9 @@ C {lab_pin.sym} 720 -250 0 1 {name=p63 lab=VDD}
 C {lab_pin.sym} 680 -210 0 0 {name=p64 lab=Y1b}
 C {lab_pin.sym} 790 -210 0 1 {name=p65 lab=Y1}
 C {engn1600-team1/CAD4/logic.sym} 1000 -590 0 0 {name=x11}
-C {lab_pin.sym} 1000 -520 0 1 {name=p66 lab=VSS}
+C {lab_pin.sym} 1000 -510 0 1 {name=p66 lab=VSS}
 C {lab_pin.sym} 1060 -600 0 1 {name=p67 lab=NOR2}
-C {lab_pin.sym} 1000 -660 0 1 {name=p68 lab=VDD}
+C {lab_pin.sym} 1000 -670 0 1 {name=p68 lab=VDD}
 C {lab_pin.sym} 1060 -580 0 1 {name=p69 lab=XNOR2}
 C {lab_pin.sym} 940 -600 0 0 {name=p70 lab=A2}
 C {lab_pin.sym} 940 -580 0 0 {name=p71 lab=B2}
@@ -104,9 +104,9 @@ C {lab_pin.sym} 1000 -250 0 1 {name=p80 lab=VDD}
 C {lab_pin.sym} 960 -210 0 0 {name=p81 lab=Y2b}
 C {lab_pin.sym} 1070 -210 0 1 {name=p82 lab=Y2}
 C {engn1600-team1/CAD4/logic.sym} 1280 -590 0 0 {name=x14}
-C {lab_pin.sym} 1280 -520 0 1 {name=p83 lab=VSS}
+C {lab_pin.sym} 1280 -510 0 1 {name=p83 lab=VSS}
 C {lab_pin.sym} 1340 -600 0 1 {name=p84 lab=NOR3}
-C {lab_pin.sym} 1280 -660 0 1 {name=p85 lab=VDD}
+C {lab_pin.sym} 1280 -670 0 1 {name=p85 lab=VDD}
 C {lab_pin.sym} 1340 -580 0 1 {name=p86 lab=XNOR3}
 C {lab_pin.sym} 1220 -600 0 0 {name=p87 lab=A3}
 C {lab_pin.sym} 1220 -580 0 0 {name=p88 lab=B3}
@@ -155,25 +155,25 @@ C {lab_pin.sym} 2260 -1220 0 1 {name=p146 lab=COUT_06}
 C {lab_pin.sym} 2400 -1210 0 0 {name=p147 lab=COUT_06}
 C {lab_pin.sym} 2540 -1220 0 1 {name=p148 lab=COUT_07}
 C {engn1600-team1/CAD4/logic.sym} 1910 -590 0 0 {name=x24}
-C {lab_pin.sym} 1910 -520 0 1 {name=p149 lab=VSS}
+C {lab_pin.sym} 1910 -510 0 1 {name=p149 lab=VSS}
 C {lab_pin.sym} 1970 -600 0 1 {name=p150 lab=NOR5}
-C {lab_pin.sym} 1910 -660 0 1 {name=p151 lab=VDD}
+C {lab_pin.sym} 1910 -670 0 1 {name=p151 lab=VDD}
 C {lab_pin.sym} 1970 -580 0 1 {name=p152 lab=XNOR5}
 C {lab_pin.sym} 1850 -600 0 0 {name=p153 lab=A5}
 C {lab_pin.sym} 1850 -580 0 0 {name=p154 lab=B5}
 C {lab_pin.sym} 1970 -620 0 1 {name=p155 lab=NAND5}
 C {engn1600-team1/CAD4/logic.sym} 2190 -590 0 0 {name=x25}
-C {lab_pin.sym} 2190 -520 0 1 {name=p156 lab=VSS}
+C {lab_pin.sym} 2190 -510 0 1 {name=p156 lab=VSS}
 C {lab_pin.sym} 2250 -600 0 1 {name=p157 lab=NOR6}
-C {lab_pin.sym} 2190 -660 0 1 {name=p158 lab=VDD}
+C {lab_pin.sym} 2190 -670 0 1 {name=p158 lab=VDD}
 C {lab_pin.sym} 2250 -580 0 1 {name=p159 lab=XNOR6}
 C {lab_pin.sym} 2130 -600 0 0 {name=p160 lab=A6}
 C {lab_pin.sym} 2130 -580 0 0 {name=p161 lab=B6}
 C {lab_pin.sym} 2250 -620 0 1 {name=p162 lab=NAND6}
 C {engn1600-team1/CAD4/logic.sym} 2470 -590 0 0 {name=x26}
-C {lab_pin.sym} 2470 -520 0 1 {name=p163 lab=VSS}
+C {lab_pin.sym} 2470 -510 0 1 {name=p163 lab=VSS}
 C {lab_pin.sym} 2530 -600 0 1 {name=p164 lab=NOR7}
-C {lab_pin.sym} 2470 -660 0 1 {name=p165 lab=VDD}
+C {lab_pin.sym} 2470 -670 0 1 {name=p165 lab=VDD}
 C {lab_pin.sym} 2530 -580 0 1 {name=p166 lab=XNOR7}
 C {lab_pin.sym} 2410 -600 0 0 {name=p167 lab=A7}
 C {lab_pin.sym} 2410 -580 0 0 {name=p168 lab=B7}
@@ -336,25 +336,25 @@ C {lab_pin.sym} 3680 -1240 0 1 {name=p280 lab=COUT_010}
 C {lab_pin.sym} 3820 -1230 0 0 {name=p281 lab=COUT_010}
 C {lab_pin.sym} 3960 -1240 0 1 {name=p282 lab=COUT_011}
 C {engn1600-team1/CAD4/logic.sym} 3330 -610 0 0 {name=x46}
-C {lab_pin.sym} 3330 -540 0 1 {name=p283 lab=VSS}
+C {lab_pin.sym} 3330 -530 0 1 {name=p283 lab=VSS}
 C {lab_pin.sym} 3390 -620 0 1 {name=p284 lab=NOR9}
-C {lab_pin.sym} 3330 -680 0 1 {name=p285 lab=VDD}
+C {lab_pin.sym} 3330 -690 0 1 {name=p285 lab=VDD}
 C {lab_pin.sym} 3390 -600 0 1 {name=p286 lab=XNOR9}
 C {lab_pin.sym} 3270 -620 0 0 {name=p287 lab=A9}
 C {lab_pin.sym} 3270 -600 0 0 {name=p288 lab=B9}
 C {lab_pin.sym} 3390 -640 0 1 {name=p289 lab=NAND9}
 C {engn1600-team1/CAD4/logic.sym} 3610 -610 0 0 {name=x47}
-C {lab_pin.sym} 3610 -540 0 1 {name=p290 lab=VSS}
+C {lab_pin.sym} 3610 -530 0 1 {name=p290 lab=VSS}
 C {lab_pin.sym} 3670 -620 0 1 {name=p291 lab=NOR10}
-C {lab_pin.sym} 3610 -680 0 1 {name=p292 lab=VDD}
+C {lab_pin.sym} 3610 -690 0 1 {name=p292 lab=VDD}
 C {lab_pin.sym} 3670 -600 0 1 {name=p293 lab=XNOR10}
 C {lab_pin.sym} 3550 -620 0 0 {name=p294 lab=A10}
 C {lab_pin.sym} 3550 -600 0 0 {name=p295 lab=B10}
 C {lab_pin.sym} 3670 -640 0 1 {name=p296 lab=NAND10}
 C {engn1600-team1/CAD4/logic.sym} 3890 -610 0 0 {name=x48}
-C {lab_pin.sym} 3890 -540 0 1 {name=p297 lab=VSS}
+C {lab_pin.sym} 3890 -530 0 1 {name=p297 lab=VSS}
 C {lab_pin.sym} 3950 -620 0 1 {name=p298 lab=NOR11}
-C {lab_pin.sym} 3890 -680 0 1 {name=p299 lab=VDD}
+C {lab_pin.sym} 3890 -690 0 1 {name=p299 lab=VDD}
 C {lab_pin.sym} 3950 -600 0 1 {name=p300 lab=XNOR11}
 C {lab_pin.sym} 3830 -620 0 0 {name=p301 lab=A11}
 C {lab_pin.sym} 3830 -600 0 0 {name=p302 lab=B11}
@@ -514,7 +514,7 @@ C {lab_pin.sym} 5400 -1260 0 1 {name=p434 lab=COUT_015}
 C {engn1600-team1/CAD4/logic.sym} 4770 -630 0 0 {name=x70}
 C {lab_pin.sym} 4770 -560 0 1 {name=p435 lab=VSS}
 C {lab_pin.sym} 4830 -640 0 1 {name=p436 lab=NOR13}
-C {lab_pin.sym} 4770 -700 0 1 {name=p437 lab=VDD}
+C {lab_pin.sym} 4770 -710 0 1 {name=p437 lab=VDD}
 C {lab_pin.sym} 4830 -620 0 1 {name=p438 lab=XNOR13}
 C {lab_pin.sym} 4710 -640 0 0 {name=p439 lab=A13}
 C {lab_pin.sym} 4710 -620 0 0 {name=p440 lab=B13}
@@ -522,7 +522,7 @@ C {lab_pin.sym} 4830 -660 0 1 {name=p441 lab=NAND13}
 C {engn1600-team1/CAD4/logic.sym} 5050 -630 0 0 {name=x71}
 C {lab_pin.sym} 5050 -560 0 1 {name=p442 lab=VSS}
 C {lab_pin.sym} 5110 -640 0 1 {name=p443 lab=NOR14}
-C {lab_pin.sym} 5050 -700 0 1 {name=p444 lab=VDD}
+C {lab_pin.sym} 5050 -710 0 1 {name=p444 lab=VDD}
 C {lab_pin.sym} 5110 -620 0 1 {name=p445 lab=XNOR14}
 C {lab_pin.sym} 4990 -640 0 0 {name=p446 lab=A14}
 C {lab_pin.sym} 4990 -620 0 0 {name=p447 lab=B14}
@@ -530,7 +530,7 @@ C {lab_pin.sym} 5110 -660 0 1 {name=p448 lab=NAND14}
 C {engn1600-team1/CAD4/logic.sym} 5330 -630 0 0 {name=x72}
 C {lab_pin.sym} 5330 -560 0 1 {name=p449 lab=VSS}
 C {lab_pin.sym} 5390 -640 0 1 {name=p450 lab=NOR15}
-C {lab_pin.sym} 5330 -700 0 1 {name=p451 lab=VDD}
+C {lab_pin.sym} 5330 -710 0 1 {name=p451 lab=VDD}
 C {lab_pin.sym} 5390 -620 0 1 {name=p452 lab=XNOR15}
 C {lab_pin.sym} 5270 -640 0 0 {name=p453 lab=A15}
 C {lab_pin.sym} 5270 -620 0 0 {name=p454 lab=B15}
