@@ -11,15 +11,16 @@ N -280 -80 -280 -30 {lab=VSS}
 N -220 30 -220 70 {lab=GND}
 N -220 -80 -220 -30 {lab=A}
 N -160 30 -160 70 {lab=GND}
-N -160 -80 -160 -30 {lab=RA}
+N -160 -80 -160 -30 {lab=B}
 C {engn1600-team1/CAD4/logic.sym} 0 0 0 0 {name=x1}
-C {lab_pin.sym} 60 0 0 1 {name=p1 lab=NOR}
-C {lab_pin.sym} 0 -70 0 1 {name=p2 lab=VDD}
-C {lab_pin.sym} 0 70 0 1 {name=p3 lab=VSS}
-C {lab_pin.sym} 60 20 0 1 {name=p4 lab=XNOR}
+C {lab_pin.sym} 60 -10 0 1 {name=p1 lab=NOR}
+C {lab_pin.sym} 0 -80 0 1 {name=p2 lab=VDD}
+C {lab_pin.sym} 0 80 0 1 {name=p3 lab=VSS}
+C {lab_pin.sym} 60 10 0 1 {name=p4 lab=XNOR}
 C {lab_pin.sym} -60 -10 0 0 {name=p5 lab=A}
 C {lab_pin.sym} -60 10 0 0 {name=p6 lab=B}
-C {lab_pin.sym} 60 -20 0 1 {name=p7 lab=NAND}
+C {lab_pin.sym} 60 -30 0 1 {name=p7 lab=NAND}
+C {lab_pin.sym} 60 30 0 1 {name=p8 lab=XOR}
 C {vsource.sym} -340 0 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} -340 70 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} -340 -80 2 0 {name=p71 sig_type=std_logic lab=VDD}
@@ -55,7 +56,7 @@ alter @VB[PULSE] = [ 0 3.3 $&T 0 0 $&T $&DT 0 ]
 
 tran $&tstep $&tstop
 
-plot XNOR NOR+5 NAND+10 B+15 A+20
+plot XOR XNOR+5 NOR+10 NAND+15 B+20 A+25
 
 .endc
 "}
