@@ -4,6 +4,31 @@ K {}
 V {}
 S {}
 E {}
+B 2 -390 -640 410 -240 {flags=graph
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=-1.25e-09
+x2=2.375e-08
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1
+autoload=1
+color="4 5 6 8"
+node="A15;a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
+B15;b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
+SEL1;sel1,sel0
+Y15;y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0"}
 C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1}
 C {lab_pin.sym} 150 -50 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -30 0 1 {name=p2 lab=VSS}
@@ -126,3 +151,57 @@ C {devices/gnd.sym} -900 -750 1 0 {name=gB0}
 C {devices/vsource.sym} -1170 650 1 0 {name=VSEL0 value=0}
 C {devices/lab_pin.sym} -1140 650 2 0 {name=pSEL0 lab=SEL0}
 C {devices/gnd.sym} -1200 650 1 0 {name=gSEL0}
+C {code_shown.sym} 320 130 0 0 {name=s1 only_toplevel=false value="
+** READ PROPAGATION DELAY
+
+.control
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+
+let DT = T * 2
+let QT = T/4
+let FQT = QT * 5
+
+let tstop = 3 * T
+let tstep = 0.001 * T
+
+** Enable WEM
+alter @VWEM[DC] = 3.3
+
+** Assert D = N
+alter @VD0[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
+alter @VD1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+
+** Enable WE
+alter @VWE0[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VWE1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VWE2[PWL] = [ 0 0 $&T 0 $&T 3.3 $&DT 3.3 $&DT 0 ]
+
+** Assert CLK
+alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+
+** Time RA
+alter @VRA0[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
+alter @VRA2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
+
+** Time RB
+alter @VRB1[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
+alter @VRB2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
+
+tran $&tstep $&tstop
+meas tran TPLH TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA0b) VAL=1.65 FALL=1 TD=$&DT
+meas tran TPHL TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA1b) VAL=1.65 RISE=1 TD=$&DT
+
+plot QA0b QA1b+4 RA2+8
+
+.endc
+"}
+C {devices/code_shown.sym} 320 -20 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+"}
