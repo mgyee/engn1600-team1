@@ -85,19 +85,19 @@ C {lab_pin.sym} 680 -210 0 0 {name=p64 lab=Y1b}
 C {lab_pin.sym} 790 -210 0 1 {name=p65 lab=Y1}
 C {engn1600-team1/CAD4/logic.sym} 1000 -590 0 0 {name=x11}
 C {lab_pin.sym} 1000 -510 0 1 {name=p66 lab=VSS}
-C {lab_pin.sym} 1060 -600 0 1 {name=p67 lab=NOR2}
+C {lab_pin.sym} 1060 -600 0 1 {name=p67 lab=NOR2_}
 C {lab_pin.sym} 1000 -670 0 1 {name=p68 lab=VDD}
 C {lab_pin.sym} 1060 -580 0 1 {name=p69 lab=XNOR2}
 C {lab_pin.sym} 940 -600 0 0 {name=p70 lab=A2}
 C {lab_pin.sym} 940 -580 0 0 {name=p71 lab=B2}
-C {lab_pin.sym} 1060 -620 0 1 {name=p72 lab=NAND2}
+C {lab_pin.sym} 1060 -620 0 1 {name=p72 lab=NAND2_}
 C {engn1600-team1/CAD4/4:1_mux.sym} 1000 -390 0 0 {name=x12}
 C {lab_pin.sym} 1000 -470 0 1 {name=p73 lab=VSS}
 C {lab_pin.sym} 1060 -390 0 1 {name=p74 lab=Y2b}
 C {lab_pin.sym} 940 -420 0 0 {name=p75 lab=SUM2b}
-C {lab_pin.sym} 940 -380 0 0 {name=p76 lab=NOR2}
+C {lab_pin.sym} 940 -380 0 0 {name=p76 lab=NOR2_}
 C {lab_pin.sym} 940 -360 0 0 {name=p77 lab=XNOR2}
-C {lab_pin.sym} 940 -400 0 0 {name=p78 lab=NAND2}
+C {lab_pin.sym} 940 -400 0 0 {name=p78 lab=NAND2_}
 C {engn1600-team1/CAD4/inv.sym} 980 -210 0 0 {name=x13}
 C {lab_pin.sym} 1000 -170 0 1 {name=p79 lab=VSS}
 C {lab_pin.sym} 1000 -250 0 1 {name=p80 lab=VDD}
