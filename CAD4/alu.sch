@@ -650,7 +650,7 @@ C {lab_pin.sym} 5050 -840 3 0 {name=p552 lab=COUT11}
 C {lab_pin.sym} 5070 -850 3 0 {name=p553 lab=COUT11b}
 C {lab_pin.sym} 5330 -840 3 0 {name=p554 lab=COUT11}
 C {lab_pin.sym} 5350 -850 3 0 {name=p555 lab=COUT11b}
-C {engn1600-team1/CAD4/2:4_decoder.sym} 520 0 0 0 {name=x88}
+C {engn1600-team1/CAD4/2x4_decoder.sym} 520 0 0 0 {name=x88}
 C {lab_pin.sym} 670 -50 0 1 {name=p556 lab=VDD}
 C {lab_pin.sym} 670 -30 0 1 {name=p557 lab=VSS}
 C {lab_wire.sym} 370 -50 0 0 {name=p558 sig_type=std_logic lab=SEL0}

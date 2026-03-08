@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-C {engn1600-team1/CAD4/2:4_decoder.sym} -10 0 0 0 {name=x1}
+C {engn1600-team1/CAD4/2x4_decoder.sym} -10 0 0 0 {name=x1}
 C {code_shown.sym} 230 -290 0 0 {name=s1 only_toplevel=false value="
 
 .control
