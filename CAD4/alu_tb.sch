@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-1.25e-09
-x2=2.375e-08
+x1=0
+x2=25n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -24,11 +24,15 @@ logx=0
 logy=0
 digital=1
 autoload=1
-color="4 5 6 8"
-node="A15;a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
-B15;b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
-SEL1;sel1,sel0
-Y15;y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0"}
+color="4 5 6 8 9 10 11"
+node="A[15..0];a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
+B[15..0];b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
+SEL[1..0];sel1,sel0
+Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
+F
+Z
+N"
+rawfile=$netlist_dir/alu_tb.raw}
 C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1}
 C {lab_pin.sym} 150 -50 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -30 0 1 {name=p2 lab=VSS}
@@ -168,34 +172,27 @@ let FQT = QT * 5
 let tstop = 3 * T
 let tstep = 0.001 * T
 
-** Enable WEM
-alter @VWEM[DC] = 3.3
-
-** Assert D = N
-alter @VD0[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
-alter @VD1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
-
-** Enable WE
-alter @VWE0[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
-alter @VWE1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
-alter @VWE2[PWL] = [ 0 0 $&T 0 $&T 3.3 $&DT 3.3 $&DT 0 ]
-
-** Assert CLK
-alter @VCLK[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
-
-** Time RA
-alter @VRA0[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
-alter @VRA2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
-
-** Time RB
-alter @VRB1[PWL] = [ 0 3.3 $&DT 3.3 $&DT 0]
-alter @VRB2[PWL] = [ 0 0 $&DT 0 $&DT 3.3]
+** Enable A0
+alter @VA0[DC] = 3.3
+alter @VB0[DC] = 3.3
+alter @VB1[DC] = 3.3
+alter @VB2[DC] = 3.3
+alter @VB3[DC] = 3.3
+alter @VB4[DC] = 3.3
+alter @VB5[DC] = 3.3
+alter @VB6[DC] = 3.3
+alter @VB7[DC] = 3.3
+alter @VB8[DC] = 3.3
+alter @VB9[DC] = 3.3
+alter @VB10[DC] = 3.3
+alter @VB11[DC] = 3.3
+alter @VB12[DC] = 3.3
+alter @VB13[DC] = 3.3
+alter @VB14[DC] = 3.3
 
 tran $&tstep $&tstop
-meas tran TPLH TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA0b) VAL=1.65 FALL=1 TD=$&DT
-meas tran TPHL TRIG V(RA2) VAL=1.65 RISE=1 TARG V(QA1b) VAL=1.65 RISE=1 TD=$&DT
 
-plot QA0b QA1b+4 RA2+8
+write alu_tb.raw
 
 .endc
 "}
