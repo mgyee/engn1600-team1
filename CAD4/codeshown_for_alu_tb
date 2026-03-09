@@ -1,0 +1,165 @@
+name=s1 only_toplevel=false value="
+** READ PROPAGATION DELAY
+
+.control
+save all
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+
+let DT = T * 2
+let QT = T/4
+let FQT = QT * 5
+
+let tstop = 3 * T
+let tstep = 0.001 * T
+
+** Enable inputs
+alter @VA0[DC] = 3.3
+alter @VB0[DC] = 3.3
+alter @VB1[DC] = 3.3
+alter @VB2[DC] = 3.3
+alter @VB3[DC] = 3.3
+alter @VB4[DC] = 3.3
+alter @VB5[DC] = 3.3
+alter @VB6[DC] = 3.3
+alter @VB7[DC] = 3.3
+alter @VB8[DC] = 3.3
+alter @VB9[DC] = 3.3
+alter @VB10[DC] = 3.3
+alter @VB11[DC] = 3.3
+alter @VB12[DC] = 3.3
+alter @VB13[DC] = 3.3
+alter @VB14[DC] = 3.3
+alter @VB15[DC] = 3.3
+
+** Simulation
+tran $&tstep $&tstop
+
+** Plot signals in waveform viewer
+plot SEL0 SEL1+4
+plot A0+8 B0+12 CIN+16
+plot Y0+20 Y1+24 Y2+28 Y3+32
+plot F+36 Z+40 N+44
+
+write alu_tb.raw
+
+.endc
+
+"
+
+** add two numbers xor two numbers waveform
+name=s1 only_toplevel=false value="
+
+.control
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+
+let QT = T/4
+let TQT = QT * 3
+
+let tstop = 4 * T
+let tstep = 0.001 * T
+
+** A0 and B0 square waves
+alter @VA0[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB0[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A1 and B1 square waves (different phase)
+alter @VA1[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+alter @VB1[PULSE] = [ 0 3.3 $&TQT 0 0 $&PW $&T 0 ]
+
+tran $&tstep $&tstop
+
+** Monitor signals
+plot Y0 Y1+4 A0+8 B0+12 A1+16 B1+20
+
+write alu_tb.raw
+
+.endc
+"
+
+
+** evaluating normal logic (add, and, or, xor)
+name=s1 only_toplevel=false value="
+
+.control
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+
+let QT = T/4
+let TQT = QT * 3
+
+let tstop = 8 * T
+let tstep = 0.001 * T
+
+** A0 and B0 square waves
+alter @VA0[PULSE] = [ 0 3.3 0  0 0 $&PW $&T 0 ]
+alter @VB0[PULSE] = [ 0 3.3 $&PW  0 0 $&PW $&T 0 ]
+
+** A1 and B1 square waves
+alter @VSEL0[PULSE] = [ 0 3.3 $&TQT 0 0 $&PW $&T 0 ]
+alter @VSEL1[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
+
+
+tran $&tstep $&tstop
+
+** Monitor signals
+**plot Y[0] Y[1]+4 A[0]+8 B[0]+12 A[1]+16 B[1]+20 SEL[0]+24 SEL[1]+28
+
+plot A0 B0+4 Y0+8 SEL0+12 SEL1+16
+
+write alu_tb.raw
+
+.endc
+
+
+"
+
+
+** checking for overflow
+name=s1 only_toplevel=false value="
+** READ PROPAGATION DELAY
+
+.control
+save all
+
+** Define input signals
+let f = 1e8
+let T = 1/f
+let PW = T/2
+
+let DT = T * 2
+let QT = T/4
+let FQT = QT * 5
+
+let tstop = 3 * T
+let tstep = 0.001 * T
+
+** Enable inputs
+alter @VSEL0[DC] = 3.3
+alter @VSEL1[DC] = 3.3
+
+alter @VB14[DC] = 3.3
+alter @VA14[DC] = 3.3
+
+** Simulation
+tran $&tstep $&tstop
+
+**overflow
+** Plot signals in waveform viewer
+plot SEL0 SEL1+4 A14+8 B14+12 Y15+16 F+20
+
+write alu_tb.raw
+
+.endc
+
+"
