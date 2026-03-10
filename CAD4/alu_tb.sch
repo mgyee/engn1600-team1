@@ -7,13 +7,13 @@ E {}
 B 2 -390 -640 410 -240 {flags=graph
 y1=0
 y2=2
-ypos1=0
-ypos2=2
+ypos1=-0.4
+ypos2=1.6
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=25n
+x1=-2.4669735e-07
+x2=-1.5711783e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -32,7 +32,7 @@ Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
 F
 Z
 N"
-rawfile=$netlist_dir/alu_tb.raw}
+}
 C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1}
 C {lab_pin.sym} 150 -50 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -30 0 1 {name=p2 lab=VSS}
@@ -155,10 +155,11 @@ C {devices/gnd.sym} -900 -750 1 0 {name=gB0}
 C {devices/vsource.sym} -1170 650 1 0 {name=VSEL0 value=0}
 C {devices/lab_pin.sym} -1140 650 2 0 {name=pSEL0 lab=SEL0}
 C {devices/gnd.sym} -1200 650 1 0 {name=gSEL0}
-C {code_shown.sym} 320 130 0 0 {name=s1 only_toplevel=false value="
+C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
 ** READ PROPAGATION DELAY
 
 .control
+save all
 
 ** Define input signals
 let f = 1e8
@@ -172,31 +173,27 @@ let FQT = QT * 5
 let tstop = 3 * T
 let tstep = 0.001 * T
 
-** Enable A0
-alter @VA0[DC] = 3.3
-alter @VB0[DC] = 3.3
-alter @VB1[DC] = 3.3
-alter @VB2[DC] = 3.3
-alter @VB3[DC] = 3.3
-alter @VB4[DC] = 3.3
-alter @VB5[DC] = 3.3
-alter @VB6[DC] = 3.3
-alter @VB7[DC] = 3.3
-alter @VB8[DC] = 3.3
-alter @VB9[DC] = 3.3
-alter @VB10[DC] = 3.3
-alter @VB11[DC] = 3.3
-alter @VB12[DC] = 3.3
-alter @VB13[DC] = 3.3
-alter @VB14[DC] = 3.3
+** Enable inputs
+alter @VSEL0[DC] = 3.3
+alter @VSEL1[DC] = 3.3
 
+alter @VB14[DC] = 3.3
+alter @VA14[DC] = 3.3
+
+** Simulation
 tran $&tstep $&tstop
+
+**overflow
+** Plot signals in waveform viewer
+plot SEL0 SEL1+4 A14+8 B14+12 Y15+16 F+20
 
 write alu_tb.raw
 
 .endc
-"}
-C {devices/code_shown.sym} 320 -20 0 0 {name=MODELS only_toplevel=true
+
+"
+}
+C {devices/code_shown.sym} 610 -1110 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
