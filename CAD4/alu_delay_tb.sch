@@ -7,13 +7,13 @@ E {}
 B 2 -390 -640 410 -240 {flags=graph
 y1=0
 y2=2
-ypos1=-0.4
-ypos2=1.6
+ypos1=0
+ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-4.652409e-08
-x2=4.3055414e-08
+x1=0
+x2=25n
 divx=5
 subdivx=1
 xlabmag=1.0

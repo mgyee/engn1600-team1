@@ -1,8 +1,8 @@
 v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {type=subcircuit
-format="@name @pinlist @symname"
-template="name=x1"
+format="@name @pinlist @symname kN=@kN"
+template="name=x1 kN=1"
 }
 V {}
 S {}
@@ -31,3 +31,4 @@ T {B} 25 -74 0 0 0.2 0.2 {}
 T {CIN} 25 -54 0 0 0.2 0.2 {}
 T {SUMb} 115 -84 0 1 0.2 0.2 {}
 T {COUT} 115 -64 0 1 0.2 0.2 {}
+T {kN=@kN} 130 -110 0 0 0.2 0.2 { layer=13}
