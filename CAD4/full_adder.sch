@@ -247,7 +247,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 740 -340 0 0 {name=M11
 L=0.28u
-W=0.72u
+W="'kN*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -500,3 +500,6 @@ C {lab_wire.sym} 1190 -270 0 0 {name=p45 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1020 -30 0 0 {name=p46 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1190 -90 0 0 {name=p47 sig_type=std_logic lab=VSS}
 C {opin.sym} 1220 -180 0 0 {name=p48 lab=COUT}
+C {code_shown.sym} 370 -570 0 0 {name=s1 only_toplevel=false value="
+.param kN=1
+"}
