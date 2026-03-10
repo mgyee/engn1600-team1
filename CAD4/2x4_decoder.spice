@@ -1,0 +1,18 @@
+** sch_path: /foss/designs/engn1600-team1/CAD4/2x4_decoder.sch
+.subckt 2x4_decoder VDD VSS S0 S1 SA SB SC SD
+*.PININFO S0:I S1:I SA:O SB:O SC:O SD:O VSS:B VDD:B
+M1 S1bar S1 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M2 S1bar S1 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M3 SA S0 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M4 SA S1 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M5 SA S0 S1bar VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M9 S0 S1 SB VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M10 S0 S1bar SB VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M11 VSS S1 SB VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M12 S0 S1bar SD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M13 S0 S1 SD VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M14 VSS S1bar SD VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M6 SC S0 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M7 SC S1bar VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M8 SC S0 S1 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+.ends
