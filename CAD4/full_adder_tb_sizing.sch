@@ -55,7 +55,7 @@ let ton4 = 0.5*tper4-2*tfr
 let tstop = 4*tper
 let tstep = 0.001*tper
 
-let NTRIALS = 4
+let NTRIALS = 20
 
 compose kVALS start=1 stop=4 lin=$&NTRIALS
 compose TRISE start=0 stop=0 lin=$&NTRIALS

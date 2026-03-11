@@ -303,7 +303,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1000 -420 0 0 {name=M15
 L=0.28u
-W=0.72u
+W="'kM*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -317,7 +317,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1000 -340 0 0 {name=M16
 L=0.28u
-W=0.72u
+W="'kM*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -331,7 +331,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1000 -500 0 0 {name=M17
 L=0.28u
-W=0.72u
+W="'kM*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -345,7 +345,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 740 -240 0 0 {name=M18
 L=0.28u
-W=0.36u
+W="'kN*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -401,7 +401,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1000 -240 0 0 {name=M22
 L=0.28u
-W=0.36u
+W="'kM*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -415,7 +415,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1000 -160 0 0 {name=M23
 L=0.28u
-W=0.36u
+W="'kM*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -429,7 +429,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 1000 -80 0 0 {name=M24
 L=0.28u
-W=0.36u
+W="'kM*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -502,4 +502,5 @@ C {lab_wire.sym} 1190 -90 0 0 {name=p47 sig_type=std_logic lab=VSS}
 C {opin.sym} 1220 -180 0 0 {name=p48 lab=COUT}
 C {code_shown.sym} 370 -570 0 0 {name=s1 only_toplevel=false value="
 .param kN=1
+.param kM=1
 "}
