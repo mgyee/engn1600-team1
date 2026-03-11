@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=25n
+x1=-3.75e-09
+x2=2.125e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -33,7 +33,7 @@ F
 Z
 N"
 }
-C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1}
+C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1 kN="'kN'" kMUX="'kMUX'"}
 C {lab_pin.sym} 150 -50 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -30 0 1 {name=p2 lab=VSS}
 C {lab_pin.sym} -150 -50 0 0 {name=p3 lab=A[15..0]}
@@ -159,6 +159,9 @@ C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
 
 .control
 
+.param kN = 4
+.param kMUX = 1
+
 ** Define input signals
 let f = 1e8
 let T = 1/f
@@ -190,6 +193,53 @@ alter @VB2[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
 alter @VA3[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
 alter @VB3[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
 
+** A4 and B4 square waves
+alter @VA4[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB4[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A5 and B5 square waves
+alter @VA5[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB5[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A6 and B6 square waves
+alter @VA6[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB6[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A7 and B7 square waves
+alter @VA7[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB7[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A8 and B8 square waves
+alter @VA8[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB8[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A9 and B9 square waves
+alter @VA9[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB9[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A10 and B10 square waves
+alter @VA10[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB10[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A11 and B11 square waves
+alter @VA11[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB11[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A12 and B12 square waves
+alter @VA12[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB12[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A13 and B13 square waves
+alter @VA13[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB13[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A14 and B14 square waves
+alter @VA14[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB14[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+
+** A15 and B15 square waves
+alter @VA15[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
+alter @VB15[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
 tran $&tstep $&tstop
 
 meas tran TPLHY0 TRIG A0 VAL=1.65 FALL=1 TARG Y0 VAL=1.65 RISE=2

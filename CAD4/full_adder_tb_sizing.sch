@@ -34,7 +34,8 @@ value="
 "}
 C {devices/code_shown.sym} -390 -940 0 0 {name=NGSPICE only_toplevel=true
 value="
-.param kN=1
+.param kN=4
+.param kM=1
 
 .control
 save all
@@ -64,7 +65,7 @@ compose TFALL start=0 stop=0 lin=$&NTRIALS
 let idx = 0
 while idx < NTRIALS
 	let kVAL = kVALS[idx]
-	alterparam kN = $&kVAL
+	alterparam kM = $&kVAL
 	reset
 
 	** sources
@@ -129,7 +130,7 @@ C {lab_wire.sym} 530 -240 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 600 -240 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 880 -280 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 880 -110 0 0 {name=p8 sig_type=std_logic lab=VSS}
-C {engn1600-team1/CAD4/full_adder.sym} 810 -130 0 0 {name=x1 kN="'kN'"}
+C {engn1600-team1/CAD4/full_adder.sym} 810 -130 0 0 {name=x1 kN="'kN'" kM="'kM'"}
 C {capa.sym} 970 -150 0 0 {name=C2
 m=1
 value=10f
