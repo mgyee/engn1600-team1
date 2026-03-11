@@ -12,8 +12,8 @@ ypos2=1.6
 divy=5
 subdivy=1
 unity=1
-x1=-2.4669735e-07
-x2=-1.5711783e-07
+x1=0
+x2=25n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -32,7 +32,7 @@ Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
 F
 Z
 N"
-}
+rawfile=$netlist_dir/alu_tb.raw}
 C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1}
 C {lab_pin.sym} 150 -50 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -30 0 1 {name=p2 lab=VSS}
