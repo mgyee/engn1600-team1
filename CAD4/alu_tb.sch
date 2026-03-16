@@ -12,8 +12,8 @@ ypos2=1.6
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=25n
+x1=-1.25e-09
+x2=2.375e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -166,30 +166,33 @@ let f = 1e8
 let T = 1/f
 let PW = T/2
 
-let DT = T * 2
 let QT = T/4
-let FQT = QT * 5
+let TQT = QT * 3
 
-let tstop = 3 * T
+let tstop = 8 * T
 let tstep = 0.001 * T
 
-** Enable inputs
-alter @VSEL0[DC] = 3.3
-alter @VSEL1[DC] = 3.3
 
-alter @VB14[DC] = 3.3
-alter @VA14[DC] = 3.3
+** A1 and B1 square waves
+alter @VA0[PULSE] = [ 0 3.3 $&TQT 0 0 $&PW $&T 0 ]
+alter @VB0[PULSE] = [ 0 3.3 $&PW 0 0 $&PW $&T 0 ]
 
-** Simulation
+alter @VSEL0 = 0
+alter @VSEL1 = 0
+alter @VCIN = 3.3
+
 tran $&tstep $&tstop
 
-**overflow
-** Plot signals in waveform viewer
-plot SEL0 SEL1+4 A14+8 B14+12 Y15+16 F+20
+** Monitor signals
+
+plot A0 B0+4 Y0+8 Y1+12 Y15+16
+plot SEL0 SEL1+4
+
 
 write alu_tb.raw
 
 .endc
+
 
 "
 }
