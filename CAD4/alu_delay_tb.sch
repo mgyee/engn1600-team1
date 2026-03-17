@@ -33,7 +33,7 @@ F
 Z
 N"
 rawfile=$netlist_dir/alu_delay_tb.raw}
-C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1 kN="'kN'"}
+C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1}
 C {lab_pin.sym} 150 -50 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -30 0 1 {name=p2 lab=VSS}
 C {lab_pin.sym} -150 -50 0 0 {name=p3 lab=A[15..0]}
@@ -158,8 +158,6 @@ C {devices/gnd.sym} -1200 650 1 0 {name=gSEL0}
 C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
 .control
 save all
-
-.param kN = 4
 
 ** Define input signals
 let f = 1e8
