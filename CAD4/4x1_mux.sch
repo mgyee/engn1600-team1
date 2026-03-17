@@ -7,7 +7,7 @@ E {}
 N 30 -270 30 210 {lab=Y}
 C {symbols/nfet_03v3.sym} 0 -290 1 0 {name=M1
 L=0.28u
-W="'1*0.36u'"
+W=0.36u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -21,7 +21,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 0 -130 1 0 {name=M2
 L=0.28u
-W="'1*0.36u'"
+W=0.36u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -35,7 +35,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 0 30 1 0 {name=M3
 L=0.28u
-W="'1*0.36u'"
+W=0.36u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -49,7 +49,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 0 190 1 0 {name=M4
 L=0.28u
-W="'1*0.36u'"
+W=0.36u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -76,6 +76,3 @@ C {ipin.sym} 0 -310 0 0 {name=p12 lab=SA}
 C {ipin.sym} 0 -150 0 0 {name=p13 lab=SB}
 C {ipin.sym} 0 10 0 0 {name=p14 lab=SC}
 C {ipin.sym} 0 170 0 0 {name=p15 lab=SD}
-C {code_shown.sym} 90 -170 0 0 {name=s1 only_toplevel=false value="
-.param kMUX=1
-"}
