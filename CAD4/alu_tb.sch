@@ -7,8 +7,8 @@ E {}
 B 2 -390 -640 410 -240 {flags=graph
 y1=0
 y2=2
-ypos1=-0.4
-ypos2=1.6
+ypos1=0
+ypos2=2
 divy=5
 subdivy=1
 unity=1
@@ -190,9 +190,7 @@ plot SEL0 SEL1+4 A14+8 B14+12 Y15+16 F+20
 write alu_tb.raw
 
 .endc
-
-"
-}
+"}
 C {devices/code_shown.sym} 610 -1110 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
