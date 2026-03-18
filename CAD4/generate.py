@@ -105,11 +105,17 @@ write alu_tb.raw
 
 if __name__ == "__main__":
     tests = [
-        (0xFFFF, 0x0001, "+"),
-        (0x1234, 0x00FF, "&"),
-        (0xAAAA, 0x5555, "|"),
-        (0xF0F0, 0x0F0F, "^"),
-        (0x0000, 0x0001, "-"),
+        (0x1234, 0x4321, "+"), # Simple addition
+        (0xFFFF, 0x0001, "+"), # -1 + 1 = 0
+        (0x7FFF, 0x0001, "+"), # Signed overflow
+        (0x4321, 0x1234, "-"), # Simple subtraction
+        (0x0000, 0x0001, "-"), # 0 - 1 = -1
+        (0x8000, 0x0001, "-"), # Signed underflow
+        (0x1234, 0x1234, "-"), # Raise Z
+        (0x1234, 0x4321, "-"), # Raise N, lower Z
+        (0x1234, 0x00FF, "&"), # AND
+        (0xAAAA, 0x5555, "|"), # OR
+        (0xF0F0, 0x0F0F, "^"), # XOR
     ]
 
     with open("alu_tb_gen.spice", "w") as f:

@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 -390 -640 410 -240 {flags=graph
+B 2 -390 -640 410 -240 {flags=graph,unlocked
 y1=0
 y2=2
 ypos1=0
@@ -12,8 +12,38 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=25n
+x1=30n
+x2=60n
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1
+autoload=1
+color="4 5 6 8 9 10 11 12"
+node="A[15..0];a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
+B[15..0];b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
+CIN
+SEL[1..0];sel1,sel0
+Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
+F
+Z
+N"
+rawfile=$netlist_dir/alu_tb.raw}
+B 2 -390 -1060 410 -660 {flags=graph,unlocked
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0n
+x2=30n
 divx=5
 subdivx=1
 xlabmag=1.0
