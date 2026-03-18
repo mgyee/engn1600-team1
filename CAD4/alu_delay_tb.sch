@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=4n
+x2=7n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -157,7 +157,7 @@ C {devices/vsource.sym} -1170 650 1 0 {name=VSEL0 value=0}
 C {devices/lab_pin.sym} -1140 650 2 0 {name=pSEL0 lab=SEL0}
 C {devices/gnd.sym} -1200 650 1 0 {name=gSEL0}
 C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
-** DELAY 0xFFFF + 0x0001
+** DELAY 0xFFFF + [0x0000 -> 0x0001 -> 0x0000]
 
 .control
 save all
@@ -167,10 +167,10 @@ let f = 1e9
 let T = 1/f
 let PW = T/2
 
-let QT = T/4
-let TQT = QT * 3
+let TT = T * 3
+let ST = T * 6
 
-let tstop = 4 * T
+let tstop = 7 * T
 let tstep = 0.001 * T
 
 ** A (0xFFFF)
@@ -207,7 +207,7 @@ alter @VB4[DC]  = 0
 alter @VB3[DC]  = 0
 alter @VB2[DC]  = 0
 alter @VB1[DC]  = 0
-alter @VB0[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
+alter @VB0[PULSE] = [ 0 3.3 $&T 0 0 $&TT $&ST 0 ]
 
 ** SEL (ADD)
 alter @VSEL1[DC] = 0
@@ -218,9 +218,8 @@ alter @VCIN[DC] = 0
 
 tran $&tstep $&tstop
 
-meas tran TPN TRIG V(B0) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 CROSS=1
-meas tran TPZ TRIG V(B0) VAL=1.65 RISE=1 TARG V(Z) VAL=1.65 CROSS=1
-meas tran TPY TRIG V(B0) VAL=1.65 RISE=1 TARG V(Y15) VAL=1.65 CROSS=1
+meas tran TPLH TRIG V(B0) VAL=1.65 RISE=1 TARG V(Y15) VAL=1.65 CROSS=1
+meas tran TPHL TRIG V(B0) VAL=1.65 FALL=1 TARG V(Y15) VAL=1.65 CROSS=2
 
 plot x1.COUT15 x1.COUT11+5 x1.COUT7+10 x1.COUT3+15 x1.COUT2+20 x1.COUT1+25 x1.COUT0+30
 
