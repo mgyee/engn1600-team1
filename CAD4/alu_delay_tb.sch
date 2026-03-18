@@ -219,6 +219,7 @@ tran $&tstep $&tstop
 meas tran TPLH TRIG V(CIN) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 RISE=1
 
 plot N x1.COUT15+5 x1.COUT11+10 x1.COUT7+15 x1.COUT3+20
+plot Z x1.net1+5 x1.XOR0+10 x1.XOR15+15
 
 write alu_delay_tb.raw
 
