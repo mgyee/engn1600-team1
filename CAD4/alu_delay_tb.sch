@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=3n
+x2=4n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -157,6 +157,8 @@ C {devices/vsource.sym} -1170 650 1 0 {name=VSEL0 value=0}
 C {devices/lab_pin.sym} -1140 650 2 0 {name=pSEL0 lab=SEL0}
 C {devices/gnd.sym} -1200 650 1 0 {name=gSEL0}
 C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
+** DELAY 0xFFFF + 0x0001
+
 .control
 save all
 
@@ -168,10 +170,10 @@ let PW = T/2
 let QT = T/4
 let TQT = QT * 3
 
-let tstop = 3 * T
+let tstop = 4 * T
 let tstep = 0.001 * T
 
-** A = 0xFFFF
+** A (0xFFFF)
 alter @VA15[DC] = 3.3
 alter @VA14[DC] = 3.3
 alter @VA13[DC] = 3.3
@@ -189,38 +191,38 @@ alter @VA2[DC]  = 3.3
 alter @VA1[DC]  = 3.3
 alter @VA0[DC]  = 3.3
 
-** B = 0xFFFF
-alter @VB15[DC] = 3.3
-alter @VB14[DC] = 3.3
-alter @VB13[DC] = 3.3
-alter @VB12[DC] = 3.3
-alter @VB11[DC] = 3.3
-alter @VB10[DC] = 3.3
-alter @VB9[DC]  = 3.3
-alter @VB8[DC]  = 3.3
-alter @VB7[DC]  = 3.3
-alter @VB6[DC]  = 3.3
-alter @VB5[DC]  = 3.3
-alter @VB4[DC]  = 3.3
-alter @VB3[DC]  = 3.3
-alter @VB2[DC]  = 3.3
-alter @VB1[DC]  = 3.3
-alter @VB0[DC]  = 3.3
+** B (0 -> 1)
+alter @VB15[DC] = 0
+alter @VB14[DC] = 0
+alter @VB13[DC] = 0
+alter @VB12[DC] = 0
+alter @VB11[DC] = 0
+alter @VB10[DC] = 0
+alter @VB9[DC]  = 0
+alter @VB8[DC]  = 0
+alter @VB7[DC]  = 0
+alter @VB6[DC]  = 0
+alter @VB5[DC]  = 0
+alter @VB4[DC]  = 0
+alter @VB3[DC]  = 0
+alter @VB2[DC]  = 0
+alter @VB1[DC]  = 0
+alter @VB0[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
 
-** SEL (OR -> ADD)
-alter @VSEL1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
-alter @VSEL0[DC]  = 0
+** SEL (ADD)
+alter @VSEL1[DC] = 0
+alter @VSEL0[DC] = 0
 
-** CIN (0 -> 1)
-alter @VCIN[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
+** CIN (0)
+alter @VCIN[DC] = 0
 
 tran $&tstep $&tstop
 
-meas tran TPN TRIG V(CIN) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 CROSS=1
-meas tran TPZ TRIG V(CIN) VAL=1.65 RISE=1 TARG V(Z) VAL=1.65 CROSS=1
+meas tran TPN TRIG V(B0) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 CROSS=1
+meas tran TPZ TRIG V(B0) VAL=1.65 RISE=1 TARG V(Z) VAL=1.65 CROSS=1
+meas tran TPY TRIG V(B0) VAL=1.65 RISE=1 TARG V(Y15) VAL=1.65 CROSS=1
 
-plot N x1.COUT15+5 x1.COUT11+10 x1.COUT7+15 x1.COUT3+20
-plot Z x1.net1+5 x1.XOR0+10 x1.XOR15+15
+plot x1.COUT15 x1.COUT11+5 x1.COUT7+10 x1.COUT3+15 x1.COUT2+20 x1.COUT1+25 x1.COUT0+30
 
 write alu_delay_tb.raw
 
