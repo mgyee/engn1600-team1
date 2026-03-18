@@ -2,6 +2,7 @@
 
 VHI = 3.3
 VLO = 0.0
+T = 5 # nanoseconds
 
 def bits16(x):
     return [(x >> i) & 1 for i in range(16)]
@@ -30,14 +31,13 @@ def generate_summary(tests):
     return "\n".join(lines)
 
 def generate_pwl_blocks(tests):
-    T_period = 5  # nanoseconds
     VA = {i: [] for i in range(16)}
     VB = {i: [] for i in range(16)}
     VSEL0, VSEL1, VCIN = [], [], []
 
     for idx, (A, B, op) in enumerate(tests):
-        t0 = f"{idx * T_period}n"
-        t1 = f"{(idx+1) * T_period}n"
+        t0 = f"{idx * T}n"
+        t1 = f"{(idx+1) * T}n"
 
         Abits = bits16(A)
         Bbits = bits16(B)
@@ -78,9 +78,8 @@ def generate_pwl_blocks(tests):
 
 def generate_ngspice(tests):
     n = len(tests)
-    T_ns = 5  # nanoseconds
-    tstop = n * T_ns
-    tstep = 0.001 * T_ns
+    tstop = n * T
+    tstep = 0.001 * T
 
     header = f"""{generate_summary(tests)}
 
@@ -104,8 +103,6 @@ write alu_tb.raw
 
     return header + body + footer
 
-
-# Example usage
 if __name__ == "__main__":
     tests = [
         (0xFFFF, 0x0001, "+"),
@@ -115,4 +112,6 @@ if __name__ == "__main__":
         (0x0000, 0x0001, "-"),
     ]
 
-    print(generate_ngspice(tests))
+    with open("alu_tb_gen.spice", "w") as f:
+        f.write(generate_ngspice(tests))
+    print("Generated alu_tb_gen.spice")

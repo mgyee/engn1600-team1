@@ -156,69 +156,10 @@ C {devices/gnd.sym} -900 -750 1 0 {name=gB0}
 C {devices/vsource.sym} -1170 650 1 0 {name=VSEL0 value=0}
 C {devices/lab_pin.sym} -1140 650 2 0 {name=pSEL0 lab=SEL0}
 C {devices/gnd.sym} -1200 650 1 0 {name=gSEL0}
-C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
-** TEST SUMMARY
-** 00: 0xFFFF + 0x0001
-** 01: 0x1234 & 0x00FF
-** 02: 0xAAAA | 0x5555
-** 03: 0xF0F0 ^ 0x0F0F
-** 04: 0x0000 - 0x0001
-
-.control
-save all
-
-** Define input signals
-
-** A BUS
-alter @VA15[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VA14[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VA13[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VA12[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VA11[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VA10[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VA9[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VA8[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VA7[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VA6[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VA5[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VA4[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VA3[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VA2[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VA1[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VA0[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-
-** B BUS
-alter @VB15[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VB14[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VB13[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VB12[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VB11[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VB10[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VB9[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VB8[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VB7[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VB6[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VB5[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VB4[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
-alter @VB3[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VB2[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VB1[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VB0[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 3.3 25n 3.3 ]
-
-** CONTROL
-alter @VSEL1[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VSEL0[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
-alter @VCIN[PWL]  = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 3.3 25n 3.3 ]
-
-tran 0.005n 25n
-
-write alu_tb.raw
-
-.endc
-"}
-C {devices/code_shown.sym} 610 -1110 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 480 -30 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
+.include /foss/designs/engn1600-team1/CAD4/alu_tb_gen.spice
 "}
