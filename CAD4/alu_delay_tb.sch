@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=25n
+x2=3n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -24,9 +24,10 @@ logx=0
 logy=0
 digital=1
 autoload=1
-color="4 5 6 8 9 10 11"
+color="4 5 6 8 9 10 11 12"
 node="A[15..0];a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
 B[15..0];b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
+CIN
 SEL[1..0];sel1,sel0
 Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
 F
@@ -160,94 +161,66 @@ C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
 save all
 
 ** Define input signals
-let f = 1e8
+let f = 1e9
 let T = 1/f
 let PW = T/2
 
 let QT = T/4
 let TQT = QT * 3
 
-let tstop = 2 * T
+let tstop = 3 * T
 let tstep = 0.001 * T
 
-** Select Adder
-alter @VSEL0[DC] = 0
-alter @VSEL1[DC] = 0
+** A = 0xFFFF
+alter @VA15[DC] = 3.3
+alter @VA14[DC] = 3.3
+alter @VA13[DC] = 3.3
+alter @VA12[DC] = 3.3
+alter @VA11[DC] = 3.3
+alter @VA10[DC] = 3.3
+alter @VA9[DC]  = 3.3
+alter @VA8[DC]  = 3.3
+alter @VA7[DC]  = 3.3
+alter @VA6[DC]  = 3.3
+alter @VA5[DC]  = 3.3
+alter @VA4[DC]  = 3.3
+alter @VA3[DC]  = 3.3
+alter @VA2[DC]  = 3.3
+alter @VA1[DC]  = 3.3
+alter @VA0[DC]  = 3.3
 
-** A0 and B0 square waves
-alter @VA0[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB0[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+** B = 0xFFFF
+alter @VB15[DC] = 3.3
+alter @VB14[DC] = 3.3
+alter @VB13[DC] = 3.3
+alter @VB12[DC] = 3.3
+alter @VB11[DC] = 3.3
+alter @VB10[DC] = 3.3
+alter @VB9[DC]  = 3.3
+alter @VB8[DC]  = 3.3
+alter @VB7[DC]  = 3.3
+alter @VB6[DC]  = 3.3
+alter @VB5[DC]  = 3.3
+alter @VB4[DC]  = 3.3
+alter @VB3[DC]  = 3.3
+alter @VB2[DC]  = 3.3
+alter @VB1[DC]  = 3.3
+alter @VB0[DC]  = 3.3
 
-** A1 and B1 square waves
-alter @VA1[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB1[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+** SEL (OR -> ADD)
+alter @VSEL1[PWL] = [ 0 3.3 $&T 3.3 $&T 0 ]
+alter @VSEL0[DC]  = 0
 
-** A2 and B2 square waves
-alter @VA2[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB2[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
+** CIN (0 -> 1)
+alter @VCIN[PWL] = [ 0 0 $&T 0 $&T 3.3 ]
 
-** A3 and B3 square waves
-alter @VA3[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB3[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A4 and B4 square waves
-alter @VA4[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB4[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A5 and B5 square waves
-alter @VA5[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB5[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A6 and B6 square waves
-alter @VA6[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB6[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A7 and B7 square waves
-alter @VA7[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB7[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A8 and B8 square waves
-alter @VA8[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB8[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A9 and B9 square waves
-alter @VA9[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB9[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A10 and B10 square waves
-alter @VA10[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB10[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A11 and B11 square waves
-alter @VA11[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB11[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A12 and B12 square waves
-alter @VA12[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB12[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A13 and B13 square waves
-alter @VA13[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB13[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A14 and B14 square waves
-alter @VA14[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB14[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
-
-** A15 and B15 square waves
-alter @VA15[PULSE] = [ 0 3.3 0 0 0 $&PW $&T 0 ]
-alter @VB15[PULSE] = [ 0 3.3 $&QT 0 0 $&PW $&T 0 ]
 tran $&tstep $&tstop
 
-meas tran TPLHY0 TRIG A0 VAL=1.65 FALL=1 TARG Y0 VAL=1.65 RISE=2
-meas tran TPLHY1 TRIG A0 VAL=1.65 FALL=1 TARG Y1 VAL=1.65 RISE=2
-meas tran TPLHY2 TRIG A0 VAL=1.65 FALL=1 TARG Y2 VAL=1.65 RISE=2
-meas tran TPLHY3 TRIG A0 VAL=1.65 FALL=1 TARG Y3 VAL=1.65 RISE=2
+meas tran TPLH TRIG V(CIN) VAL=1.65 RISE=1 TARG V(N) VAL=1.65 RISE=1
 
-** Monitor signals
-plot A0 B0 Y0+4 Y1+4 Y2+4 Y3+4
+plot N x1.COUT15+5 x1.COUT11+10 x1.COUT7+15 x1.COUT3+20
 
-write alu_tb.raw
+write alu_delay_tb.raw
 
 .endc
 "}
