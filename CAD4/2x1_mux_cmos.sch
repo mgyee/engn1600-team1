@@ -4,7 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 40 -60 220 -60 {lab=#net1}
 N 40 -120 220 -120 {lab=VDD}
 N 40 -90 60 -90 {lab=VDD}
 N 60 -120 60 -90 {lab=VDD}
@@ -160,9 +159,9 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 0 -90 0 0 {name=p19 lab=A}
-C {lab_pin.sym} 0 -30 0 0 {name=p20 lab=B}
-C {lab_pin.sym} 260 -30 2 0 {name=p21 lab=SEL}
+C {lab_pin.sym} 0 -30 0 0 {name=p19 lab=A}
+C {lab_pin.sym} 260 -30 2 0 {name=p20 lab=B}
+C {lab_pin.sym} 0 -90 0 0 {name=p21 lab=SEL}
 C {lab_pin.sym} 260 -90 2 0 {name=p22 lab=SELb}
 C {symbols/nfet_03v3.sym} 340 30 2 1 {name=M9
 L=0.28u
