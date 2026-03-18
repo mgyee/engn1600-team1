@@ -24,9 +24,10 @@ logx=0
 logy=0
 digital=1
 autoload=1
-color="4 5 6 8 9 10 11"
+color="4 5 6 8 9 10 11 12"
 node="A[15..0];a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
 B[15..0];b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
+CIN
 SEL[1..0];sel1,sel0
 Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
 F
@@ -156,36 +157,60 @@ C {devices/vsource.sym} -1170 650 1 0 {name=VSEL0 value=0}
 C {devices/lab_pin.sym} -1140 650 2 0 {name=pSEL0 lab=SEL0}
 C {devices/gnd.sym} -1200 650 1 0 {name=gSEL0}
 C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
-** READ PROPAGATION DELAY
+** TEST SUMMARY
+** 00: 0xFFFF + 0x0001
+** 01: 0x1234 & 0x00FF
+** 02: 0xAAAA | 0x5555
+** 03: 0xF0F0 ^ 0x0F0F
+** 04: 0x0000 - 0x0001
 
 .control
 save all
 
 ** Define input signals
-let f = 1e8
-let T = 1/f
-let PW = T/2
 
-let DT = T * 2
-let QT = T/4
-let FQT = QT * 5
+** A BUS
+alter @VA15[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VA14[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VA13[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VA12[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VA11[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VA10[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VA9[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VA8[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VA7[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VA6[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VA5[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VA4[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VA3[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VA2[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VA1[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VA0[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
 
-let tstop = 3 * T
-let tstep = 0.001 * T
+** B BUS
+alter @VB15[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VB14[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VB13[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VB12[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VB11[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VB10[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VB9[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VB8[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VB7[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VB6[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VB5[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VB4[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 20n 0.0 25n 0.0 ]
+alter @VB3[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VB2[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VB1[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VB0[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 3.3 25n 3.3 ]
 
-** Enable inputs
-alter @VSEL0[DC] = 3.3
-alter @VSEL1[DC] = 3.3
+** CONTROL
+alter @VSEL1[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VSEL0[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 20n 0.0 25n 0.0 ]
+alter @VCIN[PWL]  = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 0.0 20n 0.0 20n 3.3 25n 3.3 ]
 
-alter @VB14[DC] = 3.3
-alter @VA14[DC] = 3.3
-
-** Simulation
-tran $&tstep $&tstop
-
-**overflow
-** Plot signals in waveform viewer
-plot SEL0 SEL1+4 A14+8 B14+12 Y15+16 F+20
+tran 0.005n 25n
 
 write alu_tb.raw
 
