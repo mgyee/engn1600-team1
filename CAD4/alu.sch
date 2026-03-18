@@ -17,11 +17,11 @@ C {opin.sym} 50 -140 2 0 {name=p6 lab=Y[15..0]}
 C {opin.sym} 50 -120 2 0 {name=p7 lab=F}
 C {opin.sym} 50 -100 2 0 {name=p8 lab=Z}
 C {opin.sym} 50 -80 2 0 {name=p9 lab=N}
-C {engn1600-team1/CAD4/full_adder.sym} 370 -700 0 0 {name=x1}
+C {engn1600-team1/CAD4/full_adder.sym} 370 -700 0 0 {name=x1 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {ipin.sym} 50 -180 0 0 {name=p10 lab=CIN}
-C {engn1600-team1/CAD4/full_adder.sym} 650 -700 0 0 {name=x2}
-C {engn1600-team1/CAD4/full_adder.sym} 930 -700 0 0 {name=x3}
-C {engn1600-team1/CAD4/full_adder.sym} 1210 -700 0 0 {name=x4}
+C {engn1600-team1/CAD4/full_adder.sym} 650 -700 0 0 {name=x2 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 930 -700 0 0 {name=x3 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 1210 -700 0 0 {name=x4 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {lab_pin.sym} 440 -830 0 1 {name=p11 lab=VDD}
 C {lab_pin.sym} 440 -700 0 1 {name=p12 lab=VSS}
 C {lab_pin.sym} 370 -790 0 0 {name=p13 lab=A0}
@@ -95,9 +95,9 @@ C {lab_pin.sym} 1070 -760 0 1 {name=p104 lab=COUT2}
 C {lab_pin.sym} 1210 -750 0 0 {name=p105 lab=COUT2}
 C {lab_pin.sym} 1350 -760 0 1 {name=p106 lab=COUT3}
 C {engn1600-team1/CAD4/logic_extended.sym} 1630 -1140 0 0 {name=x17}
-C {engn1600-team1/CAD4/full_adder.sym} 1840 -1160 0 0 {name=x18}
-C {engn1600-team1/CAD4/full_adder.sym} 2120 -1160 0 0 {name=x19}
-C {engn1600-team1/CAD4/full_adder.sym} 2400 -1160 0 0 {name=x20}
+C {engn1600-team1/CAD4/full_adder.sym} 1840 -1160 0 0 {name=x18 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 2120 -1160 0 0 {name=x19 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 2400 -1160 0 0 {name=x20 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {lab_pin.sym} 1910 -1290 0 1 {name=p107 lab=VDD}
 C {lab_pin.sym} 1910 -1160 0 1 {name=p108 lab=VSS}
 C {lab_pin.sym} 1840 -1250 0 0 {name=p109 lab=A5}
@@ -156,9 +156,9 @@ C {lab_pin.sym} 1690 -1150 0 1 {name=p216 lab=XNOR4}
 C {lab_pin.sym} 1570 -1150 0 0 {name=p217 lab=A4}
 C {lab_pin.sym} 1570 -1130 0 0 {name=p218 lab=B4p}
 C {lab_pin.sym} 1690 -1190 0 1 {name=p219 lab=NAND4}
-C {engn1600-team1/CAD4/full_adder.sym} 1840 -990 0 0 {name=x21}
-C {engn1600-team1/CAD4/full_adder.sym} 2120 -990 0 0 {name=x22}
-C {engn1600-team1/CAD4/full_adder.sym} 2400 -990 0 0 {name=x23}
+C {engn1600-team1/CAD4/full_adder.sym} 1840 -990 0 0 {name=x21 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 2120 -990 0 0 {name=x22 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 2400 -990 0 0 {name=x23 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {lab_pin.sym} 1910 -1120 0 1 {name=p123 lab=VDD}
 C {lab_pin.sym} 1910 -990 0 1 {name=p124 lab=VSS}
 C {lab_pin.sym} 1840 -1080 0 0 {name=p125 lab=A5}
@@ -201,8 +201,8 @@ C {lab_pin.sym} 2160 -880 0 0 {name=p236 lab=SUM_06b}
 C {lab_pin.sym} 2160 -860 0 0 {name=p237 lab=SUM_16b}
 C {lab_pin.sym} 2440 -880 0 0 {name=p238 lab=SUM_07b}
 C {lab_pin.sym} 2440 -860 0 0 {name=p239 lab=SUM_17b}
-C {engn1600-team1/CAD4/2x1_mux.sym} 2770 -870 0 0 {name=x39}
-C {lab_pin.sym} 2810 -870 0 1 {name=p240 lab=COUT7}
+C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 2770 -870 0 0 {name=x39 kYb=1 kY=1}
+C {lab_pin.sym} 2810 -880 0 1 {name=p240 lab=COUT7}
 C {lab_pin.sym} 2760 -940 0 1 {name=p241 lab=VDD}
 C {lab_pin.sym} 2780 -930 0 1 {name=p242 lab=VSS}
 C {lab_pin.sym} 2730 -880 0 0 {name=p243 lab=COUT_07}
@@ -222,15 +222,11 @@ C {lab_pin.sym} 2470 -800 3 0 {name=p255 lab=COUT3}
 C {lab_pin.sym} 2490 -810 3 0 {name=p256 lab=COUT3b}
 C {lab_pin.sym} 2760 -800 3 0 {name=p257 lab=COUT3}
 C {lab_pin.sym} 2780 -810 3 0 {name=p258 lab=COUT3b}
-C {engn1600-team1/CAD4/inv.sym} 2740 -1090 0 0 {name=x41}
-C {lab_pin.sym} 2760 -1050 0 1 {name=p259 lab=VSS}
-C {lab_pin.sym} 2760 -1130 0 1 {name=p260 lab=VDD}
-C {lab_pin.sym} 2720 -1090 0 0 {name=p261 lab=COUT7}
-C {lab_pin.sym} 2830 -1090 0 1 {name=p262 lab=COUT7b}
+C {lab_pin.sym} 2810 -860 0 1 {name=p262 lab=COUT7b}
 C {engn1600-team1/CAD4/logic_extended.sym} 3050 -1160 0 0 {name=x42}
-C {engn1600-team1/CAD4/full_adder.sym} 3260 -1180 0 0 {name=x43}
-C {engn1600-team1/CAD4/full_adder.sym} 3540 -1180 0 0 {name=x44}
-C {engn1600-team1/CAD4/full_adder.sym} 3820 -1180 0 0 {name=x45}
+C {engn1600-team1/CAD4/full_adder.sym} 3260 -1180 0 0 {name=x43 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 3540 -1180 0 0 {name=x44 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 3820 -1180 0 0 {name=x45 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {lab_pin.sym} 3330 -1310 0 1 {name=p263 lab=VDD}
 C {lab_pin.sym} 3330 -1180 0 1 {name=p264 lab=VSS}
 C {lab_pin.sym} 3260 -1270 0 0 {name=p265 lab=A9}
@@ -289,9 +285,9 @@ C {lab_pin.sym} 3110 -1170 0 1 {name=p350 lab=XNOR8}
 C {lab_pin.sym} 2990 -1170 0 0 {name=p351 lab=A8}
 C {lab_pin.sym} 2990 -1150 0 0 {name=p352 lab=B8p}
 C {lab_pin.sym} 3110 -1210 0 1 {name=p353 lab=NAND8}
-C {engn1600-team1/CAD4/full_adder.sym} 3260 -1010 0 0 {name=x61}
-C {engn1600-team1/CAD4/full_adder.sym} 3540 -1010 0 0 {name=x62}
-C {engn1600-team1/CAD4/full_adder.sym} 3820 -1010 0 0 {name=x63}
+C {engn1600-team1/CAD4/full_adder.sym} 3260 -1010 0 0 {name=x61 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 3540 -1010 0 0 {name=x62 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 3820 -1010 0 0 {name=x63 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {lab_pin.sym} 3330 -1140 0 1 {name=p354 lab=VDD}
 C {lab_pin.sym} 3330 -1010 0 1 {name=p355 lab=VSS}
 C {lab_pin.sym} 3260 -1100 0 0 {name=p356 lab=A9}
@@ -334,8 +330,8 @@ C {lab_pin.sym} 3580 -900 0 0 {name=p392 lab=SUM_010b}
 C {lab_pin.sym} 3580 -880 0 0 {name=p393 lab=SUM_110b}
 C {lab_pin.sym} 3860 -900 0 0 {name=p394 lab=SUM_011b}
 C {lab_pin.sym} 3860 -880 0 0 {name=p395 lab=SUM_111b}
-C {engn1600-team1/CAD4/2x1_mux.sym} 4190 -890 0 0 {name=x64}
-C {lab_pin.sym} 4230 -890 0 1 {name=p396 lab=COUT11}
+C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 4190 -890 0 0 {name=x64 kYb=1 kY=1}
+C {lab_pin.sym} 4230 -900 0 1 {name=p396 lab=COUT11}
 C {lab_pin.sym} 4180 -960 0 1 {name=p397 lab=VDD}
 C {lab_pin.sym} 4200 -950 0 1 {name=p398 lab=VSS}
 C {lab_pin.sym} 4150 -900 0 0 {name=p399 lab=COUT_011}
@@ -350,15 +346,10 @@ C {lab_pin.sym} 3890 -820 3 0 {name=p407 lab=COUT7}
 C {lab_pin.sym} 3910 -830 3 0 {name=p408 lab=COUT7b}
 C {lab_pin.sym} 4180 -820 3 0 {name=p409 lab=COUT7}
 C {lab_pin.sym} 4200 -830 3 0 {name=p410 lab=COUT7b}
-C {engn1600-team1/CAD4/inv.sym} 4160 -1110 0 0 {name=x65}
-C {lab_pin.sym} 4180 -1070 0 1 {name=p411 lab=VSS}
-C {lab_pin.sym} 4180 -1150 0 1 {name=p412 lab=VDD}
-C {lab_pin.sym} 4140 -1110 0 0 {name=p413 lab=COUT11}
-C {lab_pin.sym} 4250 -1110 0 1 {name=p414 lab=COUT11b}
 C {engn1600-team1/CAD4/logic_extended.sym} 4490 -1180 0 0 {name=x66}
-C {engn1600-team1/CAD4/full_adder.sym} 4700 -1200 0 0 {name=x67}
-C {engn1600-team1/CAD4/full_adder.sym} 4980 -1200 0 0 {name=x68}
-C {engn1600-team1/CAD4/full_adder.sym} 5260 -1200 0 0 {name=x69}
+C {engn1600-team1/CAD4/full_adder.sym} 4700 -1200 0 0 {name=x67 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 4980 -1200 0 0 {name=x68 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 5260 -1200 0 0 {name=x69 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {lab_pin.sym} 4770 -1330 0 1 {name=p415 lab=VDD}
 C {lab_pin.sym} 4770 -1200 0 1 {name=p416 lab=VSS}
 C {lab_pin.sym} 4700 -1290 0 0 {name=p417 lab=A13}
@@ -380,7 +371,7 @@ C {lab_pin.sym} 5120 -1260 0 1 {name=p432 lab=COUT_014}
 C {lab_pin.sym} 5260 -1250 0 0 {name=p433 lab=COUT_014}
 C {lab_pin.sym} 5400 -1260 0 1 {name=p434 lab=COUT_015}
 C {engn1600-team1/CAD4/logic.sym} 4770 -630 0 0 {name=x70}
-C {lab_pin.sym} 4770 -560 0 1 {name=p435 lab=VSS}
+C {lab_pin.sym} 4770 -550 0 1 {name=p435 lab=VSS}
 C {lab_pin.sym} 4830 -640 0 1 {name=p436 lab=NOR13}
 C {lab_pin.sym} 4770 -710 0 1 {name=p437 lab=VDD}
 C {lab_pin.sym} 4830 -620 0 1 {name=p438 lab=XNOR13}
@@ -388,7 +379,7 @@ C {lab_pin.sym} 4710 -640 0 0 {name=p439 lab=A13}
 C {lab_pin.sym} 4710 -620 0 0 {name=p440 lab=B13p}
 C {lab_pin.sym} 4830 -660 0 1 {name=p441 lab=NAND13}
 C {engn1600-team1/CAD4/logic.sym} 5050 -630 0 0 {name=x71}
-C {lab_pin.sym} 5050 -560 0 1 {name=p442 lab=VSS}
+C {lab_pin.sym} 5050 -550 0 1 {name=p442 lab=VSS}
 C {lab_pin.sym} 5110 -640 0 1 {name=p443 lab=NOR14}
 C {lab_pin.sym} 5050 -710 0 1 {name=p444 lab=VDD}
 C {lab_pin.sym} 5110 -620 0 1 {name=p445 lab=XNOR14}
@@ -396,7 +387,7 @@ C {lab_pin.sym} 4990 -640 0 0 {name=p446 lab=A14}
 C {lab_pin.sym} 4990 -620 0 0 {name=p447 lab=B14p}
 C {lab_pin.sym} 5110 -660 0 1 {name=p448 lab=NAND14}
 C {engn1600-team1/CAD4/logic.sym} 5330 -630 0 0 {name=x72}
-C {lab_pin.sym} 5330 -560 0 1 {name=p449 lab=VSS}
+C {lab_pin.sym} 5330 -550 0 1 {name=p449 lab=VSS}
 C {lab_pin.sym} 5390 -640 0 1 {name=p450 lab=NOR15}
 C {lab_pin.sym} 5330 -710 0 1 {name=p451 lab=VDD}
 C {lab_pin.sym} 5390 -620 0 1 {name=p452 lab=XNOR15}
@@ -417,9 +408,9 @@ C {lab_pin.sym} 4550 -1190 0 1 {name=p502 lab=XNOR12}
 C {lab_pin.sym} 4430 -1190 0 0 {name=p503 lab=A12}
 C {lab_pin.sym} 4430 -1170 0 0 {name=p504 lab=B12p}
 C {lab_pin.sym} 4550 -1230 0 1 {name=p505 lab=NAND12}
-C {engn1600-team1/CAD4/full_adder.sym} 4700 -1030 0 0 {name=x85}
-C {engn1600-team1/CAD4/full_adder.sym} 4980 -1030 0 0 {name=x86}
-C {engn1600-team1/CAD4/full_adder.sym} 5260 -1030 0 0 {name=x87}
+C {engn1600-team1/CAD4/full_adder.sym} 4700 -1030 0 0 {name=x85 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 4980 -1030 0 0 {name=x86 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/full_adder.sym} 5260 -1030 0 0 {name=x87 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {lab_pin.sym} 4770 -1160 0 1 {name=p506 lab=VDD}
 C {lab_pin.sym} 4770 -1030 0 1 {name=p507 lab=VSS}
 C {lab_pin.sym} 4700 -1120 0 0 {name=p508 lab=A13}
@@ -501,8 +492,8 @@ C {lab_pin.sym} 380 180 0 0 {name=p641 lab=XOR[15..0]}
 C {lab_pin.sym} 420 140 0 1 {name=p642 lab=VDD}
 C {lab_pin.sym} 420 220 0 1 {name=p644 lab=VSS}
 C {engn1600-team1/CAD4/nand2.sym} 550 180 0 0 {name=x90}
-C {engn1600-team1/CAD4/2x1_mux.sym} 5630 -910 0 0 {name=x91}
-C {lab_pin.sym} 5670 -910 0 1 {name=p643 lab=COUT15}
+C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 5630 -910 0 0 {name=x91 kYb=1 kY=1}
+C {lab_pin.sym} 5670 -920 0 1 {name=p643 lab=COUT15}
 C {lab_pin.sym} 5620 -980 0 1 {name=p645 lab=VDD}
 C {lab_pin.sym} 5640 -970 0 1 {name=p646 lab=VSS}
 C {lab_pin.sym} 5590 -920 0 0 {name=p647 lab=COUT_015}
@@ -516,8 +507,8 @@ C {engn1600-team1/CAD4/inv.sym} 650 180 0 0 {name=x92}
 C {lab_pin.sym} 740 180 0 1 {name=p653 lab=Z}
 C {lab_pin.sym} 670 140 0 1 {name=p655 lab=VDD}
 C {lab_pin.sym} 670 220 0 1 {name=p656 lab=VSS}
-C {engn1600-team1/CAD4/2x1_mux.sym} 5920 -910 0 0 {name=x94}
-C {lab_pin.sym} 5960 -910 0 1 {name=p661 lab=COUT14}
+C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 5920 -910 0 0 {name=x94 kYb=1 kY=1}
+C {lab_pin.sym} 5960 -920 0 1 {name=p661 lab=COUT14}
 C {lab_pin.sym} 5910 -980 0 1 {name=p662 lab=VDD}
 C {lab_pin.sym} 5930 -970 0 1 {name=p663 lab=VSS}
 C {lab_pin.sym} 5880 -920 0 0 {name=p664 lab=COUT_014}
@@ -540,3 +531,14 @@ C {lab_pin.sym} 400 -1030 2 1 {name=p57 lab=CIN}
 C {lab_pin.sym} 500 -1040 0 1 {name=p58 lab=B[15..0]p}
 C {lab_pin.sym} 440 -1080 0 1 {name=p59 lab=VDD}
 C {lab_pin.sym} 440 -1000 0 1 {name=p60 lab=VSS}
+C {code_shown.sym} 0 -420 0 0 {name=s1 only_toplevel=false value="
+.param kSUMb=1
+.param kTS=1
+.param kYb=1
+.param kY=1
+"}
+C {lab_pin.sym} 420 440 0 1 {name=p61 lab=VDD}
+C {lab_pin.sym} 420 520 0 1 {name=p62 lab=VSS}
+C {lab_pin.sym} 4230 -880 0 1 {name=p63 lab=COUT11b}
+C {lab_pin.sym} 5670 -900 0 1 {name=p64 lab=COUT15b}
+C {lab_pin.sym} 5960 -900 0 1 {name=p65 lab=COUT14b}

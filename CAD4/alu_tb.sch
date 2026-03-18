@@ -4,16 +4,16 @@ K {}
 V {}
 S {}
 E {}
-B 2 -390 -640 410 -240 {flags=graph
+B 2 -390 -640 410 -240 {flags=graph,unlocked
 y1=0
 y2=2
-ypos1=-0.4
-ypos2=1.6
+ypos1=0
+ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=25n
+x1=30n
+x2=60n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -24,9 +24,40 @@ logx=0
 logy=0
 digital=1
 autoload=1
-color="4 5 6 8 9 10 11"
+color="4 5 6 8 9 10 11 12"
 node="A[15..0];a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
 B[15..0];b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
+CIN
+SEL[1..0];sel1,sel0
+Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
+F
+Z
+N"
+rawfile=$netlist_dir/alu_tb.raw}
+B 2 -390 -1060 410 -660 {flags=graph,unlocked
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0n
+x2=30n
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1
+autoload=1
+color="4 5 6 8 9 10 11 12"
+node="A[15..0];a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
+B[15..0];b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
+CIN
 SEL[1..0];sel1,sel0
 Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
 F
@@ -155,47 +186,10 @@ C {devices/gnd.sym} -900 -750 1 0 {name=gB0}
 C {devices/vsource.sym} -1170 650 1 0 {name=VSEL0 value=0}
 C {devices/lab_pin.sym} -1140 650 2 0 {name=pSEL0 lab=SEL0}
 C {devices/gnd.sym} -1200 650 1 0 {name=gSEL0}
-C {code_shown.sym} 610 -950 0 0 {name=s1 only_toplevel=false value="
-** READ PROPAGATION DELAY
-
-.control
-save all
-
-** Define input signals
-let f = 1e8
-let T = 1/f
-let PW = T/2
-
-let DT = T * 2
-let QT = T/4
-let FQT = QT * 5
-
-let tstop = 3 * T
-let tstep = 0.001 * T
-
-** Enable inputs
-alter @VSEL0[DC] = 3.3
-alter @VSEL1[DC] = 3.3
-
-alter @VB14[DC] = 3.3
-alter @VA14[DC] = 3.3
-
-** Simulation
-tran $&tstep $&tstop
-
-**overflow
-** Plot signals in waveform viewer
-plot SEL0 SEL1+4 A14+8 B14+12 Y15+16 F+20
-
-write alu_tb.raw
-
-.endc
-
-"
-}
-C {devices/code_shown.sym} 610 -1110 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 480 -30 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
+.include /foss/designs/engn1600-team1/CAD4/alu_tb_gen.spice
 "}
