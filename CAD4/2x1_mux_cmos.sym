@@ -1,8 +1,8 @@
 v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {type=subcircuit
-format="@name @pinlist @symname kYb=@kYb kY=@kY"
-template="name=x1 kYb=1 kY=1"
+format="@name @pinlist @symname kI=@kI kYb=@kYb kY=@kY"
+template="name=x1 kI=1 kYb=1 kY=1"
 }
 V {}
 S {}
@@ -37,5 +37,6 @@ T {VDD} -14 -45 3 1 0.2 0.2 {}
 T {VSS} 6 -35 3 1 0.2 0.2 {}
 T {B} -15 6 0 0 0.2 0.2 {}
 T {Yb} 15 6 0 1 0.2 0.2 {}
-T {kYb=@kYb} 30 -30 0 0 0.2 0.2 { layer=13}
+T {kI=@kI} 30 -30 0 0 0.2 0.2 { layer=13}
+T {kYb=@kYb} 30 -5 0 0 0.2 0.2 { layer=13}
 T {kY=@kY} 30 20 0 0 0.2 0.2 { layer=13}
