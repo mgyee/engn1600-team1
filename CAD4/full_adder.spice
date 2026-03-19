@@ -11,20 +11,28 @@ M7 net2 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M8 net4 A net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M9 net5 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M10 net5 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M11 SUMb net4 net7 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M11 SUMb net4 net7 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
 M12 net7 A VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M13 net7 CIN VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M14 net7 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M15 net8 A net9 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M16 SUMb CIN net8 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M16 SUMb CIN net8 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
 M17 net9 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M18 SUMb net4 net6 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M18 SUMb net4 net6 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
 M19 net6 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M20 net6 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M21 net6 CIN VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M22 SUMb CIN net11 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M22 SUMb CIN net11 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
 M23 net11 A net10 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M24 net10 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M25 COUT net4 VDD VDD pfet_03v3 L=0.28u W=1.44u nf=1 m=1
-M26 COUT net4 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M25 COUT net4 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M26 COUT net4 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+**** begin user architecture code
+
+
+.param kSUMb=1
+.param kTS=1
+
+
+**** end user architecture code
 .ends
