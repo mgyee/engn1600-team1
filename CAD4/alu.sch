@@ -535,8 +535,8 @@ C {code_shown.sym} 0 -420 0 0 {name=s1 only_toplevel=false value="
 .param kSUMb=1
 .param kTS=1
 .param kI=2.5
-.param kYb=1.8787875
-.param kY=2.1578285
+.param kYb=1.875
+.param kY=2.1527778
 "}
 C {lab_pin.sym} 420 440 0 1 {name=p61 lab=VDD}
 C {lab_pin.sym} 420 520 0 1 {name=p62 lab=VSS}
