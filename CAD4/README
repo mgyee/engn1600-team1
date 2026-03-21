@@ -1,0 +1,17 @@
+### Entire design workspace, including layouts and testbenches.
+The main layout is `alu.gds`. The main schematic is `alu.sch`. We have two main testbenches:
+- `alu_tb.sch` for functionality checking
+- `alu_delay_tb.sch` for timing
+
+Unfortunately, we're running a little behind and haven't finished layout yet. Results below are for pre-PEX simulations.
+
+### Screenshots of at least the 6 tests mentioned in the Logic Verification section above.
+We used `generate.py` to convert a list of tests into input PWL stimuli. For output, we used Xschem graphs within the schematic to parse bus signals. The results are in `SUBMIT/alu_tb.svg`.
+
+### Screenshots of the simulated propagation delay.
+See `SUBMIT/alu_delay_tb.svg` for a demonstration of the inputs we tested. In summary, we used an input such that a change at the LSB of B would cause all COUTs to flip. We tested both directions (rising and falling).
+
+We get a rise time of **1793.4 ps** and fall time of **1784.4 ps**.
+
+### A hand drawn drawing, annotating the critical path of this design.
+See `SUBMIT/ENGN 1600 CAD4 CRIT.pdf`. With carry select, the critical path goes through the first set of full adders and then the 2x1 MUXes between subsequence 4-bit sets.
