@@ -491,8 +491,8 @@ C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 5630 -910 0 0 {name=x91 kI="'kI'" kYb="
 C {lab_pin.sym} 5670 -920 0 1 {name=p643 lab=COUT15}
 C {lab_pin.sym} 5620 -980 0 1 {name=p645 lab=VDD}
 C {lab_pin.sym} 5640 -970 0 1 {name=p646 lab=VSS}
-C {lab_pin.sym} 5590 -920 0 0 {name=p647 lab=COUT_015}
-C {lab_pin.sym} 5590 -900 0 0 {name=p648 lab=COUT_115}
+C {lab_pin.sym} 5590 -900 0 0 {name=p647 lab=COUT_015}
+C {lab_pin.sym} 5590 -920 0 0 {name=p648 lab=COUT_115}
 C {lab_pin.sym} 5620 -840 3 0 {name=p649 lab=COUT11}
 C {lab_pin.sym} 5640 -850 3 0 {name=p650 lab=COUT11b}
 C {lab_pin.sym} 470 180 0 1 {name=p653 lab=Z}
