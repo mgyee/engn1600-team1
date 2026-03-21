@@ -133,8 +133,8 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 170 -60 0 0 {name=p9 sig_type=std_logic lab=IN0}
-C {lab_pin.sym} -150 -120 0 0 {name=p10 sig_type=std_logic lab=IN1}
-C {lab_pin.sym} -150 -180 0 0 {name=p8 sig_type=std_logic lab=IN0}
+C {lab_pin.sym} -150 -180 0 0 {name=p10 sig_type=std_logic lab=IN1}
+C {lab_pin.sym} -150 -120 0 0 {name=p8 sig_type=std_logic lab=IN0}
 C {lab_pin.sym} 30 -60 0 0 {name=p6 sig_type=std_logic lab=IN1}
 C {lab_pin.sym} 210 -60 2 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 70 -60 2 0 {name=p11 sig_type=std_logic lab=VDD}
@@ -182,8 +182,8 @@ spiceprefix=X
 }
 C {lab_pin.sym} -220 90 0 0 {name=p12 sig_type=std_logic lab=IN0}
 C {lab_pin.sym} -80 90 0 0 {name=p13 sig_type=std_logic lab=IN1}
-C {lab_pin.sym} 170 60 0 0 {name=p14 sig_type=std_logic lab=IN0}
-C {lab_pin.sym} 170 120 0 0 {name=p15 sig_type=std_logic lab=IN1}
+C {lab_pin.sym} 170 120 0 0 {name=p14 sig_type=std_logic lab=IN0}
+C {lab_pin.sym} 170 60 0 0 {name=p15 sig_type=std_logic lab=IN1}
 C {lab_pin.sym} -110 -180 2 0 {name=p16 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -110 -120 2 0 {name=p17 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 140 -150 2 0 {name=p18 sig_type=std_logic lab=VDD}
