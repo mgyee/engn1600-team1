@@ -1,3 +1,9 @@
+Matthias Yee
+Alex Wang
+Ray 
+Martin
+Kelvin
+
 ### Entire design workspace, including layouts and testbenches.
 The main layout is `alu.gds`. The main schematic is `alu.sch`. We have two main testbenches:
 - `alu_tb.sch` for functionality checking
