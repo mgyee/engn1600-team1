@@ -1,23 +1,27 @@
 Matthias Yee
 Alex Wang
-Ray 
-Martin
-Kelvin
+Ray Wu
+Martin Atilla
+Kelvin Amankwaa
 
 ### Entire design workspace, including layouts and testbenches.
-The main layout is `alu.gds`. The main schematic is `alu.sch`. We have two main testbenches:
-- `alu_tb.sch` for functionality checking
-- `alu_delay_tb.sch` for timing
+The main layout is `alu.gds`. The main schematic is `alu.sch`. We have four main testbenches:
+- `alu_tb.sch` for pre-PEX functionality checking
+- `alu_delay_tb.sch` for pre-PEX timing
+- `alu_postpex_tb.sch` for post-PEX functionality checking
+- `alu_postpex_delay_tb.sch` for post-PEX timing
 
-Unfortunately, we're running a little behind and haven't finished layout yet. Results below are for pre-PEX simulations.
+See `SUBMIT/ALU_main_drc.png`, `SUBMIT/ALU_antenna_drc.png`, and `SUBMIT/ALU_lvs.png` for DRC and LVS passing.
 
 ### Screenshots of at least the 6 tests mentioned in the Logic Verification section above.
-We used `generate.py` to convert a list of tests into input PWL stimuli. For output, we used Xschem graphs within the schematic to parse bus signals. The results are in `SUBMIT/alu_tb.svg`.
+We used `generate.py` to convert a list of tests into input PWL stimuli. For output, we used Xschem graphs within the schematic to parse bus signals. The results are in `SUBMIT/prepex/alu_tb.svg` and `SUBMIT/postpex/alu_postpex_tb.svg`.
 
 ### Screenshots of the simulated propagation delay.
-See `SUBMIT/alu_delay_tb.svg` for a demonstration of the inputs we tested. In summary, we used an input such that a change at the LSB of B would cause all COUTs to flip. We tested both directions (rising and falling). In addition, `SUBMIT/alu_delay.svg` monitors internal signals. Delay is roughly equal between FAs and MUXes.
+See `SUBMIT/prepex/alu_delay_tb.svg` or `SUBMIT/postpex/alu_postpex_delay_tb.svg` for a demonstration of the inputs we tested. In summary, we used an input such that a change at the LSB of B would cause all COUTs to flip. We tested both directions (rising and falling). In addition, `SUBMIT/prepex/alu_delay.svg` monitors internal signals. Delay is roughly equal between FAs and MUXes.
 
-We get a rise time of **1793.4 ps** and fall time of **1784.4 ps**.
+We get a pre-PEX rise time of **1.793 ns** and fall time of **1.784 ns**.
+
+We get a post-PEX rise time of **2.963 ns** and fall time of **3.041 ns**.
 
 ### A hand drawn drawing, annotating the critical path of this design.
-See `SUBMIT/ENGN 1600 CAD4 CRIT.pdf`. With carry select, the critical path goes through the first set of full adders and then the 2x1 MUXes between subsequence 4-bit sets.
+See `SUBMIT/ENGN 1600 CAD4 CRIT.pdf`. With carry select, the critical path goes through the first set of full adders and then the 2x1 MUXes between subsequent 4-bit sets.

@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 -390 -640 410 -240 {flags=graph
+B 2 -390 -640 410 -240 {flags=graph,unlocked
 y1=0
 y2=2
 ypos1=0
@@ -34,7 +34,7 @@ F
 Z
 N"
 rawfile=$netlist_dir/alu_tb.raw}
-B 2 -390 -1060 410 -660 {flags=graph
+B 2 -390 -1060 410 -660 {flags=graph,unlocked
 y1=0
 y2=2
 ypos1=0
@@ -64,7 +64,9 @@ F
 Z
 N"
 rawfile=$netlist_dir/alu_tb.raw}
-C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1}
+C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1
+schematic=alu_flat
+spice_sym_def=".include /foss/designs/engn1600-team1/CAD4/PEX/alu_pex.spice"}
 C {lab_pin.sym} 150 -50 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -30 0 1 {name=p2 lab=VSS}
 C {lab_pin.sym} -150 -50 0 0 {name=p3 lab=A[15..0]}

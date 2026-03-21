@@ -12,8 +12,38 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=7n
+x1=5n
+x2=10n
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1
+autoload=1
+color="4 5 6 8 9 10 11 12"
+node="A[15..0];a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0
+B[15..0];b15,b14,b13,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,b0
+CIN
+SEL[1..0];sel1,sel0
+Y[15..0];y15,y14,y13,y12,y11,y10,y9,y8,y7,y6,y5,y4,y3,y2,y1,y0
+F
+Z
+N"
+rawfile=$netlist_dir/alu_delay_tb.raw}
+B 2 -390 -1060 410 -660 {flags=graph
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0n
+x2=5n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,7 +65,7 @@ Z
 N"
 rawfile=$netlist_dir/alu_delay_tb.raw}
 C {engn1600-team1/CAD4/alu.sym} 0 0 0 0 {name=x1
-schematic=alu_pex
+schematic=alu_flat
 spice_sym_def=".include /foss/designs/engn1600-team1/CAD4/PEX/alu_pex.spice"}
 C {lab_pin.sym} 150 -50 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -30 0 1 {name=p2 lab=VSS}
@@ -169,10 +199,10 @@ let f = 1e9
 let T = 1/f
 let PW = T/2
 
-let TT = T * 3
-let ST = T * 6
+let FT = T * 5
+let TT = T * 10
 
-let tstop = 7 * T
+let tstop = 10 * T
 let tstep = 0.001 * T
 
 ** A (0xFFFF)
@@ -209,7 +239,7 @@ alter @VB4[DC]  = 0
 alter @VB3[DC]  = 0
 alter @VB2[DC]  = 0
 alter @VB1[DC]  = 0
-alter @VB0[PULSE] = [ 0 3.3 $&T 0 0 $&TT $&ST 0 ]
+alter @VB0[PULSE] = [ 0 3.3 $&T 0 0 $&FT $&TT 0 ]
 
 ** SEL (ADD)
 alter @VSEL1[DC] = 0
@@ -223,7 +253,7 @@ tran $&tstep $&tstop
 meas tran TPLH TRIG V(B0) VAL=1.65 RISE=1 TARG V(Y15) VAL=1.65 CROSS=1
 meas tran TPHL TRIG V(B0) VAL=1.65 FALL=1 TARG V(Y15) VAL=1.65 CROSS=2
 
-plot Y15 x1.COUT15+5 x1.COUT11+10 x1.COUT7+15 x1.COUT3+20 x1.COUT2+25 x1.COUT1+30 x1.COUT0+35 B0+40
+** plot Y15 x1.COUT15+5 x1.COUT11+10 x1.COUT7+15 x1.COUT3+20 x1.COUT2+25 x1.COUT1+30 x1.COUT0+35 B0+40
 
 write alu_delay_tb.raw
 
