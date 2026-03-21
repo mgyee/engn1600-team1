@@ -88,10 +88,8 @@ x85 VDD VSS A13 B13p OR12 SUM_113b COUT_113 full_adder kSUMb='kSUMb' kTS='kTS'
 x86 VDD VSS A14 B14p COUT_113 SUM_114b COUT_114 full_adder kSUMb='kSUMb' kTS='kTS'
 x87 VDD VSS A15 B15p COUT_114 SUM_115b COUT_115 full_adder kSUMb='kSUMb' kTS='kTS'
 x88 VDD VSS SEL0 SEL1 SA SB SC SD 2x4_decoder
-x89 XOR15 XOR14 XOR13 XOR12 XOR11 XOR10 XOR9 XOR8 XOR7 XOR6 XOR5 XOR4 XOR3 XOR2 XOR1 XOR0 VDD net1 VSS and16
-x90 VDD net2 net1 CIN VSS nand2
+x89 XOR15 XOR14 XOR13 XOR12 XOR11 XOR10 XOR9 XOR8 XOR7 XOR6 XOR5 XOR4 XOR3 XOR2 XOR1 XOR0 VDD Z VSS and16
 x91 COUT_015 COUT11 COUT11b COUT15 VDD VSS COUT_115 COUT15b 2x1_mux_cmos kI='kI' kYb='kYb' kY='kY'
-x92 VDD net2 Z VSS inv
 x94 COUT_014 COUT11 COUT11b COUT14 VDD VSS COUT_114 COUT14b 2x1_mux_cmos kI='kI' kYb='kYb' kY='kY'
 x93 VDD F COUT14 COUT15 VSS xor2
 x95 VDD N F Y15 VSS xor2
@@ -139,18 +137,18 @@ M7 net2 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M8 net4 A net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M9 net5 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M10 net5 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M11 SUMb net4 net7 VDD pfet_03v3 L=0.28u W='kSUMb*0.72u' nf=1 m=1
+M11 SUMb net4 net7 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
 M12 net7 A VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M13 net7 CIN VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M14 net7 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M15 net8 A net9 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M16 SUMb CIN net8 VDD pfet_03v3 L=0.28u W='kTS*0.72u' nf=1 m=1
+M16 SUMb CIN net8 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
 M17 net9 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M18 SUMb net4 net6 VSS nfet_03v3 L=0.28u W='kSUMb*0.36u' nf=1 m=1
+M18 SUMb net4 net6 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
 M19 net6 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M20 net6 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M21 net6 CIN VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M22 SUMb CIN net11 VSS nfet_03v3 L=0.28u W='kTS*0.36u' nf=1 m=1
+M22 SUMb CIN net11 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
 M23 net11 A net10 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M24 net10 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M25 COUT net4 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
@@ -232,22 +230,22 @@ M4 Y SEL A VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
 ** sch_path: /foss/designs/engn1600-team1/CAD4/2x1_mux_cmos.sch
 .subckt 2x1_mux_cmos A SEL SELb Y VDD VSS B Yb  kI=1 kYb=1 kY=1
 *.PININFO A:I B:I SEL:I Y:O VDD:B VSS:B SELb:I Yb:O
-M1 VSS B net1 VSS nfet_03v3 L=0.28u W='kI*0.36u' nf=1 m=1
-M2 net1 SEL Yb VSS nfet_03v3 L=0.28u W='kYb*0.36u' nf=1 m=1
-M3 Yb SELb net2 VSS nfet_03v3 L=0.28u W='kYb*0.36u' nf=1 m=1
-M4 net2 A VSS VSS nfet_03v3 L=0.28u W='kI*0.36u' nf=1 m=1
-M5 net3 SELb Yb VDD pfet_03v3 L=0.28u W='kYb*0.72u' nf=1 m=1
-M6 VDD B net3 VDD pfet_03v3 L=0.28u W='kI*0.72u' nf=1 m=1
-M7 net4 A VDD VDD pfet_03v3 L=0.28u W='kI*0.72u' nf=1 m=1
-M8 Yb SEL net4 VDD pfet_03v3 L=0.28u W='kYb*0.72u' nf=1 m=1
-M9 VSS Yb Y VSS nfet_03v3 L=0.28u W='kY*0.36u' nf=1 m=1
-M10 VDD Yb Y VDD pfet_03v3 L=0.28u W='kY*0.72u' nf=1 m=1
+M1 VSS B net1 VSS nfet_03v3 L=0.28u W='2.5*0.36u' nf=1 m=1
+M2 net1 SEL Yb VSS nfet_03v3 L=0.28u W='1.875*0.36u' nf=1 m=1
+M3 Yb SELb net2 VSS nfet_03v3 L=0.28u W='1.875*0.36u' nf=1 m=1
+M4 net2 A VSS VSS nfet_03v3 L=0.28u W='2.5*0.36u' nf=1 m=1
+M5 net3 SELb Yb VDD pfet_03v3 L=0.28u W='1.875*0.72u' nf=1 m=1
+M6 VDD B net3 VDD pfet_03v3 L=0.28u W='2.5*0.72u' nf=1 m=1
+M7 net4 A VDD VDD pfet_03v3 L=0.28u W='2.5*0.72u' nf=1 m=1
+M8 Yb SEL net4 VDD pfet_03v3 L=0.28u W='1.875*0.72u' nf=1 m=1
+M9 VSS Yb Y VSS nfet_03v3 L=0.28u W='2.1527778*0.36u' nf=1 m=1
+M10 VDD Yb Y VDD pfet_03v3 L=0.28u W='2.1527778*0.72u' nf=1 m=1
 **** begin user architecture code
 
 
 .param kI=2.5
 .param kYb=1.875
-.param kY=2.1527778
+.param kY=2.1527777777777778
 
 
 **** end user architecture code
@@ -289,18 +287,6 @@ x5 OUT VSS VDD net4 net1 net2 net3 nor4
 .ends
 
 
-* expanding   symbol:  engn1600-team1/CAD4/nand2.sym # of pins=5
-** sym_path: /foss/designs/engn1600-team1/CAD4/nand2.sym
-** sch_path: /foss/designs/engn1600-team1/CAD4/nand2.sch
-.subckt nand2 VDD OUT IN0 IN1 VSS
-*.PININFO VSS:B VDD:B IN0:I IN1:I OUT:O
-M1 net1 IN1 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M2 OUT IN0 net1 VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M3 OUT IN1 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M4 OUT IN0 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-.ends
-
-
 * expanding   symbol:  engn1600-team1/CAD4/xor2.sym # of pins=5
 ** sym_path: /foss/designs/engn1600-team1/CAD4/xor2.sym
 ** sch_path: /foss/designs/engn1600-team1/CAD4/xor2.sch
@@ -311,11 +297,23 @@ M2 net2 IN1 net3 VDD pfet_03v3 L=0.28u W=1.44u nf=1 m=1
 M3 net2 IN0 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M5 OUT net2 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M6 net2 IN1 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M7 net1 IN0 VDD VDD pfet_03v3 L=0.28u W=1.44u nf=1 m=1
-M8 net1 IN1 VDD VDD pfet_03v3 L=0.28u W=1.44u nf=1 m=1
-M9 OUT net2 net1 VDD pfet_03v3 L=0.28u W=1.44u nf=1 m=1
+M7 OUT IN0 net1 VDD pfet_03v3 L=0.28u W=1.44u nf=1 m=1
+M8 OUT IN1 net1 VDD pfet_03v3 L=0.28u W=1.44u nf=1 m=1
+M9 net1 net2 VDD VDD pfet_03v3 L=0.28u W=1.44u nf=1 m=1
 M10 OUT IN0 net4 VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M11 net4 IN1 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD4/nand2.sym # of pins=5
+** sym_path: /foss/designs/engn1600-team1/CAD4/nand2.sym
+** sch_path: /foss/designs/engn1600-team1/CAD4/nand2.sch
+.subckt nand2 VDD OUT IN0 IN1 VSS
+*.PININFO VSS:B VDD:B IN0:I IN1:I OUT:O
+M1 net1 IN1 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M2 OUT IN0 net1 VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M3 OUT IN1 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M4 OUT IN0 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 .ends
 
 
