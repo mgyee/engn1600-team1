@@ -4,10 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 470 180 490 180 {lab=#net1}
-N 490 170 490 180 {lab=#net1}
-N 490 170 510 170 {lab=#net1}
-N 610 180 630 180 {lab=#net2}
 C {iopin.sym} 50 -260 2 0 {name=p1 lab=VDD}
 C {iopin.sym} 50 -240 2 0 {name=p2 lab=VSS}
 C {ipin.sym} 50 -220 0 0 {name=p3 lab=A[15..0]}
@@ -491,7 +487,6 @@ C {engn1600-team1/CAD4/and16.sym} 420 180 0 0 {name=x89}
 C {lab_pin.sym} 380 180 0 0 {name=p641 lab=XOR[15..0]}
 C {lab_pin.sym} 420 140 0 1 {name=p642 lab=VDD}
 C {lab_pin.sym} 420 220 0 1 {name=p644 lab=VSS}
-C {engn1600-team1/CAD4/nand2.sym} 550 180 0 0 {name=x90}
 C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 5630 -910 0 0 {name=x91 kI="'kI'" kYb="'kYb'" kY="'kY'"}
 C {lab_pin.sym} 5670 -920 0 1 {name=p643 lab=COUT15}
 C {lab_pin.sym} 5620 -980 0 1 {name=p645 lab=VDD}
@@ -500,13 +495,7 @@ C {lab_pin.sym} 5590 -920 0 0 {name=p647 lab=COUT_015}
 C {lab_pin.sym} 5590 -900 0 0 {name=p648 lab=COUT_115}
 C {lab_pin.sym} 5620 -840 3 0 {name=p649 lab=COUT11}
 C {lab_pin.sym} 5640 -850 3 0 {name=p650 lab=COUT11b}
-C {lab_pin.sym} 510 190 2 1 {name=p651 lab=CIN}
-C {lab_pin.sym} 550 140 0 1 {name=p652 lab=VDD}
-C {lab_pin.sym} 550 220 0 1 {name=p654 lab=VSS}
-C {engn1600-team1/CAD4/inv.sym} 650 180 0 0 {name=x92}
-C {lab_pin.sym} 740 180 0 1 {name=p653 lab=Z}
-C {lab_pin.sym} 670 140 0 1 {name=p655 lab=VDD}
-C {lab_pin.sym} 670 220 0 1 {name=p656 lab=VSS}
+C {lab_pin.sym} 470 180 0 1 {name=p653 lab=Z}
 C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 5920 -910 0 0 {name=x94 kI="'kI'" kYb="'kYb'" kY="'kY'"}
 C {lab_pin.sym} 5960 -920 0 1 {name=p661 lab=COUT14}
 C {lab_pin.sym} 5910 -980 0 1 {name=p662 lab=VDD}
