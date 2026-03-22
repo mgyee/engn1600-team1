@@ -177,8 +177,8 @@ C {lab_pin.sym} 2400 -1040 0 0 {name=p142 lab=COUT_16}
 C {lab_pin.sym} 2540 -1050 0 1 {name=p143 lab=COUT_17}
 C {lab_pin.sym} 1840 -1040 0 0 {name=p222 lab=OR4}
 C {lab_pin.sym} 1840 -1210 0 0 {name=p223 lab=AND4}
-C {lab_pin.sym} 1600 -890 0 0 {name=p111 lab=XNOR4}
-C {lab_pin.sym} 1600 -870 0 0 {name=p127 lab=XOR4}
+C {lab_pin.sym} 1600 -870 0 0 {name=p111 lab=XNOR4}
+C {lab_pin.sym} 1600 -890 0 0 {name=p127 lab=XOR4}
 C {lab_pin.sym} 1680 -880 0 1 {name=p220 lab=SUM4b}
 C {lab_pin.sym} 1630 -950 0 1 {name=p221 lab=VDD}
 C {lab_pin.sym} 1650 -940 0 1 {name=p224 lab=VSS}
@@ -201,23 +201,23 @@ C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 2770 -870 0 0 {name=x39 kI="'kI'" kYb="
 C {lab_pin.sym} 2810 -880 0 1 {name=p240 lab=COUT7}
 C {lab_pin.sym} 2760 -940 0 1 {name=p241 lab=VDD}
 C {lab_pin.sym} 2780 -930 0 1 {name=p242 lab=VSS}
-C {lab_pin.sym} 2730 -880 0 0 {name=p243 lab=COUT_07}
-C {lab_pin.sym} 2730 -860 0 0 {name=p244 lab=COUT_17}
+C {lab_pin.sym} 2730 -860 0 0 {name=p243 lab=COUT_07}
+C {lab_pin.sym} 2730 -880 0 0 {name=p244 lab=COUT_17}
 C {engn1600-team1/CAD4/inv.sym} 1320 -1040 0 0 {name=x40}
 C {lab_pin.sym} 1340 -1000 0 1 {name=p245 lab=VSS}
 C {lab_pin.sym} 1340 -1080 0 1 {name=p246 lab=VDD}
 C {lab_pin.sym} 1300 -1040 0 0 {name=p247 lab=COUT3}
 C {lab_pin.sym} 1410 -1040 0 1 {name=p248 lab=COUT3b}
-C {lab_pin.sym} 1630 -810 3 0 {name=p249 lab=COUT3}
-C {lab_pin.sym} 1650 -820 3 0 {name=p250 lab=COUT3b}
+C {lab_pin.sym} 1650 -820 3 0 {name=p249 lab=COUT3}
+C {lab_pin.sym} 1630 -810 3 0 {name=p250 lab=COUT3b}
 C {lab_pin.sym} 1910 -800 3 0 {name=p251 lab=COUT3}
 C {lab_pin.sym} 1930 -810 3 0 {name=p252 lab=COUT3b}
 C {lab_pin.sym} 2190 -800 3 0 {name=p253 lab=COUT3}
 C {lab_pin.sym} 2210 -810 3 0 {name=p254 lab=COUT3b}
 C {lab_pin.sym} 2470 -800 3 0 {name=p255 lab=COUT3}
 C {lab_pin.sym} 2490 -810 3 0 {name=p256 lab=COUT3b}
-C {lab_pin.sym} 2760 -800 3 0 {name=p257 lab=COUT3}
-C {lab_pin.sym} 2780 -810 3 0 {name=p258 lab=COUT3b}
+C {lab_pin.sym} 2780 -810 3 0 {name=p257 lab=COUT3}
+C {lab_pin.sym} 2760 -800 3 0 {name=p258 lab=COUT3b}
 C {lab_pin.sym} 2810 -860 0 1 {name=p262 lab=COUT7b}
 C {engn1600-team1/CAD4/logic_extended.sym} 3050 -1160 0 0 {name=x42}
 C {engn1600-team1/CAD4/full_adder.sym} 3260 -1180 0 0 {name=x43 kSUMb="'kSUMb'" kTS="'kTS'"}
@@ -306,8 +306,8 @@ C {lab_pin.sym} 3820 -1060 0 0 {name=p372 lab=COUT_110}
 C {lab_pin.sym} 3960 -1070 0 1 {name=p373 lab=COUT_111}
 C {lab_pin.sym} 3260 -1060 0 0 {name=p374 lab=OR8}
 C {lab_pin.sym} 3260 -1230 0 0 {name=p375 lab=AND8}
-C {lab_pin.sym} 3020 -910 0 0 {name=p376 lab=XNOR8}
-C {lab_pin.sym} 3020 -890 0 0 {name=p377 lab=XOR8}
+C {lab_pin.sym} 3020 -890 0 0 {name=p376 lab=XNOR8}
+C {lab_pin.sym} 3020 -910 0 0 {name=p377 lab=XOR8}
 C {lab_pin.sym} 3100 -900 0 1 {name=p378 lab=SUM8b}
 C {lab_pin.sym} 3050 -970 0 1 {name=p379 lab=VDD}
 C {lab_pin.sym} 3070 -960 0 1 {name=p380 lab=VSS}
@@ -330,18 +330,18 @@ C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 4190 -890 0 0 {name=x64 kI="'kI'" kYb="
 C {lab_pin.sym} 4230 -900 0 1 {name=p396 lab=COUT11}
 C {lab_pin.sym} 4180 -960 0 1 {name=p397 lab=VDD}
 C {lab_pin.sym} 4200 -950 0 1 {name=p398 lab=VSS}
-C {lab_pin.sym} 4150 -900 0 0 {name=p399 lab=COUT_011}
-C {lab_pin.sym} 4150 -880 0 0 {name=p400 lab=COUT_111}
-C {lab_pin.sym} 3050 -830 3 0 {name=p401 lab=COUT7}
-C {lab_pin.sym} 3070 -840 3 0 {name=p402 lab=COUT7b}
+C {lab_pin.sym} 4150 -880 0 0 {name=p399 lab=COUT_011}
+C {lab_pin.sym} 4150 -900 0 0 {name=p400 lab=COUT_111}
+C {lab_pin.sym} 3070 -840 3 0 {name=p401 lab=COUT7}
+C {lab_pin.sym} 3050 -830 3 0 {name=p402 lab=COUT7b}
 C {lab_pin.sym} 3330 -820 3 0 {name=p403 lab=COUT7}
 C {lab_pin.sym} 3350 -830 3 0 {name=p404 lab=COUT7b}
 C {lab_pin.sym} 3610 -820 3 0 {name=p405 lab=COUT7}
 C {lab_pin.sym} 3630 -830 3 0 {name=p406 lab=COUT7b}
 C {lab_pin.sym} 3890 -820 3 0 {name=p407 lab=COUT7}
 C {lab_pin.sym} 3910 -830 3 0 {name=p408 lab=COUT7b}
-C {lab_pin.sym} 4180 -820 3 0 {name=p409 lab=COUT7}
-C {lab_pin.sym} 4200 -830 3 0 {name=p410 lab=COUT7b}
+C {lab_pin.sym} 4200 -830 3 0 {name=p409 lab=COUT7}
+C {lab_pin.sym} 4180 -820 3 0 {name=p410 lab=COUT7b}
 C {engn1600-team1/CAD4/logic_extended.sym} 4490 -1180 0 0 {name=x66}
 C {engn1600-team1/CAD4/full_adder.sym} 4700 -1200 0 0 {name=x67 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {engn1600-team1/CAD4/full_adder.sym} 4980 -1200 0 0 {name=x68 kSUMb="'kSUMb'" kTS="'kTS'"}
@@ -429,8 +429,8 @@ C {lab_pin.sym} 5260 -1080 0 0 {name=p524 lab=COUT_114}
 C {lab_pin.sym} 5400 -1090 0 1 {name=p525 lab=COUT_115}
 C {lab_pin.sym} 4700 -1080 0 0 {name=p526 lab=OR12}
 C {lab_pin.sym} 4700 -1250 0 0 {name=p527 lab=AND12}
-C {lab_pin.sym} 4460 -930 0 0 {name=p528 lab=XNOR12}
-C {lab_pin.sym} 4460 -910 0 0 {name=p529 lab=XOR12}
+C {lab_pin.sym} 4460 -910 0 0 {name=p528 lab=XNOR12}
+C {lab_pin.sym} 4460 -930 0 0 {name=p529 lab=XOR12}
 C {lab_pin.sym} 4540 -920 0 1 {name=p530 lab=SUM12b}
 C {lab_pin.sym} 4490 -990 0 1 {name=p531 lab=VDD}
 C {lab_pin.sym} 4510 -980 0 1 {name=p532 lab=VSS}
@@ -449,8 +449,8 @@ C {lab_pin.sym} 5020 -920 0 0 {name=p544 lab=SUM_014b}
 C {lab_pin.sym} 5020 -900 0 0 {name=p545 lab=SUM_114b}
 C {lab_pin.sym} 5300 -920 0 0 {name=p546 lab=SUM_015b}
 C {lab_pin.sym} 5300 -900 0 0 {name=p547 lab=SUM_115b}
-C {lab_pin.sym} 4490 -850 3 0 {name=p548 lab=COUT11}
-C {lab_pin.sym} 4510 -860 3 0 {name=p549 lab=COUT11b}
+C {lab_pin.sym} 4510 -860 3 0 {name=p548 lab=COUT11}
+C {lab_pin.sym} 4490 -850 3 0 {name=p549 lab=COUT11b}
 C {lab_pin.sym} 4770 -840 3 0 {name=p550 lab=COUT11}
 C {lab_pin.sym} 4790 -850 3 0 {name=p551 lab=COUT11b}
 C {lab_pin.sym} 5050 -840 3 0 {name=p552 lab=COUT11}
@@ -491,10 +491,10 @@ C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 5630 -910 0 0 {name=x91 kI="'kI'" kYb="
 C {lab_pin.sym} 5670 -920 0 1 {name=p643 lab=COUT15}
 C {lab_pin.sym} 5620 -980 0 1 {name=p645 lab=VDD}
 C {lab_pin.sym} 5640 -970 0 1 {name=p646 lab=VSS}
-C {lab_pin.sym} 5590 -920 0 0 {name=p647 lab=COUT_015}
-C {lab_pin.sym} 5590 -900 0 0 {name=p648 lab=COUT_115}
-C {lab_pin.sym} 5620 -840 3 0 {name=p649 lab=COUT11}
-C {lab_pin.sym} 5640 -850 3 0 {name=p650 lab=COUT11b}
+C {lab_pin.sym} 5590 -900 0 0 {name=p647 lab=COUT_015}
+C {lab_pin.sym} 5590 -920 0 0 {name=p648 lab=COUT_115}
+C {lab_pin.sym} 5640 -850 3 0 {name=p649 lab=COUT11}
+C {lab_pin.sym} 5620 -840 3 0 {name=p650 lab=COUT11b}
 C {lab_pin.sym} 470 180 0 1 {name=p653 lab=Z}
 C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 5920 -910 0 0 {name=x94 kI="'kI'" kYb="'kYb'" kY="'kY'"}
 C {lab_pin.sym} 5960 -920 0 1 {name=p661 lab=COUT14}
