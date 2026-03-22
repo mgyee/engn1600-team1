@@ -198,5 +198,5 @@ C {opin.sym} 300 0 1 0 {name=p26 lab=Yb}
 C {code_shown.sym} -260 -190 0 0 {name=s1 only_toplevel=false value="
 .param kI=2.5
 .param kYb=1.875
-.param kY=2.1527777777777778
+.param kY=0.775/0.36
 "}
