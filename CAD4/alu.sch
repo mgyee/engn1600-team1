@@ -449,8 +449,8 @@ C {lab_pin.sym} 5020 -920 0 0 {name=p544 lab=SUM_014b}
 C {lab_pin.sym} 5020 -900 0 0 {name=p545 lab=SUM_114b}
 C {lab_pin.sym} 5300 -920 0 0 {name=p546 lab=SUM_015b}
 C {lab_pin.sym} 5300 -900 0 0 {name=p547 lab=SUM_115b}
-C {lab_pin.sym} 4510 -860 3 0 {name=p548 lab=COUT11}
-C {lab_pin.sym} 4490 -850 3 0 {name=p549 lab=COUT11b}
+C {lab_pin.sym} 4490 -850 3 0 {name=p548 lab=COUT11}
+C {lab_pin.sym} 4510 -860 3 0 {name=p549 lab=COUT11b}
 C {lab_pin.sym} 4770 -840 3 0 {name=p550 lab=COUT11}
 C {lab_pin.sym} 4790 -850 3 0 {name=p551 lab=COUT11b}
 C {lab_pin.sym} 5050 -840 3 0 {name=p552 lab=COUT11}
