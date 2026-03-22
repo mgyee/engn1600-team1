@@ -1,8 +1,7 @@
-Matthias Yee
-Alex Wang
-Ray Wu
-Martin Atilla
-Kelvin Amankwaa
+NB: We originally submitted what we had under Matthias. This submission is updated with the finalized layout and post-PEX analysis. I'll ask him to resubmit as well when he's available.
+
+### Group members
+Matthias Yee, Alex Wang, Ray Wu, Martin Atilla, Kelvin Amankwaa
 
 ### Entire design workspace, including layouts and testbenches.
 The main layout is `alu.gds`. The main schematic is `alu.sch`. We have four main testbenches:
@@ -19,9 +18,9 @@ We used `generate.py` to convert a list of tests into input PWL stimuli. For out
 ### Screenshots of the simulated propagation delay.
 See `SUBMIT/prepex/alu_delay_tb.svg` or `SUBMIT/postpex/alu_postpex_delay_tb.svg` for a demonstration of the inputs we tested. In summary, we used an input such that a change at the LSB of B would cause all COUTs to flip. We tested both directions (rising and falling). In addition, `SUBMIT/prepex/alu_delay.svg` monitors internal signals. Delay is roughly equal between FAs and MUXes.
 
-We get a pre-PEX rise time of **1.793 ns** and fall time of **1.784 ns**.
+We get a pre-PEX rise time of **1.748 ns** and fall time of **1.760 ns**.
 
-We get a post-PEX rise time of **2.963 ns** and fall time of **3.041 ns**.
+We get a post-PEX rise time of **2.962 ns** and fall time of **3.016 ns**.
 
 ### A hand drawn drawing, annotating the critical path of this design.
 See `SUBMIT/ENGN 1600 CAD4 CRIT.pdf`. With carry select, the critical path goes through the first set of full adders and then the 2x1 MUXes between subsequent 4-bit sets.
