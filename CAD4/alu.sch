@@ -505,8 +505,8 @@ C {lab_pin.sym} 5880 -900 0 0 {name=p665 lab=COUT_114}
 C {lab_pin.sym} 5910 -840 3 0 {name=p666 lab=COUT11}
 C {lab_pin.sym} 5930 -850 3 0 {name=p667 lab=COUT11b}
 C {engn1600-team1/CAD4/xor2.sym} 420 330 0 0 {name=x93}
-C {lab_pin.sym} 380 320 2 1 {name=p657 lab=COUT14}
-C {lab_pin.sym} 380 340 2 1 {name=p658 lab=COUT15}
+C {lab_pin.sym} 380 340 2 1 {name=p657 lab=COUT14}
+C {lab_pin.sym} 380 320 2 1 {name=p658 lab=COUT15}
 C {lab_pin.sym} 420 290 0 1 {name=p659 lab=VDD}
 C {lab_pin.sym} 420 370 0 1 {name=p668 lab=VSS}
 C {lab_pin.sym} 480 330 0 1 {name=p660 lab=F}
