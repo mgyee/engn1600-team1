@@ -43,7 +43,7 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {engn1600-team1/CAD4/4:1_mux.sym} 0 0 0 0 {name=x1}
+C {engn1600-team1/CAD4/4x1_mux.sym} 0 0 0 0 {name=x1}
 C {lab_pin.sym} -30 90 3 0 {name=p1 lab=SA}
 C {lab_pin.sym} -60 -30 0 0 {name=p2 lab=A}
 C {lab_pin.sym} -10 80 3 0 {name=p3 lab=SB}

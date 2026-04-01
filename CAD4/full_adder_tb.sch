@@ -98,7 +98,7 @@ C {lab_wire.sym} 530 -240 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 600 -240 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 880 -280 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 880 -110 0 0 {name=p8 sig_type=std_logic lab=VSS}
-C {engn1600-team1/CAD4/full_adder.sym} 810 -130 0 0 {name=x1}
+C {engn1600-team1/CAD4/full_adder.sym} 810 -130 0 0 {name=x1 kSUMb=1 kTS=1}
 C {capa.sym} 970 -150 0 0 {name=C2
 m=1
 value=10f
