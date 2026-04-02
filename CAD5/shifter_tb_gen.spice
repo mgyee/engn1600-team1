@@ -1,0 +1,54 @@
+** TEST SUMMARY
+** 00: 0x1234 << 0 ? 10 : 05
+** 01: 0x5678 << 1 ? 03 : 12
+** 02: 0xFFFF << 0 ? 00 : 15
+** 03: 0x0001 << 1 ? 15 : 00
+** Python executable
+** 00: hex(0x1234 << (10 if 0 else 5) & 0xFFFF)
+** 01: hex(0x5678 << (3 if 1 else 12) & 0xFFFF)
+** 02: hex(0xFFFF << (0 if 0 else 15) & 0xFFFF)
+** 03: hex(0x0001 << (15 if 1 else 0) & 0xFFFF)
+
+.control
+save all
+
+** Define input signals
+
+** D BUS
+alter @VD15[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD14[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD13[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD12[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD11[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD10[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD9[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD8[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD7[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD6[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD5[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD4[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD3[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD2[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD1[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VD0[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 3.3 20n 3.3 ]
+
+** R BUS
+alter @VR3[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VR2[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VR1[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+alter @VR0[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 3.3 15n 3.3 15n 0.0 20n 0.0 ]
+
+** I BUS
+alter @VI3[PWL] = [ 0n 3.3 5n 3.3 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 ]
+alter @VI2[PWL] = [ 0n 0.0 5n 0.0 5n 0.0 10n 0.0 10n 0.0 15n 0.0 15n 3.3 20n 3.3 ]
+alter @VI1[PWL] = [ 0n 3.3 5n 3.3 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 ]
+alter @VI0[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 ]
+
+** CONTROL
+alter @VSEL[PWL] = [ 0n 0.0 5n 0.0 5n 3.3 10n 3.3 10n 0.0 15n 0.0 15n 3.3 20n 3.3 ]
+
+tran 0.005n 20n
+
+write shifter_tb.raw
+
+.endc
