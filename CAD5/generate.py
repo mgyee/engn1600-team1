@@ -16,10 +16,8 @@ def build_pwl(events):
 def generate_summary(tests):
     lines = ["** TEST SUMMARY"]
     for i, (D, R, I, SEL) in enumerate(tests):
-        lines.append(f"** {i:02d}: 0x{D:04X} << {SEL} ? {I:02d} : {R:02d}")
-    lines.append("** Python executable")
-    for i, (D, R, I, SEL) in enumerate(tests):
-        lines.append(f"** {i:02d}: hex(0x{D:04X} << ({I} if {SEL} else {R}) & 0xFFFF)")
+        Q = D << (I if SEL else R) & 0xFFFF
+        lines.append(f"** {i:02d}: 0x{D:04X} << ({SEL} ? {I:02d} : {R:02d}) = 0x{Q:04X}")
     return "\n".join(lines)
 
 def generate_pwl_blocks(tests):

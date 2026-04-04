@@ -1,13 +1,8 @@
 ** TEST SUMMARY
-** 00: 0x1234 << 0 ? 10 : 05
-** 01: 0x5678 << 1 ? 03 : 12
-** 02: 0xFFFF << 0 ? 00 : 15
-** 03: 0x0001 << 1 ? 15 : 00
-** Python executable
-** 00: hex(0x1234 << (10 if 0 else 5) & 0xFFFF)
-** 01: hex(0x5678 << (3 if 1 else 12) & 0xFFFF)
-** 02: hex(0xFFFF << (0 if 0 else 15) & 0xFFFF)
-** 03: hex(0x0001 << (15 if 1 else 0) & 0xFFFF)
+** 00: 0x1234 << (0 ? 10 : 05) = 0x4680
+** 01: 0x5678 << (1 ? 03 : 12) = 0xB3C0
+** 02: 0xFFFF << (0 ? 00 : 15) = 0x8000
+** 03: 0x0001 << (1 ? 15 : 00) = 0x8000
 
 .control
 save all
