@@ -29,9 +29,9 @@ node="D[15..0];d15,d14,d13,d12,d11,d10,d9,d8,d7,d6,d5,d4,d3,d2,d1,d0
 R[3..0];r3,r2,r1,r0
 I[3..0];i3,i2,i1,i0
 SEL
-X[15..0]b;x1.x15b,x1.x14b,x1.x13b,x1.x12b,x1.x11b,x1.x10b,x1.x9b,x1.x8b,x1.x7b,x1.x6b,x1.x5b,x1.x4b,x1.x3b,x1.x2b,x1.x1,x1.x0b
+X[15..0];x1.x15,x1.x14,x1.x13,x1.x12,x1.x11,x1.x10,x1.x9,x1.x8,x1.x7,x1.x6,x1.x5,x1.x4,x1.x3,x1.x2,x1.x1,x1.x0
 Y[15..0];x1.Y15,x1.Y14,x1.Y13,x1.Y12,x1.Y11,x1.Y10,x1.Y9,x1.Y8,x1.Y7,x1.Y6,x1.Y5,x1.Y4,x1.Y3,x1.Y2,x1.Y1,x1.Y0
-Z[15..0]b;x1.z15b,x1.z14b,x1.z13b,x1.z12b,x1.z11b,x1.z10b,x1.z9b,x1.z8b,x1.z7b,x1.z6b,x1.z5b,x1.z4b,x1.z3b,x1.z2b,x1.z1,x1.z0b
+Z[15..0];x1.z15,x1.z14,x1.z13,x1.z12,x1.z11,x1.z10,x1.z9,x1.z8,x1.z7,x1.z6,x1.z5,x1.z4,x1.z3,x1.z2,x1.z1,x1.z0
 Q[15..0];q15,q14,q13,q12,q11,q10,q9,q8,q7,q6,q5,q4,q3,q2,q1,q0"
 rawfile=$netlist_dir/shifter_delay_tb.raw}
 C {engn1600-team1/CAD5/shifter.sym} 0 0 0 0 {name=x1}
@@ -178,7 +178,7 @@ tran $&tstep $&tstop
 meas tran TPLH TRIG V(SEL) VAL=1.65 RISE=1 TARG V(Q15) VAL=1.65 RISE=1
 meas tran TPHL TRIG V(SEL) VAL=1.65 FALL=1 TARG V(Q15) VAL=1.65 FALL=1
 
-plot Q15 x1.Z7b+5 x1.Y3+10 x1.X1b+15 SEL+20
+plot Q15 x1.Z7+5 x1.Y3+10 x1.X1+15 SEL+20
 
 write shifter_delay_tb.raw
 
