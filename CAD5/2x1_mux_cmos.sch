@@ -98,10 +98,10 @@ spiceprefix=X
 }
 C {lab_pin.sym} -190 30 2 0 {name=p7 lab=A}
 C {lab_pin.sym} -190 50 2 0 {name=p8 lab=B}
-C {lab_pin.sym} 260 90 0 1 {name=p9 lab=A}
-C {lab_pin.sym} 260 30 0 1 {name=p10 lab=SELb}
-C {lab_pin.sym} 0 30 2 1 {name=p16 lab=SEL}
-C {lab_pin.sym} 0 -90 2 1 {name=p17 lab=B}
+C {lab_pin.sym} 0 30 2 1 {name=p9 lab=A}
+C {lab_pin.sym} 0 90 2 1 {name=p10 lab=SELb}
+C {lab_pin.sym} 260 90 0 1 {name=p16 lab=SEL}
+C {lab_pin.sym} 0 -30 2 1 {name=p17 lab=B}
 C {lab_wire.sym} 130 120 2 0 {name=p18 lab=VSS}
 C {symbols/pfet_03v3.sym} 20 -30 2 1 {name=M5
 L=0.28u
@@ -159,10 +159,10 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 0 90 0 0 {name=p19 lab=B}
-C {lab_pin.sym} 260 -90 2 0 {name=p20 lab=A}
-C {lab_pin.sym} 0 -30 0 0 {name=p21 lab=SELb}
-C {lab_pin.sym} 260 -30 2 0 {name=p22 lab=SEL}
+C {lab_pin.sym} 260 30 2 0 {name=p19 lab=B}
+C {lab_pin.sym} 260 -30 2 0 {name=p20 lab=A}
+C {lab_pin.sym} 0 -90 0 0 {name=p21 lab=SELb}
+C {lab_pin.sym} 260 -90 2 0 {name=p22 lab=SEL}
 C {symbols/nfet_03v3.sym} 340 30 2 1 {name=M9
 L=0.28u
 W="'kY*0.36u'"
