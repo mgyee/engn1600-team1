@@ -10,7 +10,13 @@ N -10 140 -10 260 {lab=Z[15..0]
 bus=true}
 N -10 -60 -10 60 {lab=Y[15..0]
 bus=true}
-C {engn1600-team1/CAD5/2x1_mux_cmos.sym} 0 -300 3 1 {name=x1[15..0] kI=1 kYb=1 kY=1}
+N -10 -260 -0 -260 {lab=X[15..0]
+bus=true}
+N -10 -60 -0 -60 {lab=Y[15..0]
+bus=true}
+N -10 140 -0 140 {lab=Z[15..0]
+bus=true}
+C {engn1600-team1/CAD5/2x1_muxb.sym} 0 -300 3 1 {name=x1[15..0] kI=1 kYb=1 kY=1}
 C {iopin.sym} -350 -200 2 0 {name=p1 lab=VDD}
 C {iopin.sym} -350 -180 2 0 {name=p2 lab=VSS}
 C {lab_pin.sym} -10 -340 2 1 {name=p3 lab=D[15..0]}
@@ -37,13 +43,13 @@ C {lab_pin.sym} -240 80 2 0 {name=p21 lab=SELb}
 C {lab_pin.sym} -310 40 0 1 {name=p22 lab=VDD}
 C {lab_pin.sym} -310 120 0 1 {name=p23 lab=VSS}
 C {lab_pin.sym} -10 -140 0 0 {name=p24 lab=X[15..0]}
-C {engn1600-team1/CAD5/2x1_mux_cmos.sym} 0 -100 3 1 {name=x3[15..0] kI=1 kYb=1 kY=1}
+C {engn1600-team1/CAD5/2x1_muxb.sym} 0 -100 3 1 {name=x3[15..0] kI=1 kYb=1 kY=1}
 C {lab_pin.sym} 70 -110 0 1 {name=p26 lab=S1}
 C {lab_pin.sym} 60 -90 0 1 {name=p27 lab=S1b}
 C {lab_pin.sym} -70 -110 2 1 {name=p28 lab=VDD}
 C {lab_pin.sym} -60 -90 0 0 {name=p29 lab=VSS}
-C {lab_pin.sym} 10 -140 0 1 {name=p30 lab=X[13..0],VSS*2}
-C {engn1600-team1/CAD5/2x1_mux_cmos.sym} 0 100 3 1 {name=x4[15..0] kI=1 kYb=1 kY=1}
+C {lab_pin.sym} 10 -140 0 1 {name=p30 lab=X[13..0],VDD*2}
+C {engn1600-team1/CAD5/2x1_muxb.sym} 0 100 3 1 {name=x4[15..0] kI=1 kYb=1 kY=1}
 C {lab_pin.sym} -10 60 2 1 {name=p25 lab=Y[15..0]}
 C {lab_pin.sym} 70 90 0 1 {name=p32 lab=S2}
 C {lab_pin.sym} 60 110 0 1 {name=p33 lab=S2b}
@@ -51,10 +57,10 @@ C {lab_pin.sym} -70 90 2 1 {name=p34 lab=VDD}
 C {lab_pin.sym} -60 110 0 0 {name=p35 lab=VSS}
 C {lab_pin.sym} 10 60 0 1 {name=p36 lab=Y[11..0],VSS*4}
 C {lab_pin.sym} -10 260 0 0 {name=p37 lab=Z[15..0]}
-C {engn1600-team1/CAD5/2x1_mux_cmos.sym} 0 300 3 1 {name=x5[15..0] kI=1 kYb=1 kY=1}
+C {engn1600-team1/CAD5/2x1_muxb.sym} 0 300 3 1 {name=x5[15..0] kI=1 kYb=1 kY=1}
 C {lab_pin.sym} 70 290 0 1 {name=p38 lab=S3}
 C {lab_pin.sym} 60 310 0 1 {name=p39 lab=S3b}
 C {lab_pin.sym} -70 290 2 1 {name=p40 lab=VDD}
 C {lab_pin.sym} -60 310 0 0 {name=p41 lab=VSS}
-C {lab_pin.sym} 10 260 0 1 {name=p42 lab=Z[7..0],VSS*8}
-C {lab_pin.sym} -10 340 3 0 {name=p43 lab=Q[15..0]}
+C {lab_pin.sym} 10 260 0 1 {name=p42 lab=Z[7..0],VDD*8}
+C {lab_pin.sym} 0 340 3 0 {name=p43 lab=Q[15..0]}
