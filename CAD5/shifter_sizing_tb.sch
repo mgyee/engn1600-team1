@@ -430,12 +430,12 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
 C {code_shown.sym} 450 -380 0 0 {name=s1 only_toplevel=false value="
-** kY SWEEP
+** k VALUE SWEEPS
 
-.param kI=1
-.param kYb=1
-.param kY=1
-.param kSELb=1
+.param kI=8.421053
+.param kYb=8.421053
+.param kY=10.526315
+.param kSELb=6
 
 .control
 
@@ -452,22 +452,23 @@ let tstop = 3.5 * T
 let tstep = 0.001 * T
 let NTRIALS = 20
 
-compose kVALS start=1 stop=5 lin=$&NTRIALS
+compose kVALS start=5 stop=15 lin=$&NTRIALS
 compose TRISE start=0 stop=0 lin=$&NTRIALS
 compose TFALL start=0 stop=0 lin=$&NTRIALS
 
 let idx = 0
 while idx < NTRIALS
 	let kVAL = kVALS[idx]
-	alterparam kY = $&kVAL
+	alterparam kSELb = $&kVAL
+    ** alterparam kYb = $&kVAL
 	reset
 
     ** SEL (0 -> 1 -> 0)
     alter @VSEL[PULSE] = [ 0 3.3 $&T 0 0 $&T $&DT 0 ]
 
 	tran $&tstep $&tstop
-	meas tran TPLH TRIG V(SEL) VAL=1.65 RISE=1 TARG V(S0) VAL=1.65 RISE=1
-    meas tran TPHL TRIG V(SEL) VAL=1.65 FALL=1 TARG V(S0) VAL=1.65 FALL=1
+	meas tran TPLH TRIG V(SEL) VAL=1.65 RISE=1 TARG V(S0) VAL=1.65 FALL=1
+    meas tran TPHL TRIG V(SEL) VAL=1.65 FALL=1 TARG V(S0) VAL=1.65 RISE=1
 	let TRISE[idx] = $&TPLH
 	let TFALL[idx] = $&TPHL
 	let idx = idx + 1
@@ -501,6 +502,12 @@ C {devices/gnd.sym} -560 -100 1 0 {name=gVSS}
 C {devices/vsource.sym} -530 100 1 0 {name=VSEL value=0}
 C {devices/lab_pin.sym} -500 100 2 0 {name=pSEL lab=SEL}
 C {devices/gnd.sym} -560 100 1 0 {name=gSEL0}
-C {devices/lab_pin.sym} -350 -140 0 0 {name=pVDD1 lab=VDD}
-C {devices/lab_pin.sym} -350 -120 0 0 {name=pVSS1 lab=VSS}
 C {devices/lab_pin.sym} -350 80 0 0 {name=pSEL1 lab=SEL}
+C {devices/vsource.sym} -530 -200 1 0 {name=VA value=3.3}
+C {devices/lab_pin.sym} -500 -200 2 0 {name=pVA lab=A}
+C {devices/gnd.sym} -560 -200 1 0 {name=gVDD1}
+C {devices/vsource.sym} -530 -300 1 0 {name=VB value=0}
+C {devices/lab_pin.sym} -500 -300 2 0 {name=pVB lab=B}
+C {devices/gnd.sym} -560 -300 1 0 {name=gVSS1}
+C {devices/lab_pin.sym} -350 -120 0 0 {name=pVA1 lab=A}
+C {devices/lab_pin.sym} -350 -140 0 0 {name=pVB1 lab=B}

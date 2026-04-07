@@ -80,8 +80,8 @@ C {lab_pin.sym} 260 360 3 0 {name=p63 lab=Q[7..0]}
 C {lab_pin.sym} 220 300 2 1 {name=p64 lab=VDD}
 C {lab_pin.sym} 300 300 0 1 {name=p65 lab=VSS}
 C {code_shown.sym} -430 -380 0 0 {name=s1 only_toplevel=false value="
-.param kI=1
-.param kYb=1
-.param kY=1
-.param kSELb=1
+.param kI=8.421053
+.param kYb=8.421053
+.param kY=10.526315
+.param kSELb=6
 "}
