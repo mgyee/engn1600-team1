@@ -1,0 +1,5 @@
+### Notes on sizing & SEL placement
+- S1, S2, and S3 arrive before Xb, Y, and Zb, respectively, but S0 arrives after D. To keep things simple, I optimized SEL placement on `2x1_muxb.sch` with the former case in mind.
+- I just went with 1/2x standard sizing for `2x1_muxb.sch` and the NAND/NOR gates. We might want to experiment with 1/4x sizing for the PMOS transistors though.
+- Technically, we should size the S0, S1, S2, and S3 muxes differently since they lie later and later along the critical path, but I sized them together for simplicity.
+- Ultimately, I iteratively sized kY, kYb = kI, and kSELb. kSELb is unbounded (the bigger the better) since we assert SEL without accounting for input capacitance. I limited kSELb to 6.
