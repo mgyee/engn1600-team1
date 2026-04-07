@@ -56,9 +56,9 @@ C {lab_pin.sym} -10 -140 0 0 {name=p44 lab=X[15..0]b}
 C {lab_pin.sym} 0 -60 1 1 {name=p51 lab=Y[15..0]b}
 C {lab_pin.sym} 0 140 1 1 {name=p52 lab=Z[15..0]b}
 C {code_shown.sym} -430 -380 0 0 {name=s1 only_toplevel=false value="
-.param kI=8.421053
-.param kYb=8.421053
-.param kY=10.526315
+.param kI=6.973684
+.param kYb=6.973684
+.param kY=7.236842
 .param kSELb=6
 "}
 C {engn1600-team1/CAD5/inv.sym} -330 230 0 0 {name=x5[15..0] kSELb=1}
