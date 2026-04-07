@@ -18,7 +18,7 @@ N 40 70 40 110 {lab=VSS}
 N 40 0 60 0 {lab=OUT}
 C {symbols/pfet_03v3.sym} 20 -40 0 0 {name=M1
 L=0.28u
-W=0.72u
+W="'kSELb*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -32,7 +32,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 20 40 0 0 {name=M2
 L=0.28u
-W=0.36u
+W="'kSELb*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -48,3 +48,6 @@ C {ipin.sym} 0 0 0 0 {name=p1 lab=IN}
 C {opin.sym} 60 0 0 0 {name=p2 lab=OUT}
 C {iopin.sym} 40 -110 3 0 {name=p3 lab=VDD}
 C {iopin.sym} 40 110 1 0 {name=p4 lab=VSS}
+C {code_shown.sym} -260 -190 0 0 {name=s1 only_toplevel=false value="
+.param kSELb=1
+"}

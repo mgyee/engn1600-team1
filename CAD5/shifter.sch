@@ -18,14 +18,14 @@ C {opin.sym} -350 -80 0 1 {name=p6 lab=Q[15..0]}
 C {ipin.sym} -350 -120 0 0 {name=p10 lab=R[3..0]}
 C {ipin.sym} -350 -140 0 0 {name=p12 lab=I[3..0]}
 C {ipin.sym} -350 -100 0 0 {name=p13 lab=SEL}
-C {engn1600-team1/CAD5/2x1_mux_cmos.sym} -310 -130 2 1 {name=x2[3..0] kI=1 kYb=1 kY=1}
+C {engn1600-team1/CAD5/2x1_mux_cmos.sym} -310 -130 2 1 {name=x2[3..0] kI="'kI'" kYb="'kYb'" kY="'kY'"}
 C {lab_pin.sym} -320 -200 1 0 {name=p14 lab=SEL}
 C {lab_pin.sym} -300 -190 1 0 {name=p15 lab=SELb}
 C {lab_pin.sym} -320 -60 3 0 {name=p17 lab=VDD}
 C {lab_pin.sym} -300 -70 1 1 {name=p18 lab=VSS}
 C {lab_pin.sym} -270 -120 0 1 {name=p16 lab=S[3..0]}
 C {lab_pin.sym} -270 -140 0 1 {name=p19 lab=S[3..0]b}
-C {engn1600-team1/CAD5/inv.sym} -330 80 0 0 {name=x1}
+C {engn1600-team1/CAD5/inv.sym} -330 80 0 0 {name=x1 kSELb="'kSELb'"}
 C {lab_pin.sym} -350 80 0 0 {name=p20 lab=SEL}
 C {lab_pin.sym} -240 80 2 0 {name=p21 lab=SELb}
 C {lab_pin.sym} -310 40 0 1 {name=p22 lab=VDD}
@@ -79,3 +79,9 @@ C {lab_pin.sym} 270 260 2 0 {name=p62 lab=S3}
 C {lab_pin.sym} 260 360 3 0 {name=p63 lab=Q[7..0]}
 C {lab_pin.sym} 220 300 2 1 {name=p64 lab=VDD}
 C {lab_pin.sym} 300 300 0 1 {name=p65 lab=VSS}
+C {code_shown.sym} -430 -380 0 0 {name=s1 only_toplevel=false value="
+.param kI=1
+.param kYb=1
+.param kY=1
+.param kSELb=1
+"}
