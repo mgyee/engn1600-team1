@@ -99,10 +99,10 @@ write shifter_tb.raw
 
 if __name__ == "__main__":
     tests = [
-        (0x1234, 5,  10, 0),
         (0x5678, 12, 3,  1),
         (0xFFFF, 15, 0,  0),
         (0x0001, 0,  15, 1),
+        *[(0x1357, r, 0, 0) for r in range(16)]
     ]
 
     with open("shifter_tb_gen.spice", "w") as f:
