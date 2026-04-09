@@ -1,0 +1,23 @@
+** sch_path: /foss/designs/engn1600-team1/CAD5/2x1_mux_cmos.sch
+.subckt 2x1_mux_cmos A SEL SELb Y VDD VSS B Yb
+*.PININFO A:I B:I SEL:I Y:O VDD:B VSS:B SELb:I Yb:O
+M1 VSS SELb net1 VSS nfet_03v3 L=0.28u W=2.505u nf=1 m=1
+M2 net1 A Yb VSS nfet_03v3 L=0.28u W=2.505u nf=1 m=1
+M3 Yb B net2 VSS nfet_03v3 L=0.28u W=2.505u nf=1 m=1
+M4 net2 SEL VSS VSS nfet_03v3 L=0.28u W=2.505u nf=1 m=1
+M5 net3 B Yb VDD pfet_03v3 L=0.28u W=5.01u nf=1 m=1
+M6 VDD SELb net3 VDD pfet_03v3 L=0.28u W=5.01u nf=1 m=1
+M7 net4 SEL VDD VDD pfet_03v3 L=0.28u W=5.010u nf=1 m=1
+M8 Yb A net4 VDD pfet_03v3 L=0.28u W=5.01u nf=1 m=1
+M9 VSS Yb Y VSS nfet_03v3 L=0.28u W=2.61u nf=1 m=1
+M10 VDD Yb Y VDD pfet_03v3 L=0.28u W=5.22u nf=1 m=1
+**** begin user architecture code
+
+
+.param kI=6.958333
+.param kYb=6.958333
+.param kY=7.25
+
+
+**** end user architecture code
+.ends

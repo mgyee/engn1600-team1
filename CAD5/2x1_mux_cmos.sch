@@ -35,7 +35,8 @@ C {ipin.sym} -190 -50 0 0 {name=p3 lab=SEL}
 C {opin.sym} 380 0 0 0 {name=p4 lab=Y}
 C {symbols/nfet_03v3.sym} 20 90 2 1 {name=M1
 L=0.28u
-W="'kI*0.36u'"
+W=2.505u
+**W="'kI*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -56,7 +57,8 @@ C {lab_pin.sym} -190 -10 2 0 {name=p14 lab=VDD}
 C {lab_pin.sym} -190 10 2 0 {name=p15 lab=VSS}
 C {symbols/nfet_03v3.sym} 20 30 2 1 {name=M2
 L=0.28u
-W="'kYb*0.36u'"
+W=2.505u
+**W="'kYb*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -70,7 +72,8 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 240 30 0 1 {name=M3
 L=0.28u
-W="'kYb*0.36u'"
+W=2.505u
+**W="'kYb*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -84,7 +87,8 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 240 90 0 1 {name=M4
 L=0.28u
-W="'kI*0.36u'"
+W=2.505u
+**W="'kI*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -105,7 +109,8 @@ C {lab_pin.sym} 0 -30 2 1 {name=p17 lab=B}
 C {lab_wire.sym} 130 120 2 0 {name=p18 lab=VSS}
 C {symbols/pfet_03v3.sym} 20 -30 2 1 {name=M5
 L=0.28u
-W="'kYb*0.72u'"
+W = 5.01u
+**W="'kYb*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -119,7 +124,8 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 20 -90 2 1 {name=M6
 L=0.28u
-W="'kI*0.72u'"
+**W="'kI*0.72u'"
+W = 5.01u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -133,7 +139,8 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 240 -90 0 1 {name=M7
 L=0.28u
-W="'kI*0.72u'"
+W = 5.010u
+**W="'kI*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -147,7 +154,8 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 240 -30 0 1 {name=M8
 L=0.28u
-W="'kYb*0.72u'"
+W=5.01u
+**W="'kYb*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -165,7 +173,8 @@ C {lab_pin.sym} 0 -90 0 0 {name=p21 lab=SELb}
 C {lab_pin.sym} 260 -90 2 0 {name=p22 lab=SEL}
 C {symbols/nfet_03v3.sym} 340 30 2 1 {name=M9
 L=0.28u
-W="'kY*0.36u'"
+W=2.61u
+**W="'kY*0.36u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -179,7 +188,8 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 340 -30 2 1 {name=M10
 L=0.28u
-W="'kY*0.72u'"
+W=5.22u
+**W="'kY*0.72u'"
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -196,7 +206,7 @@ C {lab_wire.sym} 380 -60 0 0 {name=p23 lab=VDD}
 C {lab_wire.sym} 380 60 2 0 {name=p25 lab=VSS}
 C {opin.sym} 300 0 1 0 {name=p26 lab=Yb}
 C {code_shown.sym} -260 -190 0 0 {name=s1 only_toplevel=false value="
-.param kI=1
-.param kYb=1
-.param kY=1
+.param kI=6.958333
+.param kYb=6.958333
+.param kY=7.25
 "}
