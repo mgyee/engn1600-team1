@@ -35,7 +35,9 @@ Z[15..0]b;x1.z15b,x1.z14b,x1.z13b,x1.z12b,x1.z11b,x1.z10b,x1.z9b,x1.z8b,x1.z7b,x
 Q[15..0];q15,q14,q13,q12,q11,q10,q9,q8,q7,q6,q5,q4,q3,q2,q1,q0
 "
 rawfile=$netlist_dir/shifter_tb.raw}
-C {engn1600-team1/CAD5/shifter.sym} 0 0 0 0 {name=x1}
+C {engn1600-team1/CAD5/shifter.sym} 0 0 0 0 {name=x1
+schematic=shifter_flat
+spice_sym_def=".include /foss/designs/engn1600-team1/CAD5/PEX/shifter_pex.spice"}
 C {devices/vsource.sym} -1440 450 1 0 {name=VVDD value=3.3}
 C {devices/lab_pin.sym} -1410 450 2 0 {name=pVDD lab=VDD}
 C {devices/gnd.sym} -1470 450 1 0 {name=gVDD}
