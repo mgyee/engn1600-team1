@@ -61,10 +61,10 @@ C {code_shown.sym} -430 -380 0 0 {name=s1 only_toplevel=false value="
 .param kY=7.25
 .param kSELb=6
 "}
-C {engn1600-team1/CAD5/inv.sym} -330 230 0 0 {name=x5[15..0] kSELb=1}
+C {engn1600-team1/CAD5/unit_inv.sym} -330 230 0 0 {name=x5[15..0]}
 C {lab_pin.sym} -310 190 0 1 {name=p68 lab=VDD}
 C {lab_pin.sym} -310 270 0 1 {name=p69 lab=VSS}
-C {engn1600-team1/CAD5/inv.sym} -330 380 0 0 {name=x9[15..0] kSELb=1}
+C {engn1600-team1/CAD5/unit_inv.sym} -330 380 0 0 {name=x9[15..0]}
 C {lab_pin.sym} -310 340 0 1 {name=p72 lab=VDD}
 C {lab_pin.sym} -310 420 0 1 {name=p73 lab=VSS}
 C {lab_pin.sym} -350 230 0 0 {name=p66 lab=Q[15..0]b}

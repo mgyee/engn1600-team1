@@ -71,38 +71,38 @@ x43 Z3b S3 S3b Q3b VDD VSS VDD 2x1_mux
 x42 Z2b S3 S3b Q2b VDD VSS VDD 2x1_mux
 x41 Z1b S3 S3b Q1b VDD VSS VDD 2x1_mux
 x40 Z0b S3 S3b Q0b VDD VSS VDD 2x1_mux
-x515 VDD Q15b Q15 VSS inv kSELb=1
-x514 VDD Q14b Q14 VSS inv kSELb=1
-x513 VDD Q13b Q13 VSS inv kSELb=1
-x512 VDD Q12b Q12 VSS inv kSELb=1
-x511 VDD Q11b Q11 VSS inv kSELb=1
-x510 VDD Q10b Q10 VSS inv kSELb=1
-x59 VDD Q9b Q9 VSS inv kSELb=1
-x58 VDD Q8b Q8 VSS inv kSELb=1
-x57 VDD Q7b Q7 VSS inv kSELb=1
-x56 VDD Q6b Q6 VSS inv kSELb=1
-x55 VDD Q5b Q5 VSS inv kSELb=1
-x54 VDD Q4b Q4 VSS inv kSELb=1
-x53 VDD Q3b Q3 VSS inv kSELb=1
-x52 VDD Q2b Q2 VSS inv kSELb=1
-x51 VDD Q1b Q1 VSS inv kSELb=1
-x50 VDD Q0b Q0 VSS inv kSELb=1
-x915 VDD D15 D15b VSS inv kSELb=1
-x914 VDD D14 D14b VSS inv kSELb=1
-x913 VDD D13 D13b VSS inv kSELb=1
-x912 VDD D12 D12b VSS inv kSELb=1
-x911 VDD D11 D11b VSS inv kSELb=1
-x910 VDD D10 D10b VSS inv kSELb=1
-x99 VDD D9 D9b VSS inv kSELb=1
-x98 VDD D8 D8b VSS inv kSELb=1
-x97 VDD D7 D7b VSS inv kSELb=1
-x96 VDD D6 D6b VSS inv kSELb=1
-x95 VDD D5 D5b VSS inv kSELb=1
-x94 VDD D4 D4b VSS inv kSELb=1
-x93 VDD D3 D3b VSS inv kSELb=1
-x92 VDD D2 D2b VSS inv kSELb=1
-x91 VDD D1 D1b VSS inv kSELb=1
-x90 VDD D0 D0b VSS inv kSELb=1
+x515 VDD Q15b Q15 VSS unit_inv
+x514 VDD Q14b Q14 VSS unit_inv
+x513 VDD Q13b Q13 VSS unit_inv
+x512 VDD Q12b Q12 VSS unit_inv
+x511 VDD Q11b Q11 VSS unit_inv
+x510 VDD Q10b Q10 VSS unit_inv
+x59 VDD Q9b Q9 VSS unit_inv
+x58 VDD Q8b Q8 VSS unit_inv
+x57 VDD Q7b Q7 VSS unit_inv
+x56 VDD Q6b Q6 VSS unit_inv
+x55 VDD Q5b Q5 VSS unit_inv
+x54 VDD Q4b Q4 VSS unit_inv
+x53 VDD Q3b Q3 VSS unit_inv
+x52 VDD Q2b Q2 VSS unit_inv
+x51 VDD Q1b Q1 VSS unit_inv
+x50 VDD Q0b Q0 VSS unit_inv
+x915 VDD D15 D15b VSS unit_inv
+x914 VDD D14 D14b VSS unit_inv
+x913 VDD D13 D13b VSS unit_inv
+x912 VDD D12 D12b VSS unit_inv
+x911 VDD D11 D11b VSS unit_inv
+x910 VDD D10 D10b VSS unit_inv
+x99 VDD D9 D9b VSS unit_inv
+x98 VDD D8 D8b VSS unit_inv
+x97 VDD D7 D7b VSS unit_inv
+x96 VDD D6 D6b VSS unit_inv
+x95 VDD D5 D5b VSS unit_inv
+x94 VDD D4 D4b VSS unit_inv
+x93 VDD D3 D3b VSS unit_inv
+x92 VDD D2 D2b VSS unit_inv
+x91 VDD D1 D1b VSS unit_inv
+x90 VDD D0 D0b VSS unit_inv
 **** begin user architecture code
 
 
@@ -168,5 +168,15 @@ M2 OUT IN VSS VSS nfet_03v3 L=0.28u W='6*0.36u' nf=1 m=1
 
 
 **** end user architecture code
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD5/unit_inv.sym # of pins=4
+** sym_path: /foss/designs/engn1600-team1/CAD5/unit_inv.sym
+** sch_path: /foss/designs/engn1600-team1/CAD5/unit_inv.sch
+.subckt unit_inv VDD IN OUT VSS
+*.PININFO IN:I OUT:O VDD:B VSS:B
+M1 OUT IN VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M2 OUT IN VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 .ends
 
