@@ -1,5 +1,53 @@
-### Notes on sizing & SEL placement
-- S1, S2, and S3 arrive before Xb, Y, and Zb, respectively, but S0 arrives after D. To keep things simple, I optimized SEL placement on `2x1_muxb.sch` with the former case in mind.
-- I just went with 1/2x standard sizing for `2x1_muxb.sch` and the NAND/NOR gates. We might want to experiment with 1/4x sizing for the PMOS transistors though.
-- Technically, we should size the S0, S1, S2, and S3 muxes differently since they lie later and later along the critical path, but I sized them together for simplicity.
-- Ultimately, I iteratively sized kY, kYb = kI, and kSELb. kSELb is unbounded (the bigger the better) since we assert SEL without accounting for input capacitance. I limited kSELb to 6.
+### Testbenches
+We used `generate.py` to convert a list of tests into input PWL stimuli. For output, we used Xschem graphs within the schematic to parse bus signals. The results are in `SUBMIT/prepex/shifter_tb.svg` and `SUBMIT/postpex/shifter_postpex_tb.svg`. The test summary is below:
+
+```
+** TEST SUMMARY
+** 00: 0x5678 << (1 ? 03 : 12) = 0xB3C0
+** 01: 0xFFFF << (0 ? 00 : 15) = 0x8000
+** 02: 0x0001 << (1 ? 15 : 00) = 0x8000
+** 03: 0x1357 << (0 ? 00 : 00) = 0x1357
+** 04: 0x1357 << (0 ? 00 : 01) = 0x26AE
+** 05: 0x1357 << (0 ? 00 : 02) = 0x4D5C
+** 06: 0x1357 << (0 ? 00 : 03) = 0x9AB8
+** 07: 0x1357 << (0 ? 00 : 04) = 0x3570
+** 08: 0x1357 << (0 ? 00 : 05) = 0x6AE0
+** 09: 0x1357 << (0 ? 00 : 06) = 0xD5C0
+** 10: 0x1357 << (0 ? 00 : 07) = 0xAB80
+** 11: 0x1357 << (0 ? 00 : 08) = 0x5700
+** 12: 0x1357 << (0 ? 00 : 09) = 0xAE00
+** 13: 0x1357 << (0 ? 00 : 10) = 0x5C00
+** 14: 0x1357 << (0 ? 00 : 11) = 0xB800
+** 15: 0x1357 << (0 ? 00 : 12) = 0x7000
+** 16: 0x1357 << (0 ? 00 : 13) = 0xE000
+** 17: 0x1357 << (0 ? 00 : 14) = 0xC000
+** 18: 0x1357 << (0 ? 00 : 15) = 0x8000
+```
+
+See `SUBMIT/prepex/shifter_delay_tb.svg` or `SUBMIT/postpex/shifter_postpex_delay_tb.svg` for a demonstration of the inputs we tested. In summary, we used an input whose critical path must traverse both R/I selection and all logarithmic shift stages before toggling the output. We tested both directions (rising and falling). In addition, `SUBMIT/prepex/shifter_delay.svg` monitors internal signals. Driving the SX lines takes a fair amount of time due to high capacitance.
+
+```
+** TEST SUMMARY
+** 0x0001 << E -> 0x0001 << F -> 0x0001 << E
+```
+
+We get a pre-PEX rise time of **529.0 ps** and fall time of **541.4 ps**.
+
+We get a post-PEX rise time of **1510.0 ps** and fall time of **1411.1 ps**.
+
+The discrepancy likely arises since we did not simulate wire capacitance.
+
+### Design
+Before sizing, we tested four mux designs for the main shifter logic:
+
+- Pure CMOS mux
+- Pure CMOS mux with inversion between each stage (the design more naturally gives inverted outputs)
+- Pure CMOX mux with inversion between each stage and gates to replace those with hardcoded inputs
+- Transmission gate CMOS mux
+
+The transmission gate variation was ultimately fastest.
+
+### Notes on sizing
+- We just went with 1x sizing for `2x1_mux.sch`.
+- Technically, we should size the S0, S1, S2, and S3 muxes differently since they lie later and later along the critical path, but we sized them together for simplicity.
+- Ultimately, we iteratively sized kY, kYb = kI, and kSELb. kSELb is unbounded (the bigger the better) since we assert SEL without accounting for input capacitance. We limited kSELb to 6.
