@@ -1,0 +1,172 @@
+** sch_path: /foss/designs/engn1600-team1/CAD5/shifter.sch
+.subckt shifter VDD VSS D15 D14 D13 D12 D11 D10 D9 D8 D7 D6 D5 D4 D3 D2 D1 D0 I3 I2 I1 I0 R3 R2 R1 R0 SEL Q15 Q14 Q13 Q12 Q11 Q10
++ Q9 Q8 Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0
+*.PININFO VDD:B VSS:B D[15..0]:I Q[15..0]:O R[3..0]:I I[3..0]:I SEL:I
+x115 D15b S0 S0b X15b VDD VSS D14b 2x1_mux
+x114 D14b S0 S0b X14b VDD VSS D13b 2x1_mux
+x113 D13b S0 S0b X13b VDD VSS D12b 2x1_mux
+x112 D12b S0 S0b X12b VDD VSS D11b 2x1_mux
+x111 D11b S0 S0b X11b VDD VSS D10b 2x1_mux
+x110 D10b S0 S0b X10b VDD VSS D9b 2x1_mux
+x19 D9b S0 S0b X9b VDD VSS D8b 2x1_mux
+x18 D8b S0 S0b X8b VDD VSS D7b 2x1_mux
+x17 D7b S0 S0b X7b VDD VSS D6b 2x1_mux
+x16 D6b S0 S0b X6b VDD VSS D5b 2x1_mux
+x15 D5b S0 S0b X5b VDD VSS D4b 2x1_mux
+x14 D4b S0 S0b X4b VDD VSS D3b 2x1_mux
+x13 D3b S0 S0b X3b VDD VSS D2b 2x1_mux
+x12 D2b S0 S0b X2b VDD VSS D1b 2x1_mux
+x11 D1b S0 S0b X1b VDD VSS D0b 2x1_mux
+x10 D0b S0 S0b X0b VDD VSS VDD 2x1_mux
+x23 R3 SEL SELb S3 VDD VSS I3 S3b 2x1_mux_cmos kI='kI' kYb='kYb' kY='kY'
+x22 R2 SEL SELb S2 VDD VSS I2 S2b 2x1_mux_cmos kI='kI' kYb='kYb' kY='kY'
+x21 R1 SEL SELb S1 VDD VSS I1 S1b 2x1_mux_cmos kI='kI' kYb='kYb' kY='kY'
+x20 R0 SEL SELb S0 VDD VSS I0 S0b 2x1_mux_cmos kI='kI' kYb='kYb' kY='kY'
+x1 VDD SEL SELb VSS inv kSELb='kSELb'
+x315 X15b S1 S1b Y15b VDD VSS X13b 2x1_mux
+x314 X14b S1 S1b Y14b VDD VSS X12b 2x1_mux
+x313 X13b S1 S1b Y13b VDD VSS X11b 2x1_mux
+x312 X12b S1 S1b Y12b VDD VSS X10b 2x1_mux
+x311 X11b S1 S1b Y11b VDD VSS X9b 2x1_mux
+x310 X10b S1 S1b Y10b VDD VSS X8b 2x1_mux
+x39 X9b S1 S1b Y9b VDD VSS X7b 2x1_mux
+x38 X8b S1 S1b Y8b VDD VSS X6b 2x1_mux
+x37 X7b S1 S1b Y7b VDD VSS X5b 2x1_mux
+x36 X6b S1 S1b Y6b VDD VSS X4b 2x1_mux
+x35 X5b S1 S1b Y5b VDD VSS X3b 2x1_mux
+x34 X4b S1 S1b Y4b VDD VSS X2b 2x1_mux
+x33 X3b S1 S1b Y3b VDD VSS X1b 2x1_mux
+x32 X2b S1 S1b Y2b VDD VSS X0b 2x1_mux
+x31 X1b S1 S1b Y1b VDD VSS VDD 2x1_mux
+x30 X0b S1 S1b Y0b VDD VSS VDD 2x1_mux
+x1015 Y15b S2 S2b Z15b VDD VSS Y11b 2x1_mux
+x1014 Y14b S2 S2b Z14b VDD VSS Y10b 2x1_mux
+x1013 Y13b S2 S2b Z13b VDD VSS Y9b 2x1_mux
+x1012 Y12b S2 S2b Z12b VDD VSS Y8b 2x1_mux
+x1011 Y11b S2 S2b Z11b VDD VSS Y7b 2x1_mux
+x1010 Y10b S2 S2b Z10b VDD VSS Y6b 2x1_mux
+x109 Y9b S2 S2b Z9b VDD VSS Y5b 2x1_mux
+x108 Y8b S2 S2b Z8b VDD VSS Y4b 2x1_mux
+x107 Y7b S2 S2b Z7b VDD VSS Y3b 2x1_mux
+x106 Y6b S2 S2b Z6b VDD VSS Y2b 2x1_mux
+x105 Y5b S2 S2b Z5b VDD VSS Y1b 2x1_mux
+x104 Y4b S2 S2b Z4b VDD VSS Y0b 2x1_mux
+x103 Y3b S2 S2b Z3b VDD VSS VDD 2x1_mux
+x102 Y2b S2 S2b Z2b VDD VSS VDD 2x1_mux
+x101 Y1b S2 S2b Z1b VDD VSS VDD 2x1_mux
+x100 Y0b S2 S2b Z0b VDD VSS VDD 2x1_mux
+x415 Z15b S3 S3b Q15b VDD VSS Z7b 2x1_mux
+x414 Z14b S3 S3b Q14b VDD VSS Z6b 2x1_mux
+x413 Z13b S3 S3b Q13b VDD VSS Z5b 2x1_mux
+x412 Z12b S3 S3b Q12b VDD VSS Z4b 2x1_mux
+x411 Z11b S3 S3b Q11b VDD VSS Z3b 2x1_mux
+x410 Z10b S3 S3b Q10b VDD VSS Z2b 2x1_mux
+x49 Z9b S3 S3b Q9b VDD VSS Z1b 2x1_mux
+x48 Z8b S3 S3b Q8b VDD VSS Z0b 2x1_mux
+x47 Z7b S3 S3b Q7b VDD VSS VDD 2x1_mux
+x46 Z6b S3 S3b Q6b VDD VSS VDD 2x1_mux
+x45 Z5b S3 S3b Q5b VDD VSS VDD 2x1_mux
+x44 Z4b S3 S3b Q4b VDD VSS VDD 2x1_mux
+x43 Z3b S3 S3b Q3b VDD VSS VDD 2x1_mux
+x42 Z2b S3 S3b Q2b VDD VSS VDD 2x1_mux
+x41 Z1b S3 S3b Q1b VDD VSS VDD 2x1_mux
+x40 Z0b S3 S3b Q0b VDD VSS VDD 2x1_mux
+x515 VDD Q15b Q15 VSS inv kSELb=1
+x514 VDD Q14b Q14 VSS inv kSELb=1
+x513 VDD Q13b Q13 VSS inv kSELb=1
+x512 VDD Q12b Q12 VSS inv kSELb=1
+x511 VDD Q11b Q11 VSS inv kSELb=1
+x510 VDD Q10b Q10 VSS inv kSELb=1
+x59 VDD Q9b Q9 VSS inv kSELb=1
+x58 VDD Q8b Q8 VSS inv kSELb=1
+x57 VDD Q7b Q7 VSS inv kSELb=1
+x56 VDD Q6b Q6 VSS inv kSELb=1
+x55 VDD Q5b Q5 VSS inv kSELb=1
+x54 VDD Q4b Q4 VSS inv kSELb=1
+x53 VDD Q3b Q3 VSS inv kSELb=1
+x52 VDD Q2b Q2 VSS inv kSELb=1
+x51 VDD Q1b Q1 VSS inv kSELb=1
+x50 VDD Q0b Q0 VSS inv kSELb=1
+x915 VDD D15 D15b VSS inv kSELb=1
+x914 VDD D14 D14b VSS inv kSELb=1
+x913 VDD D13 D13b VSS inv kSELb=1
+x912 VDD D12 D12b VSS inv kSELb=1
+x911 VDD D11 D11b VSS inv kSELb=1
+x910 VDD D10 D10b VSS inv kSELb=1
+x99 VDD D9 D9b VSS inv kSELb=1
+x98 VDD D8 D8b VSS inv kSELb=1
+x97 VDD D7 D7b VSS inv kSELb=1
+x96 VDD D6 D6b VSS inv kSELb=1
+x95 VDD D5 D5b VSS inv kSELb=1
+x94 VDD D4 D4b VSS inv kSELb=1
+x93 VDD D3 D3b VSS inv kSELb=1
+x92 VDD D2 D2b VSS inv kSELb=1
+x91 VDD D1 D1b VSS inv kSELb=1
+x90 VDD D0 D0b VSS inv kSELb=1
+**** begin user architecture code
+
+
+.param kI=6.958333
+.param kYb=6.958333
+.param kY=7.25
+.param kSELb=6
+
+
+**** end user architecture code
+.ends
+
+* expanding   symbol:  engn1600-team1/CAD5/2x1_mux.sym # of pins=7
+** sym_path: /foss/designs/engn1600-team1/CAD5/2x1_mux.sym
+** sch_path: /foss/designs/engn1600-team1/CAD5/2x1_mux.sch
+.subckt 2x1_mux A SEL SELb Y VDD VSS B
+*.PININFO A:I B:I SEL:I Y:O VDD:B VSS:B SELb:I
+M1 Y SEL B VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M2 Y SELb B VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M3 Y SELb A VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M4 Y SEL A VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD5/2x1_mux_cmos.sym # of pins=8
+** sym_path: /foss/designs/engn1600-team1/CAD5/2x1_mux_cmos.sym
+** sch_path: /foss/designs/engn1600-team1/CAD5/2x1_mux_cmos.sch
+.subckt 2x1_mux_cmos A SEL SELb Y VDD VSS B Yb  kI=1 kYb=1 kY=1
+*.PININFO A:I B:I SEL:I Y:O VDD:B VSS:B SELb:I Yb:O
+M1 VSS SELb net1 VSS nfet_03v3 L=0.28u W=2.505u nf=1 m=1
+M2 net1 A Yb VSS nfet_03v3 L=0.28u W=2.505u nf=1 m=1
+M3 Yb B net2 VSS nfet_03v3 L=0.28u W=2.505u nf=1 m=1
+M4 net2 SEL VSS VSS nfet_03v3 L=0.28u W=2.505u nf=1 m=1
+M5 net3 B Yb VDD pfet_03v3 L=0.28u W=5.01u nf=1 m=1
+M6 VDD SELb net3 VDD pfet_03v3 L=0.28u W=5.01u nf=1 m=1
+M7 net4 SEL VDD VDD pfet_03v3 L=0.28u W=5.010u nf=1 m=1
+M8 Yb A net4 VDD pfet_03v3 L=0.28u W=5.01u nf=1 m=1
+M9 VSS Yb Y VSS nfet_03v3 L=0.28u W=2.61u nf=1 m=1
+M10 VDD Yb Y VDD pfet_03v3 L=0.28u W=5.22u nf=1 m=1
+**** begin user architecture code
+
+
+.param kI=6.958333
+.param kYb=6.958333
+.param kY=7.25
+
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD5/inv.sym # of pins=4
+** sym_path: /foss/designs/engn1600-team1/CAD5/inv.sym
+** sch_path: /foss/designs/engn1600-team1/CAD5/inv.sch
+.subckt inv VDD IN OUT VSS  kSELb=1
+*.PININFO IN:I OUT:O VDD:B VSS:B
+M1 OUT IN VDD VDD pfet_03v3 L=0.28u W='6*0.72u' nf=1 m=1
+M2 OUT IN VSS VSS nfet_03v3 L=0.28u W='6*0.36u' nf=1 m=1
+**** begin user architecture code
+
+
+.param kSELb=1
+
+
+**** end user architecture code
+.ends
+
