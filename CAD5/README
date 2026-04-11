@@ -1,3 +1,13 @@
+### Group members
+Matthias Yee, Alex Wang, Ray Wu, Martin Atilla, Kelvin Amankwaa
+
+### Entire design workspace, including layouts and testbenches.
+The main layout is `shifter.gds`. The main schematic is `.sch`. We have four main testbenches:
+- `shifter_tb.sch` for pre-PEX functionality checking
+- `shifter_delay_tb.sch` for pre-PEX timing
+- `shifter_postpex_tb.sch` for post-PEX functionality checking
+- `shifter_postpex_delay_tb.sch` for post-PEX timing
+
 ### Testbenches
 We used `generate.py` to convert a list of tests into input PWL stimuli. For output, we used Xschem graphs within the schematic to parse bus signals. The results are in `SUBMIT/prepex/shifter_tb.svg` and `SUBMIT/postpex/shifter_postpex_tb.svg`. The test summary is below:
 
