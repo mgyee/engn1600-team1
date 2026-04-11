@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from itertools import chain
+
 VHI = 3.3
 VLO = 0.0
 T = 5 # nanoseconds
@@ -98,13 +100,11 @@ write shifter_tb.raw
     return header + body + footer
 
 if __name__ == "__main__":
-    tests = [
-        (0x5678, 12, 3,  1),
-        (0xFFFF, 15, 0,  0),
-        (0x0001, 0,  15, 1),
-        *[(0x1357, r, 0, 0) for r in range(16)]
-    ]
-
+    tests = list(chain.from_iterable(zip(
+        [(0x00AA, r, 0, 0) for r in range(16)],
+        [(0x00AA, r, 0, 1) for r in range(16)],
+    )))
+    
     with open("shifter_tb_gen.spice", "w") as f:
         f.write(generate_ngspice(tests))
     print("Generated shifter_tb_gen.spice")
