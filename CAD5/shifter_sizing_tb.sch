@@ -322,21 +322,22 @@ compose TFALL start=0 stop=0 lin=$&NTRIALS
 
 let idx = 0
 while idx < NTRIALS
-	let kVAL = kVALS[idx]
-	alterparam kY = $&kVAL
-	** alterparam kI = $&kVAL
+    let kVAL = kVALS[idx]
+    alterparam kY = $&kVAL
+    ** alterparam kI = $&kVAL
     ** alterparam kYb = $&kVAL
-	reset
+    ** alterparam kSELb = $&kVAL
+    reset
 
     ** SEL (0 -> 1 -> 0)
     alter @VSEL[PULSE] = [ 0 3.3 $&T 0 0 $&T $&DT 0 ]
 
-	tran $&tstep $&tstop
-	meas tran TPLH TRIG V(SEL) VAL=1.65 RISE=1 TARG V(S0) VAL=1.65 FALL=1
+    tran $&tstep $&tstop
+    meas tran TPLH TRIG V(SEL) VAL=1.65 RISE=1 TARG V(S0) VAL=1.65 FALL=1
     meas tran TPHL TRIG V(SEL) VAL=1.65 FALL=1 TARG V(S0) VAL=1.65 RISE=1
-	let TRISE[idx] = $&TPLH
-	let TFALL[idx] = $&TPHL
-	let idx = idx + 1
+    let TRISE[idx] = $&TPLH
+    let TFALL[idx] = $&TPHL
+    let idx = idx + 1
 end
 
 plot TRISE vs kVALS

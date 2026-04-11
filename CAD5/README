@@ -2,7 +2,7 @@
 Matthias Yee, Alex Wang, Ray Wu, Martin Atilla, Kelvin Amankwaa
 
 ### Entire design workspace, including layouts and testbenches.
-The main layout is `shifter.gds`. The main schematic is `.sch`. We have four main testbenches:
+The main layout is `shifter.gds`. The main schematic is `shifter.sch`. We have four main testbenches:
 - `shifter_tb.sch` for pre-PEX functionality checking
 - `shifter_delay_tb.sch` for pre-PEX timing
 - `shifter_postpex_tb.sch` for post-PEX functionality checking
@@ -11,7 +11,9 @@ In addition, we utilized the following testbench for sizing simulation:
 - `shifter_sizing_tb.sch`
 
 ### Testbenches
-We used `generate.py` to convert a list of tests into input PWL stimuli. For output, we used Xschem graphs within the schematic to parse bus signals. The results are in `SUBMIT/prepex/shifter_tb.svg` and `SUBMIT/postpex/shifter_postpex_tb.svg`. The test summary is below:
+We used `generate.py` to convert a list of tests into input PWL stimuli. For output, we used Xschem graphs within the schematic to parse bus signals. Thus, we verify functionality using a more compact representation than per-input waveforms.
+
+The results are in `SUBMIT/prepex/shifter_tb.svg` and `SUBMIT/postpex/shifter_postpex_tb.svg`. The test summary is below:
 
 ```
 ** TEST SUMMARY
@@ -55,11 +57,15 @@ Before sizing, we tested four mux designs for the main shifter logic:
 - Pure CMOS mux
 - Pure CMOS mux with inversion between each stage (the design more naturally gives inverted outputs)
 - Pure CMOX mux with inversion between each stage and gates to replace those with hardcoded inputs
-- Transmission gate CMOS mux
+- Transmission gate CMOS mux with inversion at the start and end for level restoration
 
-The transmission gate variation was ultimately fastest.
+The transmission gate variation was ultimately fastest and interfaces well with inverted RF inputs. Other designs suffered from high capacitance on the SX nodes.
+
+For `S[3..0]` selection logic, we use a stack of 2x1 muxes to select between `R[3..0]` when SEL=0 and `I[3..0]` when SEL=1. We decided to use pure CMOS muxes instead of transmission gate muxes here since they are amenable to sizing and provide inverting outputs.
 
 ### Notes on sizing
 - We just went with 1x sizing for `2x1_mux.sch`.
 - Technically, we should size the S0, S1, S2, and S3 muxes differently since they lie later and later along the critical path, but we sized them together for simplicity.
 - Ultimately, we iteratively sized kY, kYb = kI, and kSELb. kSELb is unbounded (the bigger the better) since we assert SEL without accounting for input capacitance. We limited kSELb to 6.
+- To sweep sizes, we just exchanged the commenting on lines 326-329 of `shifter_sizing_tb.sch`.
+- The testbench uses dummy transistors to estimate the load on each SX node.
