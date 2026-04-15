@@ -1,0 +1,8 @@
+** sch_path: /foss/designs/CAD2/NAND2.sch
+.subckt NAND2 vdd INO OUT IN1 vss
+*.PININFO INO:I IN1:I vdd:B vss:B OUT:O
+M1 OUT INO net1 vss nfet_03v3 L=0.28u W=2u nf=1 m=1
+M2 net1 IN1 vss vss nfet_03v3 L=0.28u W=2u nf=1 m=1
+M3 OUT INO vdd vdd pfet_03v3 L=0.28u W=2u nf=1 m=1
+M4 OUT IN1 vdd vdd pfet_03v3 L=0.28u W=2u nf=1 m=1
+.ends
