@@ -51,8 +51,8 @@ N 300 -740 300 -640 {lab=#net1}
 N 180 -620 180 -600 {lab=VDD}
 N 180 -240 180 -220 {lab=VSS}
 N 300 -480 300 -420 {lab=#net1}
-N 400 -860 400 -820 {lab=cbar}
-N 400 -660 400 -620 {lab=c}
+N 400 -860 400 -820 {lab=CLKb}
+N 400 -660 400 -620 {lab=CLK}
 N 700 -880 700 -840 {lab=VDD}
 N 540 -880 700 -880 {lab=VDD}
 N 540 -880 540 -840 {lab=VDD}
@@ -97,8 +97,8 @@ N 920 -460 940 -460 {lab=#net7}
 N 940 -460 940 -380 {lab=#net7}
 N 920 -380 940 -380 {lab=#net7}
 N 800 -420 840 -420 {lab=#net4}
-N 890 -540 890 -500 {lab=cbar}
-N 890 -340 890 -300 {lab=c}
+N 890 -540 890 -500 {lab=CLKb}
+N 890 -340 890 -300 {lab=CLK}
 N 1060 -490 1060 -450 {lab=VDD}
 N 1060 -490 1220 -490 {lab=VDD}
 N 1220 -490 1220 -450 {lab=VDD}
@@ -164,39 +164,11 @@ N 1380 -470 1380 -370 {lab=#net8}
 N 1380 -370 1400 -370 {lab=#net8}
 N 1360 -420 1380 -420 {lab=#net8}
 N 1440 -420 1520 -420 {lab=Q}
-N 1360 -420 1360 -220 {lab=#net8}
-N 1360 -220 1520 -220 {lab=#net8}
-N 1580 -240 1580 -200 {lab=#net11}
-N 1580 -340 1580 -300 {lab=VDD}
-N 1580 -140 1580 -100 {lab=VSS}
-N 1580 -270 1600 -270 {lab=VDD}
-N 1600 -320 1600 -270 {lab=VDD}
-N 1580 -320 1600 -320 {lab=VDD}
-N 1580 -120 1600 -120 {lab=VSS}
-N 1600 -170 1600 -120 {lab=VSS}
-N 1580 -170 1600 -170 {lab=VSS}
-N 1520 -270 1540 -270 {lab=#net8}
-N 1520 -270 1520 -170 {lab=#net8}
-N 1520 -170 1540 -170 {lab=#net8}
-N 1740 -240 1740 -200 {lab=Qb}
-N 1740 -340 1740 -300 {lab=VDD}
-N 1740 -140 1740 -100 {lab=VSS}
-N 1740 -270 1760 -270 {lab=VDD}
-N 1760 -320 1760 -270 {lab=VDD}
-N 1740 -320 1760 -320 {lab=VDD}
-N 1740 -120 1760 -120 {lab=VSS}
-N 1760 -170 1760 -120 {lab=VSS}
-N 1740 -170 1760 -170 {lab=VSS}
-N 1680 -270 1700 -270 {lab=#net11}
-N 1680 -270 1680 -170 {lab=#net11}
-N 1680 -170 1700 -170 {lab=#net11}
-N 1580 -220 1680 -220 {lab=#net11}
-N 1740 -220 1820 -220 {lab=Qb}
 N 1150 -720 1150 -700 {lab=#net12}
-N 120 -550 140 -550 {lab=c}
-N 120 -290 140 -290 {lab=cbar}
-N 1190 -670 1210 -670 {lab=cbar}
-N 1190 -930 1210 -930 {lab=c}
+N 120 -550 140 -550 {lab=CLK}
+N 120 -290 140 -290 {lab=CLKb}
+N 1190 -670 1210 -670 {lab=CLKb}
+N 1190 -930 1210 -930 {lab=CLK}
 N 1150 -1000 1150 -980 {lab=VDD}
 N 1150 -620 1150 -600 {lab=VSS}
 N 1000 -420 1020 -420 {lab=#net7}
@@ -316,8 +288,8 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_wire.sym} 400 -840 0 0 {name=p18 sig_type=std_logic lab=cbar}
-C {lab_wire.sym} 400 -640 0 0 {name=p19 sig_type=std_logic lab=c}
+C {lab_wire.sym} 400 -840 0 0 {name=p18 sig_type=std_logic lab=CLKb}
+C {lab_wire.sym} 400 -640 0 0 {name=p19 sig_type=std_logic lab=CLK}
 C {symbols/pfet_03v3.sym} 720 -810 0 1 {name=M25
 L=0.28u
 W=0.36u
@@ -403,7 +375,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_wire.sym} 890 -520 0 0 {name=p28 sig_type=std_logic lab=cbar}
+C {lab_wire.sym} 890 -520 0 0 {name=p28 sig_type=std_logic lab=CLKb}
 C {symbols/pfet_03v3.sym} 1040 -420 0 0 {name=M31
 L=0.28u
 W=0.36u
@@ -516,8 +488,8 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_wire.sym} 890 -320 0 0 {name=p34 sig_type=std_logic lab=c}
-C {lab_wire.sym} 1210 -930 0 0 {name=p35 sig_type=std_logic lab=c}
+C {lab_wire.sym} 890 -320 0 0 {name=p34 sig_type=std_logic lab=CLK}
+C {lab_wire.sym} 1210 -930 0 0 {name=p35 sig_type=std_logic lab=CLK}
 C {symbols/pfet_03v3.sym} 1420 -470 0 0 {name=M43
 L=0.28u
 W=0.72u
@@ -546,78 +518,17 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_wire.sym} 1210 -670 0 0 {name=p5 sig_type=std_logic lab=cbar}
+C {lab_wire.sym} 1210 -670 0 0 {name=p5 sig_type=std_logic lab=CLKb}
 C {lab_wire.sym} 790 -810 0 0 {name=p9 sig_type=std_logic lab=RSTn}
-C {symbols/pfet_03v3.sym} 1560 -270 0 0 {name=M3
-L=0.28u
-W=0.36u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 1560 -170 0 0 {name=M4
-L=0.28u
-W=0.36u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {symbols/pfet_03v3.sym} 1720 -270 0 0 {name=M5
-L=0.28u
-W=0.72u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 1720 -170 0 0 {name=M6
-L=0.28u
-W=0.36u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {opin.sym} 1820 -220 0 0 {name=p24 lab=Qb}
 C {lab_wire.sym} 620 -900 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 400 -540 0 0 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1140 -510 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1440 -540 0 0 {name=p15 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1580 -340 0 0 {name=p26 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1740 -340 0 0 {name=p29 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1740 -100 0 0 {name=p14 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 1580 -100 0 0 {name=p20 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1440 -300 0 0 {name=p23 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 400 -300 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 620 -520 0 0 {name=p31 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 120 -290 0 0 {name=p32 sig_type=std_logic lab=cbar}
-C {lab_wire.sym} 120 -550 0 0 {name=p21 sig_type=std_logic lab=c}
+C {lab_wire.sym} 120 -290 0 0 {name=p32 sig_type=std_logic lab=CLKb}
+C {lab_wire.sym} 120 -550 0 0 {name=p21 sig_type=std_logic lab=CLK}
 C {lab_wire.sym} 180 -620 0 0 {name=p33 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 180 -220 0 0 {name=p22 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1150 -1000 0 0 {name=p36 sig_type=std_logic lab=VDD
@@ -629,5 +540,7 @@ C {lab_wire.sym} 890 -400 0 0 {name=p40 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 400 -720 0 0 {name=p41 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1140 -130 0 0 {name=p42 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 970 -350 0 0 {name=p8 sig_type=std_logic lab=RSTn}
-C {iopin.sym} 50 -820 0 0 {name=p25 lab=c}
-C {iopin.sym} 50 -790 0 0 {name=p43 lab=cbar}
+C {ipin.sym} 50 -820 0 0 {name=p25 lab=CLK}
+C {ipin.sym} 50 -800 0 0 {name=p43 lab=CLKb}
+C {iopin.sym} 50 -860 2 0 {name=p2 lab=VDD}
+C {iopin.sym} 50 -840 2 0 {name=p4 lab=VSS}
