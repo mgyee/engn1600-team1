@@ -64,6 +64,66 @@ SO;pc15
 PC[15..0];pc15,pc14,pc13,pc12,pc11,pc10,pc9,pc8,pc7,pc6,pc5,pc4,pc3,pc2,pc1,pc0
 "
 rawfile=$netlist_dir/pc_tb.raw}
+B 2 1000 -1000 1300 -600 {flags=graph
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=50n
+x2=51n
+divx=1
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1
+autoload=1
+color="4 5 6 8 9 10 11"
+node="CLK
+RSTn
+BR
+DISP[7..0];disp7,disp6,disp5,disp4,disp3,disp2,disp1,disp0
+JMP
+DEST[15..0];dest15,dest14,dest13,dest12,dest11,dest10,dest9,dest8,dest7,dest6,dest5,dest4,dest3,dest2,dest1,dest0
+PC[15..0];pc15,pc14,pc13,pc12,pc11,pc10,pc9,pc8,pc7,pc6,pc5,pc4,pc3,pc2,pc1,pc0
+"
+rawfile=$netlist_dir/pc_tb.raw}
+B 2 1000 -600 1300 -200 {flags=graph
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=209n
+x2=210n
+divx=1
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1
+autoload=1
+color="4 5 6 8 9 10 11"
+node="CLK
+JMP
+DEST[15..0];dest15,dest14,dest13,dest12,dest11,dest10,dest9,dest8,dest7,dest6,dest5,dest4,dest3,dest2,dest1,dest0
+SI
+SE
+SO;pc15
+PC[15..0];pc15,pc14,pc13,pc12,pc11,pc10,pc9,pc8,pc7,pc6,pc5,pc4,pc3,pc2,pc1,pc0
+"
+rawfile=$netlist_dir/pc_tb.raw}
 C {engn1600-team1/CAD6/pc.sym} 0 0 0 0 {name=x1}
 C {lab_pin.sym} 150 -70 0 1 {name=p1 lab=VDD}
 C {lab_pin.sym} 150 -50 0 1 {name=p2 lab=VSS}

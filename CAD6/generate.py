@@ -90,7 +90,7 @@ def generate_pwl_blocks(tests):
 
     # CLK signal
     lines.append(f"\n** CLK")
-    lines.append(f"alter @VCLK[PULSE] = [ 0 {VHI} {T/2}n 0 0 {T/2}n {T}n 0 ]")
+    lines.append(f"alter @VCLK[PULSE] = [ 0 {VHI} {T * 3/4}n 0 0 {T/2}n {T}n 0 ]")
 
     return "\n".join(lines)
 
