@@ -11,9 +11,9 @@ C {ipin.sym} -100 -10 0 0 {name=p6 lab=DISP[7..0]}
 C {engn1600-team1/CAD6/sign_extend.sym} -50 310 0 0 {name=x1}
 C {lab_pin.sym} 70 180 0 1 {name=p7 lab=VDD}
 C {lab_pin.sym} 70 290 0 1 {name=p8 lab=VSS}
-C {lab_pin.sym} 140 230 0 1 {name=p9 lab=DISP_SE[8..0]}
+C {lab_pin.sym} 140 230 0 1 {name=p9 lab=DISP_SE}
 C {lab_pin.sym} 0 230 0 0 {name=p10 lab=DISP7}
-C {lab_pin.sym} 810 200 0 0 {name=p2 lab=DISP_SE[8..0],DISP[6..0]}
+C {lab_pin.sym} 810 200 0 0 {name=p2 lab=DISP_SE*9,DISP[6..0]}
 C {engn1600-team1/CAD6/2x1_mux.sym} 850 210 0 0 {name=x2[15..0]}
 C {engn1600-team1/CAD6/inv.sym} 20 -230 0 0 {name=x8[15..0] kINV=1}
 C {lab_pin.sym} 40 -270 0 1 {name=p11 lab=VDD}
