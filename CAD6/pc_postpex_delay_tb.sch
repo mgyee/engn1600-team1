@@ -191,7 +191,7 @@ tran $&tstep $&tstop
 meas tran TPLH TRIG V(DISP1) VAL=1.65 RISE=1 TARG V(PC_NEXT15) VAL=1.65 FALL=1
 meas tran TPHL TRIG V(DISP1) VAL=1.65 FALL=1 TARG V(PC_NEXT15) VAL=1.65 RISE=2
 
-plot PC_NEXT15 DISP7+5
+plot PC_NEXT15 DISP1+5
 
 write pc_delay_tb.raw
 

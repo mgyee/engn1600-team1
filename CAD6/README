@@ -1,2 +1,66 @@
-TPLH = 6.545 ns
-TPHL = 5.762 ns
+### Group members
+Matthias Yee, Alex Wang, Ray Wu, Martin Atilla, Kelvin Amankwaa
+
+### Entire design workspace, including layouts and testbenches.
+The main layout is `pc.gds`. The main schematic is `pc.sch`. We have three main testbenches:
+- `pc_tb.sch` for pre-PEX functionality checking
+- `pc_postpex_tb.sch` for post-PEX functionality checking
+- `pc_postpex_delay_tb.sch` for post-PEX timing
+
+### Testbenches
+We used `generate.py` to convert a list of tests into input PWL stimuli. For output, we used Xschem graphs within the schematic to parse bus signals. Thus, we verify functionality using a more compact representation than per-input waveforms.
+
+The results are in `SUBMIT/prepex/pc_tb.svg` and `SUBMIT/postpex/pc_postpex_tb.svg`. We simulate a representative control sequence with a program counter reset, some increments, forward and backward branching, jumping, and a full scan-in/scan-out demonstration.
+
+```
+** TEST SUMMARY
+** 00: PC <= 0x???? (INCR)
+** 01: PC <= 0x0000 (RESET)
+** 02: PC <= 0x0002 (INCR)
+** 03: PC <= 0x0012 (BR by 16)
+** 04: PC <= 0x0014 (INCR)
+** 05: PC <= 0x0004 (BR by -16)
+** 06: PC <= 0x0006 (INCR)
+** 07: PC <= 0x1234 (JMP to 0x1234)
+** 08: PC <= 0x1236 (INCR)
+** 09: PC <= 0x3579 (JMP to 0x3579)
+** 10: PC <= 0x6AF2 (SI bit 0, SO was 0)
+** 11: PC <= 0xD5E4 (SI bit 0, SO was 0)
+** 12: PC <= 0xABC8 (SI bit 0, SO was 1)
+** 13: PC <= 0x5790 (SI bit 0, SO was 1)
+** 14: PC <= 0xAF20 (SI bit 0, SO was 0)
+** 15: PC <= 0x5E40 (SI bit 0, SO was 1)
+** 16: PC <= 0xBC80 (SI bit 0, SO was 0)
+** 17: PC <= 0x7900 (SI bit 0, SO was 1)
+** 18: PC <= 0xF200 (SI bit 0, SO was 0)
+** 19: PC <= 0xE400 (SI bit 0, SO was 1)
+** 20: PC <= 0xC800 (SI bit 0, SO was 1)
+** 21: PC <= 0x9000 (SI bit 0, SO was 1)
+** 22: PC <= 0x2000 (SI bit 0, SO was 1)
+** 23: PC <= 0x4000 (SI bit 0, SO was 0)
+** 24: PC <= 0x8000 (SI bit 0, SO was 0)
+** 25: PC <= 0x0000 (SI bit 0, SO was 1)
+** 26: PC <= 0x0000 (SI bit 0, SO was 0)
+** 27: PC <= 0x0001 (SI bit 1, SO was 0)
+** 28: PC <= 0x0002 (SI bit 0, SO was 0)
+** 29: PC <= 0x0005 (SI bit 1, SO was 0)
+** 30: PC <= 0x000A (SI bit 0, SO was 0)
+** 31: PC <= 0x0015 (SI bit 1, SO was 0)
+** 32: PC <= 0x002A (SI bit 0, SO was 0)
+** 33: PC <= 0x0055 (SI bit 1, SO was 0)
+** 34: PC <= 0x00AA (SI bit 0, SO was 0)
+** 35: PC <= 0x0155 (SI bit 1, SO was 0)
+** 36: PC <= 0x02AA (SI bit 0, SO was 0)
+** 37: PC <= 0x0555 (SI bit 1, SO was 0)
+** 38: PC <= 0x0AAA (SI bit 0, SO was 0)
+** 39: PC <= 0x1555 (SI bit 1, SO was 0)
+** 40: PC <= 0x2AAA (SI bit 0, SO was 0)
+** 41: PC <= 0x5555 (SI bit 1, SO was 0)
+```
+
+See `SUBMIT/postpex/pc_postpex_delay_tb.svg` for the critical path delay. We used an input whose critical path must traverse the entire ripple carry adder (cause a toggle of every carry bit). This occurs when PC = 2, we're running a branch instruction, and we switch DISP between -4 and -2. We assume that PC[0] is untouched since instructions must be aligned. We tested both directions (rising and falling). We measure delay between the toggle of DISP[1] and the resolution of PC_NEXT[15] which should occur after the final carry.
+
+We get a post-PEX rise time of **6.545 ns** and fall time of **5.762 ns**.
+
+### Design
+The program counter uses inverters, 2:1 muxes, and full adders. Each full adder uses 2:1 unit sizing on all transistors. We chose a 16-bit ripple carry adder since the program counter is not along the critical path. Each 2:1 transmission gate mux requires inverted select lines, so we added several inverters to each bit slice. The non-inverted select lines will need to be strong, but we'll deal with this when we build the control unit. All inverters are unit size except for a 3x/9x chain used for sign extension.

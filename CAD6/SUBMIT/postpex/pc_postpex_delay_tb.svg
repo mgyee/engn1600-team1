@@ -113,7 +113,7 @@ pc_next15
 <path stroke="red" d="M972 440l1 0 0 -1 1 0"/>
 <path stroke="blue" d="M50 23l46 0"/>
 <text stroke="none" fill="white" font-size="16" x="106" y="32">
-disp7+5
+disp1+5
 </text>
-<path stroke="blue" d="M50 97l924 0"/>
+<path stroke="blue" d="M50 318l308 0 0 -221 308 0M666 318l0 -221M666 318l308 0"/>
 </svg>

@@ -1,46 +1,46 @@
 ** TEST SUMMARY
-** 00: INCR
-** 01: RESET
-** 02: INCR
-** 03: BR by 16
-** 04: INCR
-** 05: BR by -16
-** 06: INCR
-** 07: JMP to 0x1234
-** 08: INCR
-** 09: JMP to 0x3579
-** 10: SI bit 0
-** 11: SI bit 0
-** 12: SI bit 0
-** 13: SI bit 0
-** 14: SI bit 0
-** 15: SI bit 0
-** 16: SI bit 0
-** 17: SI bit 0
-** 18: SI bit 0
-** 19: SI bit 0
-** 20: SI bit 0
-** 21: SI bit 0
-** 22: SI bit 0
-** 23: SI bit 0
-** 24: SI bit 0
-** 25: SI bit 0
-** 26: SI bit 0
-** 27: SI bit 1
-** 28: SI bit 0
-** 29: SI bit 1
-** 30: SI bit 0
-** 31: SI bit 1
-** 32: SI bit 0
-** 33: SI bit 1
-** 34: SI bit 0
-** 35: SI bit 1
-** 36: SI bit 0
-** 37: SI bit 1
-** 38: SI bit 0
-** 39: SI bit 1
-** 40: SI bit 0
-** 41: SI bit 1
+** 00: PC <= 0x???? (INCR)
+** 01: PC <= 0x0000 (RESET)
+** 02: PC <= 0x0002 (INCR)
+** 03: PC <= 0x0012 (BR by 16)
+** 04: PC <= 0x0014 (INCR)
+** 05: PC <= 0x0004 (BR by -16)
+** 06: PC <= 0x0006 (INCR)
+** 07: PC <= 0x1234 (JMP to 0x1234)
+** 08: PC <= 0x1236 (INCR)
+** 09: PC <= 0x3579 (JMP to 0x3579)
+** 10: PC <= 0x6AF2 (SI bit 0, SO was 0)
+** 11: PC <= 0xD5E4 (SI bit 0, SO was 0)
+** 12: PC <= 0xABC8 (SI bit 0, SO was 1)
+** 13: PC <= 0x5790 (SI bit 0, SO was 1)
+** 14: PC <= 0xAF20 (SI bit 0, SO was 0)
+** 15: PC <= 0x5E40 (SI bit 0, SO was 1)
+** 16: PC <= 0xBC80 (SI bit 0, SO was 0)
+** 17: PC <= 0x7900 (SI bit 0, SO was 1)
+** 18: PC <= 0xF200 (SI bit 0, SO was 0)
+** 19: PC <= 0xE400 (SI bit 0, SO was 1)
+** 20: PC <= 0xC800 (SI bit 0, SO was 1)
+** 21: PC <= 0x9000 (SI bit 0, SO was 1)
+** 22: PC <= 0x2000 (SI bit 0, SO was 1)
+** 23: PC <= 0x4000 (SI bit 0, SO was 0)
+** 24: PC <= 0x8000 (SI bit 0, SO was 0)
+** 25: PC <= 0x0000 (SI bit 0, SO was 1)
+** 26: PC <= 0x0000 (SI bit 0, SO was 0)
+** 27: PC <= 0x0001 (SI bit 1, SO was 0)
+** 28: PC <= 0x0002 (SI bit 0, SO was 0)
+** 29: PC <= 0x0005 (SI bit 1, SO was 0)
+** 30: PC <= 0x000A (SI bit 0, SO was 0)
+** 31: PC <= 0x0015 (SI bit 1, SO was 0)
+** 32: PC <= 0x002A (SI bit 0, SO was 0)
+** 33: PC <= 0x0055 (SI bit 1, SO was 0)
+** 34: PC <= 0x00AA (SI bit 0, SO was 0)
+** 35: PC <= 0x0155 (SI bit 1, SO was 0)
+** 36: PC <= 0x02AA (SI bit 0, SO was 0)
+** 37: PC <= 0x0555 (SI bit 1, SO was 0)
+** 38: PC <= 0x0AAA (SI bit 0, SO was 0)
+** 39: PC <= 0x1555 (SI bit 1, SO was 0)
+** 40: PC <= 0x2AAA (SI bit 0, SO was 0)
+** 41: PC <= 0x5555 (SI bit 1, SO was 0)
 
 .control
 save all
