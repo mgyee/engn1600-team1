@@ -86,3 +86,4 @@ C {code_shown.sym} 360 -340 0 0 {name=s1 only_toplevel=false value="
 .param kTS=1
 .param Kb=1
 "}
+C {opin.sym} -100 120 2 0 {name=p5 lab=PC_NEXT15}

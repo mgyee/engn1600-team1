@@ -192,3 +192,4 @@ write pc_delay_tb.raw
 
 .endc
 "}
+C {lab_pin.sym} 150 -10 0 1 {name=p11 lab=PC_NEXT15}
