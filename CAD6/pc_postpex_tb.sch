@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0n
-x2=50n
+x2=100n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -42,8 +42,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=50n
-x2=210n
+x1=100n
+x2=420n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -72,8 +72,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=50n
-x2=51n
+x1=100n
+x2=102n
 divx=1
 subdivx=1
 xlabmag=1.0
@@ -102,8 +102,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=209n
-x2=210n
+x1=418n
+x2=420n
 divx=1
 subdivx=1
 xlabmag=1.0
@@ -239,5 +239,5 @@ format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
-.include /foss/designs/engn1600-team1/CAD6/pc_tb_gen.spice
+.include /foss/designs/engn1600-team1/CAD6/pc_postpex_tb_gen.spice
 "}
