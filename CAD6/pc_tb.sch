@@ -237,5 +237,5 @@ format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
-.include /foss/designs/engn1600-team1/CAD6/pc_tb_gen.spice
+.include /foss/designs/engn1600-team1/CAD6/pc_prepex_tb_gen.spice
 "}

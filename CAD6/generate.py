@@ -19,18 +19,26 @@ def build_pwl(events):
     return "[ " + " ".join(f"{t} {v}" for t, v in events) + " ]"
 
 def generate_summary(tests):
+    pc = None
     lines = ["** TEST SUMMARY"]
     for i, (RSTn, BR, DISP, JMP, DEST, SI, SE) in enumerate(tests):
         if (not RSTn):
-            lines.append(f"** {i:02d}: RESET")
+            tag = f"RESET"
+            pc = 0
         elif SE:
-            lines.append(f"** {i:02d}: SI bit {SI}")
+            tag = f"SI bit {SI}, SO was {(pc >> 15) & 1}"
+            pc = pc if pc is None else ((pc << 1) + SI) & 0xFFFF
         elif JMP:
-            lines.append(f"** {i:02d}: JMP to 0x{DEST:04X}")
+            tag = f"JMP to 0x{DEST:04X}"
+            pc = DEST
         elif BR:
-            lines.append(f"** {i:02d}: BR by {DISP - 256 if DISP & 0x80 else DISP}")
+            tag = f"BR by {DISP - 256 if DISP &0x80 else DISP}"
+            pc = pc if pc is None else (pc + (DISP - 256 if DISP & 0x80 else DISP)) & 0xFFFF
         else:
-            lines.append(f"** {i:02d}: INCR")
+            tag = f"INCR"
+            pc = pc if pc is None else (pc + 2) & 0xFFFF
+        pc_str = f"0x{pc:04X}" if pc is not None else "0x????"
+        lines.append(f"** {i:02d}: PC <= {pc_str} ({tag})")
     return "\n".join(lines)
 
 def generate_pwl_blocks(tests):

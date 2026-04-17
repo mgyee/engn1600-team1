@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=21n
+x2=30n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,14 +26,14 @@ digital=1
 autoload=1
 color="4 5 6 8 9 10 11"
 node="CLK
+RSTn
+BR
+DISP[7..0];disp7,disp6,disp5,disp4,disp3,disp2,disp1,disp0
 JMP
 DEST[15..0];dest15,dest14,dest13,dest12,dest11,dest10,dest9,dest8,dest7,dest6,dest5,dest4,dest3,dest2,dest1,dest0
-SI
-SE
-SO;pc15
 PC[15..0];pc15,pc14,pc13,pc12,pc11,pc10,pc9,pc8,pc7,pc6,pc5,pc4,pc3,pc2,pc1,pc0
 "
-rawfile=$netlist_dir/pc_tb.raw}
+rawfile=$netlist_dir/pc_delay_tb.raw}
 C {engn1600-team1/CAD6/pc.sym} 0 0 0 0 {name=x1
 schematic=pc_flat
 spice_sym_def=".include /foss/designs/engn1600-team1/CAD6/PEX/pc_pex.spice"}
@@ -160,33 +160,38 @@ save all
 let f = 1e9
 let T = 1/f
 
-let T11 = T * 11
+let DT = T * 2
+let T5 = T * 5
+let T8 = T * 8
+let T10 = T * 10
+let T20 = T * 20
 
-let tstop = 21 * T
+let tstop = 30 * T
 let tstep = 0.001 * T
 
 ** DISP (0 -> -2 -> 0)
-alter @VDISP7[PWL] = [ 0 0 $&T 0 $&T 3.3 $&T11 3.3 $&T11 0 ]
-alter @VDISP6[PWL] = [ 0 0 $&T 0 $&T 3.3 $&T11 3.3 $&T11 0 ]
-alter @VDISP5[PWL] = [ 0 0 $&T 0 $&T 3.3 $&T11 3.3 $&T11 0 ]
-alter @VDISP4[PWL] = [ 0 0 $&T 0 $&T 3.3 $&T11 3.3 $&T11 0 ]
-alter @VDISP3[PWL] = [ 0 0 $&T 0 $&T 3.3 $&T11 3.3 $&T11 0 ]
-alter @VDISP2[PWL] = [ 0 0 $&T 0 $&T 3.3 $&T11 3.3 $&T11 0 ]
-alter @VDISP1[PWL] = [ 0 0 $&T 0 $&T 3.3 $&T11 3.3 $&T11 0 ]
+alter @VDISP7[DC] = 3.3
+alter @VDISP6[DC] = 3.3
+alter @VDISP5[DC] = 3.3
+alter @VDISP4[DC] = 3.3
+alter @VDISP3[DC] = 3.3
+alter @VDISP2[DC] = 3.3
+alter @VDISP1[PWL] = [ 0 0 $&T10 0 $&T10 3.3 $&T20 3.3 $&T20 0 ]
 alter @VDISP0[DC] = 0
 
 ** CONTROL
-alter @VBR[DC] = 3.3
+alter @VRSTn[PWL] = [ 0 0 $&DT 0 $&DT 3.3 ]
+alter @VBR[PWL] = [ 0 0 $&T10 0 $&T10 3.3 ]
 
 ** CLK
-alter @VCLK[DC] = 0
+alter @VCLK[PULSE] = [ 0 3.3 $&T8 0 0 $&T5 $&T10 0 ]
 
 tran $&tstep $&tstop
 
-meas tran TPLH TRIG V(DISP7) VAL=1.65 RISE=1 TARG V(PC_NEXT15) VAL=1.65 FALL=1
-meas tran TPHL TRIG V(DISP7) VAL=1.65 FALL=1 TARG V(PC_NEXT15) VAL=1.65 FALL=2
+meas tran TPLH TRIG V(DISP1) VAL=1.65 RISE=1 TARG V(PC_NEXT15) VAL=1.65 FALL=1
+meas tran TPHL TRIG V(DISP1) VAL=1.65 FALL=1 TARG V(PC_NEXT15) VAL=1.65 RISE=2
 
-plot PC_NEXT15 DISP7+5
+plot PC_NEXT15 DISP1+5
 
 write pc_delay_tb.raw
 
