@@ -1,0 +1,265 @@
+** sch_path: /foss/designs/engn1600-team1/CAD6/pc.sch
+.subckt pc VDD VSS CLK RSTn BR DISP7 DISP6 DISP5 DISP4 DISP3 DISP2 DISP1 DISP0 JMP DEST15 DEST14 DEST13 DEST12 DEST11 DEST10 DEST9
++ DEST8 DEST7 DEST6 DEST5 DEST4 DEST3 DEST2 DEST1 DEST0 SI SE PC15 PC14 PC13 PC12 PC11 PC10 PC9 PC8 PC7 PC6 PC5 PC4 PC3 PC2 PC1 PC0
+*.PININFO JMP:I BR:I VDD:B DISP[7..0]:I PC[15..0]:O SI:I SE:I DEST[15..0]:I VSS:B CLK:I RSTn:I
+x1 VDD VSS DISP_SE DISP7 sign_extend
+x215 VSS BR BR15b B15 VDD VSS DISP_SE 2x1_mux
+x214 VSS BR BR14b B14 VDD VSS DISP_SE 2x1_mux
+x213 VSS BR BR13b B13 VDD VSS DISP_SE 2x1_mux
+x212 VSS BR BR12b B12 VDD VSS DISP_SE 2x1_mux
+x211 VSS BR BR11b B11 VDD VSS DISP_SE 2x1_mux
+x210 VSS BR BR10b B10 VDD VSS DISP_SE 2x1_mux
+x29 VSS BR BR9b B9 VDD VSS DISP_SE 2x1_mux
+x28 VSS BR BR8b B8 VDD VSS DISP_SE 2x1_mux
+x27 VSS BR BR7b B7 VDD VSS DISP_SE 2x1_mux
+x26 VSS BR BR6b B6 VDD VSS DISP6 2x1_mux
+x25 VSS BR BR5b B5 VDD VSS DISP5 2x1_mux
+x24 VSS BR BR4b B4 VDD VSS DISP4 2x1_mux
+x23 VSS BR BR3b B3 VDD VSS DISP3 2x1_mux
+x22 VSS BR BR2b B2 VDD VSS DISP2 2x1_mux
+x21 VDD BR BR1b B1 VDD VSS DISP1 2x1_mux
+x20 VSS BR BR0b B0 VDD VSS DISP0 2x1_mux
+x815 VDD BR BR15b VSS inv kINV=1
+x814 VDD BR BR14b VSS inv kINV=1
+x813 VDD BR BR13b VSS inv kINV=1
+x812 VDD BR BR12b VSS inv kINV=1
+x811 VDD BR BR11b VSS inv kINV=1
+x810 VDD BR BR10b VSS inv kINV=1
+x89 VDD BR BR9b VSS inv kINV=1
+x88 VDD BR BR8b VSS inv kINV=1
+x87 VDD BR BR7b VSS inv kINV=1
+x86 VDD BR BR6b VSS inv kINV=1
+x85 VDD BR BR5b VSS inv kINV=1
+x84 VDD BR BR4b VSS inv kINV=1
+x83 VDD BR BR3b VSS inv kINV=1
+x82 VDD BR BR2b VSS inv kINV=1
+x81 VDD BR BR1b VSS inv kINV=1
+x80 VDD BR BR0b VSS inv kINV=1
+x915 VDD JMP JMP15b VSS inv kINV=1
+x914 VDD JMP JMP14b VSS inv kINV=1
+x913 VDD JMP JMP13b VSS inv kINV=1
+x912 VDD JMP JMP12b VSS inv kINV=1
+x911 VDD JMP JMP11b VSS inv kINV=1
+x910 VDD JMP JMP10b VSS inv kINV=1
+x99 VDD JMP JMP9b VSS inv kINV=1
+x98 VDD JMP JMP8b VSS inv kINV=1
+x97 VDD JMP JMP7b VSS inv kINV=1
+x96 VDD JMP JMP6b VSS inv kINV=1
+x95 VDD JMP JMP5b VSS inv kINV=1
+x94 VDD JMP JMP4b VSS inv kINV=1
+x93 VDD JMP JMP3b VSS inv kINV=1
+x92 VDD JMP JMP2b VSS inv kINV=1
+x91 VDD JMP JMP1b VSS inv kINV=1
+x90 VDD JMP JMP0b VSS inv kINV=1
+x515 PCB15 JMP JMP15b PCJ15 VDD VSS DEST15 2x1_mux
+x514 PCB14 JMP JMP14b PCJ14 VDD VSS DEST14 2x1_mux
+x513 PCB13 JMP JMP13b PCJ13 VDD VSS DEST13 2x1_mux
+x512 PCB12 JMP JMP12b PCJ12 VDD VSS DEST12 2x1_mux
+x511 PCB11 JMP JMP11b PCJ11 VDD VSS DEST11 2x1_mux
+x510 PCB10 JMP JMP10b PCJ10 VDD VSS DEST10 2x1_mux
+x59 PCB9 JMP JMP9b PCJ9 VDD VSS DEST9 2x1_mux
+x58 PCB8 JMP JMP8b PCJ8 VDD VSS DEST8 2x1_mux
+x57 PCB7 JMP JMP7b PCJ7 VDD VSS DEST7 2x1_mux
+x56 PCB6 JMP JMP6b PCJ6 VDD VSS DEST6 2x1_mux
+x55 PCB5 JMP JMP5b PCJ5 VDD VSS DEST5 2x1_mux
+x54 PCB4 JMP JMP4b PCJ4 VDD VSS DEST4 2x1_mux
+x53 PCB3 JMP JMP3b PCJ3 VDD VSS DEST3 2x1_mux
+x52 PCB2 JMP JMP2b PCJ2 VDD VSS DEST2 2x1_mux
+x51 PCB1 JMP JMP1b PCJ1 VDD VSS DEST1 2x1_mux
+x50 PCB0 JMP JMP0b PCJ0 VDD VSS DEST0 2x1_mux
+x315 CLK15b PC_NEXT15 PC15 RSTn CLK VDD VSS dff
+x314 CLK14b PC_NEXT14 PC14 RSTn CLK VDD VSS dff
+x313 CLK13b PC_NEXT13 PC13 RSTn CLK VDD VSS dff
+x312 CLK12b PC_NEXT12 PC12 RSTn CLK VDD VSS dff
+x311 CLK11b PC_NEXT11 PC11 RSTn CLK VDD VSS dff
+x310 CLK10b PC_NEXT10 PC10 RSTn CLK VDD VSS dff
+x39 CLK9b PC_NEXT9 PC9 RSTn CLK VDD VSS dff
+x38 CLK8b PC_NEXT8 PC8 RSTn CLK VDD VSS dff
+x37 CLK7b PC_NEXT7 PC7 RSTn CLK VDD VSS dff
+x36 CLK6b PC_NEXT6 PC6 RSTn CLK VDD VSS dff
+x35 CLK5b PC_NEXT5 PC5 RSTn CLK VDD VSS dff
+x34 CLK4b PC_NEXT4 PC4 RSTn CLK VDD VSS dff
+x33 CLK3b PC_NEXT3 PC3 RSTn CLK VDD VSS dff
+x32 CLK2b PC_NEXT2 PC2 RSTn CLK VDD VSS dff
+x31 CLK1b PC_NEXT1 PC1 RSTn CLK VDD VSS dff
+x30 CLK0b PC_NEXT0 PC0 RSTn CLK VDD VSS dff
+x115 VDD CLK CLK15b VSS inv kINV=1
+x114 VDD CLK CLK14b VSS inv kINV=1
+x113 VDD CLK CLK13b VSS inv kINV=1
+x112 VDD CLK CLK12b VSS inv kINV=1
+x111 VDD CLK CLK11b VSS inv kINV=1
+x110 VDD CLK CLK10b VSS inv kINV=1
+x19 VDD CLK CLK9b VSS inv kINV=1
+x18 VDD CLK CLK8b VSS inv kINV=1
+x17 VDD CLK CLK7b VSS inv kINV=1
+x16 VDD CLK CLK6b VSS inv kINV=1
+x15 VDD CLK CLK5b VSS inv kINV=1
+x14 VDD CLK CLK4b VSS inv kINV=1
+x13 VDD CLK CLK3b VSS inv kINV=1
+x12 VDD CLK CLK2b VSS inv kINV=1
+x11 VDD CLK CLK1b VSS inv kINV=1
+x10 VDD CLK CLK0b VSS inv kINV=1
+x415 VDD VSS PC15 B15 COUT14 PCB15 COUT15 full_adder kSUMb=1 kTS=1
+x414 VDD VSS PC14 B14 COUT13 PCB14 COUT14 full_adder kSUMb=1 kTS=1
+x413 VDD VSS PC13 B13 COUT12 PCB13 COUT13 full_adder kSUMb=1 kTS=1
+x412 VDD VSS PC12 B12 COUT11 PCB12 COUT12 full_adder kSUMb=1 kTS=1
+x411 VDD VSS PC11 B11 COUT10 PCB11 COUT11 full_adder kSUMb=1 kTS=1
+x410 VDD VSS PC10 B10 COUT9 PCB10 COUT10 full_adder kSUMb=1 kTS=1
+x49 VDD VSS PC9 B9 COUT8 PCB9 COUT9 full_adder kSUMb=1 kTS=1
+x48 VDD VSS PC8 B8 COUT7 PCB8 COUT8 full_adder kSUMb=1 kTS=1
+x47 VDD VSS PC7 B7 COUT6 PCB7 COUT7 full_adder kSUMb=1 kTS=1
+x46 VDD VSS PC6 B6 COUT5 PCB6 COUT6 full_adder kSUMb=1 kTS=1
+x45 VDD VSS PC5 B5 COUT4 PCB5 COUT5 full_adder kSUMb=1 kTS=1
+x44 VDD VSS PC4 B4 COUT3 PCB4 COUT4 full_adder kSUMb=1 kTS=1
+x43 VDD VSS PC3 B3 COUT2 PCB3 COUT3 full_adder kSUMb=1 kTS=1
+x42 VDD VSS PC2 B2 COUT1 PCB2 COUT2 full_adder kSUMb=1 kTS=1
+x41 VDD VSS PC1 B1 COUT0 PCB1 COUT1 full_adder kSUMb=1 kTS=1
+x40 VDD VSS PC0 B0 VSS PCB0 COUT0 full_adder kSUMb=1 kTS=1
+x715 PCJ15 SE SE15b PC_NEXT15 VDD VSS PC14 2x1_mux
+x714 PCJ14 SE SE14b PC_NEXT14 VDD VSS PC13 2x1_mux
+x713 PCJ13 SE SE13b PC_NEXT13 VDD VSS PC12 2x1_mux
+x712 PCJ12 SE SE12b PC_NEXT12 VDD VSS PC11 2x1_mux
+x711 PCJ11 SE SE11b PC_NEXT11 VDD VSS PC10 2x1_mux
+x710 PCJ10 SE SE10b PC_NEXT10 VDD VSS PC9 2x1_mux
+x79 PCJ9 SE SE9b PC_NEXT9 VDD VSS PC8 2x1_mux
+x78 PCJ8 SE SE8b PC_NEXT8 VDD VSS PC7 2x1_mux
+x77 PCJ7 SE SE7b PC_NEXT7 VDD VSS PC6 2x1_mux
+x76 PCJ6 SE SE6b PC_NEXT6 VDD VSS PC5 2x1_mux
+x75 PCJ5 SE SE5b PC_NEXT5 VDD VSS PC4 2x1_mux
+x74 PCJ4 SE SE4b PC_NEXT4 VDD VSS PC3 2x1_mux
+x73 PCJ3 SE SE3b PC_NEXT3 VDD VSS PC2 2x1_mux
+x72 PCJ2 SE SE2b PC_NEXT2 VDD VSS PC1 2x1_mux
+x71 PCJ1 SE SE1b PC_NEXT1 VDD VSS PC0 2x1_mux
+x70 PCJ0 SE SE0b PC_NEXT0 VDD VSS SI 2x1_mux
+x1015 VDD SE SE15b VSS inv kINV=1
+x1014 VDD SE SE14b VSS inv kINV=1
+x1013 VDD SE SE13b VSS inv kINV=1
+x1012 VDD SE SE12b VSS inv kINV=1
+x1011 VDD SE SE11b VSS inv kINV=1
+x1010 VDD SE SE10b VSS inv kINV=1
+x109 VDD SE SE9b VSS inv kINV=1
+x108 VDD SE SE8b VSS inv kINV=1
+x107 VDD SE SE7b VSS inv kINV=1
+x106 VDD SE SE6b VSS inv kINV=1
+x105 VDD SE SE5b VSS inv kINV=1
+x104 VDD SE SE4b VSS inv kINV=1
+x103 VDD SE SE3b VSS inv kINV=1
+x102 VDD SE SE2b VSS inv kINV=1
+x101 VDD SE SE1b VSS inv kINV=1
+x100 VDD SE SE0b VSS inv kINV=1
+.ends
+
+* expanding   symbol:  engn1600-team1/CAD6/sign_extend.sym # of pins=4
+** sym_path: /foss/designs/engn1600-team1/CAD6/sign_extend.sym
+** sch_path: /foss/designs/engn1600-team1/CAD6/sign_extend.sch
+.subckt sign_extend VDD VSS OUT IN
+*.PININFO IN:I OUT:O VDD:B VSS:B
+x1 VDD IN net1 VSS inv kINV=3
+x2 VDD net1 OUT VSS inv kINV=9
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD6/2x1_mux.sym # of pins=7
+** sym_path: /foss/designs/engn1600-team1/CAD6/2x1_mux.sym
+** sch_path: /foss/designs/engn1600-team1/CAD6/2x1_mux.sch
+.subckt 2x1_mux A SEL SELb Y VDD VSS B
+*.PININFO A:I B:I SEL:I Y:O VDD:B VSS:B SELb:I
+M1 Y SEL B VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M2 Y SELb B VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M3 Y SELb A VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M4 Y SEL A VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD6/inv.sym # of pins=4
+** sym_path: /foss/designs/engn1600-team1/CAD6/inv.sym
+** sch_path: /foss/designs/engn1600-team1/CAD6/inv.sch
+.subckt inv VDD IN OUT VSS  kINV=1
+*.PININFO IN:I OUT:O VDD:B VSS:B
+M1 OUT IN VDD VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
+M2 OUT IN VSS VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
+**** begin user architecture code
+
+
+.param kINV=1
+
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD6/dff.sym # of pins=7
+** sym_path: /foss/designs/engn1600-team1/CAD6/dff.sym
+** sch_path: /foss/designs/engn1600-team1/CAD6/dff.sch
+.subckt dff CLKb D Q RSTn CLK VDD VSS
+*.PININFO D:I Q:O RSTn:I CLK:I CLKb:I VDD:B VSS:B
+M7 net2 CLK VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M8 net1 D net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M9 net1 D net3 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M10 net3 CLKb VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M13 net4 net1 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M14 net4 net1 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M15 net1 CLKb net5 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M16 net1 CLK net5 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M25 net5 RSTn VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M26 net5 net4 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M27 net6 net4 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M28 net5 RSTn net6 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M29 net4 CLKb net7 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M30 net4 CLK net7 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M31 net8 net7 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M32 net8 RSTn VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M33 net9 RSTn VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M34 net8 net7 net9 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M35 net10 CLK VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M36 net7 net8 net10 VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M37 net7 net8 net11 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M38 net11 CLKb VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M43 Q net8 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M44 Q net8 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD6/full_adder.sym # of pins=7
+** sym_path: /foss/designs/engn1600-team1/CAD6/full_adder.sym
+** sch_path: /foss/designs/engn1600-team1/CAD6/full_adder.sch
+.subckt full_adder VDD VSS A B CIN SUM COUT  kSUMb=1 kTS=1
+*.PININFO VDD:B VSS:B A:I B:I CIN:I COUT:O SUM:O
+M1 net1 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M2 net4 A net1 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M3 net3 A VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M4 net3 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M5 net4 CIN net3 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M6 net4 CIN net5 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M7 net2 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M8 net4 A net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M9 net5 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M10 net5 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M11 net8 net4 net7 VDD pfet_03v3 L=0.28u W='kSUMb*0.72u' nf=1 m=1
+M12 net7 A VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M13 net7 CIN VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M14 net7 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M15 net9 A net10 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M16 net8 CIN net9 VDD pfet_03v3 L=0.28u W='kTS*0.72u' nf=1 m=1
+M17 net10 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M18 net8 net4 net6 VSS nfet_03v3 L=0.28u W='kSUMb*0.36u' nf=1 m=1
+M19 net6 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M20 net6 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M21 net6 CIN VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M22 net8 CIN net12 VSS nfet_03v3 L=0.28u W='kTS*0.36u' nf=1 m=1
+M23 net12 A net11 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M24 net11 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M25 COUT net4 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M26 COUT net4 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+**** begin user architecture code
+
+
+.param kSUMb=1
+.param kTS=1
+
+
+**** end user architecture code
+M27 SUM net8 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M28 SUM net8 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+.ends
+
