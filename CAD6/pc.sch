@@ -80,3 +80,9 @@ C {lab_pin.sym} 40 40 0 1 {name=p68 lab=VDD}
 C {lab_pin.sym} 110 80 0 1 {name=p69 lab=SE[15..0]b}
 C {lab_pin.sym} 40 120 0 1 {name=p70 lab=VSS}
 C {lab_pin.sym} 0 80 0 0 {name=p71 lab=SE}
+C {code_shown.sym} 360 -340 0 0 {name=s1 only_toplevel=false value="
+.param kINV=1
+.param kSUMb=1
+.param kTS=1
+.param Kb=1
+"}

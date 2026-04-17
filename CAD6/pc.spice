@@ -147,15 +147,27 @@ x103 VDD SE SE3b VSS inv kINV=1
 x102 VDD SE SE2b VSS inv kINV=1
 x101 VDD SE SE1b VSS inv kINV=1
 x100 VDD SE SE0b VSS inv kINV=1
+**** begin user architecture code
+
+
+.param kINV=1
+.param kSUMb=1
+.param kTS=1
+.param Kb=1
+
+
+**** end user architecture code
 .ends
 
 * expanding   symbol:  engn1600-team1/CAD6/sign_extend.sym # of pins=4
 ** sym_path: /foss/designs/engn1600-team1/CAD6/sign_extend.sym
 ** sch_path: /foss/designs/engn1600-team1/CAD6/sign_extend.sch
 .subckt sign_extend VDD VSS OUT IN
-*.PININFO IN:I OUT:O VDD:B VSS:B
-x1 VDD IN net1 VSS inv kINV=3
-x2 VDD net1 OUT VSS inv kINV=9
+*.PININFO VDD:B VSS:B IN:I OUT:O
+M1 net1 IN VDD VDD pfet_03v3 L=0.28u W='3*0.72u' nf=1 m=1
+M2 net1 IN VSS VSS nfet_03v3 L=0.28u W='3*0.36u' nf=1 m=1
+M3 OUT net1 VDD VDD pfet_03v3 L=0.28u W='9*0.72u' nf=1 m=1
+M4 OUT net1 VSS VSS nfet_03v3 L=0.28u W='9*0.36u' nf=1 m=1
 .ends
 
 
@@ -235,18 +247,18 @@ M7 net2 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M8 net4 A net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M9 net5 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M10 net5 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M11 net8 net4 net7 VDD pfet_03v3 L=0.28u W='kSUMb*0.72u' nf=1 m=1
+M11 net8 net4 net7 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
 M12 net7 A VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M13 net7 CIN VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M14 net7 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M15 net9 A net10 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M16 net8 CIN net9 VDD pfet_03v3 L=0.28u W='kTS*0.72u' nf=1 m=1
+M16 net8 CIN net9 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
 M17 net10 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M18 net8 net4 net6 VSS nfet_03v3 L=0.28u W='kSUMb*0.36u' nf=1 m=1
+M18 net8 net4 net6 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
 M19 net6 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M20 net6 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M21 net6 CIN VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M22 net8 CIN net12 VSS nfet_03v3 L=0.28u W='kTS*0.36u' nf=1 m=1
+M22 net8 CIN net12 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
 M23 net12 A net11 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M24 net11 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M25 COUT net4 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
