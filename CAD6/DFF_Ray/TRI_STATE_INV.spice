@@ -1,8 +1,0 @@
-** sch_path: /foss/designs/CAD2/TRI_STATE_INV.sch
-.subckt TRI_STATE_INV VDD CLK OUT IN CLKN VSS
-*.PININFO VSS:B VDD:B CLK:B CLKN:B IN:I OUT:O
-M1 net1 CLKN VDD VDD pfet_03v3 L=0.28u W=4u nf=1 m=1
-M2 OUT IN net1 VDD pfet_03v3 L=0.28u W=4u nf=1 m=1
-M3 OUT IN net2 VSS nfet_03v3 L=0.28u W=2u nf=1 m=1
-M4 net2 CLK VSS VSS nfet_03v3 L=0.28u W=2u nf=1 m=1
-.ends
