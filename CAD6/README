@@ -64,3 +64,8 @@ We get a post-PEX rise time of **6.545 ns** and fall time of **5.762 ns**.
 
 ### Design
 The program counter uses inverters, 2:1 muxes, and full adders. Each full adder uses 2:1 unit sizing on all transistors. We chose a 16-bit ripple carry adder since the program counter is not along the critical path. Each 2:1 transmission gate mux requires inverted select lines, so we added several inverters to each bit slice. The non-inverted select lines will need to be strong, but we'll deal with this when we build the control unit. All inverters are unit size except for a 3x/9x chain used for sign extension.
+
+### Floorplan Ratio
+
+### Branch Targets
+Branch targets are calculated with a 16 bit ripple carry adder dedicated to incrementing PC by displacement if BR, or 2 otherwise.
