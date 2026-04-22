@@ -1,0 +1,11 @@
+# ENGN1600 Baseline RISC Processor
+# Anhang Li (anhangli@umich.edu)
+# -----
+
+*.memh
+*.out
+*.vcd
+*.log
+
+.codex
+.vscode/
