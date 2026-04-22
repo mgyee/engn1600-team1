@@ -48,7 +48,7 @@ module control (
 
   assign rd   = rdest;
   assign ra   = rsrc;
-  assign rb   = dest;
+  assign rb   = rdest;
   assign imm  = instr[7:0];
   assign disp = instr[7:0];
 
