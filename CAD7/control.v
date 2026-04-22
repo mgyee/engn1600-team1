@@ -1,4 +1,4 @@
-module Control (
+module control (
     input [15:0] instr,
 
     // Register File
