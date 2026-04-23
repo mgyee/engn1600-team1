@@ -71,10 +71,10 @@ C {lab_pin.sym} 1530 0 0 1 {name=p34 sig_type=std_logic lab=RF_D[15..0]
 C {lab_pin.sym} 930 210 0 1 {name=p35 sig_type=std_logic lab=SHIFTER_Q[15..0]b
 
 }
-C {ipin.sym} 1330 90 3 0 {name=p40 lab=MEM_RF}
-C {ipin.sym} 1350 80 3 0 {name=p41 lab=ALU_RF}
-C {ipin.sym} 1370 70 3 0 {name=p42 lab=SHIFTER_RF}
-C {ipin.sym} 1390 60 3 0 {name=p43 lab=PC_RF}
+C {lab_pin.sym} 1330 90 3 0 {name=p40 lab=DATA_OUT0}
+C {lab_pin.sym} 1350 80 3 0 {name=p41 lab=DATA_OUT1}
+C {lab_pin.sym} 1370 70 3 0 {name=p42 lab=DATA_OUT2}
+C {lab_pin.sym} 1390 60 3 0 {name=p43 lab=DATA_OUT3}
 C {engn1600-team1/CAD7/inv.sym} 1440 0 0 0 {name=x1[15..0] kINV=1}
 C {lab_pin.sym} 1460 -40 0 1 {name=p44 lab=VDD}
 C {lab_pin.sym} 1460 40 0 1 {name=p46 lab=VSS}
@@ -224,3 +224,4 @@ C {ipin.sym} 630 230 0 0 {name=p23 lab=SHIFT_AMT_SRC}
 C {ipin.sym} -1070 50 0 0 {name=p54 lab=SI}
 C {ipin.sym} -1070 70 0 0 {name=p136 lab=SE}
 C {lab_pin.sym} -770 -10 0 1 {name=p137 lab=PC_NEXT15}
+C {ipin.sym} 1220 140 3 0 {name=p138 lab=DATA_OUT[3..0]}

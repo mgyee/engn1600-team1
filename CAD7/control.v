@@ -29,9 +29,8 @@ module control (
     // Memory Signals
     output reg mem_write,
 
-    output reg [1:0] data_out,  // 00: ALU, 01: Mem, 10: Shifter
+    output reg [3:0] data_out,  // 0001: Mem, 0010: ALU, 0100: Shifter, 1000: PC
 
-    output reg pc_write,  // 0: data_out to RF, 1: PC to RF
 
     // Outputs to PC
     output reg pc_br,  // For Branch
@@ -79,8 +78,7 @@ module control (
     cin = 0;
     extend = 0;
     mem_write = 0;
-    data_out = 2'b00;
-    pc_write = 0;
+    data_out = 4'b0010;
     pc_br = 0;
     pc_jmp = 0;
     shift_val_src = 0;
@@ -94,8 +92,7 @@ module control (
         cin = 0;
         extend = 0;
         mem_write = 0;
-        data_out = 2'b00;
-        pc_write = 0;
+        data_out = 4'b0010;
 
         case (ext)
           4'b0101: alu_sel = 2'b00;  // ADD
@@ -126,8 +123,7 @@ module control (
         cin = 0;
         extend = 1;
         mem_write = 0;
-        data_out = 2'b00;
-        pc_write = 0;
+        data_out = 4'b0010;
       end
 
       4'b1001: begin  // SUBI
@@ -138,8 +134,7 @@ module control (
         cin = 1;
         extend = 1;
         mem_write = 0;
-        data_out = 2'b00;
-        pc_write = 0;
+        data_out = 4'b0010;
       end
 
       4'b1101: begin  // CMPI
@@ -150,8 +145,7 @@ module control (
         cin = 1;
         extend = 1;
         mem_write = 0;
-        data_out = 2'b00;
-        pc_write = 0;
+        data_out = 4'b0010;
       end
 
       4'b0001: begin  // ANDI
@@ -162,8 +156,7 @@ module control (
         cin = 0;
         extend = 0;
         mem_write = 0;
-        data_out = 2'b00;
-        pc_write = 0;
+        data_out = 4'b0010;
       end
 
       4'b0010: begin  // ORI
@@ -174,8 +167,7 @@ module control (
         cin = 0;
         extend = 0;
         mem_write = 0;
-        data_out = 2'b00;
-        pc_write = 0;
+        data_out = 4'b0010;
       end
 
       4'b0011: begin  // XORI
@@ -186,8 +178,7 @@ module control (
         cin = 0;
         extend = 0;
         mem_write = 0;
-        data_out = 2'b00;
-        pc_write = 0;
+        data_out = 4'b0010;
       end
 
       4'b1011: begin  // MOVI
@@ -198,15 +189,13 @@ module control (
         cin = 0;
         extend = 0;
         mem_write = 0;
-        data_out = 2'b00;
-        pc_write = 0;
+        data_out = 4'b0010;
       end
 
       4'b1000: begin  // SHIFT
         reg_write = 1;
         mem_write = 0;
-        data_out  = 2'b10;
-        pc_write  = 0;
+        data_out  = 4'b0100;
         case (ext)
           4'b0100: begin  // LSH
             shift_val_src = 0;
@@ -231,8 +220,7 @@ module control (
       4'b1111: begin  // LUI
         reg_write = 1;
         mem_write = 0;
-        data_out = 2'b10;
-        pc_write = 0;
+        data_out = 4'b0100;
         extend = 0;
         shift_val_src = 1;
         is_lui = 1;
@@ -244,7 +232,7 @@ module control (
         case (ext)
           4'b0000: begin  // LOAD
             reg_write = 1;
-            data_out  = 2'b01;
+            data_out  = 4'b0001;
           end
           4'b0100: begin  // STOR
             reg_write = 0;
@@ -255,8 +243,8 @@ module control (
           end
           4'b1000: begin
             pc_jmp = 1;  // JAL
-            pc_write = 1;
             reg_write = 1;
+            data_out = 4'b1000;
           end
         endcase
       end
