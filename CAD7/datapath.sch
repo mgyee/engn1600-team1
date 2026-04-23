@@ -32,8 +32,8 @@ C {lab_pin.sym} 930 190 0 1 {name=p8 sig_type=std_logic lab=VSS
 }
 C {lab_pin.sym} -370 -30 0 0 {name=p10 sig_type=std_logic lab=WEM
 }
-C {lab_pin.sym} -370 10 0 0 {name=p11 sig_type=std_logic lab=RA[15..0]}
-C {lab_pin.sym} -370 30 0 0 {name=p12 sig_type=std_logic lab=RB[15..0]}
+C {ipin.sym} -370 10 0 0 {name=p11 sig_type=std_logic lab=RA[15..0]}
+C {ipin.sym} -370 30 0 0 {name=p12 sig_type=std_logic lab=RB[15..0]}
 C {lab_pin.sym} -370 -50 0 0 {name=p13 sig_type=std_logic lab=CLK
 }
 C {lab_pin.sym} -200 80 3 0 {name=p14 sig_type=std_logic lab=RDST[15..0]b
@@ -184,3 +184,19 @@ C {lab_pin.sym} -430 520 0 1 {name=p103 lab=OUT}
 C {lab_pin.sym} -730 540 0 0 {name=p104 lab=INSTR[7]}
 C {lab_pin.sym} -430 540 0 1 {name=p105 lab=VDD}
 C {lab_pin.sym} -430 560 0 1 {name=p106 lab=VSS}
+C {lab_pin.sym} -1070 -30 0 0 {name=p107 lab=PC_BR}
+C {lab_pin.sym} -1070 10 0 0 {name=p108 lab=PC_JMP}
+C {ipin.sym} 200 -70 0 0 {name=p109 lab=ALU_SRC_B}
+C {ipin.sym} 200 110 0 0 {name=p110 lab=ALU_SRC_A}
+C {lab_pin.sym} 200 470 0 0 {name=p112 lab=VDD}
+C {lab_pin.sym} 220 480 0 1 {name=p113 lab=VSS}
+C {ipin.sym} -70 320 0 0 {name=p111 lab=IS_LUI}
+C {engn1600-team1/CAD7/inv.sym} -50 320 0 0 {name=x17[3..0] kINV=1}
+C {lab_pin.sym} -30 280 0 1 {name=p114 lab=VDD}
+C {lab_pin.sym} 40 320 0 1 {name=p115 lab=IS_LUIb}
+C {lab_pin.sym} -30 360 0 1 {name=p116 lab=VSS}
+C {lab_pin.sym} 200 430 0 0 {name=p117 lab=IS_LUI}
+C {lab_pin.sym} 220 420 0 0 {name=p118 lab=IS_LUIb}
+C {ipin.sym} 200 610 0 0 {name=p119 sig_type=std_logic lab=SHIFT_VAL_SRC
+
+}

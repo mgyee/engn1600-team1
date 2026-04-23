@@ -2,10 +2,11 @@ module control (
     input [15:0] instr,
 
     // Register File
-    output reg       reg_write,
-    output     [3:0] rd,
-    output     [3:0] ra,
-    output     [3:0] rb,
+    output reg        reg_write,
+    output     [15:0] rd,
+    output     [15:0] ra,
+    output     [15:0] rb,
+    output     [15:0] we,
 
     // ALU
     output reg [1:0] alu_sel,    // 00: ADD, 01: AND, 10: OR, 11: XOR
@@ -19,7 +20,8 @@ module control (
 
     // Shift
     output reg shift_val_src,  // 0: reg, 1: imm
-    output reg [1:0] shift_amt_src,  // 00: reg, 01: imm, 10: 8
+    output reg is_lui,  // 0: shift amt 8, 1: shift amt imm
+    output reg shift_amt_src,  // 0: reg, 1: imm
 
     // Memory Signals
     output reg mem_write,
@@ -46,9 +48,10 @@ module control (
   wire [3:0] rsrc = instr[3:0];
 
 
-  assign rd   = rdest;
-  assign ra   = rsrc;
-  assign rb   = rdest;
+  assign rd   = 1 << rdest;
+  assign ra   = 1 << rsrc;
+  assign rb   = 1 << rdest;
+  assign we   = (1 & reg_write) << rdest;
   assign imm  = instr[7:0];
   assign disp = instr[7:0];
 
@@ -87,6 +90,8 @@ module control (
     pc_write = 0;
     pc_br = 0;
     pc_jmp = 0;
+    shift_val_src = 0;
+    shift_amt_src = 0;
 
     case (opcode)
       4'b0000: begin  // Register
@@ -212,17 +217,20 @@ module control (
         case (ext)
           4'b0100: begin  // LSH
             shift_val_src = 0;
-            shift_amt_src = 2'b00;
+            is_lui = 0;
+            shift_amt_src = 0;
           end
           4'b0000: begin  // LSHI 0 extend?
             extend = 0;
             shift_val_src = 0;
-            shift_amt_src = 2'b01;
+            is_lui = 0;
+            shift_amt_src = 1;
           end
           4'b0001: begin  // LSHI 2s comp extend
             extend = 1;
             shift_val_src = 0;
-            shift_amt_src = 2'b01;
+            is_lui = 0;
+            shift_amt_src = 1;
           end
         endcase
       end
@@ -234,7 +242,8 @@ module control (
         pc_write = 0;
         extend = 0;
         shift_val_src = 1;
-        shift_amt_src = 2'b11;
+        is_lui = 1;
+        shift_amt_src = 1;
       end
 
 
