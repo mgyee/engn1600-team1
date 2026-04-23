@@ -1,6 +1,11 @@
 module control (
     input [15:0] instr,
 
+
+    input reg psr_z,
+    input reg psr_n,
+    input reg psr_f,
+
     // Register File
     output reg        reg_write,
     output     [15:0] rd,
@@ -36,11 +41,6 @@ module control (
 
     output reg [7:0] disp
 );
-
-
-  reg psr_z;
-  reg psr_n;
-  reg psr_f;
 
   wire [3:0] opcode = instr[15:12];
   wire [3:0] rdest = instr[11:8];

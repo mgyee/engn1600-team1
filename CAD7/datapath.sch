@@ -82,9 +82,9 @@ C {lab_pin.sym} 1460 -40 0 1 {name=p44 lab=VDD}
 C {lab_pin.sym} 1460 40 0 1 {name=p46 lab=VSS}
 C {lab_pin.sym} 630 -10 0 0 {name=p45 lab=ALU_CIN}
 C {lab_pin.sym} 630 10 0 0 {name=p47 lab=ALU_SEL[1..0]}
-C {lab_pin.sym} 930 10 0 1 {name=p48 lab=ALU_F}
-C {lab_pin.sym} 930 30 0 1 {name=p49 lab=ALU_Z}
-C {lab_pin.sym} 930 50 0 1 {name=p50 lab=ALU_N}
+C {opin.sym} 930 10 0 0 {name=p48 lab=ALU_F}
+C {opin.sym} 930 30 0 0 {name=p49 lab=ALU_Z}
+C {opin.sym} 930 50 0 0 {name=p50 lab=ALU_N}
 C {lab_pin.sym} 630 170 0 0 {name=p51 lab=SHIFTER_D[15..0]}
 C {lab_pin.sym} 630 190 0 0 {name=p52 lab=SHIFTER_I[3..0]}
 C {lab_pin.sym} 630 210 0 0 {name=p53 lab=SHIFTER_R[3..0]}
