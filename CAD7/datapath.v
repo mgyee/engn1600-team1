@@ -12,10 +12,10 @@ module datapath
   inout wire VDD,
   input wire [15..0] RA,
   input wire [15..0] RB,
-  input wire MEM_WRITE,
-  input wire ALU_WRITE,
-  input wire SHIFTER_WRITE,
-  input wire PC_WRITE,
+  input wire MEM_RF,
+  input wire ALU_RF,
+  input wire SHIFTER_RF,
+  input wire PC_RF,
   input wire [15..0] DMEM_Q,
   input wire [15..0] WE,
   input wire [15..0] IMEM_Q,
@@ -323,240 +323,240 @@ x4 (
 
 4x1_mux
 x515 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q15b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y15b ),
  .VSS( VSS ),
  .Y( net1[15] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q15b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC15b )
 );
 
 
 4x1_mux
 x514 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q14b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y14b ),
  .VSS( VSS ),
  .Y( net1[14] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q14b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC14b )
 );
 
 
 4x1_mux
 x513 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q13b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y13b ),
  .VSS( VSS ),
  .Y( net1[13] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q13b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC13b )
 );
 
 
 4x1_mux
 x512 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q12b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y12b ),
  .VSS( VSS ),
  .Y( net1[12] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q12b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC12b )
 );
 
 
 4x1_mux
 x511 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q11b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y11b ),
  .VSS( VSS ),
  .Y( net1[11] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q11b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC11b )
 );
 
 
 4x1_mux
 x510 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q10b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y10b ),
  .VSS( VSS ),
  .Y( net1[10] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q10b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC10b )
 );
 
 
 4x1_mux
 x59 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q9b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y9b ),
  .VSS( VSS ),
  .Y( net1[9] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q9b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC9b )
 );
 
 
 4x1_mux
 x58 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q8b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y8b ),
  .VSS( VSS ),
  .Y( net1[8] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q8b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC8b )
 );
 
 
 4x1_mux
 x57 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q7b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y7b ),
  .VSS( VSS ),
  .Y( net1[7] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q7b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC7b )
 );
 
 
 4x1_mux
 x56 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q6b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y6b ),
  .VSS( VSS ),
  .Y( net1[6] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q6b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC6b )
 );
 
 
 4x1_mux
 x55 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q5b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y5b ),
  .VSS( VSS ),
  .Y( net1[5] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q5b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC5b )
 );
 
 
 4x1_mux
 x54 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q4b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y4b ),
  .VSS( VSS ),
  .Y( net1[4] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q4b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC4b )
 );
 
 
 4x1_mux
 x53 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q3b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y3b ),
  .VSS( VSS ),
  .Y( net1[3] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q3b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC3b )
 );
 
 
 4x1_mux
 x52 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q2b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y2b ),
  .VSS( VSS ),
  .Y( net1[2] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q2b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC2b )
 );
 
 
 4x1_mux
 x51 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q1b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y1b ),
  .VSS( VSS ),
  .Y( net1[1] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q1b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC1b )
 );
 
 
 4x1_mux
 x50 ( 
- .SA( MEM_WRITE ),
+ .SA( MEM_RF ),
  .A( DMEM_Q0b ),
- .SB( ALU_WRITE ),
+ .SB( ALU_RF ),
  .B( ALU_Y0b ),
  .VSS( VSS ),
  .Y( net1[0] ),
- .SC( SHIFTER_WRITE ),
+ .SC( SHIFTER_RF ),
  .C( SHIFTER_Q0b ),
- .SD( PC_WRITE ),
+ .SD( PC_RF ),
  .D( PC0b )
 );
 

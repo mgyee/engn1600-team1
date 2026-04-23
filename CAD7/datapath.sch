@@ -71,10 +71,10 @@ C {lab_pin.sym} 1530 0 0 1 {name=p34 sig_type=std_logic lab=RF_D[15..0]
 C {lab_pin.sym} 930 210 0 1 {name=p35 sig_type=std_logic lab=SHIFTER_Q[15..0]b
 
 }
-C {ipin.sym} 1330 90 3 0 {name=p40 lab=MEM_WRITE}
-C {ipin.sym} 1350 80 3 0 {name=p41 lab=ALU_WRITE}
-C {ipin.sym} 1370 70 3 0 {name=p42 lab=SHIFTER_WRITE}
-C {ipin.sym} 1390 60 3 0 {name=p43 lab=PC_WRITE}
+C {ipin.sym} 1330 90 3 0 {name=p40 lab=MEM_RF}
+C {ipin.sym} 1350 80 3 0 {name=p41 lab=ALU_RF}
+C {ipin.sym} 1370 70 3 0 {name=p42 lab=SHIFTER_RF}
+C {ipin.sym} 1390 60 3 0 {name=p43 lab=PC_RF}
 C {engn1600-team1/CAD7/inv.sym} 1440 0 0 0 {name=x1[15..0] kINV=1}
 C {lab_pin.sym} 1460 -40 0 1 {name=p44 lab=VDD}
 C {lab_pin.sym} 1460 40 0 1 {name=p46 lab=VSS}

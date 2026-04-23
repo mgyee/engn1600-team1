@@ -8,7 +8,6 @@ module control (
 
     // Register File
     output reg        reg_write,
-    output     [15:0] rd,
     output     [15:0] ra,
     output     [15:0] rb,
     output     [15:0] we,
@@ -20,7 +19,6 @@ module control (
     output reg       cin,        // 1 for sub/cmp, 0 otherwise
 
     // Imm Gen
-    output [7:0] imm,
     output reg extend,  // 0: zero extend, 1: sign extend
 
     // Shift
@@ -38,8 +36,6 @@ module control (
     // Outputs to PC
     output reg pc_br,  // For Branch
     output reg pc_jmp, // For Jump
-
-    output reg [7:0] disp
 );
 
   wire [3:0] opcode = instr[15:12];
@@ -48,12 +44,9 @@ module control (
   wire [3:0] rsrc = instr[3:0];
 
 
-  assign rd   = 1 << rdest;
   assign ra   = 1 << rsrc;
   assign rb   = 1 << rdest;
   assign we   = (1 & reg_write) << rdest;
-  assign imm  = instr[7:0];
-  assign disp = instr[7:0];
 
   reg cond_met;
   always @(*) begin
