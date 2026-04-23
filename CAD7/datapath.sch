@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-N 930 -330 960 -330 {lab=DMEM_Q[15..0]
+N 1100 -300 1130 -300 {lab=DMEM_Q[15..0]
 bus=true}
 C {engn1600-team1/CAD4/alu.sym} 780 0 0 0 {name=x1}
 C {engn1600-team1/CAD3/rf.sym} -220 0 0 0 {name=x2}
@@ -29,8 +29,6 @@ C {lab_pin.sym} 930 -30 0 1 {name=p7 sig_type=std_logic lab=VSS
 }
 C {lab_pin.sym} 930 190 0 1 {name=p8 sig_type=std_logic lab=VSS
 
-}
-C {lab_pin.sym} -370 -30 0 0 {name=p10 sig_type=std_logic lab=WEM
 }
 C {ipin.sym} -370 10 0 0 {name=p11 sig_type=std_logic lab=RA[15..0]}
 C {ipin.sym} -370 30 0 0 {name=p12 sig_type=std_logic lab=RB[15..0]}
@@ -73,22 +71,19 @@ C {lab_pin.sym} 1530 0 0 1 {name=p34 sig_type=std_logic lab=RF_D[15..0]
 C {lab_pin.sym} 930 210 0 1 {name=p35 sig_type=std_logic lab=SHIFTER_Q[15..0]b
 
 }
-C {lab_pin.sym} 1330 90 3 0 {name=p40 lab=SA}
-C {lab_pin.sym} 1350 80 3 0 {name=p41 lab=SB}
-C {lab_pin.sym} 1370 70 3 0 {name=p42 lab=SC}
-C {lab_pin.sym} 1390 60 3 0 {name=p43 lab=SD}
+C {ipin.sym} 1330 90 3 0 {name=p40 lab=MEM_WRITE}
+C {ipin.sym} 1350 80 3 0 {name=p41 lab=ALU_WRITE}
+C {ipin.sym} 1370 70 3 0 {name=p42 lab=SHIFTER_WRITE}
+C {ipin.sym} 1390 60 3 0 {name=p43 lab=PC_WRITE}
 C {engn1600-team1/CAD7/inv.sym} 1440 0 0 0 {name=x1[15..0] kINV=1}
 C {lab_pin.sym} 1460 -40 0 1 {name=p44 lab=VDD}
 C {lab_pin.sym} 1460 40 0 1 {name=p46 lab=VSS}
-C {lab_pin.sym} 630 -10 0 0 {name=p45 lab=ALU_CIN}
-C {lab_pin.sym} 630 10 0 0 {name=p47 lab=ALU_SEL[1..0]}
 C {opin.sym} 930 10 0 0 {name=p48 lab=ALU_F}
 C {opin.sym} 930 30 0 0 {name=p49 lab=ALU_Z}
 C {opin.sym} 930 50 0 0 {name=p50 lab=ALU_N}
 C {lab_pin.sym} 630 170 0 0 {name=p51 lab=SHIFTER_D[15..0]}
 C {lab_pin.sym} 630 190 0 0 {name=p52 lab=SHIFTER_I[3..0]}
 C {lab_pin.sym} 630 210 0 0 {name=p53 lab=SHIFTER_R[3..0]}
-C {lab_pin.sym} 630 230 0 0 {name=p54 lab=SHIFTER_SEL}
 C {engn1600-team1/CAD7/2x1_mux.sym} 210 360 0 0 {name=x2[3..0]}
 C {lab_pin.sym} 250 360 2 0 {name=p55 lab=SHIFTER_I[3..0]}
 C {lab_pin.sym} 170 350 0 0 {name=p56 lab=INSTR[3..0]}
@@ -125,19 +120,19 @@ C {lab_pin.sym} 170 -150 0 0 {name=p62 sig_type=std_logic lab=RSRC[15..0]b
 }
 C {lab_pin.sym} 170 -130 0 0 {name=p74 sig_type=std_logic lab=IMM[15..0]b
 }
-C {opin.sym} 740 -370 0 0 {name=p75 lab=RDST[15..0]}
-C {ipin.sym} 930 -330 0 0 {name=p76 lab=DMEM_Q[15..0]}
-C {opin.sym} 740 -300 0 0 {name=p80 lab=DMEM_ADDR}
+C {opin.sym} 740 -460 0 0 {name=p75 lab=RDST[15..0]}
+C {ipin.sym} 1100 -300 0 0 {name=p76 lab=DMEM_Q[15..0]}
+C {opin.sym} 740 -300 0 0 {name=p80 lab=DMEM_ADDR[15..0]}
 C {engn1600-team1/CAD7/inv.sym} 650 -300 0 0 {name=x9[15..0] kINV=1}
 C {lab_pin.sym} 670 -340 0 1 {name=p81 lab=VDD}
 C {lab_pin.sym} 630 -300 0 0 {name=p82 lab=RSRC[15..0]b}
 C {lab_pin.sym} 670 -260 0 1 {name=p83 lab=VSS}
-C {lab_pin.sym} 1070 -330 0 1 {name=p84 sig_type=std_logic lab=DMEM_Q[15..0]b
+C {lab_pin.sym} 1240 -300 0 1 {name=p84 sig_type=std_logic lab=DMEM_Q[15..0]b
 
 }
-C {engn1600-team1/CAD7/inv.sym} 980 -330 0 0 {name=x10[15..0] kINV=1}
-C {lab_pin.sym} 1000 -370 0 1 {name=p85 lab=VDD}
-C {lab_pin.sym} 1000 -290 0 1 {name=p86 lab=VSS}
+C {engn1600-team1/CAD7/inv.sym} 1150 -300 0 0 {name=x10[15..0] kINV=1}
+C {lab_pin.sym} 1170 -340 0 1 {name=p85 lab=VDD}
+C {lab_pin.sym} 1170 -260 0 1 {name=p86 lab=VSS}
 C {engn1600-team1/CAD7/2x1_mux_pass.sym} 210 540 0 0 {name=x12[15..0]}
 C {engn1600-team1/CAD7/inv.sym} 270 540 0 0 {name=x13[15..0] kINV=1}
 C {lab_pin.sym} 290 500 0 1 {name=p88 lab=VDD}
@@ -155,15 +150,15 @@ C {lab_pin.sym} -150 580 0 1 {name=p94 lab=VSS}
 C {lab_pin.sym} -80 540 2 0 {name=p95 sig_type=std_logic lab=IMM[15..0]b
 }
 C {ipin.sym} -370 -10 0 0 {name=p24 lab=WE[15..0]}
-C {opin.sym} -940 360 2 0 {name=p32 lab=PC[15..0]}
+C {opin.sym} -1050 360 0 0 {name=p32 lab=PC[15..0]}
 C {lab_pin.sym} -1070 -70 0 0 {name=p33 lab=CLK}
 C {lab_pin.sym} -1070 -50 0 0 {name=p36 lab=RSTn}
 C {lab_pin.sym} -1070 -10 0 0 {name=p38 lab=INSTR[7..0]}
 C {lab_pin.sym} -1070 30 0 0 {name=p96 lab=DEST[15..0]}
 C {lab_pin.sym} -770 -30 0 1 {name=p99 lab=PC[15..0]}
-C {opin.sym} -910 360 0 0 {name=p9 lab=IMEM_Q[15..0]}
+C {ipin.sym} -790 360 0 0 {name=p9 lab=IMEM_Q[15..0]}
 C {engn1600-team1/CAD7/dff.sym} -550 360 0 0 {name=x16[15..0]}
-C {lab_pin.sym} -550 420 0 0 {name=p25 lab=CLKb}
+C {lab_pin.sym} -550 420 0 0 {name=p25 lab=CLK[15..0]b}
 C {lab_pin.sym} -600 340 0 0 {name=p26 lab=IMEM_Q[15..0]}
 C {lab_pin.sym} -500 340 0 1 {name=p27 lab=INSTR[15..0]}
 C {lab_pin.sym} -600 360 0 0 {name=p30 lab=RSTn}
@@ -179,13 +174,10 @@ C {lab_pin.sym} -1320 0 2 0 {name=p98 sig_type=std_logic lab=DEST[15..0]
 }
 C {opin.sym} -750 180 0 0 {name=p102 lab=INSTR[15..0]}
 C {engn1600-team1/CAD7/sign_zero_extender.sym} -580 540 0 0 {name=x5}
-C {lab_pin.sym} -730 520 0 0 {name=p23 lab=EXTEND}
 C {lab_pin.sym} -430 520 0 1 {name=p103 lab=OUT}
-C {lab_pin.sym} -730 540 0 0 {name=p104 lab=INSTR[7]}
+C {lab_pin.sym} -730 540 0 0 {name=p104 lab=INSTR7}
 C {lab_pin.sym} -430 540 0 1 {name=p105 lab=VDD}
 C {lab_pin.sym} -430 560 0 1 {name=p106 lab=VSS}
-C {lab_pin.sym} -1070 -30 0 0 {name=p107 lab=PC_BR}
-C {lab_pin.sym} -1070 10 0 0 {name=p108 lab=PC_JMP}
 C {ipin.sym} 200 -70 0 0 {name=p109 lab=ALU_SRC_B}
 C {ipin.sym} 200 110 0 0 {name=p110 lab=ALU_SRC_A}
 C {lab_pin.sym} 200 470 0 0 {name=p112 lab=VDD}
@@ -193,10 +185,42 @@ C {lab_pin.sym} 220 480 0 1 {name=p113 lab=VSS}
 C {ipin.sym} -70 320 0 0 {name=p111 lab=IS_LUI}
 C {engn1600-team1/CAD7/inv.sym} -50 320 0 0 {name=x17[3..0] kINV=1}
 C {lab_pin.sym} -30 280 0 1 {name=p114 lab=VDD}
-C {lab_pin.sym} 40 320 0 1 {name=p115 lab=IS_LUIb}
+C {lab_pin.sym} 40 320 0 1 {name=p115 lab=IS_LUI[3..0]b}
 C {lab_pin.sym} -30 360 0 1 {name=p116 lab=VSS}
 C {lab_pin.sym} 200 430 0 0 {name=p117 lab=IS_LUI}
-C {lab_pin.sym} 220 420 0 0 {name=p118 lab=IS_LUIb}
+C {lab_pin.sym} 220 420 2 0 {name=p118 lab=IS_LUI[3..0]b}
 C {ipin.sym} 200 610 0 0 {name=p119 sig_type=std_logic lab=SHIFT_VAL_SRC
 
 }
+C {lab_pin.sym} -980 -240 0 0 {name=p120 sig_type=std_logic lab=PC[15..0]
+}
+C {engn1600-team1/CAD7/inv.sym} -960 -240 0 0 {name=x18[15..0] kINV=1}
+C {lab_pin.sym} -940 -280 0 1 {name=p121 lab=VDD}
+C {lab_pin.sym} -940 -200 0 1 {name=p122 lab=VSS}
+C {lab_pin.sym} -870 -240 2 0 {name=p123 sig_type=std_logic lab=PC[15..0]b
+}
+C {lab_pin.sym} -1100 540 0 0 {name=p124 sig_type=std_logic lab=CLK
+}
+C {engn1600-team1/CAD7/inv.sym} -1080 540 0 0 {name=x19[15..0] kINV=1}
+C {lab_pin.sym} -1060 500 0 1 {name=p125 lab=VDD}
+C {lab_pin.sym} -1060 580 0 1 {name=p126 lab=VSS}
+C {lab_pin.sym} -990 540 2 0 {name=p127 sig_type=std_logic lab=CLK[15..0]b
+}
+C {ipin.sym} 630 10 0 0 {name=p47 lab=ALU_SEL[1..0]}
+C {ipin.sym} -370 -30 0 0 {name=p10 lab=REG_WRITE}
+C {ipin.sym} 630 -10 0 0 {name=p45 lab=ALU_CIN}
+C {engn1600-team1/CAD7/inv.sym} 650 -460 0 0 {name=x20[15..0] kINV=1}
+C {lab_pin.sym} 670 -500 0 1 {name=p129 lab=VDD}
+C {lab_pin.sym} 630 -460 0 0 {name=p130 lab=RDST[15..0]b}
+C {lab_pin.sym} 670 -420 0 1 {name=p131 lab=VSS}
+C {ipin.sym} -1070 -30 0 0 {name=p107 lab=PC_BR}
+C {ipin.sym} -1070 10 0 0 {name=p108 lab=PC_JMP}
+C {ipin.sym} -1430 120 0 0 {name=p128 lab=CLK}
+C {ipin.sym} -1430 140 0 0 {name=p132 lab=RSTn}
+C {iopin.sym} -1430 160 2 0 {name=p133 lab=VSS}
+C {iopin.sym} -1430 180 2 0 {name=p134 lab=VDD}
+C {ipin.sym} -730 520 0 0 {name=p135 lab=EXTEND}
+C {ipin.sym} 630 230 0 0 {name=p23 lab=SHIFT_AMT_SRC}
+C {ipin.sym} -1070 50 0 0 {name=p54 lab=SI}
+C {ipin.sym} -1070 70 0 0 {name=p136 lab=SE}
+C {lab_pin.sym} -770 -10 0 1 {name=p137 lab=PC_NEXT15}
