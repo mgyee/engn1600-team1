@@ -15,7 +15,7 @@ module nfet_03v3 #(
   parameter model = nfet_03v3 ,
   parameter spiceprefix = X
 ) (
-  input D ,
+  inout D ,
   input G ,
   input S ,
   input B
