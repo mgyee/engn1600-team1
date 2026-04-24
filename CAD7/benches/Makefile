@@ -2,11 +2,10 @@
 # Anhang Li (anhangli@umich.edu)
 # -----
 
-BENCHES_DIR := benches
 IVERILOG := iverilog
 VVP := vvp
 VERILATOR := verilator
-ASSEMBLER := ./$(BENCHES_DIR)/assembler.py
+ASSEMBLER := ./assembler.py
 SIM ?= iverilog
 
 VERILATOR_BUILD_DIR ?= obj_dir
@@ -38,7 +37,7 @@ programs: $(addprefix run-,$(PROGRAM_TBS))
 
 assemble: $(MEMH)
 
-bench_%.memh: ./$(BENCHES_DIR)/bench_%.asm
+bench_%.memh: bench_%.asm
 	$(ASSEMBLER) $< -o $@
 
 tb_%.out: $(BENCHES_DIR)/tb_%.v bench_%.memh $(RTL)
