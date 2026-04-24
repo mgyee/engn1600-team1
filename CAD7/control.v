@@ -34,7 +34,7 @@ module control (
 
     // Outputs to PC
     output reg pc_br,  // For Branch
-    output reg pc_jmp, // For Jump
+    output reg pc_jmp  // For Jump
 );
 
   wire [3:0] opcode = instr[15:12];
