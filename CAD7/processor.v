@@ -36,7 +36,9 @@ module processor #(
   wire shift_amt_src;     // Datapath: SHIFT_AMT_SRC
   // Datapath: SI
   // Datapath: SE
-  wire [3:0] data_out;   // Datapath: [3:0] DATA_OUT
+  wire [3:0] data_out;    // Datapath: [3:0] DATA_OUT
+
+  wire mem_write;         // Datapath: N/A
   
   datapath u_datapath (
     .ALU_F(alu_f),

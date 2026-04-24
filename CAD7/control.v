@@ -71,10 +71,10 @@ module control (
   end
 
 
-  assign ra   = 1 << rsrc;
-  assign rb   = 1 << rdest;
-  assign we   = (1 & reg_write) << rdest;
-  assign cond = instr[11:8];
+  assign ra       = 1 << rsrc;
+  assign rb       = 1 << rdest;
+  assign we       = {15'd0, reg_write} << rdest;
+  wire [3:0] cond = instr[11:8];
   reg cond_met;
   always @(*) begin
     case (cond)

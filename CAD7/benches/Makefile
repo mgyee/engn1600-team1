@@ -2,6 +2,8 @@
 # Anhang Li (anhangli@umich.edu)
 # -----
 
+# ONLY USE FOR `make assemble`
+
 IVERILOG := iverilog
 VVP := vvp
 VERILATOR := verilator
@@ -11,7 +13,7 @@ SIM ?= iverilog
 VERILATOR_BUILD_DIR ?= obj_dir
 VERILATOR_FLAGS ?= --binary --timing
 
-RTL := processor.v datapath.v control.v dmem.v imem.v nfet_03v3.v pfet_03v3.v pc_full_adder.v
+RTL := processor.v control.v dmem.v imem.v
 
 BENCH_PROGS := arith ctrl memshift_jal
 PROGRAM_PROGS := fib pi_q8 nqueens8
