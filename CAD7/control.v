@@ -57,7 +57,8 @@ module control (
       psr_z_next = psr_z;
       psr_n_next = psr_n;
       psr_f_next = psr_f;
-    end begin
+    end
+    begin
       psr_z_next = psr_z_internal;
       psr_n_next = psr_n_internal;
       psr_f_next = psr_f_internal;
@@ -71,9 +72,9 @@ module control (
   end
 
 
-  assign ra       = 1 << rsrc;
-  assign rb       = 1 << rdest;
-  assign we       = {15'd0, reg_write} << rdest;
+  assign ra = 1 << rsrc;
+  assign rb = 1 << rdest;
+  assign we = {15'd0, reg_write} << rdest;
   wire [3:0] cond = instr[11:8];
   reg cond_met;
   always @(*) begin
@@ -139,6 +140,8 @@ module control (
           4'b1101: begin
             alu_sel   = 2'b00;  // MOV
             alu_src_a = 1;
+          end
+          default: begin
           end
         endcase
       end
@@ -242,6 +245,8 @@ module control (
             is_lui = 0;
             shift_amt_src = 1;
           end
+          default: begin
+          end
         endcase
       end
 
@@ -274,13 +279,16 @@ module control (
             reg_write = 1;
             data_out = 4'b1000;
           end
+          default: begin
+          end
         endcase
       end
 
       4'b1100: begin  // Bcond
         if (cond_met) pc_br = 1;
       end
-
+      default: begin
+      end
     endcase
   end
 endmodule
