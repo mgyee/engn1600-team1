@@ -1,4 +1,7 @@
-module processor (
+module processor #(
+    parameter IMEM_FILE = "",
+    parameter DMEM_FILE = ""
+) (
     input CLK,
     input RSTn,
     input SI,
@@ -35,7 +38,7 @@ module processor (
   // Datapath: SE
   wire [3..0] data_out;   // Datapath: [3..0] DATA_OUT
 
-  datapath path(
+  datapath u_datapath (
     .ALU_F(alu_f),
     .ALU_Z(alu_z),
     .ALU_N(alu_n),
@@ -68,7 +71,7 @@ module processor (
     .DATA_OUT(data_out)
   )
 
-  dmem ram(
+  dmem #(.MEMFILE(DMEM_FILE)) u_dmem (
     .clk(CLK),
     .we(mem_write),
     .addr(dmem_addr),
@@ -76,13 +79,12 @@ module processor (
     .rdata(dmem_q)
   )
 
-  // TODO: CLK?
-  imem rom(
+  imem #(.MEMFILE(IMEM_FILE)) u_imem (
     .addr(pc),
     .data(imem_q)
   )
 
-  control ctrl(
+  control u_control (
     .instr(instr),
     .psr_z(alu_z),
     .psr_n(alu_n),
