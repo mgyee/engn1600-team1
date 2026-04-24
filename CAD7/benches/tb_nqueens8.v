@@ -16,7 +16,7 @@ module tb_nqueens8;
     reg board_ok;
     always #5 clk = ~clk;
 
-    processor #(.IMEM_FILE("bench_nqueens8.memh")) dut (
+    processor #(.IMEM_FILE("benches/bench_nqueens8.memh")) dut (
         .CLK(clk), .RSTn(~rst), .SI(), .SE()
     );
 

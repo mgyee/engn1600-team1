@@ -8,7 +8,7 @@ module tb_pi_q8;
     reg rst = 1;
     always #5 clk = ~clk;
 
-    processor #(.IMEM_FILE("bench_pi_q8.memh")) dut (
+    processor #(.IMEM_FILE("benches/bench_pi_q8.memh")) dut (
         .CLK(clk), .RSTn(~rst), .SI(), .SE()
     );
 

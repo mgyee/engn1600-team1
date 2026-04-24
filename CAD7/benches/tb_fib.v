@@ -8,7 +8,7 @@ module tb_fib;
     reg rst = 1;
     always #5 clk = ~clk;
 
-    processor #(.IMEM_FILE("bench_fib.memh")) dut (
+    processor #(.IMEM_FILE("benches/bench_fib.memh")) dut (
         .CLK(clk), .RSTn(~rst), .SI(), .SE()
     );
 

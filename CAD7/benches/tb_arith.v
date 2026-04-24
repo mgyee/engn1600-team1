@@ -8,7 +8,7 @@ module tb_arith;
     reg rst = 1;
     always #5 clk = ~clk;
 
-    processor #(.IMEM_FILE("bench_arith.memh")) dut (
+    processor #(.IMEM_FILE("benches/bench_arith.memh")) dut (
         .CLK(clk), .RSTn(~rst), .SI(), .SE()
     );
 

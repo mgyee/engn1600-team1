@@ -1,8 +1,6 @@
-RTL := control dmem imem
+.PHONY: proc clean
 
-.PHONY: lib clean
-
-lib: $(addsuffix .so,$(RTL))
+proc: processor.so
 
 %.so: %.v
 	ngspice vlnggen $<
