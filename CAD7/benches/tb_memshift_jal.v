@@ -9,7 +9,7 @@ module tb_memshift_jal;
     always #5 clk = ~clk;
 
     processor #(.IMEM_FILE("bench_memshift_jal.memh")) dut (
-        .CLK(clk), .RSTn(rst), .SI(), .SE()
+        .CLK(clk), .RSTn(~rst), .SI(), .SE()
     );
 
     initial begin

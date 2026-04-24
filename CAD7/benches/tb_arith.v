@@ -9,7 +9,7 @@ module tb_arith;
     always #5 clk = ~clk;
 
     processor #(.IMEM_FILE("bench_arith.memh")) dut (
-        .CLK(clk), .RSTn(rst), .SI(), .SE()
+        .CLK(clk), .RSTn(~rst), .SI(), .SE()
     );
 
     initial begin
