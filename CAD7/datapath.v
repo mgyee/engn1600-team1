@@ -12379,7 +12379,7 @@ shifter_x20 (
 
 inv
 #(
-.kSELb ( "'kSELb'" )
+.kINV ( "'kSELb'" )
 )
 shifter_x1 ( 
  .VDD( VDD ),
@@ -13292,8 +13292,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _4x1_mux_M1 ( 
  .D( Y ),
@@ -13318,8 +13318,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _4x1_mux_M2 ( 
  .D( Y ),
@@ -13344,8 +13344,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _4x1_mux_M3 ( 
  .D( Y ),
@@ -13370,8 +13370,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _4x1_mux_M4 ( 
  .D( Y ),
@@ -13411,8 +13411,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 inv_M1 ( 
  .D( OUT ),
@@ -13437,8 +13437,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 inv_M2 ( 
  .D( OUT ),
@@ -13481,8 +13481,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_M1 ( 
  .D( Y ),
@@ -13507,8 +13507,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_M2 ( 
  .D( Y ),
@@ -13533,8 +13533,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_M3 ( 
  .D( Y ),
@@ -13559,8 +13559,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_M4 ( 
  .D( Y ),
@@ -13601,8 +13601,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_pass_M1 ( 
  .D( Y ),
@@ -13627,8 +13627,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_pass_M3 ( 
  .D( Y ),
@@ -13692,8 +13692,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M7 ( 
  .D( net2 ),
@@ -13718,8 +13718,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M8 ( 
  .D( net1 ),
@@ -13744,8 +13744,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M9 ( 
  .D( net1 ),
@@ -13770,8 +13770,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M10 ( 
  .D( net3 ),
@@ -13796,8 +13796,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M13 ( 
  .D( net4 ),
@@ -13822,8 +13822,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M14 ( 
  .D( net4 ),
@@ -13848,8 +13848,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M15 ( 
  .D( net1 ),
@@ -13874,8 +13874,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M16 ( 
  .D( net1 ),
@@ -13900,8 +13900,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M25 ( 
  .D( net5 ),
@@ -13926,8 +13926,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M26 ( 
  .D( net5 ),
@@ -13952,8 +13952,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M27 ( 
  .D( net6 ),
@@ -13978,8 +13978,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M28 ( 
  .D( net5 ),
@@ -14004,8 +14004,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M29 ( 
  .D( net4 ),
@@ -14030,8 +14030,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M30 ( 
  .D( net4 ),
@@ -14056,8 +14056,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M31 ( 
  .D( net8 ),
@@ -14082,8 +14082,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M32 ( 
  .D( net8 ),
@@ -14108,8 +14108,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M33 ( 
  .D( net9 ),
@@ -14134,8 +14134,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M34 ( 
  .D( net8 ),
@@ -14160,8 +14160,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M35 ( 
  .D( net10 ),
@@ -14186,8 +14186,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M36 ( 
  .D( net7 ),
@@ -14212,8 +14212,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M37 ( 
  .D( net7 ),
@@ -14238,8 +14238,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M38 ( 
  .D( net11 ),
@@ -14264,8 +14264,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M43 ( 
  .D( Q ),
@@ -14290,8 +14290,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 dff_M44 ( 
  .D( Q ),
@@ -14333,8 +14333,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 sign_zero_extender_M1 ( 
  .D( net1 ),
@@ -14359,8 +14359,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 sign_zero_extender_M2 ( 
  .D( net1 ),
@@ -14385,8 +14385,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 sign_zero_extender_M3 ( 
  .D( OUT ),
@@ -14411,8 +14411,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 sign_zero_extender_M4 ( 
  .D( OUT ),
@@ -14480,8 +14480,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M1 ( 
  .D( net1 ),
@@ -14506,8 +14506,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M2 ( 
  .D( net4 ),
@@ -14532,8 +14532,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M3 ( 
  .D( net3 ),
@@ -14558,8 +14558,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M4 ( 
  .D( net3 ),
@@ -14584,8 +14584,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M5 ( 
  .D( net4 ),
@@ -14610,8 +14610,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M6 ( 
  .D( net4 ),
@@ -14636,8 +14636,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M7 ( 
  .D( net2 ),
@@ -14662,8 +14662,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M8 ( 
  .D( net4 ),
@@ -14688,8 +14688,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M9 ( 
  .D( net5 ),
@@ -14714,8 +14714,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M10 ( 
  .D( net5 ),
@@ -14740,8 +14740,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M11 ( 
  .D( SUMb ),
@@ -14766,8 +14766,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M12 ( 
  .D( net7 ),
@@ -14792,8 +14792,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M13 ( 
  .D( net7 ),
@@ -14818,8 +14818,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M14 ( 
  .D( net7 ),
@@ -14844,8 +14844,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M15 ( 
  .D( net8 ),
@@ -14870,8 +14870,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M16 ( 
  .D( SUMb ),
@@ -14896,8 +14896,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M17 ( 
  .D( net9 ),
@@ -14922,8 +14922,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M18 ( 
  .D( SUMb ),
@@ -14948,8 +14948,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M19 ( 
  .D( net6 ),
@@ -14974,8 +14974,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M20 ( 
  .D( net6 ),
@@ -15000,8 +15000,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M21 ( 
  .D( net6 ),
@@ -15026,8 +15026,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M22 ( 
  .D( SUMb ),
@@ -15052,8 +15052,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M23 ( 
  .D( net11 ),
@@ -15078,8 +15078,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M24 ( 
  .D( net10 ),
@@ -15104,8 +15104,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M25 ( 
  .D( COUT ),
@@ -15130,8 +15130,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 full_adder_M26 ( 
  .D( COUT ),
@@ -15327,8 +15327,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M1 ( 
  .D( VSS ),
@@ -15353,8 +15353,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M2 ( 
  .D( net1 ),
@@ -15379,8 +15379,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M3 ( 
  .D( Yb ),
@@ -15405,8 +15405,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M4 ( 
  .D( net2 ),
@@ -15431,8 +15431,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M5 ( 
  .D( net3 ),
@@ -15457,8 +15457,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M6 ( 
  .D( VDD ),
@@ -15483,8 +15483,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M7 ( 
  .D( net4 ),
@@ -15509,8 +15509,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M8 ( 
  .D( Yb ),
@@ -15535,8 +15535,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M9 ( 
  .D( VSS ),
@@ -15561,8 +15561,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 _2x1_mux_cmos_M10 ( 
  .D( VDD ),
@@ -15610,8 +15610,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M1 ( 
  .D( S1bar ),
@@ -15636,8 +15636,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M2 ( 
  .D( S1bar ),
@@ -15662,8 +15662,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M3 ( 
  .D( SA ),
@@ -15688,8 +15688,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M4 ( 
  .D( SA ),
@@ -15714,8 +15714,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M5 ( 
  .D( SA ),
@@ -15740,8 +15740,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M9 ( 
  .D( S0 ),
@@ -15766,8 +15766,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M10 ( 
  .D( S0 ),
@@ -15792,8 +15792,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M11 ( 
  .D( VSS ),
@@ -15818,8 +15818,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M12 ( 
  .D( S0 ),
@@ -15844,8 +15844,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M13 ( 
  .D( S0 ),
@@ -15870,8 +15870,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M14 ( 
  .D( VSS ),
@@ -15896,8 +15896,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M6 ( 
  .D( SC ),
@@ -15922,8 +15922,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M7 ( 
  .D( SC ),
@@ -15948,8 +15948,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 M8 ( 
  .D( SC ),
@@ -16069,8 +16069,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M1 ( 
  .D( net3 ),
@@ -16095,8 +16095,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M2 ( 
  .D( net2 ),
@@ -16121,8 +16121,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M3 ( 
  .D( net2 ),
@@ -16147,8 +16147,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M5 ( 
  .D( OUT ),
@@ -16173,8 +16173,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M6 ( 
  .D( net2 ),
@@ -16199,8 +16199,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M7 ( 
  .D( OUT ),
@@ -16225,8 +16225,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M8 ( 
  .D( OUT ),
@@ -16251,8 +16251,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M9 ( 
  .D( net1 ),
@@ -16277,8 +16277,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M10 ( 
  .D( OUT ),
@@ -16303,8 +16303,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 xor2_M11 ( 
  .D( net4 ),
@@ -16358,8 +16358,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M1 ( 
  .D( net1 ),
@@ -16384,8 +16384,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M2 ( 
  .D( net1 ),
@@ -16410,8 +16410,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M3 ( 
  .D( net3 ),
@@ -16436,8 +16436,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M4 ( 
  .D( net4 ),
@@ -16462,8 +16462,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M5 ( 
  .D( VDD ),
@@ -16488,8 +16488,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M6 ( 
  .D( net8 ),
@@ -16514,8 +16514,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M7 ( 
  .D( net1 ),
@@ -16540,8 +16540,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M8 ( 
  .D( net1 ),
@@ -16566,8 +16566,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M9 ( 
  .D( net3 ),
@@ -16592,8 +16592,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M10 ( 
  .D( net4 ),
@@ -16618,8 +16618,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M11 ( 
  .D( net7 ),
@@ -16644,8 +16644,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M12 ( 
  .D( VSS ),
@@ -16670,8 +16670,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M13 ( 
  .D( net3 ),
@@ -16696,8 +16696,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M14 ( 
  .D( net3 ),
@@ -16722,8 +16722,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M15 ( 
  .D( net5 ),
@@ -16748,8 +16748,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M16 ( 
  .D( net5 ),
@@ -16774,8 +16774,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M21 ( 
  .D( net3 ),
@@ -16800,8 +16800,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M22 ( 
  .D( net3 ),
@@ -16826,8 +16826,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M23 ( 
  .D( net6 ),
@@ -16852,8 +16852,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 slave_latch_M24 ( 
  .D( net6 ),
@@ -16904,8 +16904,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M3 ( 
  .D( master_latch_net1 ),
@@ -16930,8 +16930,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M7 ( 
  .D( master_latch_net1 ),
@@ -16956,8 +16956,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M8 ( 
  .D( Q ),
@@ -16982,8 +16982,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M9 ( 
  .D( master_latch_net3 ),
@@ -17008,8 +17008,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M10 ( 
  .D( VDD ),
@@ -17034,8 +17034,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M12 ( 
  .D( master_latch_net5 ),
@@ -17060,8 +17060,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M19 ( 
  .D( master_latch_net1 ),
@@ -17086,8 +17086,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M20 ( 
  .D( master_latch_net1 ),
@@ -17112,8 +17112,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M21 ( 
  .D( Q ),
@@ -17138,8 +17138,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M22 ( 
  .D( master_latch_net3 ),
@@ -17164,8 +17164,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M23 ( 
  .D( master_latch_net4 ),
@@ -17190,8 +17190,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 master_latch_M24 ( 
  .D( VSS ),
@@ -17240,8 +17240,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 driver_cell_M13 ( 
  .D( WECLK ),
@@ -17266,8 +17266,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 driver_cell_M14 ( 
  .D( WECLK ),
@@ -17292,8 +17292,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 driver_cell_M1 ( 
  .D( WECLKb ),
@@ -17318,8 +17318,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 driver_cell_M2 ( 
  .D( WECLKb ),
@@ -17344,8 +17344,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 driver_cell_M3 ( 
  .D( driver_cell_net1 ),
@@ -17370,8 +17370,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 driver_cell_M4 ( 
  .D( driver_cell_net1 ),
@@ -17396,8 +17396,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 driver_cell_M5 ( 
  .D( driver_cell_net2 ),
@@ -17422,8 +17422,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 driver_cell_M6 ( 
  .D( driver_cell_net1 ),
@@ -17466,8 +17466,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 output_inverter_M3 ( 
  .D( QBb ),
@@ -17492,8 +17492,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 output_inverter_M4 ( 
  .D( QBb ),
@@ -17518,8 +17518,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 output_inverter_M35 ( 
  .D( QAb ),
@@ -17544,8 +17544,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 output_inverter_M36 ( 
  .D( QAb ),
@@ -17585,8 +17585,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 wem_inverter_M1 ( 
  .D( WEMb ),
@@ -17611,8 +17611,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 wem_inverter_M2 ( 
  .D( WEMb ),
@@ -17654,8 +17654,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 sign_extend_M1 ( 
  .D( net1 ),
@@ -17680,8 +17680,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 sign_extend_M2 ( 
  .D( net1 ),
@@ -17706,8 +17706,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 sign_extend_M3 ( 
  .D( OUT ),
@@ -17732,8 +17732,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 sign_extend_M4 ( 
  .D( OUT ),
@@ -17770,8 +17770,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 unit_inv_M1 ( 
  .D( OUT ),
@@ -17796,8 +17796,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 unit_inv_M2 ( 
  .D( OUT ),
@@ -17837,8 +17837,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand2_M1 ( 
  .D( net1 ),
@@ -17863,8 +17863,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand2_M2 ( 
  .D( OUT ),
@@ -17889,8 +17889,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand2_M3 ( 
  .D( OUT ),
@@ -17915,8 +17915,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand2_M4 ( 
  .D( OUT ),
@@ -17956,8 +17956,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor2_M1 ( 
  .D( OUT ),
@@ -17982,8 +17982,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor2_M2 ( 
  .D( OUT ),
@@ -18008,8 +18008,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor2_M3 ( 
  .D( net1 ),
@@ -18034,8 +18034,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor2_M4 ( 
  .D( OUT ),
@@ -18079,8 +18079,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand4_M1 ( 
  .D( net1 ),
@@ -18105,8 +18105,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand4_M2 ( 
  .D( OUT ),
@@ -18131,8 +18131,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand4_M3 ( 
  .D( OUT ),
@@ -18157,8 +18157,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand4_M4 ( 
  .D( OUT ),
@@ -18183,8 +18183,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand4_M5 ( 
  .D( OUT ),
@@ -18209,8 +18209,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand4_M6 ( 
  .D( OUT ),
@@ -18235,8 +18235,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand4_M7 ( 
  .D( net3 ),
@@ -18261,8 +18261,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nand4_M8 ( 
  .D( net2 ),
@@ -18306,8 +18306,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor4_M1 ( 
  .D( net1 ),
@@ -18332,8 +18332,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor4_M2 ( 
  .D( net2 ),
@@ -18358,8 +18358,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor4_M3 ( 
  .D( OUT ),
@@ -18384,8 +18384,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor4_M4 ( 
  .D( OUT ),
@@ -18410,8 +18410,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor4_M5 ( 
  .D( OUT ),
@@ -18436,8 +18436,8 @@ nfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( nfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "nfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor4_M6 ( 
  .D( OUT ),
@@ -18462,8 +18462,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor4_M7 ( 
  .D( OUT ),
@@ -18488,8 +18488,8 @@ pfet_03v3
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
-.model ( pfet_03v3 ) ,
-.spiceprefix ( X )
+.model ( "pfet_03v3" ) ,
+.spiceprefix ( "X" )
 )
 nor4_M8 ( 
  .D( net3 ),

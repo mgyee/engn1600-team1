@@ -12,7 +12,7 @@ SIM ?= iverilog
 VERILATOR_BUILD_DIR ?= obj_dir
 VERILATOR_FLAGS ?= --binary --timing
 
-RTL := processor.v datapath.v control.v dmem.v imem.v
+RTL := processor.v datapath.v control.v dmem.v imem.v nfet_03v3.v pfet_03v3.v
 
 BENCH_PROGS := arith ctrl memshift_jal
 PROGRAM_PROGS := fib pi_q8 nqueens8
