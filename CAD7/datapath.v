@@ -11362,7 +11362,7 @@ pc_x10 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11378,7 +11378,7 @@ pc_x415 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11394,7 +11394,7 @@ pc_x414 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11410,7 +11410,7 @@ pc_x413 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11426,7 +11426,7 @@ pc_x412 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11442,7 +11442,7 @@ pc_x411 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11458,7 +11458,7 @@ pc_x410 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11474,7 +11474,7 @@ pc_x49 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11490,7 +11490,7 @@ pc_x48 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11506,7 +11506,7 @@ pc_x47 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11522,7 +11522,7 @@ pc_x46 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11538,7 +11538,7 @@ pc_x45 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11554,7 +11554,7 @@ pc_x44 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11570,7 +11570,7 @@ pc_x43 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11586,7 +11586,7 @@ pc_x42 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
@@ -11602,7 +11602,7 @@ pc_x41 (
 );
 
 
-full_adder
+pc_full_adder
 #(
 .kSUMb ( 1 ) ,
 .kTS ( 1 )
