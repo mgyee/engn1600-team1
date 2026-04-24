@@ -4918,11 +4918,11 @@ alu_x120 (
 );
 
 
-.param kSUMb=1
-.param kTS=1
-.param kI=2.5
-.param kYb=1.875
-.param kY=0.775/0.36
+// .param kSUMb=1
+// .param kTS=1
+// .param kI=2.5
+// .param kYb=1.875
+// .param kY=0.775/0.36
 
 endmodule
 
@@ -10029,11 +10029,11 @@ rf_x49 (
 );
 
 
-.param kWECLKb=1.34/0.36
-.param kWECLK=1.27/0.36
-.param kWEMb=1.26/0.36
-.param kQ=0.36/0.36
-.param kN=1.24/0.36
+// .param kWECLKb=1.34/0.36
+// .param kWECLK=1.27/0.36
+// .param kWEMb=1.26/0.36
+// .param kQ=0.36/0.36
+// .param kN=1.24/0.36
 
 endmodule
 
@@ -12002,10 +12002,10 @@ pc_x100 (
 );
 
 
-.param kINV=1
-.param kSUMb=1
-.param kTS=1
-.param Kb=1
+// .param kINV=1
+// .param kSUMb=1
+// .param kTS=1
+// .param Kb=1
 
 endmodule
 
@@ -13253,10 +13253,10 @@ shifter_x90 (
 );
 
 
-.param kI=6.958333
-.param kYb=6.958333
-.param kY=7.25
-.param kSELb=6
+// .param kI=6.958333
+// .param kYb=6.958333
+// .param kY=7.25
+// .param kSELb=6
 
 endmodule
 
@@ -13448,7 +13448,7 @@ inv_M2 (
 );
 
 
-.param kINV=1
+// .param kINV=1
 
 endmodule
 
@@ -15141,8 +15141,8 @@ full_adder_M26 (
 );
 
 
-.param kSUMb=1
-.param kTS=1
+// .param kSUMb=1
+// .param kTS=1
 
 endmodule
 
@@ -15572,9 +15572,9 @@ _2x1_mux_cmos_M10 (
 );
 
 
-.param kI=2.5
-.param kYb=1.875
-.param kY=0.775/0.36
+// .param kI=2.5
+// .param kYb=1.875
+// .param kY=0.775/0.36
 
 endmodule
 
@@ -16863,7 +16863,7 @@ slave_latch_M24 (
 );
 
 
-.param kQ=1
+// .param kQ=1
 
 endmodule
 
@@ -17201,7 +17201,7 @@ master_latch_M24 (
 );
 
 
-.param kN=1
+// .param kN=1
 
 endmodule
 
@@ -17433,8 +17433,8 @@ driver_cell_M6 (
 );
 
 
-.param kWECLKb=1
-.param kWECLK=1
+// .param kWECLKb=1
+// .param kWECLK=1
 
 endmodule
 
@@ -17622,7 +17622,7 @@ wem_inverter_M2 (
 );
 
 
-.param kWEMb=1
+// .param kWEMb=1
 
 endmodule
 
