@@ -5,6 +5,7 @@ module control (
     input psr_z,
     input psr_n,
     input psr_f,
+    input clk,
 
     // Register File
     output reg        reg_write,
@@ -42,6 +43,33 @@ module control (
   wire [3:0] ext = instr[7:4];
   wire [3:0] rsrc = instr[3:0];
 
+  reg psr_z_internal;
+  reg psr_n_internal;
+  reg psr_f_internal;
+
+  reg psr_z_next;
+  reg psr_n_next;
+  reg psr_f_next;
+
+  always @(*) begin
+    // CMP only
+    if (opcode == 4'b0000 && ext == 4'b1011) begin
+      psr_z_next = psr_z;
+      psr_n_next = psr_n;
+      psr_f_next = psr_f;
+    end begin
+      psr_z_next = psr_z_internal;
+      psr_n_next = psr_n_internal;
+      psr_f_next = psr_f_internal;
+    end
+  end
+
+  always @(posedge clk) begin
+    psr_z_internal <= psr_z_next;
+    psr_n_internal <= psr_n_next;
+    psr_f_internal <= psr_f_next;
+  end
+
 
   assign ra   = 1 << rsrc;
   assign rb   = 1 << rdest;
@@ -50,20 +78,20 @@ module control (
   reg cond_met;
   always @(*) begin
     case (cond)
-      4'b0000: cond_met = psr_z;  // EQ
-      4'b0001: cond_met = !psr_z;  // NE
-      4'b1101: cond_met = (psr_n || psr_z);  // GE
-      4'b0010: cond_met = psr_f;  // CS
-      4'b0011: cond_met = !psr_f;  // CC
+      4'b0000: cond_met = psr_z_internal;  // EQ
+      4'b0001: cond_met = !psr_z_internal;  // NE
+      4'b1101: cond_met = (psr_n_internal || psr_z_internal);  // GE
+      // 4'b0010: cond_met = psr_f;  // CS
+      // 4'b0011: cond_met = !psr_f;  // CC
       // 4'b0100: cond_met = psr_l;  // HI
       // 4'b0101: cond_met = !psr_l;  // LS
       // 4'b1010: cond_met = (!psr_l && !psr_z);  // LO
       // 4'b1011: cond_met = (psr_l || psr_z);  // HS
-      4'b0110: cond_met = psr_n;  // GT
-      4'b0111: cond_met = !psr_n;  // LE
-      4'b1000: cond_met = psr_f;  // FS
-      4'b1001: cond_met = !psr_f;  // FC
-      4'b1100: cond_met = (!psr_n && !psr_z);  // LT
+      4'b0110: cond_met = psr_n_internal;  // GT
+      4'b0111: cond_met = !psr_n_internal;  // LE
+      4'b1000: cond_met = psr_f_internal;  // FS
+      4'b1001: cond_met = !psr_f_internal;  // FC
+      4'b1100: cond_met = (!psr_n_internal && !psr_z_internal);  // LT
       4'b1110: cond_met = 1'b1;  // UC
       4'b1111: cond_met = 1'b0;  // Never Jump
       default: cond_met = 1'b0;

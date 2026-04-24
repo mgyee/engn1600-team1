@@ -89,6 +89,7 @@ module processor #(
     .psr_z(alu_z),
     .psr_n(alu_n),
     .psr_f(alu_f),
+    .clk(CLK),
     .reg_write(reg_write),
     .ra(ra),
     .rb(rb),
