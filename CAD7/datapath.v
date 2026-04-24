@@ -4,22 +4,22 @@ module datapath
   output wire ALU_F,
   output wire ALU_Z,
   output wire ALU_N,
-  output wire [15..0] RDST,
-  output wire [15..0] DMEM_ADDR,
-  output wire [15..0] PC,
-  output wire [15..0] INSTR,
+  output wire [15:0] RDST,
+  output wire [15:0] DMEM_ADDR,
+  output wire [15:0] PC,
+  output wire [15:0] INSTR,
   inout wire VSS,
   inout wire VDD,
-  input wire [15..0] RA,
-  input wire [15..0] RB,
-  input wire [15..0] DMEM_Q,
-  input wire [15..0] WE,
-  input wire [15..0] IMEM_Q,
+  input wire [15:0] RA,
+  input wire [15:0] RB,
+  input wire [15:0] DMEM_Q,
+  input wire [15:0] WE,
+  input wire [15:0] IMEM_Q,
   input wire ALU_SRC_B,
   input wire ALU_SRC_A,
   input wire IS_LUI,
   input wire SHIFT_VAL_SRC,
-  input wire [1..0] ALU_SEL,
+  input wire [1:0] ALU_SEL,
   input wire REG_WRITE,
   input wire ALU_CIN,
   input wire PC_BR,
@@ -30,7 +30,7 @@ module datapath
   input wire SHIFT_AMT_SRC,
   input wire SI,
   input wire SE,
-  input wire [3..0] DATA_OUT
+  input wire [3:0] DATA_OUT
 );
 wire CLK2b ;
 wire CLK3b ;
@@ -317,7 +317,7 @@ x4 (
 );
 
 
-4x1_mux
+_4x1_mux
 x515 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q15b ),
@@ -332,7 +332,7 @@ x515 (
 );
 
 
-4x1_mux
+_4x1_mux
 x514 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q14b ),
@@ -347,7 +347,7 @@ x514 (
 );
 
 
-4x1_mux
+_4x1_mux
 x513 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q13b ),
@@ -362,7 +362,7 @@ x513 (
 );
 
 
-4x1_mux
+_4x1_mux
 x512 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q12b ),
@@ -377,7 +377,7 @@ x512 (
 );
 
 
-4x1_mux
+_4x1_mux
 x511 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q11b ),
@@ -392,7 +392,7 @@ x511 (
 );
 
 
-4x1_mux
+_4x1_mux
 x510 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q10b ),
@@ -407,7 +407,7 @@ x510 (
 );
 
 
-4x1_mux
+_4x1_mux
 x59 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q9b ),
@@ -422,7 +422,7 @@ x59 (
 );
 
 
-4x1_mux
+_4x1_mux
 x58 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q8b ),
@@ -437,7 +437,7 @@ x58 (
 );
 
 
-4x1_mux
+_4x1_mux
 x57 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q7b ),
@@ -452,7 +452,7 @@ x57 (
 );
 
 
-4x1_mux
+_4x1_mux
 x56 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q6b ),
@@ -467,7 +467,7 @@ x56 (
 );
 
 
-4x1_mux
+_4x1_mux
 x55 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q5b ),
@@ -482,7 +482,7 @@ x55 (
 );
 
 
-4x1_mux
+_4x1_mux
 x54 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q4b ),
@@ -497,7 +497,7 @@ x54 (
 );
 
 
-4x1_mux
+_4x1_mux
 x53 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q3b ),
@@ -512,7 +512,7 @@ x53 (
 );
 
 
-4x1_mux
+_4x1_mux
 x52 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q2b ),
@@ -527,7 +527,7 @@ x52 (
 );
 
 
-4x1_mux
+_4x1_mux
 x51 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q1b ),
@@ -542,7 +542,7 @@ x51 (
 );
 
 
-4x1_mux
+_4x1_mux
 x50 ( 
  .SA( DATA_OUT0 ),
  .A( DMEM_Q0b ),
@@ -749,7 +749,7 @@ x10 (
 );
 
 
-2x1_mux
+_2x1_mux
 x23 ( 
  .A( INSTR3 ),
  .SEL( IS_LUI ),
@@ -761,7 +761,7 @@ x23 (
 );
 
 
-2x1_mux
+_2x1_mux
 x22 ( 
  .A( INSTR2 ),
  .SEL( IS_LUI ),
@@ -773,7 +773,7 @@ x22 (
 );
 
 
-2x1_mux
+_2x1_mux
 x21 ( 
  .A( INSTR1 ),
  .SEL( IS_LUI ),
@@ -785,7 +785,7 @@ x21 (
 );
 
 
-2x1_mux
+_2x1_mux
 x20 ( 
  .A( INSTR0 ),
  .SEL( IS_LUI ),
@@ -845,7 +845,7 @@ x30 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x415 ( 
  .A( RDST15b ),
  .SEL( ALU_SRC_A ),
@@ -856,7 +856,7 @@ x415 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x414 ( 
  .A( RDST14b ),
  .SEL( ALU_SRC_A ),
@@ -867,7 +867,7 @@ x414 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x413 ( 
  .A( RDST13b ),
  .SEL( ALU_SRC_A ),
@@ -878,7 +878,7 @@ x413 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x412 ( 
  .A( RDST12b ),
  .SEL( ALU_SRC_A ),
@@ -889,7 +889,7 @@ x412 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x411 ( 
  .A( RDST11b ),
  .SEL( ALU_SRC_A ),
@@ -900,7 +900,7 @@ x411 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x410 ( 
  .A( RDST10b ),
  .SEL( ALU_SRC_A ),
@@ -911,7 +911,7 @@ x410 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x49 ( 
  .A( RDST9b ),
  .SEL( ALU_SRC_A ),
@@ -922,7 +922,7 @@ x49 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x48 ( 
  .A( RDST8b ),
  .SEL( ALU_SRC_A ),
@@ -933,7 +933,7 @@ x48 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x47 ( 
  .A( RDST7b ),
  .SEL( ALU_SRC_A ),
@@ -944,7 +944,7 @@ x47 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x46 ( 
  .A( RDST6b ),
  .SEL( ALU_SRC_A ),
@@ -955,7 +955,7 @@ x46 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x45 ( 
  .A( RDST5b ),
  .SEL( ALU_SRC_A ),
@@ -966,7 +966,7 @@ x45 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x44 ( 
  .A( RDST4b ),
  .SEL( ALU_SRC_A ),
@@ -977,7 +977,7 @@ x44 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x43 ( 
  .A( RDST3b ),
  .SEL( ALU_SRC_A ),
@@ -988,7 +988,7 @@ x43 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x42 ( 
  .A( RDST2b ),
  .SEL( ALU_SRC_A ),
@@ -999,7 +999,7 @@ x42 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x41 ( 
  .A( RDST1b ),
  .SEL( ALU_SRC_A ),
@@ -1010,7 +1010,7 @@ x41 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x40 ( 
  .A( RDST0b ),
  .SEL( ALU_SRC_A ),
@@ -1213,7 +1213,7 @@ x60 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x715 ( 
  .A( RSRC15b ),
  .SEL( ALU_SRC_B ),
@@ -1224,7 +1224,7 @@ x715 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x714 ( 
  .A( RSRC14b ),
  .SEL( ALU_SRC_B ),
@@ -1235,7 +1235,7 @@ x714 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x713 ( 
  .A( RSRC13b ),
  .SEL( ALU_SRC_B ),
@@ -1246,7 +1246,7 @@ x713 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x712 ( 
  .A( RSRC12b ),
  .SEL( ALU_SRC_B ),
@@ -1257,7 +1257,7 @@ x712 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x711 ( 
  .A( RSRC11b ),
  .SEL( ALU_SRC_B ),
@@ -1268,7 +1268,7 @@ x711 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x710 ( 
  .A( RSRC10b ),
  .SEL( ALU_SRC_B ),
@@ -1279,7 +1279,7 @@ x710 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x79 ( 
  .A( RSRC9b ),
  .SEL( ALU_SRC_B ),
@@ -1290,7 +1290,7 @@ x79 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x78 ( 
  .A( RSRC8b ),
  .SEL( ALU_SRC_B ),
@@ -1301,7 +1301,7 @@ x78 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x77 ( 
  .A( RSRC7b ),
  .SEL( ALU_SRC_B ),
@@ -1312,7 +1312,7 @@ x77 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x76 ( 
  .A( RSRC6b ),
  .SEL( ALU_SRC_B ),
@@ -1323,7 +1323,7 @@ x76 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x75 ( 
  .A( RSRC5b ),
  .SEL( ALU_SRC_B ),
@@ -1334,7 +1334,7 @@ x75 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x74 ( 
  .A( RSRC4b ),
  .SEL( ALU_SRC_B ),
@@ -1345,7 +1345,7 @@ x74 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x73 ( 
  .A( RSRC3b ),
  .SEL( ALU_SRC_B ),
@@ -1356,7 +1356,7 @@ x73 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x72 ( 
  .A( RSRC2b ),
  .SEL( ALU_SRC_B ),
@@ -1367,7 +1367,7 @@ x72 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x71 ( 
  .A( RSRC1b ),
  .SEL( ALU_SRC_B ),
@@ -1378,7 +1378,7 @@ x71 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x70 ( 
  .A( RSRC0b ),
  .SEL( ALU_SRC_B ),
@@ -1965,7 +1965,7 @@ x100 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x1215 ( 
  .A( RDST15b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -1976,7 +1976,7 @@ x1215 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x1214 ( 
  .A( RDST14b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -1987,7 +1987,7 @@ x1214 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x1213 ( 
  .A( RDST13b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -1998,7 +1998,7 @@ x1213 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x1212 ( 
  .A( RDST12b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2009,7 +2009,7 @@ x1212 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x1211 ( 
  .A( RDST11b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2020,7 +2020,7 @@ x1211 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x1210 ( 
  .A( RDST10b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2031,7 +2031,7 @@ x1210 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x129 ( 
  .A( RDST9b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2042,7 +2042,7 @@ x129 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x128 ( 
  .A( RDST8b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2053,7 +2053,7 @@ x128 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x127 ( 
  .A( RDST7b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2064,7 +2064,7 @@ x127 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x126 ( 
  .A( RDST6b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2075,7 +2075,7 @@ x126 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x125 ( 
  .A( RDST5b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2086,7 +2086,7 @@ x125 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x124 ( 
  .A( RDST4b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2097,7 +2097,7 @@ x124 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x123 ( 
  .A( RDST3b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2108,7 +2108,7 @@ x123 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x122 ( 
  .A( RDST2b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2119,7 +2119,7 @@ x122 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x121 ( 
  .A( RDST1b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -2130,7 +2130,7 @@ x121 (
 );
 
 
-2x1_mux_pass
+_2x1_mux_pass
 x120 ( 
  .A( RDST0b ),
  .SEL( SHIFT_VAL_SRC ),
@@ -3359,11 +3359,11 @@ module alu
 (
   inout wire VDD,
   inout wire VSS,
-  input wire [15..0] A,
-  input wire [15..0] B,
+  input wire [15:0] A,
+  input wire [15:0] B,
   input wire CIN,
-  input wire [1..0] SEL,
-  output wire [15..0] Y,
+  input wire [1:0] SEL,
+  output wire [15:0] Y,
   output wire F,
   output wire Z,
   output wire N
@@ -3618,7 +3618,7 @@ x5 (
 );
 
 
-4x1_mux
+_4x1_mux
 x1015 ( 
  .SA( SA ),
  .A( SUM15b ),
@@ -3633,7 +3633,7 @@ x1015 (
 );
 
 
-4x1_mux
+_4x1_mux
 x1014 ( 
  .SA( SA ),
  .A( SUM14b ),
@@ -3648,7 +3648,7 @@ x1014 (
 );
 
 
-4x1_mux
+_4x1_mux
 x1013 ( 
  .SA( SA ),
  .A( SUM13b ),
@@ -3663,7 +3663,7 @@ x1013 (
 );
 
 
-4x1_mux
+_4x1_mux
 x1012 ( 
  .SA( SA ),
  .A( SUM12b ),
@@ -3678,7 +3678,7 @@ x1012 (
 );
 
 
-4x1_mux
+_4x1_mux
 x1011 ( 
  .SA( SA ),
  .A( SUM11b ),
@@ -3693,7 +3693,7 @@ x1011 (
 );
 
 
-4x1_mux
+_4x1_mux
 x1010 ( 
  .SA( SA ),
  .A( SUM10b ),
@@ -3708,7 +3708,7 @@ x1010 (
 );
 
 
-4x1_mux
+_4x1_mux
 x109 ( 
  .SA( SA ),
  .A( SUM9b ),
@@ -3723,7 +3723,7 @@ x109 (
 );
 
 
-4x1_mux
+_4x1_mux
 x108 ( 
  .SA( SA ),
  .A( SUM8b ),
@@ -3738,7 +3738,7 @@ x108 (
 );
 
 
-4x1_mux
+_4x1_mux
 x107 ( 
  .SA( SA ),
  .A( SUM7b ),
@@ -3753,7 +3753,7 @@ x107 (
 );
 
 
-4x1_mux
+_4x1_mux
 x106 ( 
  .SA( SA ),
  .A( SUM6b ),
@@ -3768,7 +3768,7 @@ x106 (
 );
 
 
-4x1_mux
+_4x1_mux
 x105 ( 
  .SA( SA ),
  .A( SUM5b ),
@@ -3783,7 +3783,7 @@ x105 (
 );
 
 
-4x1_mux
+_4x1_mux
 x104 ( 
  .SA( SA ),
  .A( SUM4b ),
@@ -3798,7 +3798,7 @@ x104 (
 );
 
 
-4x1_mux
+_4x1_mux
 x103 ( 
  .SA( SA ),
  .A( SUM3b ),
@@ -3813,7 +3813,7 @@ x103 (
 );
 
 
-4x1_mux
+_4x1_mux
 x102 ( 
  .SA( SA ),
  .A( SUM2b ),
@@ -3828,7 +3828,7 @@ x102 (
 );
 
 
-4x1_mux
+_4x1_mux
 x101 ( 
  .SA( SA ),
  .A( SUM1b ),
@@ -3843,7 +3843,7 @@ x101 (
 );
 
 
-4x1_mux
+_4x1_mux
 x100 ( 
  .SA( SA ),
  .A( SUM0b ),
@@ -4143,7 +4143,7 @@ x26 (
 );
 
 
-2x1_mux
+_2x1_mux
 x35 ( 
  .A( SUM_07b ),
  .SEL( COUT3 ),
@@ -4155,7 +4155,7 @@ x35 (
 );
 
 
-2x1_mux
+_2x1_mux
 x36 ( 
  .A( SUM_06b ),
  .SEL( COUT3 ),
@@ -4167,7 +4167,7 @@ x36 (
 );
 
 
-2x1_mux
+_2x1_mux
 x37 ( 
  .A( SUM_05b ),
  .SEL( COUT3 ),
@@ -4179,7 +4179,7 @@ x37 (
 );
 
 
-2x1_mux
+_2x1_mux
 x38 ( 
  .A( XOR4 ),
  .SEL( COUT3b ),
@@ -4239,7 +4239,7 @@ x23 (
 );
 
 
-2x1_mux_cmos
+_2x1_mux_cmos
 #(
 .kI ( "'kI'" ) ,
 .kYb ( "'kYb'" ) ,
@@ -4368,7 +4368,7 @@ x48 (
 );
 
 
-2x1_mux
+_2x1_mux
 x57 ( 
  .A( SUM_011b ),
  .SEL( COUT7 ),
@@ -4380,7 +4380,7 @@ x57 (
 );
 
 
-2x1_mux
+_2x1_mux
 x58 ( 
  .A( SUM_010b ),
  .SEL( COUT7 ),
@@ -4392,7 +4392,7 @@ x58 (
 );
 
 
-2x1_mux
+_2x1_mux
 x59 ( 
  .A( SUM_09b ),
  .SEL( COUT7 ),
@@ -4404,7 +4404,7 @@ x59 (
 );
 
 
-2x1_mux
+_2x1_mux
 x60 ( 
  .A( XOR8 ),
  .SEL( COUT7b ),
@@ -4464,7 +4464,7 @@ x63 (
 );
 
 
-2x1_mux_cmos
+_2x1_mux_cmos
 #(
 .kI ( "'kI'" ) ,
 .kYb ( "'kYb'" ) ,
@@ -4584,7 +4584,7 @@ x72 (
 );
 
 
-2x1_mux
+_2x1_mux
 x81 ( 
  .A( SUM_015b ),
  .SEL( COUT11 ),
@@ -4596,7 +4596,7 @@ x81 (
 );
 
 
-2x1_mux
+_2x1_mux
 x82 ( 
  .A( SUM_014b ),
  .SEL( COUT11 ),
@@ -4608,7 +4608,7 @@ x82 (
 );
 
 
-2x1_mux
+_2x1_mux
 x83 ( 
  .A( SUM_013b ),
  .SEL( COUT11 ),
@@ -4620,7 +4620,7 @@ x83 (
 );
 
 
-2x1_mux
+_2x1_mux
 x84 ( 
  .A( XOR12 ),
  .SEL( COUT11b ),
@@ -4702,7 +4702,7 @@ x89 (
 );
 
 
-2x1_mux_cmos
+_2x1_mux_cmos
 #(
 .kI ( "'kI'" ) ,
 .kYb ( "'kYb'" ) ,
@@ -4720,7 +4720,7 @@ x91 (
 );
 
 
-2x1_mux_cmos
+_2x1_mux_cmos
 #(
 .kI ( "'kI'" ) ,
 .kYb ( "'kYb'" ) ,
@@ -4935,12 +4935,12 @@ module rf
   input wire WEM,
   inout wire VDD,
   inout wire VSS,
-  input wire [15..0] WE,
-  input wire [15..0] RA,
-  input wire [15..0] RB,
-  input wire [15..0] D,
-  output wire [15..0b] QA,
-  output wire [15..0b] QB
+  input wire [15:0] WE,
+  input wire [15:0] RA,
+  input wire [15:0] RB,
+  input wire [15:0] D,
+  output wire [15:0] QAb,
+  output wire [15:0] QBb
 );
 wire N10 ;
 wire N11 ;
@@ -9845,10 +9845,10 @@ output_inverter
 x33 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA0b ),
+ .QAb( QAb[0] ),
  .QA( QA0 ),
  .QB( QB0 ),
- .QBb( QB0b )
+ .QBb( QBb[0] )
 );
 
 
@@ -9856,10 +9856,10 @@ output_inverter
 x34 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA1b ),
+ .QAb( QAb[1] ),
  .QA( QA1 ),
  .QB( QB1 ),
- .QBb( QB1b )
+ .QBb( QBb[1] )
 );
 
 
@@ -9867,10 +9867,10 @@ output_inverter
 x35 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA2b ),
+ .QAb( QAb[2] ),
  .QA( QA2 ),
  .QB( QB2 ),
- .QBb( QB2b )
+ .QBb( QBb[2] )
 );
 
 
@@ -9878,10 +9878,10 @@ output_inverter
 x36 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA3b ),
+ .QAb( QAb[3] ),
  .QA( QA3 ),
  .QB( QB3 ),
- .QBb( QB3b )
+ .QBb( QBb[3] )
 );
 
 
@@ -9889,10 +9889,10 @@ output_inverter
 x37 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA4b ),
+ .QAb( QAb[4] ),
  .QA( QA4 ),
  .QB( QB4 ),
- .QBb( QB4b )
+ .QBb( QBb[4] )
 );
 
 
@@ -9900,10 +9900,10 @@ output_inverter
 x38 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA5b ),
+ .QAb( QAb[5] ),
  .QA( QA5 ),
  .QB( QB5 ),
- .QBb( QB5b )
+ .QBb( QBb[5] )
 );
 
 
@@ -9911,10 +9911,10 @@ output_inverter
 x39 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA6b ),
+ .QAb( QAb[6] ),
  .QA( QA6 ),
  .QB( QB6 ),
- .QBb( QB6b )
+ .QBb( QBb[6] )
 );
 
 
@@ -9922,10 +9922,10 @@ output_inverter
 x40 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA7b ),
+ .QAb( QAb[7] ),
  .QA( QA7 ),
  .QB( QB7 ),
- .QBb( QB7b )
+ .QBb( QBb[7] )
 );
 
 
@@ -9933,10 +9933,10 @@ output_inverter
 x41 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA8b ),
+ .QAb( QAb[8] ),
  .QA( QA8 ),
  .QB( QB8 ),
- .QBb( QB8b )
+ .QBb( QBb[8] )
 );
 
 
@@ -9944,10 +9944,10 @@ output_inverter
 x42 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA9b ),
+ .QAb( QAb[9] ),
  .QA( QA9 ),
  .QB( QB9 ),
- .QBb( QB9b )
+ .QBb( QBb[9] )
 );
 
 
@@ -9955,10 +9955,10 @@ output_inverter
 x43 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA10b ),
+ .QAb( QAb[10] ),
  .QA( QA10 ),
  .QB( QB10 ),
- .QBb( QB10b )
+ .QBb( QBb[10] )
 );
 
 
@@ -9966,10 +9966,10 @@ output_inverter
 x44 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA11b ),
+ .QAb( QAb[11] ),
  .QA( QA11 ),
  .QB( QB11 ),
- .QBb( QB11b )
+ .QBb( QBb[11] )
 );
 
 
@@ -9977,10 +9977,10 @@ output_inverter
 x45 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA12b ),
+ .QAb( QAb[12] ),
  .QA( QA12 ),
  .QB( QB12 ),
- .QBb( QB12b )
+ .QBb( QBb[12] )
 );
 
 
@@ -9988,10 +9988,10 @@ output_inverter
 x46 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA13b ),
+ .QAb( QAb[13] ),
  .QA( QA13 ),
  .QB( QB13 ),
- .QBb( QB13b )
+ .QBb( QBb[13] )
 );
 
 
@@ -9999,10 +9999,10 @@ output_inverter
 x47 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA14b ),
+ .QAb( QAb[14] ),
  .QA( QA14 ),
  .QB( QB14 ),
- .QBb( QB14b )
+ .QBb( QBb[14] )
 );
 
 
@@ -10010,10 +10010,10 @@ output_inverter
 x48 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .QAb( QA15b ),
+ .QAb( QAb[15] ),
  .QA( QA15 ),
  .QB( QB15 ),
- .QBb( QB15b )
+ .QBb( QBb[15] )
 );
 
 
@@ -10047,12 +10047,12 @@ module pc
   input wire CLK,
   input wire RSTn,
   input wire BR,
-  input wire [7..0] DISP,
+  input wire [7:0] DISP,
   input wire JMP,
-  input wire [15..0] DEST,
+  input wire [15:0] DEST,
   input wire SI,
   input wire SE,
-  output wire [15..0] PC,
+  output wire [15:0] PC,
   output wire PC_NEXT15
 );
 wire CLK2b ;
@@ -10210,7 +10210,7 @@ x1 (
 );
 
 
-2x1_mux
+_2x1_mux
 x215 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10222,7 +10222,7 @@ x215 (
 );
 
 
-2x1_mux
+_2x1_mux
 x214 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10234,7 +10234,7 @@ x214 (
 );
 
 
-2x1_mux
+_2x1_mux
 x213 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10246,7 +10246,7 @@ x213 (
 );
 
 
-2x1_mux
+_2x1_mux
 x212 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10258,7 +10258,7 @@ x212 (
 );
 
 
-2x1_mux
+_2x1_mux
 x211 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10270,7 +10270,7 @@ x211 (
 );
 
 
-2x1_mux
+_2x1_mux
 x210 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10282,7 +10282,7 @@ x210 (
 );
 
 
-2x1_mux
+_2x1_mux
 x29 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10294,7 +10294,7 @@ x29 (
 );
 
 
-2x1_mux
+_2x1_mux
 x28 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10306,7 +10306,7 @@ x28 (
 );
 
 
-2x1_mux
+_2x1_mux
 x27 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10318,7 +10318,7 @@ x27 (
 );
 
 
-2x1_mux
+_2x1_mux
 x26 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10330,7 +10330,7 @@ x26 (
 );
 
 
-2x1_mux
+_2x1_mux
 x25 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10342,7 +10342,7 @@ x25 (
 );
 
 
-2x1_mux
+_2x1_mux
 x24 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10354,7 +10354,7 @@ x24 (
 );
 
 
-2x1_mux
+_2x1_mux
 x23 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10366,7 +10366,7 @@ x23 (
 );
 
 
-2x1_mux
+_2x1_mux
 x22 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10378,7 +10378,7 @@ x22 (
 );
 
 
-2x1_mux
+_2x1_mux
 x21 ( 
  .A( VDD ),
  .SEL( BR ),
@@ -10390,7 +10390,7 @@ x21 (
 );
 
 
-2x1_mux
+_2x1_mux
 x20 ( 
  .A( VSS ),
  .SEL( BR ),
@@ -10786,7 +10786,7 @@ x90 (
 );
 
 
-2x1_mux
+_2x1_mux
 x515 ( 
  .A( PCB15 ),
  .SEL( JMP ),
@@ -10798,7 +10798,7 @@ x515 (
 );
 
 
-2x1_mux
+_2x1_mux
 x514 ( 
  .A( PCB14 ),
  .SEL( JMP ),
@@ -10810,7 +10810,7 @@ x514 (
 );
 
 
-2x1_mux
+_2x1_mux
 x513 ( 
  .A( PCB13 ),
  .SEL( JMP ),
@@ -10822,7 +10822,7 @@ x513 (
 );
 
 
-2x1_mux
+_2x1_mux
 x512 ( 
  .A( PCB12 ),
  .SEL( JMP ),
@@ -10834,7 +10834,7 @@ x512 (
 );
 
 
-2x1_mux
+_2x1_mux
 x511 ( 
  .A( PCB11 ),
  .SEL( JMP ),
@@ -10846,7 +10846,7 @@ x511 (
 );
 
 
-2x1_mux
+_2x1_mux
 x510 ( 
  .A( PCB10 ),
  .SEL( JMP ),
@@ -10858,7 +10858,7 @@ x510 (
 );
 
 
-2x1_mux
+_2x1_mux
 x59 ( 
  .A( PCB9 ),
  .SEL( JMP ),
@@ -10870,7 +10870,7 @@ x59 (
 );
 
 
-2x1_mux
+_2x1_mux
 x58 ( 
  .A( PCB8 ),
  .SEL( JMP ),
@@ -10882,7 +10882,7 @@ x58 (
 );
 
 
-2x1_mux
+_2x1_mux
 x57 ( 
  .A( PCB7 ),
  .SEL( JMP ),
@@ -10894,7 +10894,7 @@ x57 (
 );
 
 
-2x1_mux
+_2x1_mux
 x56 ( 
  .A( PCB6 ),
  .SEL( JMP ),
@@ -10906,7 +10906,7 @@ x56 (
 );
 
 
-2x1_mux
+_2x1_mux
 x55 ( 
  .A( PCB5 ),
  .SEL( JMP ),
@@ -10918,7 +10918,7 @@ x55 (
 );
 
 
-2x1_mux
+_2x1_mux
 x54 ( 
  .A( PCB4 ),
  .SEL( JMP ),
@@ -10930,7 +10930,7 @@ x54 (
 );
 
 
-2x1_mux
+_2x1_mux
 x53 ( 
  .A( PCB3 ),
  .SEL( JMP ),
@@ -10942,7 +10942,7 @@ x53 (
 );
 
 
-2x1_mux
+_2x1_mux
 x52 ( 
  .A( PCB2 ),
  .SEL( JMP ),
@@ -10954,7 +10954,7 @@ x52 (
 );
 
 
-2x1_mux
+_2x1_mux
 x51 ( 
  .A( PCB1 ),
  .SEL( JMP ),
@@ -10966,7 +10966,7 @@ x51 (
 );
 
 
-2x1_mux
+_2x1_mux
 x50 ( 
  .A( PCB0 ),
  .SEL( JMP ),
@@ -11618,7 +11618,7 @@ x40 (
 );
 
 
-2x1_mux
+_2x1_mux
 x715 ( 
  .A( PCJ15 ),
  .SEL( SE ),
@@ -11630,7 +11630,7 @@ x715 (
 );
 
 
-2x1_mux
+_2x1_mux
 x714 ( 
  .A( PCJ14 ),
  .SEL( SE ),
@@ -11642,7 +11642,7 @@ x714 (
 );
 
 
-2x1_mux
+_2x1_mux
 x713 ( 
  .A( PCJ13 ),
  .SEL( SE ),
@@ -11654,7 +11654,7 @@ x713 (
 );
 
 
-2x1_mux
+_2x1_mux
 x712 ( 
  .A( PCJ12 ),
  .SEL( SE ),
@@ -11666,7 +11666,7 @@ x712 (
 );
 
 
-2x1_mux
+_2x1_mux
 x711 ( 
  .A( PCJ11 ),
  .SEL( SE ),
@@ -11678,7 +11678,7 @@ x711 (
 );
 
 
-2x1_mux
+_2x1_mux
 x710 ( 
  .A( PCJ10 ),
  .SEL( SE ),
@@ -11690,7 +11690,7 @@ x710 (
 );
 
 
-2x1_mux
+_2x1_mux
 x79 ( 
  .A( PCJ9 ),
  .SEL( SE ),
@@ -11702,7 +11702,7 @@ x79 (
 );
 
 
-2x1_mux
+_2x1_mux
 x78 ( 
  .A( PCJ8 ),
  .SEL( SE ),
@@ -11714,7 +11714,7 @@ x78 (
 );
 
 
-2x1_mux
+_2x1_mux
 x77 ( 
  .A( PCJ7 ),
  .SEL( SE ),
@@ -11726,7 +11726,7 @@ x77 (
 );
 
 
-2x1_mux
+_2x1_mux
 x76 ( 
  .A( PCJ6 ),
  .SEL( SE ),
@@ -11738,7 +11738,7 @@ x76 (
 );
 
 
-2x1_mux
+_2x1_mux
 x75 ( 
  .A( PCJ5 ),
  .SEL( SE ),
@@ -11750,7 +11750,7 @@ x75 (
 );
 
 
-2x1_mux
+_2x1_mux
 x74 ( 
  .A( PCJ4 ),
  .SEL( SE ),
@@ -11762,7 +11762,7 @@ x74 (
 );
 
 
-2x1_mux
+_2x1_mux
 x73 ( 
  .A( PCJ3 ),
  .SEL( SE ),
@@ -11774,7 +11774,7 @@ x73 (
 );
 
 
-2x1_mux
+_2x1_mux
 x72 ( 
  .A( PCJ2 ),
  .SEL( SE ),
@@ -11786,7 +11786,7 @@ x72 (
 );
 
 
-2x1_mux
+_2x1_mux
 x71 ( 
  .A( PCJ1 ),
  .SEL( SE ),
@@ -11798,7 +11798,7 @@ x71 (
 );
 
 
-2x1_mux
+_2x1_mux
 x70 ( 
  .A( PCJ0 ),
  .SEL( SE ),
@@ -12016,11 +12016,11 @@ module shifter
 (
   inout wire VDD,
   inout wire VSS,
-  input wire [15..0] D,
-  input wire [3..0] I,
-  input wire [3..0] R,
+  input wire [15:0] D,
+  input wire [3:0] I,
+  input wire [3:0] R,
   input wire SEL,
-  output wire [15..0] Q
+  output wire [15:0] Q
 );
 wire X10b ;
 wire X11b ;
@@ -12113,7 +12113,7 @@ wire D8b ;
 wire D9b ;
 
 
-2x1_mux
+_2x1_mux
 x115 ( 
  .A( D15b ),
  .SEL( S0 ),
@@ -12125,7 +12125,7 @@ x115 (
 );
 
 
-2x1_mux
+_2x1_mux
 x114 ( 
  .A( D14b ),
  .SEL( S0 ),
@@ -12137,7 +12137,7 @@ x114 (
 );
 
 
-2x1_mux
+_2x1_mux
 x113 ( 
  .A( D13b ),
  .SEL( S0 ),
@@ -12149,7 +12149,7 @@ x113 (
 );
 
 
-2x1_mux
+_2x1_mux
 x112 ( 
  .A( D12b ),
  .SEL( S0 ),
@@ -12161,7 +12161,7 @@ x112 (
 );
 
 
-2x1_mux
+_2x1_mux
 x111 ( 
  .A( D11b ),
  .SEL( S0 ),
@@ -12173,7 +12173,7 @@ x111 (
 );
 
 
-2x1_mux
+_2x1_mux
 x110 ( 
  .A( D10b ),
  .SEL( S0 ),
@@ -12185,7 +12185,7 @@ x110 (
 );
 
 
-2x1_mux
+_2x1_mux
 x19 ( 
  .A( D9b ),
  .SEL( S0 ),
@@ -12197,7 +12197,7 @@ x19 (
 );
 
 
-2x1_mux
+_2x1_mux
 x18 ( 
  .A( D8b ),
  .SEL( S0 ),
@@ -12209,7 +12209,7 @@ x18 (
 );
 
 
-2x1_mux
+_2x1_mux
 x17 ( 
  .A( D7b ),
  .SEL( S0 ),
@@ -12221,7 +12221,7 @@ x17 (
 );
 
 
-2x1_mux
+_2x1_mux
 x16 ( 
  .A( D6b ),
  .SEL( S0 ),
@@ -12233,7 +12233,7 @@ x16 (
 );
 
 
-2x1_mux
+_2x1_mux
 x15 ( 
  .A( D5b ),
  .SEL( S0 ),
@@ -12245,7 +12245,7 @@ x15 (
 );
 
 
-2x1_mux
+_2x1_mux
 x14 ( 
  .A( D4b ),
  .SEL( S0 ),
@@ -12257,7 +12257,7 @@ x14 (
 );
 
 
-2x1_mux
+_2x1_mux
 x13 ( 
  .A( D3b ),
  .SEL( S0 ),
@@ -12269,7 +12269,7 @@ x13 (
 );
 
 
-2x1_mux
+_2x1_mux
 x12 ( 
  .A( D2b ),
  .SEL( S0 ),
@@ -12281,7 +12281,7 @@ x12 (
 );
 
 
-2x1_mux
+_2x1_mux
 x11 ( 
  .A( D1b ),
  .SEL( S0 ),
@@ -12293,7 +12293,7 @@ x11 (
 );
 
 
-2x1_mux
+_2x1_mux
 x10 ( 
  .A( D0b ),
  .SEL( S0 ),
@@ -12305,7 +12305,7 @@ x10 (
 );
 
 
-2x1_mux_cmos
+_2x1_mux_cmos
 #(
 .kI ( "'kI'" ) ,
 .kYb ( "'kYb'" ) ,
@@ -12323,7 +12323,7 @@ x23 (
 );
 
 
-2x1_mux_cmos
+_2x1_mux_cmos
 #(
 .kI ( "'kI'" ) ,
 .kYb ( "'kYb'" ) ,
@@ -12341,7 +12341,7 @@ x22 (
 );
 
 
-2x1_mux_cmos
+_2x1_mux_cmos
 #(
 .kI ( "'kI'" ) ,
 .kYb ( "'kYb'" ) ,
@@ -12359,7 +12359,7 @@ x21 (
 );
 
 
-2x1_mux_cmos
+_2x1_mux_cmos
 #(
 .kI ( "'kI'" ) ,
 .kYb ( "'kYb'" ) ,
@@ -12389,7 +12389,7 @@ x1 (
 );
 
 
-2x1_mux
+_2x1_mux
 x315 ( 
  .A( X15b ),
  .SEL( S1 ),
@@ -12401,7 +12401,7 @@ x315 (
 );
 
 
-2x1_mux
+_2x1_mux
 x314 ( 
  .A( X14b ),
  .SEL( S1 ),
@@ -12413,7 +12413,7 @@ x314 (
 );
 
 
-2x1_mux
+_2x1_mux
 x313 ( 
  .A( X13b ),
  .SEL( S1 ),
@@ -12425,7 +12425,7 @@ x313 (
 );
 
 
-2x1_mux
+_2x1_mux
 x312 ( 
  .A( X12b ),
  .SEL( S1 ),
@@ -12437,7 +12437,7 @@ x312 (
 );
 
 
-2x1_mux
+_2x1_mux
 x311 ( 
  .A( X11b ),
  .SEL( S1 ),
@@ -12449,7 +12449,7 @@ x311 (
 );
 
 
-2x1_mux
+_2x1_mux
 x310 ( 
  .A( X10b ),
  .SEL( S1 ),
@@ -12461,7 +12461,7 @@ x310 (
 );
 
 
-2x1_mux
+_2x1_mux
 x39 ( 
  .A( X9b ),
  .SEL( S1 ),
@@ -12473,7 +12473,7 @@ x39 (
 );
 
 
-2x1_mux
+_2x1_mux
 x38 ( 
  .A( X8b ),
  .SEL( S1 ),
@@ -12485,7 +12485,7 @@ x38 (
 );
 
 
-2x1_mux
+_2x1_mux
 x37 ( 
  .A( X7b ),
  .SEL( S1 ),
@@ -12497,7 +12497,7 @@ x37 (
 );
 
 
-2x1_mux
+_2x1_mux
 x36 ( 
  .A( X6b ),
  .SEL( S1 ),
@@ -12509,7 +12509,7 @@ x36 (
 );
 
 
-2x1_mux
+_2x1_mux
 x35 ( 
  .A( X5b ),
  .SEL( S1 ),
@@ -12521,7 +12521,7 @@ x35 (
 );
 
 
-2x1_mux
+_2x1_mux
 x34 ( 
  .A( X4b ),
  .SEL( S1 ),
@@ -12533,7 +12533,7 @@ x34 (
 );
 
 
-2x1_mux
+_2x1_mux
 x33 ( 
  .A( X3b ),
  .SEL( S1 ),
@@ -12545,7 +12545,7 @@ x33 (
 );
 
 
-2x1_mux
+_2x1_mux
 x32 ( 
  .A( X2b ),
  .SEL( S1 ),
@@ -12557,7 +12557,7 @@ x32 (
 );
 
 
-2x1_mux
+_2x1_mux
 x31 ( 
  .A( X1b ),
  .SEL( S1 ),
@@ -12569,7 +12569,7 @@ x31 (
 );
 
 
-2x1_mux
+_2x1_mux
 x30 ( 
  .A( X0b ),
  .SEL( S1 ),
@@ -12581,7 +12581,7 @@ x30 (
 );
 
 
-2x1_mux
+_2x1_mux
 x1015 ( 
  .A( Y15b ),
  .SEL( S2 ),
@@ -12593,7 +12593,7 @@ x1015 (
 );
 
 
-2x1_mux
+_2x1_mux
 x1014 ( 
  .A( Y14b ),
  .SEL( S2 ),
@@ -12605,7 +12605,7 @@ x1014 (
 );
 
 
-2x1_mux
+_2x1_mux
 x1013 ( 
  .A( Y13b ),
  .SEL( S2 ),
@@ -12617,7 +12617,7 @@ x1013 (
 );
 
 
-2x1_mux
+_2x1_mux
 x1012 ( 
  .A( Y12b ),
  .SEL( S2 ),
@@ -12629,7 +12629,7 @@ x1012 (
 );
 
 
-2x1_mux
+_2x1_mux
 x1011 ( 
  .A( Y11b ),
  .SEL( S2 ),
@@ -12641,7 +12641,7 @@ x1011 (
 );
 
 
-2x1_mux
+_2x1_mux
 x1010 ( 
  .A( Y10b ),
  .SEL( S2 ),
@@ -12653,7 +12653,7 @@ x1010 (
 );
 
 
-2x1_mux
+_2x1_mux
 x109 ( 
  .A( Y9b ),
  .SEL( S2 ),
@@ -12665,7 +12665,7 @@ x109 (
 );
 
 
-2x1_mux
+_2x1_mux
 x108 ( 
  .A( Y8b ),
  .SEL( S2 ),
@@ -12677,7 +12677,7 @@ x108 (
 );
 
 
-2x1_mux
+_2x1_mux
 x107 ( 
  .A( Y7b ),
  .SEL( S2 ),
@@ -12689,7 +12689,7 @@ x107 (
 );
 
 
-2x1_mux
+_2x1_mux
 x106 ( 
  .A( Y6b ),
  .SEL( S2 ),
@@ -12701,7 +12701,7 @@ x106 (
 );
 
 
-2x1_mux
+_2x1_mux
 x105 ( 
  .A( Y5b ),
  .SEL( S2 ),
@@ -12713,7 +12713,7 @@ x105 (
 );
 
 
-2x1_mux
+_2x1_mux
 x104 ( 
  .A( Y4b ),
  .SEL( S2 ),
@@ -12725,7 +12725,7 @@ x104 (
 );
 
 
-2x1_mux
+_2x1_mux
 x103 ( 
  .A( Y3b ),
  .SEL( S2 ),
@@ -12737,7 +12737,7 @@ x103 (
 );
 
 
-2x1_mux
+_2x1_mux
 x102 ( 
  .A( Y2b ),
  .SEL( S2 ),
@@ -12749,7 +12749,7 @@ x102 (
 );
 
 
-2x1_mux
+_2x1_mux
 x101 ( 
  .A( Y1b ),
  .SEL( S2 ),
@@ -12761,7 +12761,7 @@ x101 (
 );
 
 
-2x1_mux
+_2x1_mux
 x100 ( 
  .A( Y0b ),
  .SEL( S2 ),
@@ -12773,7 +12773,7 @@ x100 (
 );
 
 
-2x1_mux
+_2x1_mux
 x415 ( 
  .A( Z15b ),
  .SEL( S3 ),
@@ -12785,7 +12785,7 @@ x415 (
 );
 
 
-2x1_mux
+_2x1_mux
 x414 ( 
  .A( Z14b ),
  .SEL( S3 ),
@@ -12797,7 +12797,7 @@ x414 (
 );
 
 
-2x1_mux
+_2x1_mux
 x413 ( 
  .A( Z13b ),
  .SEL( S3 ),
@@ -12809,7 +12809,7 @@ x413 (
 );
 
 
-2x1_mux
+_2x1_mux
 x412 ( 
  .A( Z12b ),
  .SEL( S3 ),
@@ -12821,7 +12821,7 @@ x412 (
 );
 
 
-2x1_mux
+_2x1_mux
 x411 ( 
  .A( Z11b ),
  .SEL( S3 ),
@@ -12833,7 +12833,7 @@ x411 (
 );
 
 
-2x1_mux
+_2x1_mux
 x410 ( 
  .A( Z10b ),
  .SEL( S3 ),
@@ -12845,7 +12845,7 @@ x410 (
 );
 
 
-2x1_mux
+_2x1_mux
 x49 ( 
  .A( Z9b ),
  .SEL( S3 ),
@@ -12857,7 +12857,7 @@ x49 (
 );
 
 
-2x1_mux
+_2x1_mux
 x48 ( 
  .A( Z8b ),
  .SEL( S3 ),
@@ -12869,7 +12869,7 @@ x48 (
 );
 
 
-2x1_mux
+_2x1_mux
 x47 ( 
  .A( Z7b ),
  .SEL( S3 ),
@@ -12881,7 +12881,7 @@ x47 (
 );
 
 
-2x1_mux
+_2x1_mux
 x46 ( 
  .A( Z6b ),
  .SEL( S3 ),
@@ -12893,7 +12893,7 @@ x46 (
 );
 
 
-2x1_mux
+_2x1_mux
 x45 ( 
  .A( Z5b ),
  .SEL( S3 ),
@@ -12905,7 +12905,7 @@ x45 (
 );
 
 
-2x1_mux
+_2x1_mux
 x44 ( 
  .A( Z4b ),
  .SEL( S3 ),
@@ -12917,7 +12917,7 @@ x44 (
 );
 
 
-2x1_mux
+_2x1_mux
 x43 ( 
  .A( Z3b ),
  .SEL( S3 ),
@@ -12929,7 +12929,7 @@ x43 (
 );
 
 
-2x1_mux
+_2x1_mux
 x42 ( 
  .A( Z2b ),
  .SEL( S3 ),
@@ -12941,7 +12941,7 @@ x42 (
 );
 
 
-2x1_mux
+_2x1_mux
 x41 ( 
  .A( Z1b ),
  .SEL( S3 ),
@@ -12953,7 +12953,7 @@ x41 (
 );
 
 
-2x1_mux
+_2x1_mux
 x40 ( 
  .A( Z0b ),
  .SEL( S3 ),
@@ -13260,10 +13260,10 @@ x90 (
 
 endmodule
 
-// expanding   symbol:  engn1600-team1/CAD4/4x1_mux.sym # of pins=10
-// sym_path: /foss/designs/engn1600-team1/CAD4/4x1_mux.sym
-// sch_path: /foss/designs/engn1600-team1/CAD4/4x1_mux.sch
-module 4x1_mux
+// expanding   symbol:  engn1600-team1/CAD4/_4x1_mux.sym # of pins=10
+// sym_path: /foss/designs/engn1600-team1/CAD4/_4x1_mux.sym
+// sch_path: /foss/designs/engn1600-team1/CAD4/_4x1_mux.sch
+module _4x1_mux
 (
   input wire SA,
   input wire A,
@@ -13283,12 +13283,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13309,12 +13309,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13335,12 +13335,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13361,12 +13361,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13402,12 +13402,12 @@ pfet_03v3
 .W ( "'kINV*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13428,12 +13428,12 @@ nfet_03v3
 .W ( "'kINV*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13452,10 +13452,10 @@ M2 (
 
 endmodule
 
-// expanding   symbol:  engn1600-team1/CAD7/2x1_mux.sym # of pins=7
-// sym_path: /foss/designs/engn1600-team1/CAD7/2x1_mux.sym
-// sch_path: /foss/designs/engn1600-team1/CAD7/2x1_mux.sch
-module 2x1_mux
+// expanding   symbol:  engn1600-team1/CAD7/_2x1_mux.sym # of pins=7
+// sym_path: /foss/designs/engn1600-team1/CAD7/_2x1_mux.sym
+// sch_path: /foss/designs/engn1600-team1/CAD7/_2x1_mux.sch
+module _2x1_mux
 (
   input wire A,
   input wire SEL,
@@ -13472,12 +13472,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13498,12 +13498,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13524,12 +13524,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13550,12 +13550,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13571,10 +13571,10 @@ M4 (
 
 endmodule
 
-// expanding   symbol:  engn1600-team1/CAD7/2x1_mux_pass.sym # of pins=6
-// sym_path: /foss/designs/engn1600-team1/CAD7/2x1_mux_pass.sym
-// sch_path: /foss/designs/engn1600-team1/CAD7/2x1_mux_pass.sch
-module 2x1_mux_pass
+// expanding   symbol:  engn1600-team1/CAD7/_2x1_mux_pass.sym # of pins=6
+// sym_path: /foss/designs/engn1600-team1/CAD7/_2x1_mux_pass.sym
+// sch_path: /foss/designs/engn1600-team1/CAD7/_2x1_mux_pass.sch
+module _2x1_mux_pass
 (
   input wire A,
   input wire SEL,
@@ -13592,12 +13592,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13618,12 +13618,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13683,12 +13683,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13709,12 +13709,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13735,12 +13735,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13761,12 +13761,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13787,12 +13787,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13813,12 +13813,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13839,12 +13839,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13865,12 +13865,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13891,12 +13891,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13917,12 +13917,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13943,12 +13943,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13969,12 +13969,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -13995,12 +13995,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14021,12 +14021,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14047,12 +14047,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14073,12 +14073,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14099,12 +14099,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14125,12 +14125,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14151,12 +14151,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14177,12 +14177,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14203,12 +14203,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14229,12 +14229,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14255,12 +14255,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14281,12 +14281,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14324,12 +14324,12 @@ pfet_03v3
 .W ( "'3*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14350,12 +14350,12 @@ nfet_03v3
 .W ( "'3*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14376,12 +14376,12 @@ pfet_03v3
 .W ( "'9*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14402,12 +14402,12 @@ nfet_03v3
 .W ( "'9*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14471,12 +14471,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14497,12 +14497,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14523,12 +14523,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14549,12 +14549,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14575,12 +14575,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14601,12 +14601,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14627,12 +14627,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14653,12 +14653,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14679,12 +14679,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14705,12 +14705,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14731,12 +14731,12 @@ pfet_03v3
 .W ( "'kSUMb*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14757,12 +14757,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14783,12 +14783,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14809,12 +14809,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14835,12 +14835,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14861,12 +14861,12 @@ pfet_03v3
 .W ( "'kTS*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14887,12 +14887,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14913,12 +14913,12 @@ nfet_03v3
 .W ( "'kSUMb*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14939,12 +14939,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14965,12 +14965,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -14991,12 +14991,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15017,12 +15017,12 @@ nfet_03v3
 .W ( "'kTS*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15043,12 +15043,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15069,12 +15069,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15095,12 +15095,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15121,12 +15121,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15287,10 +15287,10 @@ x6 (
 
 endmodule
 
-// expanding   symbol:  engn1600-team1/CAD4/2x1_mux_cmos.sym # of pins=8
-// sym_path: /foss/designs/engn1600-team1/CAD4/2x1_mux_cmos.sym
-// sch_path: /foss/designs/engn1600-team1/CAD4/2x1_mux_cmos.sch
-module 2x1_mux_cmos
+// expanding   symbol:  engn1600-team1/CAD4/_2x1_mux_cmos.sym # of pins=8
+// sym_path: /foss/designs/engn1600-team1/CAD4/_2x1_mux_cmos.sym
+// sch_path: /foss/designs/engn1600-team1/CAD4/_2x1_mux_cmos.sch
+module _2x1_mux_cmos
 #(
   parameter kI = 1,
   parameter kYb = 1,
@@ -15318,12 +15318,12 @@ nfet_03v3
 .W ( "'kI*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15344,12 +15344,12 @@ nfet_03v3
 .W ( "'kYb*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15370,12 +15370,12 @@ nfet_03v3
 .W ( "'kYb*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15396,12 +15396,12 @@ nfet_03v3
 .W ( "'kI*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15422,12 +15422,12 @@ pfet_03v3
 .W ( "'kYb*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15448,12 +15448,12 @@ pfet_03v3
 .W ( "'kI*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15474,12 +15474,12 @@ pfet_03v3
 .W ( "'kI*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15500,12 +15500,12 @@ pfet_03v3
 .W ( "'kYb*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15526,12 +15526,12 @@ nfet_03v3
 .W ( "'kY*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15552,12 +15552,12 @@ pfet_03v3
 .W ( "'kY*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15601,12 +15601,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15627,12 +15627,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15653,12 +15653,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15679,12 +15679,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15705,12 +15705,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15731,12 +15731,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15757,12 +15757,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15783,12 +15783,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15809,12 +15809,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15835,12 +15835,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15861,12 +15861,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15887,12 +15887,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15913,12 +15913,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15939,12 +15939,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -15965,7 +15965,7 @@ endmodule
 // sch_path: /foss/designs/engn1600-team1/CAD4/and16.sch
 module and16
 (
-  input wire [15..0] IN,
+  input wire [15:0] IN,
   inout wire VDD,
   output wire OUT,
   inout wire VSS
@@ -16060,12 +16060,12 @@ pfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16086,12 +16086,12 @@ pfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16112,12 +16112,12 @@ nfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16138,12 +16138,12 @@ nfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16164,12 +16164,12 @@ nfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16190,12 +16190,12 @@ pfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16216,12 +16216,12 @@ pfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16242,12 +16242,12 @@ pfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16268,12 +16268,12 @@ nfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16294,12 +16294,12 @@ nfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16349,12 +16349,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16375,12 +16375,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16401,12 +16401,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16427,12 +16427,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16453,12 +16453,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16479,12 +16479,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16505,12 +16505,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16531,12 +16531,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16557,12 +16557,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16583,12 +16583,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16609,12 +16609,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16635,12 +16635,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16661,12 +16661,12 @@ pfet_03v3
 .W ( "'kQ*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16687,12 +16687,12 @@ nfet_03v3
 .W ( "'kQ*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16713,12 +16713,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16739,12 +16739,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16765,12 +16765,12 @@ pfet_03v3
 .W ( "'kQ*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16791,12 +16791,12 @@ nfet_03v3
 .W ( "'kQ*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16817,12 +16817,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16843,12 +16843,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16895,12 +16895,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16921,12 +16921,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16947,12 +16947,12 @@ pfet_03v3
 .W ( "'kN*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16973,12 +16973,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -16999,12 +16999,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17025,12 +17025,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17051,12 +17051,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17077,12 +17077,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17103,12 +17103,12 @@ nfet_03v3
 .W ( "'kN*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17129,12 +17129,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17155,12 +17155,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17181,12 +17181,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17231,12 +17231,12 @@ pfet_03v3
 .W ( "'kWECLK*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17257,12 +17257,12 @@ nfet_03v3
 .W ( "'kWECLK*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17283,12 +17283,12 @@ pfet_03v3
 .W ( "'kWECLKb*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17309,12 +17309,12 @@ nfet_03v3
 .W ( "'kWECLKb*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17335,12 +17335,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17361,12 +17361,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17387,12 +17387,12 @@ nfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17413,12 +17413,12 @@ nfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17457,12 +17457,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17483,12 +17483,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17509,12 +17509,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17535,12 +17535,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17576,12 +17576,12 @@ pfet_03v3
 .W ( "'kWEMb*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17602,12 +17602,12 @@ nfet_03v3
 .W ( "'kWEMb*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17645,12 +17645,12 @@ pfet_03v3
 .W ( "'3*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17671,12 +17671,12 @@ nfet_03v3
 .W ( "'3*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17697,12 +17697,12 @@ pfet_03v3
 .W ( "'9*0.72u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17723,12 +17723,12 @@ nfet_03v3
 .W ( "'9*0.36u'" ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17761,12 +17761,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17787,12 +17787,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17828,12 +17828,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17854,12 +17854,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17880,12 +17880,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17906,12 +17906,12 @@ pfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17947,12 +17947,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17973,12 +17973,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -17999,12 +17999,12 @@ pfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18025,12 +18025,12 @@ pfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18070,12 +18070,12 @@ nfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18096,12 +18096,12 @@ nfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18122,12 +18122,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18148,12 +18148,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18174,12 +18174,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18200,12 +18200,12 @@ pfet_03v3
 .W ( 7.2e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18226,12 +18226,12 @@ nfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18252,12 +18252,12 @@ nfet_03v3
 .W ( 1.44e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18297,12 +18297,12 @@ pfet_03v3
 .W ( 2.88e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18323,12 +18323,12 @@ pfet_03v3
 .W ( 2.88e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18349,12 +18349,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18375,12 +18375,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18401,12 +18401,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18427,12 +18427,12 @@ nfet_03v3
 .W ( 3.6e-07 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18453,12 +18453,12 @@ pfet_03v3
 .W ( 2.88e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
@@ -18479,12 +18479,12 @@ pfet_03v3
 .W ( 2.88e-06 ) ,
 .nf ( 1 ) ,
 .m ( 1 ) ,
-.ad ( "'int((nf+1)/2) ) ,
-.pd ( "'2*int((nf+1)/2) ) ,
-.as ( "'int((nf+2)/2) ) ,
-.ps ( "'2*int((nf+2)/2) ) ,
-.nrd ( "'0.18u ) ,
-.nrs ( "'0.18u ) ,
+.ad ( "'int((nf+1)/2)'" ) ,
+.pd ( "'2*int((nf+1)/2)'" ) ,
+.as ( "'int((nf+2)/2)'" ) ,
+.ps ( "'2*int((nf+2)/2)'" ) ,
+.nrd ( "'0.18u'" ) ,
+.nrs ( "'0.18u'" ) ,
 .sa ( 0 ) ,
 .sb ( 0 ) ,
 .sd ( 0 ) ,
