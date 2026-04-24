@@ -8,8 +8,8 @@ module tb_memshift_jal;
     reg rst = 1;
     always #5 clk = ~clk;
 
-    cpu16 #(.IMEM_FILE("bench_memshift_jal.memh")) dut (
-        .clk(clk), .rst(rst), .dbg_pc(), .dbg_ir_x(), .dbg_flags()
+    processor #(.IMEM_FILE("bench_memshift_jal.memh")) dut (
+        .CLK(clk), .RSTn(rst), .SI(), .SE()
     );
 
     initial begin
