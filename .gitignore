@@ -1,3 +1,6 @@
 *.lyrdb
 *.cir
 .DS_Store
+
+*_obj_dir
+*.so

@@ -1,6 +1,15 @@
-RTL := processor.v control.v dmem.v imem.v
+RTL := control dmem imem
 
-.PHONY: all test benches programs assemble clean
+.PHONY: lib clean
 
-spice: $(RTL)
-	ngspice vlnggen $^
+lib: $(addsuffix .so,$(RTL))
+
+%.so: %.v
+	ngspice vlnggen $<
+
+%.spice: %.sch
+	xschem -n -o . $<
+
+clean:
+	rm -f *.spice *.so
+	rm -rf *_obj_dir
