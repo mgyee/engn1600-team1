@@ -52,16 +52,6 @@ wire DMEM_Q7b ;
 wire DMEM_Q8b ;
 wire DMEM_Q9b ;
 wire OUT ;
-wire SHIFTER_D0 ;
-wire SHIFTER_D1 ;
-wire SHIFTER_D2 ;
-wire SHIFTER_D3 ;
-wire SHIFTER_D4 ;
-wire SHIFTER_D5 ;
-wire SHIFTER_D6 ;
-wire SHIFTER_D7 ;
-wire SHIFTER_D8 ;
-wire SHIFTER_D9 ;
 wire SHIFTER_I0 ;
 wire SHIFTER_I1 ;
 wire SHIFTER_I2 ;
@@ -102,12 +92,16 @@ wire CLK12b ;
 wire CLK13b ;
 wire CLK14b ;
 wire CLK15b ;
-wire SHIFTER_D10 ;
-wire SHIFTER_D11 ;
-wire SHIFTER_D12 ;
-wire SHIFTER_D13 ;
-wire SHIFTER_D14 ;
-wire SHIFTER_D15 ;
+wire SHIFTER_D0b ;
+wire SHIFTER_D1b ;
+wire SHIFTER_D2b ;
+wire SHIFTER_D3b ;
+wire SHIFTER_D4b ;
+wire SHIFTER_D5b ;
+wire SHIFTER_D6b ;
+wire SHIFTER_D7b ;
+wire SHIFTER_D8b ;
+wire SHIFTER_D9b ;
 wire ALU_A10 ;
 wire ALU_A11 ;
 wire ALU_A12 ;
@@ -201,7 +195,6 @@ wire RDST9b ;
 wire [15:0] net1 ;
 wire [15:0] net2 ;
 wire [15:0] net3 ;
-wire [15:0] net4 ;
 wire RDST10b ;
 wire RDST11b ;
 wire SHIFTER_Q10b ;
@@ -244,6 +237,12 @@ wire DEST6 ;
 wire DEST7 ;
 wire DEST8 ;
 wire DEST9 ;
+wire SHIFTER_D10b ;
+wire SHIFTER_D11b ;
+wire SHIFTER_D12b ;
+wire SHIFTER_D13b ;
+wire SHIFTER_D14b ;
+wire SHIFTER_D15b ;
 wire DMEM_Q10b ;
 wire DMEM_Q11b ;
 wire DMEM_Q12b ;
@@ -310,7 +309,7 @@ shifter
 x4 ( 
  .VDD( VDD ),
  .VSS( VSS ),
- .D( {SHIFTER_D15,SHIFTER_D14,SHIFTER_D13,SHIFTER_D12,SHIFTER_D11,SHIFTER_D10,SHIFTER_D9,SHIFTER_D8,SHIFTER_D7,SHIFTER_D6,SHIFTER_D5,SHIFTER_D4,SHIFTER_D3,SHIFTER_D2,SHIFTER_D1,SHIFTER_D0} ),
+ .D( {SHIFTER_D15b,SHIFTER_D14b,SHIFTER_D13b,SHIFTER_D12b,SHIFTER_D11b,SHIFTER_D10b,SHIFTER_D9b,SHIFTER_D8b,SHIFTER_D7b,SHIFTER_D6b,SHIFTER_D5b,SHIFTER_D4b,SHIFTER_D3b,SHIFTER_D2b,SHIFTER_D1b,SHIFTER_D0b} ),
  .I( {SHIFTER_I3,SHIFTER_I2,SHIFTER_I1,SHIFTER_I0} ),
  .R( {SHIFTER_R3,SHIFTER_R2,SHIFTER_R1,SHIFTER_R0} ),
  .SEL( SHIFT_AMT_SRC ),
@@ -1970,7 +1969,7 @@ x100 (
 x1215 ( 
  .A( RDST15b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[15] ),
+ .Y( SHIFTER_D15b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM15b )
@@ -1981,7 +1980,7 @@ x1215 (
 x1214 ( 
  .A( RDST14b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[14] ),
+ .Y( SHIFTER_D14b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM14b )
@@ -1992,7 +1991,7 @@ x1214 (
 x1213 ( 
  .A( RDST13b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[13] ),
+ .Y( SHIFTER_D13b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM13b )
@@ -2003,7 +2002,7 @@ x1213 (
 x1212 ( 
  .A( RDST12b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[12] ),
+ .Y( SHIFTER_D12b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM12b )
@@ -2014,7 +2013,7 @@ x1212 (
 x1211 ( 
  .A( RDST11b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[11] ),
+ .Y( SHIFTER_D11b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM11b )
@@ -2025,7 +2024,7 @@ x1211 (
 x1210 ( 
  .A( RDST10b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[10] ),
+ .Y( SHIFTER_D10b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM10b )
@@ -2036,7 +2035,7 @@ x1210 (
 x129 ( 
  .A( RDST9b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[9] ),
+ .Y( SHIFTER_D9b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM9b )
@@ -2047,7 +2046,7 @@ x129 (
 x128 ( 
  .A( RDST8b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[8] ),
+ .Y( SHIFTER_D8b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM8b )
@@ -2058,7 +2057,7 @@ x128 (
 x127 ( 
  .A( RDST7b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[7] ),
+ .Y( SHIFTER_D7b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM7b )
@@ -2069,7 +2068,7 @@ x127 (
 x126 ( 
  .A( RDST6b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[6] ),
+ .Y( SHIFTER_D6b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM6b )
@@ -2080,7 +2079,7 @@ x126 (
 x125 ( 
  .A( RDST5b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[5] ),
+ .Y( SHIFTER_D5b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM5b )
@@ -2091,7 +2090,7 @@ x125 (
 x124 ( 
  .A( RDST4b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[4] ),
+ .Y( SHIFTER_D4b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM4b )
@@ -2102,7 +2101,7 @@ x124 (
 x123 ( 
  .A( RDST3b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[3] ),
+ .Y( SHIFTER_D3b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM3b )
@@ -2113,7 +2112,7 @@ x123 (
 x122 ( 
  .A( RDST2b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[2] ),
+ .Y( SHIFTER_D2b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM2b )
@@ -2124,7 +2123,7 @@ x122 (
 x121 ( 
  .A( RDST1b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[1] ),
+ .Y( SHIFTER_D1b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM1b )
@@ -2135,202 +2134,10 @@ x121 (
 x120 ( 
  .A( RDST0b ),
  .SEL( SHIFT_VAL_SRC ),
- .Y( net4[0] ),
+ .Y( SHIFTER_D0b ),
  .VDD( VDD ),
  .VSS( VSS ),
  .B( IMM0b )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x1315 ( 
- .VDD( VDD ),
- .IN( net4[15] ),
- .OUT( SHIFTER_D15 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x1314 ( 
- .VDD( VDD ),
- .IN( net4[14] ),
- .OUT( SHIFTER_D14 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x1313 ( 
- .VDD( VDD ),
- .IN( net4[13] ),
- .OUT( SHIFTER_D13 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x1312 ( 
- .VDD( VDD ),
- .IN( net4[12] ),
- .OUT( SHIFTER_D12 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x1311 ( 
- .VDD( VDD ),
- .IN( net4[11] ),
- .OUT( SHIFTER_D11 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x1310 ( 
- .VDD( VDD ),
- .IN( net4[10] ),
- .OUT( SHIFTER_D10 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x139 ( 
- .VDD( VDD ),
- .IN( net4[9] ),
- .OUT( SHIFTER_D9 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x138 ( 
- .VDD( VDD ),
- .IN( net4[8] ),
- .OUT( SHIFTER_D8 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x137 ( 
- .VDD( VDD ),
- .IN( net4[7] ),
- .OUT( SHIFTER_D7 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x136 ( 
- .VDD( VDD ),
- .IN( net4[6] ),
- .OUT( SHIFTER_D6 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x135 ( 
- .VDD( VDD ),
- .IN( net4[5] ),
- .OUT( SHIFTER_D5 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x134 ( 
- .VDD( VDD ),
- .IN( net4[4] ),
- .OUT( SHIFTER_D4 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x133 ( 
- .VDD( VDD ),
- .IN( net4[3] ),
- .OUT( SHIFTER_D3 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x132 ( 
- .VDD( VDD ),
- .IN( net4[2] ),
- .OUT( SHIFTER_D2 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x131 ( 
- .VDD( VDD ),
- .IN( net4[1] ),
- .OUT( SHIFTER_D1 ),
- .VSS( VSS )
-);
-
-
-inv
-#(
-.kINV ( 1 )
-)
-x130 ( 
- .VDD( VDD ),
- .IN( net4[0] ),
- .OUT( SHIFTER_D0 ),
- .VSS( VSS )
 );
 
 

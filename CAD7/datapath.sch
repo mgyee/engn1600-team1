@@ -81,7 +81,7 @@ C {lab_pin.sym} 1460 40 0 1 {name=p46 lab=VSS}
 C {opin.sym} 930 10 0 0 {name=p48 lab=ALU_F}
 C {opin.sym} 930 30 0 0 {name=p49 lab=ALU_Z}
 C {opin.sym} 930 50 0 0 {name=p50 lab=ALU_N}
-C {lab_pin.sym} 630 170 0 0 {name=p51 lab=SHIFTER_D[15..0]}
+C {lab_pin.sym} 630 170 0 0 {name=p51 lab=SHIFTER_D[15..0]b}
 C {lab_pin.sym} 630 190 0 0 {name=p52 lab=SHIFTER_I[3..0]}
 C {lab_pin.sym} 630 210 0 0 {name=p53 lab=SHIFTER_R[3..0]}
 C {engn1600-team1/CAD7/2x1_mux.sym} 210 360 0 0 {name=x2[3..0]}
@@ -134,10 +134,7 @@ C {engn1600-team1/CAD7/inv.sym} 1150 -300 0 0 {name=x10[15..0] kINV=1}
 C {lab_pin.sym} 1170 -340 0 1 {name=p85 lab=VDD}
 C {lab_pin.sym} 1170 -260 0 1 {name=p86 lab=VSS}
 C {engn1600-team1/CAD7/2x1_mux_pass.sym} 210 540 0 0 {name=x12[15..0]}
-C {engn1600-team1/CAD7/inv.sym} 270 540 0 0 {name=x13[15..0] kINV=1}
-C {lab_pin.sym} 290 500 0 1 {name=p88 lab=VDD}
-C {lab_pin.sym} 290 580 0 1 {name=p89 lab=VSS}
-C {lab_pin.sym} 360 540 2 0 {name=p87 lab=SHIFTER_D[15..0]}
+C {lab_pin.sym} 250 540 2 0 {name=p87 lab=SHIFTER_D[15..0]b}
 C {lab_pin.sym} 170 550 0 0 {name=p92 sig_type=std_logic lab=IMM[15..0]b
 }
 C {lab_pin.sym} 170 530 0 0 {name=p90 sig_type=std_logic lab=RDST[15..0]b
