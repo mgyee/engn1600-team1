@@ -15300,7 +15300,7 @@ module _2x1_mux_cmos
   input wire A,
   input wire SEL,
   input wire SELb,
-  output wire Y,
+  inout wire Y,
   inout wire VDD,
   inout wire VSS,
   input wire B,
@@ -15585,12 +15585,12 @@ module _2x4_decoder
 (
   inout wire VDD,
   inout wire VSS,
-  input wire S0,
+  inout wire S0,
   input wire S1,
   output wire SA,
-  output wire SB,
+  inout wire SB,
   output wire SC,
-  output wire SD
+  inout wire SD
 );
 wire S1bar ;
 
@@ -16325,12 +16325,12 @@ module slave_latch
 (
   inout wire VDD,
   inout wire VSS,
-  output wire QA,
+  inout wire QA,
   input wire WECLK,
   input wire WECLKb,
   input wire RA,
   input wire RB,
-  output wire QB,
+  inout wire QB,
   input wire D
 );
 wire net1 ;
