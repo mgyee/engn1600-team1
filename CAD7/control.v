@@ -2,9 +2,9 @@ module control (
     input [15:0] instr,
 
 
-    input reg psr_z,
-    input reg psr_n,
-    input reg psr_f,
+    input psr_z,
+    input psr_n,
+    input psr_f,
 
     // Register File
     output reg        reg_write,
@@ -46,15 +46,15 @@ module control (
   assign ra   = 1 << rsrc;
   assign rb   = 1 << rdest;
   assign we   = (1 & reg_write) << rdest;
-
+  assign cond = instr[11:8];
   reg cond_met;
   always @(*) begin
     case (cond)
       4'b0000: cond_met = psr_z;  // EQ
       4'b0001: cond_met = !psr_z;  // NE
       4'b1101: cond_met = (psr_n || psr_z);  // GE
-      4'b0010: cond_met = psr_c;  // CS
-      4'b0011: cond_met = !psr_c;  // CC
+      4'b0010: cond_met = psr_f;  // CS
+      4'b0011: cond_met = !psr_f;  // CC
       // 4'b0100: cond_met = psr_l;  // HI
       // 4'b0101: cond_met = !psr_l;  // LS
       // 4'b1010: cond_met = (!psr_l && !psr_z);  // LO
