@@ -21,6 +21,6 @@ module nfet_03v3 #(
   input B
 );
 
-nmos u_nmos ( D, G, S, B );
+nmos u_nmos ( D, S, G );
 
 endmodule

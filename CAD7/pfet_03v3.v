@@ -21,6 +21,6 @@ module pfet_03v3 #(
   input B
 );
 
-pmos u_pmos ( D, G, S, B );
+pmos u_pmos ( D, S, G );
 
 endmodule
