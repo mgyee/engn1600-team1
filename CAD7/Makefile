@@ -1,6 +1,7 @@
 VPI_DIR = .
 
 SPICE_NETLIST = datapath_bind.spice
+VCC = 3.3
 
 TB ?= benches/tb_arith
 HDL_INSTANCE =$(notdir $(TB)).dut.u_datapath
@@ -27,6 +28,7 @@ run: $(SPICE_NETLIST) $(TB).vvp
 	@echo "Running Testbench: $(TB)..."
 	SPICE_NETLIST=$(SPICE_NETLIST) \
 	HDL_INSTANCE=$(HDL_INSTANCE) \
+	VCC=$(VCC) \
 	vvp -M $(VPI_DIR) -m spicebind_vpi $(TB).vvp
 
 run_all: $(TESTBENCHES)
