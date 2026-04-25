@@ -6,3 +6,6 @@ admem [ clk we addr15 addr14 addr13 addr12 addr11 addr10 addr9 addr8 addr7 addr6
 
 aimem [ addr15 addr14 addr13 addr12 addr11 addr10 addr9 addr8 addr7 addr6 addr5 addr4 addr3 addr2 addr1 addr0 ] [ data15 data14 data13 data12 data11 data10 data9 data8 data7 data6 data5 data4 data3 data2 data1 data0 ] null imem
 .model imem d_cosim simulation="/foss/designs/engn1600-team1/CAD7/imem.so"
+
+** Hopefully works intead of https://github.com/AL-255/ngSpice-AMSG#3-terminate-ports
+.options rshunt=1e9
