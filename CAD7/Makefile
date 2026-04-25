@@ -3,7 +3,7 @@ VPI_DIR = .
 SPICE_NETLIST = datapath_bind.spice
 
 TB ?= benches/tb_arith
-HDL_INSTANCE =$(notdir $(TB)).dut.datapath 
+HDL_INSTANCE =$(notdir $(TB)).dut.u_datapath
 
 TB_FILES = $(wildcard benches/tb_*.v)
 TESTBENCHES = $(TB_FILES:.v=)
