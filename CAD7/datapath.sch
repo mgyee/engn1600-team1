@@ -40,7 +40,7 @@ C {lab_pin.sym} -220 80 3 0 {name=p15 sig_type=std_logic lab=RSRC[15..0]b
 }
 C {lab_pin.sym} -240 80 3 0 {name=p16 sig_type=std_logic lab=RF_D[15..0]
 }
-C {engn1600-team1/CAD4/4x1_mux.sym} 1360 0 0 0 {name=x5[15..0]}
+C {engn1600-team1/CAD7/4x1_mux.sym} 1360 0 0 0 {name=x5[15..0]}
 C {lab_pin.sym} 1360 -80 3 1 {name=p17 sig_type=std_logic lab=VSS
 
 }
