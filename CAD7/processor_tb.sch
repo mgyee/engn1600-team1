@@ -78,6 +78,8 @@ C {lab_pin.sym} -150 -30 0 0 {name=p1 lab=CLK}
 C {lab_pin.sym} -150 -10 0 0 {name=p2 lab=RSTn}
 C {lab_pin.sym} -150 10 0 0 {name=p3 lab=SE}
 C {lab_pin.sym} -150 30 0 0 {name=p4 lab=SI}
+C {lab_pin.sym} 150 -30 0 1 {name=p5 lab=VDD}
+C {lab_pin.sym} 150 -10 0 1 {name=p6 lab=VSS}
 C {devices/vsource.sym} 0 400 1 0 {name=VCLK value=0}
 C {devices/lab_pin.sym} 30 400 2 0 {name=pCLK lab=CLK}
 C {devices/gnd.sym} -30 400 1 0 {name=gCLK}
@@ -90,3 +92,9 @@ C {devices/gnd.sym} -30 600 1 0 {name=gSE}
 C {devices/vsource.sym} 0 700 1 0 {name=VSI value=0}
 C {devices/lab_pin.sym} 30 700 2 0 {name=pSI lab=SI}
 C {devices/gnd.sym} -30 700 1 0 {name=gSI}
+C {devices/vsource.sym} 0 800 1 0 {name=VVDD value=3.3}
+C {devices/lab_pin.sym} 30 800 2 0 {name=pVDD lab=VDD}
+C {devices/gnd.sym} -30 800 1 0 {name=gVDD}
+C {devices/vsource.sym} 0 900 1 0 {name=VVSS value=0}
+C {devices/lab_pin.sym} 30 900 2 0 {name=pVSS lab=VSS}
+C {devices/gnd.sym} -30 900 1 0 {name=gVSS}
