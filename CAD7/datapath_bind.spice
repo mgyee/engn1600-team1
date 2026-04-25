@@ -1240,7 +1240,7 @@ M2 net1 net2 VSS VSS nfet_03v3 L=0.28u W='3*0.36u' nf=1 m=1
 M3 OUT net1 VDD VDD pfet_03v3 L=0.28u W='9*0.72u' nf=1 m=1
 M4 OUT net1 VSS VSS nfet_03v3 L=0.28u W='9*0.36u' nf=1 m=1
 x1 VDD net3 net2 VSS datapath_inv kINV=1
-x1 VDD net3 EXTEND IN VSS datapath_nand2
+x2 VDD net3 EXTEND IN VSS datapath_nand2
 .ends
 
 
