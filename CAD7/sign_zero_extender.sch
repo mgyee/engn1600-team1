@@ -30,7 +30,7 @@ N 330 -60 350 -60 {lab=OUT}
 N 150 -60 290 -60 {lab=#net1}
 N -110 -60 -90 -60 {lab=#net3}
 N 20 -60 110 -60 {lab=#net2}
-N -230 -70 -210 -70 {lab=extend}
+N -230 -70 -210 -70 {lab=EXTEND}
 N -230 -50 -210 -50 {lab=IN}
 C {iopin.sym} -390 -40 2 0 {name=p3 lab=VDD}
 C {iopin.sym} -390 -20 2 0 {name=p4 lab=VSS}
@@ -98,7 +98,7 @@ spiceprefix=X
 C {opin.sym} 350 -60 0 0 {name=p14 lab=OUT}
 C {ipin.sym} -230 -70 0 0 {name=p1 lab=EXTEND}
 C {engn1600-team1/CAD7/datapath_inv.sym} -70 -60 0 0 {name=x1 kINV=1}
-C {engn1600-team1/CAD7/datapath_nand2.sym} -260 20 0 0 {}
+C {engn1600-team1/CAD7/datapath_nand2.sym} -260 20 0 0 {name=x2}
 C {lab_pin.sym} -170 -100 0 1 {name=p2 lab=VDD}
 C {lab_pin.sym} -170 -20 0 1 {name=p12 lab=VSS}
 C {lab_pin.sym} -50 -100 0 1 {name=p13 lab=VDD}
