@@ -347,3 +347,7 @@ C {devices/gnd.sym} -30 2500 1 0 {name=gEXTEND}
 C {devices/vsource.sym} 0 2600 1 0 {name=VSHIFT_VAL_SRC value=0}
 C {devices/lab_pin.sym} 30 2600 2 0 {name=pSHIFT_VAL_SRC lab=SHIFT_VAL_SRC}
 C {devices/gnd.sym} -30 2600 1 0 {name=gSHIFT_VAL_SRC}
+C {devices/code_shown.sym} 1020 -220 0 0 {name=NGSPICE only_toplevel=true
+value="
+.tran 100p 100u
+"}
