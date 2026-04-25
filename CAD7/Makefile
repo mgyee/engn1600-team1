@@ -2,18 +2,20 @@ VPI_DIR = .
 
 SPICE_NETLIST = datapath_bind.spice
 
-TB ?= tb_arith
-HDL_INSTANCE = $(TB).dut.datapath
+TB ?= benches/tb_arith
+HDL_INSTANCE =$(notdir $(TB)).dut.datapath 
 
-TB_FILES = $(wildcard tb_*.v)
+TB_FILES = $(wildcard benches/tb_*.v)
 TESTBENCHES = $(TB_FILES:.v=)
+
+SRC_FILES = $(wildcard *.v)
 
 .PHONY: proc clean
 
 proc: processor.so
 
-%.vvp: %.v processor.v
-	iverilog -o $@ $^
+%.vvp: %.v $(SRC_FILES) 
+	iverilog -g2012 -o $@ $^
 
 # %.so: %.v
 #	ngspice vlnggen $<
