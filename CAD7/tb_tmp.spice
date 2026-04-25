@@ -1,0 +1,6 @@
+.control
+save all
+alter @VRSTn[PWL] = [ 0 0 10n 0 10n 3.3 ]
+tran 1n 30n
+write processor_tb.raw
+.endc

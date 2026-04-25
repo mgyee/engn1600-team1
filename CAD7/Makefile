@@ -1,25 +1,19 @@
-VPI_DIR = .
-
 SPICE_NETLIST = datapath_bind.spice
-VCC = 3.3
 
 TB ?= benches/tb_arith
-HDL_INSTANCE =$(notdir $(TB)).dut.u_datapath
-
 TB_FILES = $(wildcard benches/tb_*.v)
 TESTBENCHES = $(TB_FILES:.v=)
 
+RTL := control dmem imem
+
 SRC_FILES = $(wildcard *.v)
 
-.PHONY: proc clean
+.PHONY: lib clean
 
-proc: processor.so
+lib: $(RTL:%=%.so)
 
-%.vvp: %.v $(SRC_FILES) 
-	iverilog -g2012 -o $@ $^
-
-# %.so: %.v
-#	ngspice vlnggen $<
+%.so: %.v
+	ngspice vlnggen $<
 
 %.spice: %.sch
 	DISPLAY= xschem -n -o . $<
@@ -41,5 +35,5 @@ $(TESTBENCHES):
 	@$(MAKE) --no-print-directory run TB=$@
 
 clean:
-	rm -f *.spice *.so
-	rm -rf *_obj_dir
+	rm -f $(RTL:%=%.so)
+	rm -rf $(RTL:%=%_obj_dir)
