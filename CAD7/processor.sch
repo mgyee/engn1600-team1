@@ -40,7 +40,9 @@ C {lab_pin.sym} -150 160 0 0 {name=p27 lab=IMEM_Q[15..0]}
 C {lab_pin.sym} 150 -40 0 1 {name=p28 lab=PC[15..0]}
 C {lab_pin.sym} -150 180 0 0 {name=p29 lab=EXTEND}
 C {lab_pin.sym} -150 200 0 0 {name=p30 lab=SHIFT_VAL_SRC}
-C {ipin.sym} -490 -30 0 0 {name=p31 lab=CLK}
-C {ipin.sym} -490 -10 0 0 {name=p32 lab=RSTn}
-C {ipin.sym} -490 10 0 0 {name=p33 lab=SE}
-C {ipin.sym} -490 30 0 0 {name=p34 lab=SI}
+C {ipin.sym} -490 -50 0 0 {name=p31 lab=CLK}
+C {ipin.sym} -490 -30 0 0 {name=p32 lab=RSTn}
+C {ipin.sym} -490 -10 0 0 {name=p33 lab=SE}
+C {ipin.sym} -490 10 0 0 {name=p34 lab=SI}
+C {iopin.sym} -490 30 2 0 {name=p35 lab=VDD}
+C {iopin.sym} -490 50 2 0 {name=p36 lab=VSS}
