@@ -10,7 +10,6 @@ format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
-.include /foss/designs/engn1600-team1/CAD7/external.spice
 "}
 C {lab_pin.sym} 150 -200 0 1 {name=p1 lab=RDST[15..0]}
 C {lab_pin.sym} 150 -180 0 1 {name=p2 lab=DMEM_ADDR[15..0]}
@@ -348,3 +347,8 @@ C {devices/gnd.sym} -30 2500 1 0 {name=gEXTEND}
 C {devices/vsource.sym} 0 2600 1 0 {name=VSHIFT_VAL_SRC value=0}
 C {devices/lab_pin.sym} 30 2600 2 0 {name=pSHIFT_VAL_SRC lab=SHIFT_VAL_SRC}
 C {devices/gnd.sym} -30 2600 1 0 {name=gSHIFT_VAL_SRC}
+C {devices/code_shown.sym} 480 80 0 0 {name=NGSPICE only_toplevel=true
+format="tcleval( @value )"
+value="
+.tran 100p 1n
+"}
