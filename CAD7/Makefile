@@ -22,7 +22,7 @@ proc: processor.so
 #	ngspice vlnggen $<
 
 %.spice: %.sch
-	xschem -n -o . $<
+	DISPLAY= xschem -n -o . $<
 
 run: $(SPICE_NETLIST) $(TB).vvp
 	@echo "Running Testbench: $(TB)..."
