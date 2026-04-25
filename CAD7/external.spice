@@ -1,0 +1,5 @@
+.control
+save all
+tran 100p 1n
+write datapath_tb.raw
+.endc
