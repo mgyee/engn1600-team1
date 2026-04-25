@@ -48,7 +48,7 @@ C {lab_pin.sym} -290 0 2 0 {name=p14 lab=VDD}
 C {lab_pin.sym} -290 20 2 0 {name=p15 lab=VSS}
 C {lab_pin.sym} 90 -150 1 0 {name=p16 lab=SELb}
 C {lab_pin.sym} 90 150 3 0 {name=p18 lab=SEL}
-C {engn1600-team1/CAD7/inv.sym} -140 0 0 0 {name=x1 kINV=1}
+C {engn1600-team1/CAD7/datapath_inv.sym} -140 0 0 0 {name=x1 kINV=1}
 C {lab_pin.sym} -120 -40 0 1 {name=p7 lab=VDD}
 C {lab_pin.sym} -160 0 0 0 {name=p8 lab=SEL}
 C {lab_pin.sym} -50 0 0 1 {name=p9 lab=SELb}

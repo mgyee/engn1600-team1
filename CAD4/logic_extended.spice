@@ -9,9 +9,9 @@ x5 VDD NAND AND VSS inv
 x6 VDD XNOR XOR VSS inv
 .ends
 
-* expanding   symbol:  engn1600-team1/CAD4/nand2.sym # of pins=5
-** sym_path: /foss/designs/engn1600-team1/CAD4/nand2.sym
-** sch_path: /foss/designs/engn1600-team1/CAD4/nand2.sch
+* expanding   symbol:  engn1600-team1/CAD4/alu_nand2.sym # of pins=5
+** sym_path: /foss/designs/engn1600-team1/CAD4/alu_nand2.sym
+** sch_path: /foss/designs/engn1600-team1/CAD4/alu_nand2.sch
 .subckt nand2 VDD OUT IN0 IN1 VSS
 *.PININFO VSS:B VDD:B IN0:I IN1:I OUT:O
 M1 net1 IN1 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 m=1
@@ -21,9 +21,9 @@ M4 OUT IN0 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 .ends
 
 
-* expanding   symbol:  engn1600-team1/CAD4/inv.sym # of pins=4
-** sym_path: /foss/designs/engn1600-team1/CAD4/inv.sym
-** sch_path: /foss/designs/engn1600-team1/CAD4/inv.sch
+* expanding   symbol:  engn1600-team1/CAD4/alu_inv.sym # of pins=4
+** sym_path: /foss/designs/engn1600-team1/CAD4/alu_inv.sym
+** sch_path: /foss/designs/engn1600-team1/CAD4/alu_inv.sch
 .subckt inv VDD IN OUT VSS
 *.PININFO IN:I OUT:O VDD:B VSS:B
 M1 OUT IN VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
@@ -31,9 +31,9 @@ M2 OUT IN VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 .ends
 
 
-* expanding   symbol:  engn1600-team1/CAD4/nor2.sym # of pins=5
-** sym_path: /foss/designs/engn1600-team1/CAD4/nor2.sym
-** sch_path: /foss/designs/engn1600-team1/CAD4/nor2.sch
+* expanding   symbol:  engn1600-team1/CAD4/alu_nor2.sym # of pins=5
+** sym_path: /foss/designs/engn1600-team1/CAD4/alu_nor2.sym
+** sch_path: /foss/designs/engn1600-team1/CAD4/alu_nor2.sch
 .subckt nor2 VDD OUT IN0 IN1 VSS
 *.PININFO VSS:B VDD:B IN0:I IN1:I OUT:O
 M1 OUT IN0 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1

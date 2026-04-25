@@ -1,6 +1,6 @@
-** sch_path: /foss/designs/engn1600-team1/CAD4/full_adder.sch
-.subckt full_adder VDD VSS A B CIN SUMb COUT
-*.PININFO VDD:B VSS:B A:I B:I CIN:I SUMb:O COUT:O
+** sch_path: /foss/designs/engn1600-team1/CAD6/pc_full_adder.sch
+.subckt full_adder VDD VSS A B CIN SUM COUT
+*.PININFO VDD:B VSS:B A:I B:I CIN:I COUT:O SUM:O
 M1 net1 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M2 net4 A net1 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M3 net3 A VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
@@ -11,22 +11,24 @@ M7 net2 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M8 net4 A net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M9 net5 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M10 net5 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M11 SUMb net4 net7 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
+M11 net8 net4 net7 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
 M12 net7 A VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M13 net7 CIN VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M14 net7 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M15 net8 A net9 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M16 SUMb CIN net8 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
-M17 net9 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
-M18 SUMb net4 net6 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
+M15 net9 A net10 VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M16 net8 CIN net9 VDD pfet_03v3 L=0.28u W='1*0.72u' nf=1 m=1
+M17 net10 B VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M18 net8 net4 net6 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
 M19 net6 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M20 net6 A VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M21 net6 CIN VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M22 SUMb CIN net11 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
-M23 net11 A net10 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
-M24 net10 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M22 net8 CIN net12 VSS nfet_03v3 L=0.28u W='1*0.36u' nf=1 m=1
+M23 net12 A net11 VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M24 net11 B VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 M25 COUT net4 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
 M26 COUT net4 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
+M27 SUM net8 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 m=1
+M28 SUM net8 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
 **** begin user architecture code
 
 

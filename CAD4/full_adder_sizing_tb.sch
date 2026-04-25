@@ -126,7 +126,7 @@ C {vsource.sym} -280 0 0 0 {name=V2 value=0 savecurrent=false}
 C {gnd.sym} -280 50 0 0 {name=l10 lab=GND}
 C {lab_wire.sym} -350 -50 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} -280 -50 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {engn1600-team1/CAD4/full_adder.sym} -70 70 0 0 {name=x1 kSUMb="'kSUMb'" kTS="'kTS'"}
+C {engn1600-team1/CAD4/alu_full_adder.sym} -70 70 0 0 {name=x1 kSUMb="'kSUMb'" kTS="'kTS'"}
 C {capa.sym} 90 60 0 0 {name=C2
 m=1
 value=10f

@@ -97,8 +97,8 @@ spiceprefix=X
 }
 C {opin.sym} 350 -60 0 0 {name=p14 lab=OUT}
 C {ipin.sym} -230 -70 0 0 {name=p1 lab=EXTEND}
-C {engn1600-team1/CAD7/inv.sym} -70 -60 0 0 {name=x1 kINV=1}
-C {engn1600-team1/CAD7/nand2.sym} -260 20 0 0 {}
+C {engn1600-team1/CAD7/datapath_inv.sym} -70 -60 0 0 {name=x1 kINV=1}
+C {engn1600-team1/CAD7/datapath_nand2.sym} -260 20 0 0 {}
 C {lab_pin.sym} -170 -100 0 1 {name=p2 lab=VDD}
 C {lab_pin.sym} -170 -20 0 1 {name=p12 lab=VSS}
 C {lab_pin.sym} -50 -100 0 1 {name=p13 lab=VDD}

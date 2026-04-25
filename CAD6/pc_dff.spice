@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/engn1600-team1/CAD6/dff.sch
+** sch_path: /foss/designs/engn1600-team1/CAD6/pc_dff.sch
 .subckt dff D Q RSTn Qb c cbar
 *.PININFO D:I Q:O RSTn:I Qb:O c:B cbar:B
 M7 net2 c VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 m=1

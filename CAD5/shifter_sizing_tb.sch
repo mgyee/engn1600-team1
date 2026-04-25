@@ -22,14 +22,14 @@ N 120 280 120 340 {lab=VSS}
 N 120 200 120 260 {lab=VDD}
 C {lab_pin.sym} -100 -310 2 1 {name=p4 lab=S0}
 C {lab_pin.sym} -60 -200 0 0 {name=p8 lab=VSS}
-C {engn1600-team1/CAD5/2x1_mux_cmos.sym} -310 -130 2 1 {name=x2[3..0] kI="'kI'" kYb="'kYb'" kY="'kY'"}
+C {engn1600-team1/CAD5/shifter_2x1_mux_cmos.sym} -310 -130 2 1 {name=x2[3..0] kI="'kI'" kYb="'kYb'" kY="'kY'"}
 C {lab_pin.sym} -320 -200 1 0 {name=p14 lab=SEL}
 C {lab_pin.sym} -300 -190 1 0 {name=p15 lab=SELb}
 C {lab_pin.sym} -320 -60 3 0 {name=p17 lab=VDD}
 C {lab_pin.sym} -300 -70 1 1 {name=p18 lab=VSS}
 C {lab_pin.sym} -270 -120 0 1 {name=p16 lab=S[3..0]}
 C {lab_pin.sym} -270 -140 0 1 {name=p19 lab=S[3..0]b}
-C {engn1600-team1/CAD5/inv.sym} -330 80 0 0 {name=x1 kSELb="'kSELb'"}
+C {engn1600-team1/CAD5/shifter_inv.sym} -330 80 0 0 {name=x1 kSELb="'kSELb'"}
 C {lab_pin.sym} -240 80 2 0 {name=p21 lab=SELb}
 C {lab_pin.sym} -310 40 0 1 {name=p22 lab=VDD}
 C {lab_pin.sym} -310 120 0 1 {name=p23 lab=VSS}

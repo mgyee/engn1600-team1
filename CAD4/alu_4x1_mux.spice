@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/engn1600-team1/CAD4/4x1_mux.sch
+** sch_path: /foss/designs/engn1600-team1/CAD4/alu_4x1_mux.sch
 .subckt 4x1_mux SA A SB B VSS Y SC C SD D
 *.PININFO A:I B:I C:I D:I Y:O VSS:B SA:I SB:I SC:I SD:I
 M1 Y SA A VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1

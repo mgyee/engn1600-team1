@@ -86,7 +86,7 @@ C {vsource.sym} -340 0 0 0 {name=V2 value=0 savecurrent=false}
 C {gnd.sym} -340 50 0 0 {name=l10 lab=GND}
 C {lab_wire.sym} -410 -50 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} -340 -50 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 0 0 0 0 {name=x1 kI="'kI'" kYb="'kYb'" kY="'kY'"}
+C {engn1600-team1/CAD4/alu_2x1_mux_cmos.sym} 0 0 0 0 {name=x1 kI="'kI'" kYb="'kYb'" kY="'kY'"}
 C {lab_pin.sym} -10 70 3 0 {name=p8 lab=SEL}
 C {lab_pin.sym} 10 60 3 0 {name=p10 lab=SELb
 }
@@ -100,7 +100,7 @@ C {lab_pin.sym} 390 -70 1 0 {name=p16 lab=VDD}
 C {lab_pin.sym} 410 -60 3 1 {name=p17 lab=VSS}
 C {lab_pin.sym} 360 -10 2 1 {name=p20 lab=VSS}
 C {lab_pin.sym} 360 10 2 1 {name=p11 lab=VSS}
-C {engn1600-team1/CAD4/2x1_mux.sym} 200 0 0 0 {name=x3[3..0]}
+C {engn1600-team1/CAD4/alu_2x1_mux.sym} 200 0 0 0 {name=x3[3..0]}
 C {lab_pin.sym} 40 -10 0 1 {name=p9 lab=Y}
 C {lab_pin.sym} 40 10 0 1 {name=p15 lab=Yb}
 C {lab_pin.sym} 160 -10 2 1 {name=p18 lab=VSS}
@@ -111,4 +111,4 @@ C {lab_pin.sym} 190 70 1 1 {name=p1 lab=Y}
 C {lab_pin.sym} 210 60 1 1 {name=p4 lab=Yb}
 C {lab_pin.sym} 390 70 1 1 {name=p21 lab=Y}
 C {lab_pin.sym} 410 60 1 1 {name=p22 lab=Yb}
-C {engn1600-team1/CAD4/2x1_mux_cmos.sym} 400 0 0 0 {name=x2 kI="'kI'" kYb="'kYb'" kY="'kY'"}
+C {engn1600-team1/CAD4/alu_2x1_mux_cmos.sym} 400 0 0 0 {name=x2 kI="'kI'" kYb="'kYb'" kY="'kY'"}

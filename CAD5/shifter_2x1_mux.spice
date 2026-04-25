@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/engn1600-team1/CAD4/2x1_mux.sch
+** sch_path: /foss/designs/engn1600-team1/CAD5/shifter_2x1_mux.sch
 .subckt 2x1_mux A SEL SELb Y VDD VSS B
 *.PININFO A:I B:I SEL:I Y:O VDD:B VSS:B SELb:I
 M1 Y SEL B VSS nfet_03v3 L=0.28u W=0.36u nf=1 m=1
