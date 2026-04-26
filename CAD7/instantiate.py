@@ -21,7 +21,7 @@ def expand_bus(name, msb, lsb):
     msb = int(msb)
     lsb = int(lsb)
     step = -1 if msb > lsb else 1
-    return [f"{name}.{i}" for i in range(msb, lsb + step, step)]
+    return [f"{name}{i}" for i in range(msb, lsb + step, step)]
 
 
 def parse_ports(port_block):
@@ -47,10 +47,10 @@ def emit_terminations(inputs, outputs, model_name):
 
     # Inputs: weak pull-down (can change to VDD if needed)
     for p in inputs:
-        lines.append(f"R{model_name}_{p.replace(".", "")}_term {p} 0 1G")
+        lines.append(f"R{model_name}_{p}_term {p} 0 1G")
     # Outputs: also weak termination (stabilizes floating outputs)
     for p in outputs:
-        lines.append(f"R{model_name}_{p.replace(".", "")}_term {p} 0 1G")
+        lines.append(f"R{model_name}_{p}_term {p} 0 1G")
 
     return lines
 
@@ -76,13 +76,19 @@ def main():
     in_str = " ".join(inputs)
     out_str = " ".join(outputs)
 
-    print(f"a{module_name} [ {in_str} ] [ {out_str} ] null {module_name}")
-    print(f'.model {module_name} d_cosim simulation="/foss/designs/engn1600-team1/CAD7/{module_name}.so"')
+    print(f"* {module_name.upper()}")
 
-    print("\n* --- terminations ---")
+    print(f"* Instantiation")
+    print(f"a{module_name} [ {in_str} ] [ {out_str} ] null {module_name}")
+    print(f'.model {module_name} d_cosim simulation="/foss/designs/engn1600-team1/CAD7/{module_name}.so" delay=10p')
+
+    print()
+
+    print("* Termination")
     for line in emit_terminations(inputs, outputs, module_name):
         print(line)
-    print("* --- end terminations ---\n")
+
+    print()
 
 
 if __name__ == "__main__":
