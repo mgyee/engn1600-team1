@@ -1,45 +1,41 @@
-VPI_DIR = .
+# SPICE_NETLIST = datapath_bind.spice
 
-SPICE_NETLIST = datapath_bind.spice
-VCC = 3.3
+# TB ?= benches/tb_arith
+# TB_FILES = $(wildcard benches/tb_*.v)
+# TESTBENCHES = $(TB_FILES:.v=)
 
-TB ?= benches/tb_arith
-HDL_INSTANCE =$(notdir $(TB)).dut.u_datapath
+RTL := control dmem imem
 
-TB_FILES = $(wildcard benches/tb_*.v)
-TESTBENCHES = $(TB_FILES:.v=)
+# SRC_FILES = $(wildcard *.v)
 
-SRC_FILES = $(wildcard *.v)
+.PHONY: lib lib.spice clean
 
-.PHONY: proc clean
+lib: $(RTL:%=%.so)
 
-proc: processor.so
+%.so: %.v
+	ngspice vlnggen $<
 
-%.vvp: %.v $(SRC_FILES) 
-	iverilog -g2012 -o $@ $^
+lib.spice: $(RTL:%=%.v)
+	@echo "Generating SPICE instantiations: $@"
+	@rm -f $@
+	@for file in $^; do python3 instantiate.py $$file >> $@; done
 
-# %.so: %.v
-#	ngspice vlnggen $<
+# run: $(SPICE_NETLIST) $(TB).vvp
+# 	@echo "Running Testbench: $(TB)..."
+# 	SPICE_NETLIST=$(SPICE_NETLIST) \
+# 	HDL_INSTANCE=$(HDL_INSTANCE) \
+# 	VCC=$(VCC) \
+# 	vvp -M $(VPI_DIR) -m spicebind_vpi $(TB).vvp
 
-%.spice: %.sch
-	xschem -n -o . $<
+# run_all: $(TESTBENCHES)
+# 	@echo "All testbenches completed!"
 
-run: $(SPICE_NETLIST) $(TB).vvp
-	@echo "Running Testbench: $(TB)..."
-	SPICE_NETLIST=$(SPICE_NETLIST) \
-	HDL_INSTANCE=$(HDL_INSTANCE) \
-	VCC=$(VCC) \
-	vvp -M $(VPI_DIR) -m spicebind_vpi $(TB).vvp
-
-run_all: $(TESTBENCHES)
-	@echo "All testbenches completed!"
-
-$(TESTBENCHES):
-	@echo "============================================================"
-	@echo " RUNNING TESTBENCH: $@"
-	@echo "============================================================"
-	@$(MAKE) --no-print-directory run TB=$@
+# $(TESTBENCHES):
+# 	@echo "============================================================"
+# 	@echo " RUNNING TESTBENCH: $@"
+# 	@echo "============================================================"
+# 	@$(MAKE) --no-print-directory run TB=$@
 
 clean:
-	rm -f *.spice *.so
-	rm -rf *_obj_dir
+	rm -f $(RTL:%=%.so)
+	rm -rf $(RTL:%=%_obj_dir)
