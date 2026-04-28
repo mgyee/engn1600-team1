@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # Converts a Verilog module into a SPICE subcircuit instantiation.
 
+import argparse
 import re
-import sys
 from pathlib import Path
 
 MODULE_RE = re.compile(
@@ -57,11 +57,20 @@ def emit_terminations(inputs, outputs, model_name):
 
 
 def main():
-    if len(sys.argv) != 2:
-        print("usage: instantiate.py file.v")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description="Convert a Verilog module into a SPICE subcircuit instantiation."
+    )
+    parser.add_argument("file", type=Path, help="Path to Verilog .v file")
+    parser.add_argument(
+        "--irreversible",
+        type=int,
+        default=None,
+        help="If set, emit d_cosim model parameter irreversible=<N>",
+    )
 
-    path = Path(sys.argv[1])
+    args = parser.parse_args()
+
+    path = args.file
     text = path.read_text()
 
     m = MODULE_RE.search(text)
@@ -81,7 +90,12 @@ def main():
 
     print(f"* Instantiation")
     print(f"a{module_name} [ {in_str} ] [ {out_str} ] null {module_name}")
-    print(f'.model {module_name} d_cosim simulation="/foss/designs/engn1600-team1/CAD7/{module_name}.so" delay=10p')
+    model_line = (
+        f'.model {module_name} d_cosim simulation="/foss/designs/engn1600-team1/CAD7/{module_name}.so" delay=10p'
+    )
+    if args.irreversible is not None and args.irreversible > 1:
+        model_line += f" irreversible={args.irreversible}"
+    print(model_line)
 
     print()
 

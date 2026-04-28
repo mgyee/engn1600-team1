@@ -93,7 +93,7 @@ Rcontrol_PC_JMP PC_JMP 0 1G
 * DMEM
 * Instantiation
 admem [ CLK WE ADDR15 ADDR14 ADDR13 ADDR12 ADDR11 ADDR10 ADDR9 ADDR8 ADDR7 ADDR6 ADDR5 ADDR4 ADDR3 ADDR2 ADDR1 ADDR0 WDATA15 WDATA14 WDATA13 WDATA12 WDATA11 WDATA10 WDATA9 WDATA8 WDATA7 WDATA6 WDATA5 WDATA4 WDATA3 WDATA2 WDATA1 WDATA0 ] [ RDATA15 RDATA14 RDATA13 RDATA12 RDATA11 RDATA10 RDATA9 RDATA8 RDATA7 RDATA6 RDATA5 RDATA4 RDATA3 RDATA2 RDATA1 RDATA0 ] null dmem
-.model dmem d_cosim simulation="/foss/designs/engn1600-team1/CAD7/dmem.so" delay=10p
+.model dmem d_cosim simulation="/foss/designs/engn1600-team1/CAD7/dmem.so" delay=10p irreversible=2
 
 * Termination
 Rdmem_CLK CLK 0 1G
@@ -150,7 +150,7 @@ Rdmem_RDATA0 RDATA0 0 1G
 * IMEM
 * Instantiation
 aimem [ ADDR15 ADDR14 ADDR13 ADDR12 ADDR11 ADDR10 ADDR9 ADDR8 ADDR7 ADDR6 ADDR5 ADDR4 ADDR3 ADDR2 ADDR1 ADDR0 ] [ DATA15 DATA14 DATA13 DATA12 DATA11 DATA10 DATA9 DATA8 DATA7 DATA6 DATA5 DATA4 DATA3 DATA2 DATA1 DATA0 ] null imem
-.model imem d_cosim simulation="/foss/designs/engn1600-team1/CAD7/imem.so" delay=10p
+.model imem d_cosim simulation="/foss/designs/engn1600-team1/CAD7/imem.so" delay=10p irreversible=3
 
 * Termination
 Rimem_ADDR15 ADDR15 0 1G

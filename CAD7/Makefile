@@ -18,7 +18,11 @@ lib: $(RTL:%=%.so)
 lib.spice: $(RTL:%=%.v)
 	@echo "Generating SPICE instantiations: $@"
 	@rm -f $@
-	@for file in $^; do python3 instantiate.py $$file >> $@; done
+	@i=1; \
+	for file in $^; do \
+		python3 instantiate.py --irreversible $$i $$file >> $@; \
+		i=$$((i+1)); \
+	done
 
 # run: $(SPICE_NETLIST) $(TB).vvp
 # 	@echo "Running Testbench: $(TB)..."
