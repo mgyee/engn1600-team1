@@ -1,14 +1,6 @@
-# SPICE_NETLIST = datapath_bind.spice
-
-# TB ?= benches/tb_arith
-# TB_FILES = $(wildcard benches/tb_*.v)
-# TESTBENCHES = $(TB_FILES:.v=)
-
 RTL := control dmem imem
 
-# SRC_FILES = $(wildcard *.v)
-
-.PHONY: lib lib.spice clean
+.PHONY: lib lib.spice clean build-%
 
 lib: $(RTL:%=%.so)
 
@@ -24,22 +16,26 @@ lib.spice: $(RTL:%=%.v)
 		i=$$((i+1)); \
 	done
 
-# run: $(SPICE_NETLIST) $(TB).vvp
-# 	@echo "Running Testbench: $(TB)..."
-# 	SPICE_NETLIST=$(SPICE_NETLIST) \
-# 	HDL_INSTANCE=$(HDL_INSTANCE) \
-# 	VCC=$(VCC) \
-# 	vvp -M $(VPI_DIR) -m spicebind_vpi $(TB).vvp
-
-# run_all: $(TESTBENCHES)
-# 	@echo "All testbenches completed!"
-
-# $(TESTBENCHES):
-# 	@echo "============================================================"
-# 	@echo " RUNNING TESTBENCH: $@"
-# 	@echo "============================================================"
-# 	@$(MAKE) --no-print-directory run TB=$@
-
 clean:
 	rm -f $(RTL:%=%.so)
 	rm -rf $(RTL:%=%_obj_dir)
+
+# Usage: make build-arith
+# - Temporarily patches imem.v so MEMFILE defaults to benches/bench_<name>.memh
+# - Rebuilds imem.so
+# - Restores imem.v
+# - Copies benches/tb_<name>.spice -> tb_tmp.spice
+build-%:
+	@set -e; \
+	name="$*"; \
+	memfile="benches/bench_$${name}.memh"; \
+	tbspice="benches/tb_$${name}.spice"; \
+	if [ ! -f "$$memfile" ]; then echo "Missing $$memfile" >&2; exit 1; fi; \
+	if [ ! -f "$$tbspice" ]; then echo "Missing $$tbspice" >&2; exit 1; fi; \
+	backup="$$(mktemp imem.v.XXXXXX.bak)"; \
+	cp imem.v "$$backup"; \
+	trap 'mv "$$backup" imem.v' EXIT INT TERM; \
+	python3 patch_imem.py imem.v "$$memfile"; \
+	$(MAKE) imem.so; \
+	cp "$$tbspice" tb_tmp.spice; \
+	echo "Built imem.so for $$name and wrote tb_tmp.spice";
