@@ -15,6 +15,7 @@ PORT_RE = re.compile(
 )
 
 def expand_bus(name, msb, lsb):
+    name = name.upper()
     if not msb:
         return [name]
 
@@ -47,10 +48,10 @@ def emit_terminations(inputs, outputs, model_name):
 
     # Inputs: weak pull-down (can change to VDD if needed)
     for p in inputs:
-        lines.append(f"R{model_name}_{p}_term {p} 0 1G")
+        lines.append(f"R{model_name}_{p} {p} 0 1G")
     # Outputs: also weak termination (stabilizes floating outputs)
     for p in outputs:
-        lines.append(f"R{model_name}_{p}_term {p} 0 1G")
+        lines.append(f"R{model_name}_{p} {p} 0 1G")
 
     return lines
 
