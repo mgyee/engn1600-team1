@@ -27,8 +27,10 @@ autoload=1
 color="4 5 6 8 9 10 11"
 node="CLK;clk
 RSTn;rstn
+JMP;x1.pc_jmp
 PC[15..0];x1.pc15,x1.pc14,x1.pc13,x1.pc12,x1.pc11,x1.pc10,x1.pc9,x1.pc8,x1.pc7,x1.pc6,x1.pc5,x1.pc4,x1.pc3,x1.pc2,x1.pc1,x1.pc0
-IQ[15..0];x1.imem_q15,x1.imem_q14,x1.imem_q13,x1.imem_q12,x1.imem_q11,x1.imem_q10,x1.imem_q9,x1.imem_q8,x1.imem_q7,x1.imem_q6,x1.imem_q5,x1.imem_q4,x1.imem_q3,x1.imem_q2,x1.imem_q1,x1.imem_q0
+IMEMQ[15..0];x1.imem_q15,x1.imem_q14,x1.imem_q13,x1.imem_q12,x1.imem_q11,x1.imem_q10,x1.imem_q9,x1.imem_q8,x1.imem_q7,x1.imem_q6,x1.imem_q5,x1.imem_q4,x1.imem_q3,x1.imem_q2,x1.imem_q1,x1.imem_q0
+INSTR[15..0];x1.instr15,x1.instr14,x1.instr13,x1.instr12,x1.instr11,x1.instr10,x1.instr9,x1.instr8,x1.instr7,x1.instr6,x1.instr5,x1.instr4,x1.instr3,x1.instr2,x1.instr1,x1.instr0
 WE;x1.mem_write
 WA[15..0];x1.dmem_addr15,x1.dmem_addr14,x1.dmem_addr13,x1.dmem_addr12,x1.dmem_addr11,x1.dmem_addr10,x1.dmem_addr9,x1.dmem_addr8,x1.dmem_addr7,x1.dmem_addr6,x1.dmem_addr5,x1.dmem_addr4,x1.dmem_addr3,x1.dmem_addr2,x1.dmem_addr1,x1.dmem_addr0
 WD[15..0];x1.rdst15,x1.rdst14,x1.rdst13,x1.rdst12,x1.rdst11,x1.rdst10,x1.rdst9,x1.rdst8,x1.rdst7,x1.rdst6,x1.rdst5,x1.rdst4,x1.rdst3,x1.rdst2,x1.rdst1,x1.rdst0
@@ -57,8 +59,10 @@ autoload=1
 color="4 5 6 8 9 10 11"
 node="CLK;clk
 RSTn;rstn
+JMP;x1.pc_jmp
 PC[15..0];x1.pc15,x1.pc14,x1.pc13,x1.pc12,x1.pc11,x1.pc10,x1.pc9,x1.pc8,x1.pc7,x1.pc6,x1.pc5,x1.pc4,x1.pc3,x1.pc2,x1.pc1,x1.pc0
-IQ[15..0];x1.imem_q15,x1.imem_q14,x1.imem_q13,x1.imem_q12,x1.imem_q11,x1.imem_q10,x1.imem_q9,x1.imem_q8,x1.imem_q7,x1.imem_q6,x1.imem_q5,x1.imem_q4,x1.imem_q3,x1.imem_q2,x1.imem_q1,x1.imem_q0
+IMEMQ[15..0];x1.imem_q15,x1.imem_q14,x1.imem_q13,x1.imem_q12,x1.imem_q11,x1.imem_q10,x1.imem_q9,x1.imem_q8,x1.imem_q7,x1.imem_q6,x1.imem_q5,x1.imem_q4,x1.imem_q3,x1.imem_q2,x1.imem_q1,x1.imem_q0
+INSTR[15..0];x1.instr15,x1.instr14,x1.instr13,x1.instr12,x1.instr11,x1.instr10,x1.instr9,x1.instr8,x1.instr7,x1.instr6,x1.instr5,x1.instr4,x1.instr3,x1.instr2,x1.instr1,x1.instr0
 WE;x1.mem_write
 WA[15..0];x1.dmem_addr15,x1.dmem_addr14,x1.dmem_addr13,x1.dmem_addr12,x1.dmem_addr11,x1.dmem_addr10,x1.dmem_addr9,x1.dmem_addr8,x1.dmem_addr7,x1.dmem_addr6,x1.dmem_addr5,x1.dmem_addr4,x1.dmem_addr3,x1.dmem_addr2,x1.dmem_addr1,x1.dmem_addr0
 WD[15..0];x1.rdst15,x1.rdst14,x1.rdst13,x1.rdst12,x1.rdst11,x1.rdst10,x1.rdst9,x1.rdst8,x1.rdst7,x1.rdst6,x1.rdst5,x1.rdst4,x1.rdst3,x1.rdst2,x1.rdst1,x1.rdst0

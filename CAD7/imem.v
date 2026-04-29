@@ -4,7 +4,7 @@ module imem #(
 ) (
     input  wire        clk,
     input  wire [15:0] pc,
-    output reg  [15:0] imem_q = 16'h5555
+    output wire [15:0] imem_q
 );
   reg [15:0] mem[0:DEPTH-1];
 
@@ -24,5 +24,5 @@ module imem #(
     if (MEMFILE != "") $readmemh(MEMFILE, mem);
   end
 
-  always @(negedge clk) imem_q <= mem[word_addr];
+  assign imem_q = mem[word_addr];
 endmodule

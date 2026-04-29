@@ -56,5 +56,5 @@ processor_tb.spice: processor_tb.sch
 	echo "xschem exit code: $$rc"
 
 clean:
-	rm -f $(RTL:%=%.so) lib.spice processor_tb.spice tb_tmp.spice
-	rm -rf $(RTL:%=%_obj_dir)
+	rm -f $(RTL:%=%.so) imem.so lib.spice processor_tb.spice tb_tmp.spice
+	rm -rf $(RTL:%=%_obj_dir) imem_obj_dir
