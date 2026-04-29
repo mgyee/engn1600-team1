@@ -1,10 +1,15 @@
 MAKEFILE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-RTL := control dmem imem
+RTL := cpu_peripherals
 SLOWDOWN ?= 2
 
 .PHONY: lib lib.spice clean build-% run-%
 
 lib: $(RTL:%=%.so) lib.spice
+
+# The wrapper pulls in control/dmem/imem via `include`, so make sure changes in
+# any of those files (or MEMFILE patching) will trigger a rebuild.
+cpu_peripherals.so: cpu_peripherals.v control.v dmem.v imem.v
+	ngspice vlnggen cpu_peripherals.v
 
 %.so: %.v
 	ngspice vlnggen $<
@@ -12,11 +17,7 @@ lib: $(RTL:%=%.so) lib.spice
 lib.spice: $(RTL:%=%.v)
 	@echo "Generating SPICE instantiations: $@"
 	@rm -f $@
-	@i=2; \
-	for file in $^; do \
-		python3 instantiate.py --irreversible $$i $$file >> $@; \
-		i=$$((i+1)); \
-	done
+	@python3 instantiate.py --irreversible 2 $< >> $@
 
 benches/tb_%.spice: benches/tb_%.v tb_spice.py
 	python3 tb_spice.py $< $(SLOWDOWN)
@@ -44,9 +45,9 @@ build-%: lib benches/bench_%.memh benches/tb_%.spice
 	cp imem.v "$$backup"; \
 	trap 'mv "$$backup" imem.v' EXIT INT TERM; \
 	python3 patch_imem.py imem.v "$$memfile"; \
-	$(MAKE) imem.so; \
+	$(MAKE) cpu_peripherals.so; \
 	cp "$$tbspice" tb_tmp.spice; \
-	echo "Built imem.so for $$name and wrote tb_tmp.spice";
+	echo "Built cpu_peripherals.so for $$name and wrote tb_tmp.spice";
 
 processor_tb.spice: processor_tb.sch
 	cd /foss/designs && \
