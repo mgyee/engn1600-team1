@@ -2,10 +2,19 @@ module imem #(
     parameter DEPTH   = 65536,
     parameter MEMFILE = ""
 ) (
+    input  wire        clk,
+    input  wire        rstn,
     input  wire [15:0] pc,
     output wire [15:0] imem_q
 );
   reg [15:0] mem[0:DEPTH-1];
+
+  // NOTE: ngspice/XSPICE's d_cosim calls into the Verilated model only when a
+  // digital input changes. In the full processor sim, PC can sit at 0 for a
+  // while after reset, which can prevent a first evaluation at t=0.
+  // Adding CLK as an (otherwise unused) input ensures the IMEM model is
+  // evaluated early due to clock edges, so $readmemh runs and IMEM_Q reflects
+  // mem[0] immediately once RSTn is deasserted.
 
   // Addressing is byte-based; instructions are 16-bit (2 bytes) wide.
   // Word index = byte_address >> 1.
@@ -18,5 +27,5 @@ module imem #(
     if (MEMFILE != "") $readmemh(MEMFILE, mem);
   end
 
-  assign imem_q = mem[word_addr];
+  assign imem_q = rstn ? mem[word_addr] : 16'h0000;
 endmodule

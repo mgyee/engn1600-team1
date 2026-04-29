@@ -1,12 +1,20 @@
 .control
-save all
+* Use an explicit save list ("save all" creates duplicate names that can
+* break downstream .raw parsing).
+save v(clk) v(rstn)
+save v(x1.pc0) v(x1.pc1) v(x1.pc2) v(x1.pc3) v(x1.pc4) v(x1.pc5) v(x1.pc6) v(x1.pc7)
+save v(x1.pc8) v(x1.pc9) v(x1.pc10) v(x1.pc11) v(x1.pc12) v(x1.pc13) v(x1.pc14) v(x1.pc15)
+save v(x1.imem_q0) v(x1.imem_q1) v(x1.imem_q2) v(x1.imem_q3) v(x1.imem_q4) v(x1.imem_q5) v(x1.imem_q6) v(x1.imem_q7)
+save v(x1.imem_q8) v(x1.imem_q9) v(x1.imem_q10) v(x1.imem_q11) v(x1.imem_q12) v(x1.imem_q13) v(x1.imem_q14) v(x1.imem_q15)
+save v(x1.instr0) v(x1.instr1) v(x1.instr2) v(x1.instr3) v(x1.instr4) v(x1.instr5) v(x1.instr6) v(x1.instr7)
+save v(x1.instr8) v(x1.instr9) v(x1.instr10) v(x1.instr11) v(x1.instr12) v(x1.instr13) v(x1.instr14) v(x1.instr15)
 
 ** CLK
 alter @VCLK[PULSE] = [ 0 3.3 10n 0 0 10n 20n 0 ]
 ** RSTn
-alter @VRSTn[PWL] = [ 0 0 24n 0 24n 3.3 ]
+alter @VRSTn[PWL] = [ 0 0 24n 0 24.001n 3.3 ]
 
-tran 0.5n 270n
+tran 0.5n 80n
 
 write tb_arith.raw
 .endc
