@@ -1,8 +1,9 @@
+MAKEFILE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 RTL := control dmem imem
 
-.PHONY: lib lib.spice clean build-%
+.PHONY: lib lib.spice processor_tb.spice clean build-%
 
-lib: $(RTL:%=%.so)
+lib: $(RTL:%=%.so) lib.spice
 
 %.so: %.v
 	ngspice vlnggen $<
@@ -16,16 +17,21 @@ lib.spice: $(RTL:%=%.v)
 		i=$$((i+1)); \
 	done
 
-clean:
-	rm -f $(RTL:%=%.so)
-	rm -rf $(RTL:%=%_obj_dir)
+# Usage: make run-arith
+# - Builds imem.so for bench_arith.memh and writes tb_tmp.spice
+# - Simulates processor_tb.spice with ngspice, writing tb_run-arith.raw
+run-%: build-% processor_tb.spice
+	@set -e; \
+	name="$*"; \
+	ngspice -b -r tb_$${name}.raw processor_tb.spice && \
+	echo "Simulated $${name} and wrote tb_$${name}.raw";
 
 # Usage: make build-arith
 # - Temporarily patches imem.v so MEMFILE defaults to benches/bench_<name>.memh
 # - Rebuilds imem.so
 # - Restores imem.v
 # - Copies benches/tb_<name>.spice -> tb_tmp.spice
-build-%:
+build-%: lib
 	@set -e; \
 	name="$*"; \
 	memfile="benches/bench_$${name}.memh"; \
@@ -39,3 +45,13 @@ build-%:
 	$(MAKE) imem.so; \
 	cp "$$tbspice" tb_tmp.spice; \
 	echo "Built imem.so for $$name and wrote tb_tmp.spice";
+
+processor_tb.spice: processor_tb.sch
+	cd /foss/designs && \
+	DISPLAY= xschem -n -q -o $(MAKEFILE_DIR) $(MAKEFILE_DIR)$< ; \
+	rc=$$? ; \
+	echo "xschem exit code: $$rc"
+
+clean:
+	rm -f $(RTL:%=%.so) lib.spice processor_tb.spice tb_tmp.spice
+	rm -rf $(RTL:%=%_obj_dir)

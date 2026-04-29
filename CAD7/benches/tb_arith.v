@@ -14,7 +14,7 @@ module tb_arith;
 
     initial begin
         #12 rst = 0;
-        repeat (40) @(posedge clk);
+        repeat (12) @(posedge clk);
 
         if (dut.u_dmem.mem[16'h0000] !== 16'h0008) begin
             $display("FAIL arith: mem[0] = %h, expected 0008", dut.u_dmem.mem[16'h0000]);
