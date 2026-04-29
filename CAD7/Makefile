@@ -27,7 +27,8 @@ benches/tb_%.spice: benches/tb_%.v tb_spice.py
 run-%: build-% processor_tb.spice
 	@set -e; \
 	name="$*"; \
-	ngspice -b -r tb_$${name}.raw processor_tb.spice && \
+	ngspice -b processor_tb.spice && \
+	cp /headless/.xschem/simulations/tb_$${name}.raw .; \
 	echo "Simulated $${name} and wrote tb_$${name}.raw";
 
 # Usage: make build-arith
