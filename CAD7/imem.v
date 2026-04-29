@@ -3,7 +3,7 @@ module imem #(
     parameter MEMFILE = ""
 ) (
     input  wire [15:0] pc,
-    output wire [15:0] instr
+    output wire [15:0] imem_q
 );
   reg [15:0] mem[0:DEPTH-1];
 
@@ -13,5 +13,5 @@ module imem #(
     if (MEMFILE != "") $readmemh(MEMFILE, mem);
   end
 
-  assign instr = mem[pc];
+  assign imem_q = mem[pc];
 endmodule

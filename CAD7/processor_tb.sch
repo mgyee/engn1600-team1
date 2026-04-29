@@ -24,13 +24,14 @@ logx=0
 logy=0
 digital=1
 autoload=1
-color="4 5 6 8 9 10"
+color="4 5 6 8 9 10 11"
 node="CLK;clk
 RSTn;rstn
 PC[15..0];x1.pc15,x1.pc14,x1.pc13,x1.pc12,x1.pc11,x1.pc10,x1.pc9,x1.pc8,x1.pc7,x1.pc6,x1.pc5,x1.pc4,x1.pc3,x1.pc2,x1.pc1,x1.pc0
+IQ[15..0];x1.imem_q15,x1.imem_q14,x1.imem_q13,x1.imem_q12,x1.imem_q11,x1.imem_q10,x1.imem_q9,x1.imem_q8,x1.imem_q7,x1.imem_q6,x1.imem_q5,x1.imem_q4,x1.imem_q3,x1.imem_q2,x1.imem_q1,x1.imem_q0
 WE;x1.mem_write
 WA[15..0];x1.dmem_addr15,x1.dmem_addr14,x1.dmem_addr13,x1.dmem_addr12,x1.dmem_addr11,x1.dmem_addr10,x1.dmem_addr9,x1.dmem_addr8,x1.dmem_addr7,x1.dmem_addr6,x1.dmem_addr5,x1.dmem_addr4,x1.dmem_addr3,x1.dmem_addr2,x1.dmem_addr1,x1.dmem_addr0
-WD[15..0];x1.wdata15,x1.wdata14,x1.wdata13,x1.wdata12,x1.wdata11,x1.wdata10,x1.wdata9,x1.wdata8,x1.wdata7,x1.wdata6,x1.wdata5,x1.wdata4,x1.wdata3,x1.wdata2,x1.wdata1,x1.wdata0
+WD[15..0];x1.rdst15,x1.rdst14,x1.rdst13,x1.rdst12,x1.rdst11,x1.rdst10,x1.rdst9,x1.rdst8,x1.rdst7,x1.rdst6,x1.rdst5,x1.rdst4,x1.rdst3,x1.rdst2,x1.rdst1,x1.rdst0
 "
 rawfile=$netlist_dir/tb_arith.raw}
 B 2 -1000 -600 1000 -200 {flags=graph
@@ -53,13 +54,14 @@ logx=0
 logy=0
 digital=1
 autoload=1
-color="4 5 6 8 9 10"
+color="4 5 6 8 9 10 11"
 node="CLK;clk
 RSTn;rstn
 PC[15..0];x1.pc15,x1.pc14,x1.pc13,x1.pc12,x1.pc11,x1.pc10,x1.pc9,x1.pc8,x1.pc7,x1.pc6,x1.pc5,x1.pc4,x1.pc3,x1.pc2,x1.pc1,x1.pc0
+IQ[15..0];x1.imem_q15,x1.imem_q14,x1.imem_q13,x1.imem_q12,x1.imem_q11,x1.imem_q10,x1.imem_q9,x1.imem_q8,x1.imem_q7,x1.imem_q6,x1.imem_q5,x1.imem_q4,x1.imem_q3,x1.imem_q2,x1.imem_q1,x1.imem_q0
 WE;x1.mem_write
 WA[15..0];x1.dmem_addr15,x1.dmem_addr14,x1.dmem_addr13,x1.dmem_addr12,x1.dmem_addr11,x1.dmem_addr10,x1.dmem_addr9,x1.dmem_addr8,x1.dmem_addr7,x1.dmem_addr6,x1.dmem_addr5,x1.dmem_addr4,x1.dmem_addr3,x1.dmem_addr2,x1.dmem_addr1,x1.dmem_addr0
-WD[15..0];x1.wdata15,x1.wdata14,x1.wdata13,x1.wdata12,x1.wdata11,x1.wdata10,x1.wdata9,x1.wdata8,x1.wdata7,x1.wdata6,x1.wdata5,x1.wdata4,x1.wdata3,x1.wdata2,x1.wdata1,x1.wdata0
+WD[15..0];x1.rdst15,x1.rdst14,x1.rdst13,x1.rdst12,x1.rdst11,x1.rdst10,x1.rdst9,x1.rdst8,x1.rdst7,x1.rdst6,x1.rdst5,x1.rdst4,x1.rdst3,x1.rdst2,x1.rdst1,x1.rdst0
 "
 rawfile=$netlist_dir/tb_arith.raw}
 C {engn1600-team1/CAD7/processor.sym} 0 0 0 0 {name=x1}
