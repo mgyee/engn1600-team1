@@ -10,6 +10,9 @@
 .param VDD=3.3
 .param TSTEP=10n
 
+* Provide a clock input for imem.v (used only to "tickle" d_cosim evals)
+VCLK  CLK   0 PULSE(0 {VDD} 0 1p 1p 5n 10n)
+
 * --- PC stimulus ----------------------------------------------------------
 * Hold PC=0 for the first TSTEP, then increment once per TSTEP.
 * Addressing is byte-based; instructions are 2 bytes, so scan addresses:
@@ -23,16 +26,15 @@
 * ignores PC0 (pc[15:1]), we use PC0 as a harmless "strobe" pulse to force a
 * re-evaluation after the address bits have settled.
 *
-* PC0 "strobe": short pulse once per address step (10 ns period), offset so it
-* occurs after the PC[4:1] transitions. PC0 is ignored by word_addr.
-VPC0  PC0   0 PULSE(0 {VDD} 2n 1p 1p 0.5n {TSTEP})
+* PC0 is ignored by word_addr.
+VPC0  PC0   0 0
 
 * Counter on PC[4:1] (PULSE starts after its delay)
 * Small skews prevent multiple bits from toggling at the exact same instant.
-VPC1  PC1   0 PULSE(0 {VDD} {1*TSTEP}          1p 1p {1*TSTEP} {2*TSTEP})
-VPC2  PC2   0 PULSE(0 {VDD} {2*TSTEP + 0.2n}   1p 1p {2*TSTEP} {4*TSTEP})
-VPC3  PC3   0 PULSE(0 {VDD} {4*TSTEP + 0.4n}   1p 1p {4*TSTEP} {8*TSTEP})
-VPC4  PC4   0 PULSE(0 {VDD} {8*TSTEP + 0.6n}   1p 1p {8*TSTEP} {16*TSTEP})
+VPC1  PC1   0 PULSE(0 {VDD} {1*TSTEP}   1p 1p {1*TSTEP} {2*TSTEP})
+VPC2  PC2   0 PULSE(0 {VDD} {2*TSTEP}   1p 1p {2*TSTEP} {4*TSTEP})
+VPC3  PC3   0 PULSE(0 {VDD} {4*TSTEP}   1p 1p {4*TSTEP} {8*TSTEP})
+VPC4  PC4   0 PULSE(0 {VDD} {8*TSTEP}   1p 1p {8*TSTEP} {16*TSTEP})
 
 * Upper bits stay 0 (scan only the first 16 instructions)
 VPC5  PC5   0 0
@@ -51,10 +53,11 @@ VPC15 PC15  0 0
 * Keep this instantiation self-contained (mirrors instantiate.py output).
 * The signal naming (PC15..PC0, IMEM_Q15..IMEM_Q0) must match the wrapper.
 
-aimem [ PC15 PC14 PC13 PC12 PC11 PC10 PC9 PC8 PC7 PC6 PC5 PC4 PC3 PC2 PC1 PC0 ] [ IMEM_Q15 IMEM_Q14 IMEM_Q13 IMEM_Q12 IMEM_Q11 IMEM_Q10 IMEM_Q9 IMEM_Q8 IMEM_Q7 IMEM_Q6 IMEM_Q5 IMEM_Q4 IMEM_Q3 IMEM_Q2 IMEM_Q1 IMEM_Q0 ] null imem
-.model imem d_cosim simulation="/foss/designs/engn1600-team1/CAD7/imem.so" delay=10p irreversible=3
+aimem [ CLK PC15 PC14 PC13 PC12 PC11 PC10 PC9 PC8 PC7 PC6 PC5 PC4 PC3 PC2 PC1 PC0 ] [ IMEM_Q15 IMEM_Q14 IMEM_Q13 IMEM_Q12 IMEM_Q11 IMEM_Q10 IMEM_Q9 IMEM_Q8 IMEM_Q7 IMEM_Q6 IMEM_Q5 IMEM_Q4 IMEM_Q3 IMEM_Q2 IMEM_Q1 IMEM_Q0 ] null imem
+.model imem d_cosim simulation="/foss/designs/engn1600-team1/CAD7/imem.so" delay=10p
 
 * Weak terminations for numerical stability / plotting convenience
+Rterm_CLK  CLK  0 1G
 Rterm_PC0  PC0  0 1G
 Rterm_PC1  PC1  0 1G
 Rterm_PC2  PC2  0 1G

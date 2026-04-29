@@ -17,7 +17,7 @@ module dmem #(
 
   initial begin
     integer i;
-    for (i = 0; i < DEPTH; i = i + 1) mem[i] = 16'h00;
+    for (i = 0; i < DEPTH; i = i + 1) mem[i] = 16'h1234;
     if (MEMFILE != "") $readmemh(MEMFILE, mem);
   end
 
