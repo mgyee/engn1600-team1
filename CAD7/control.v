@@ -2,9 +2,9 @@ module control (
     input [15:0] instr,
 
 
-    input psr_z,
-    input psr_n,
-    input psr_f,
+    input alu_z,
+    input alu_n,
+    input alu_f,
     input clk,
 
     // Register File
@@ -17,7 +17,7 @@ module control (
     output reg [1:0] alu_sel,    // 00: ADD, 01: AND, 10: OR, 11: XOR
     output reg       alu_src_b,  // 0: Reg, 1: Immediate
     output reg       alu_src_a,  // 0: Reg, 1: Imm 0 (used for MOV)
-    output reg       cin,        // 1 for sub/cmp, 0 otherwise
+    output reg       alu_cin,    // 1 for sub/cmp, 0 otherwise
 
     // Imm Gen
     output reg extend,  // 0: zero extend, 1: sign extend
@@ -54,9 +54,9 @@ module control (
   always @(*) begin
     // CMP only
     if (opcode == 4'b0000 && ext == 4'b1011) begin
-      psr_z_next = psr_z;
-      psr_n_next = psr_n;
-      psr_f_next = psr_f;
+      psr_z_next = alu_z;
+      psr_n_next = alu_n;
+      psr_f_next = alu_f;
     end
     begin
       psr_z_next = psr_z_internal;
@@ -104,7 +104,7 @@ module control (
     alu_sel = 2'b00;
     alu_src_b = 0;
     alu_src_a = 0;
-    cin = 0;
+    alu_cin = 0;
     extend = 0;
     mem_write = 0;
     data_out = 4'b0010;
@@ -118,7 +118,7 @@ module control (
         reg_write = 1;
         alu_src_b = 0;
         alu_src_a = 0;
-        cin = 0;
+        alu_cin = 0;
         extend = 0;
         mem_write = 0;
         data_out = 4'b0010;
@@ -127,12 +127,12 @@ module control (
           4'b0101: alu_sel = 2'b00;  // ADD
           4'b1001: begin
             alu_sel = 2'b00;  // SUB
-            cin = 1;
+            alu_cin = 1;
           end
           4'b1011: begin  // CMP (Subtract but no writeback)
             reg_write = 0;
-            alu_sel = 2'b00;
-            cin = 1;
+            alu_sel   = 2'b00;
+            alu_cin   = 1;
           end
           4'b0001: alu_sel = 2'b01;  // AND
           4'b0010: alu_sel = 2'b10;  // OR
@@ -151,7 +151,7 @@ module control (
         alu_src_b = 1;
         alu_src_a = 0;
         alu_sel = 2'b00;
-        cin = 0;
+        alu_cin = 0;
         extend = 1;
         mem_write = 0;
         data_out = 4'b0010;
@@ -162,7 +162,7 @@ module control (
         alu_src_b = 1;
         alu_src_a = 0;
         alu_sel = 2'b00;
-        cin = 1;
+        alu_cin = 1;
         extend = 1;
         mem_write = 0;
         data_out = 4'b0010;
@@ -173,7 +173,7 @@ module control (
         alu_src_b = 1;
         alu_src_a = 0;
         alu_sel = 2'b00;
-        cin = 1;
+        alu_cin = 1;
         extend = 1;
         mem_write = 0;
         data_out = 4'b0010;
@@ -184,7 +184,7 @@ module control (
         alu_src_b = 1;
         alu_src_a = 0;
         alu_sel = 2'b01;
-        cin = 0;
+        alu_cin = 0;
         extend = 0;
         mem_write = 0;
         data_out = 4'b0010;
@@ -195,7 +195,7 @@ module control (
         alu_src_b = 1;
         alu_src_a = 0;
         alu_sel = 2'b10;
-        cin = 0;
+        alu_cin = 0;
         extend = 0;
         mem_write = 0;
         data_out = 4'b0010;
@@ -206,7 +206,7 @@ module control (
         alu_src_b = 1;
         alu_src_a = 0;
         alu_sel = 2'b11;
-        cin = 0;
+        alu_cin = 0;
         extend = 0;
         mem_write = 0;
         data_out = 4'b0010;
@@ -217,7 +217,7 @@ module control (
         alu_src_b = 1;
         alu_src_a = 1;
         alu_sel = 2'b00;
-        cin = 0;
+        alu_cin = 0;
         extend = 0;
         mem_write = 0;
         data_out = 4'b0010;

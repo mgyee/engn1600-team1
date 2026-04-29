@@ -2,8 +2,8 @@ module imem #(
     parameter DEPTH   = 65536,
     parameter MEMFILE = ""
 ) (
-    input  wire [15:0] addr,
-    output wire [15:0] data
+    input  wire [15:0] pc,
+    output wire [15:0] instr
 );
   reg [15:0] mem[0:DEPTH-1];
 
@@ -13,5 +13,5 @@ module imem #(
     if (MEMFILE != "") $readmemh(MEMFILE, mem);
   end
 
-  assign data = mem[addr];
+  assign instr = mem[pc];
 endmodule

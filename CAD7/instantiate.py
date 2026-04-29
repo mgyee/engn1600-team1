@@ -14,6 +14,7 @@ PORT_RE = re.compile(
     r"\b(input|output|inout)\b\s*(?:wire|reg)?\s*(?:\[(\d+):(\d+)\])?\s*([\w]+)",
 )
 
+
 def expand_bus(name, msb, lsb):
     name = name.upper()
     if not msb:
@@ -90,9 +91,7 @@ def main():
 
     print(f"* Instantiation")
     print(f"a{module_name} [ {in_str} ] [ {out_str} ] null {module_name}")
-    model_line = (
-        f'.model {module_name} d_cosim simulation="/foss/designs/engn1600-team1/CAD7/{module_name}.so" delay=10p'
-    )
+    model_line = f'.model {module_name} d_cosim simulation="/foss/designs/engn1600-team1/CAD7/{module_name}.so" delay=10p'
     if args.irreversible is not None and args.irreversible > 1:
         model_line += f" irreversible={args.irreversible}"
     print(model_line)

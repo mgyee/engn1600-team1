@@ -3,10 +3,10 @@ module dmem #(
     parameter MEMFILE = ""
 ) (
     input  wire        clk,
-    input  wire        we,
-    input  wire [15:0] addr,
-    input  wire [15:0] wdata,
-    output wire [15:0] rdata
+    input  wire        mem_write,
+    input  wire [15:0] dmem_addr,
+    input  wire [15:0] rdst,
+    output wire [15:0] dmem_q
 );
   reg [15:0] mem[0:DEPTH-1];
 
@@ -17,8 +17,8 @@ module dmem #(
   end
 
   always @(posedge clk) begin
-    if (we) mem[addr] <= wdata;
+    if (mem_write) mem[dmem_addr] <= rdst;
   end
 
-  assign rdata = mem[addr];
+  assign dmem_q = mem[dmem_addr];
 endmodule
