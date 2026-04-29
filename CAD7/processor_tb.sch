@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0n
-x2=80n
+x2=150n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -24,12 +24,15 @@ logx=0
 logy=0
 digital=1
 autoload=1
-color="4 5 6 8 9"
+color="4 5 6 8 9 10"
 node="CLK;clk
 RSTn;rstn
 PC[15..0];x1.pc15,x1.pc14,x1.pc13,x1.pc12,x1.pc11,x1.pc10,x1.pc9,x1.pc8,x1.pc7,x1.pc6,x1.pc5,x1.pc4,x1.pc3,x1.pc2,x1.pc1,x1.pc0
+WE;x1.mem_write
+WA[15..0];x1.dmem_addr15,x1.dmem_addr14,x1.dmem_addr13,x1.dmem_addr12,x1.dmem_addr11,x1.dmem_addr10,x1.dmem_addr9,x1.dmem_addr8,x1.dmem_addr7,x1.dmem_addr6,x1.dmem_addr5,x1.dmem_addr4,x1.dmem_addr3,x1.dmem_addr2,x1.dmem_addr1,x1.dmem_addr0
+WD[15..0];x1.wdata15,x1.wdata14,x1.wdata13,x1.wdata12,x1.wdata11,x1.wdata10,x1.wdata9,x1.wdata8,x1.wdata7,x1.wdata6,x1.wdata5,x1.wdata4,x1.wdata3,x1.wdata2,x1.wdata1,x1.wdata0
 "
-rawfile=$netlist_dir/processor_tb.raw}
+rawfile=$netlist_dir/tb_arith.raw}
 B 2 -1000 -600 1000 -200 {flags=graph
 y1=0
 y2=2
@@ -38,8 +41,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=80n
-x2=160n
+x1=150n
+x2=300n
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -50,12 +53,15 @@ logx=0
 logy=0
 digital=1
 autoload=1
-color="4 5 6 8 9"
+color="4 5 6 8 9 10"
 node="CLK;clk
 RSTn;rstn
 PC[15..0];x1.pc15,x1.pc14,x1.pc13,x1.pc12,x1.pc11,x1.pc10,x1.pc9,x1.pc8,x1.pc7,x1.pc6,x1.pc5,x1.pc4,x1.pc3,x1.pc2,x1.pc1,x1.pc0
+WE;x1.mem_write
+WA[15..0];x1.dmem_addr15,x1.dmem_addr14,x1.dmem_addr13,x1.dmem_addr12,x1.dmem_addr11,x1.dmem_addr10,x1.dmem_addr9,x1.dmem_addr8,x1.dmem_addr7,x1.dmem_addr6,x1.dmem_addr5,x1.dmem_addr4,x1.dmem_addr3,x1.dmem_addr2,x1.dmem_addr1,x1.dmem_addr0
+WD[15..0];x1.wdata15,x1.wdata14,x1.wdata13,x1.wdata12,x1.wdata11,x1.wdata10,x1.wdata9,x1.wdata8,x1.wdata7,x1.wdata6,x1.wdata5,x1.wdata4,x1.wdata3,x1.wdata2,x1.wdata1,x1.wdata0
 "
-rawfile=$netlist_dir/processor_tb.raw}
+rawfile=$netlist_dir/tb_arith.raw}
 C {engn1600-team1/CAD7/processor.sym} 0 0 0 0 {name=x1}
 C {devices/code_shown.sym} 480 -30 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
