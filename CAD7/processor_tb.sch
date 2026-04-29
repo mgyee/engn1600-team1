@@ -33,7 +33,7 @@ WE;x1.mem_write
 WA[15..0];x1.dmem_addr15,x1.dmem_addr14,x1.dmem_addr13,x1.dmem_addr12,x1.dmem_addr11,x1.dmem_addr10,x1.dmem_addr9,x1.dmem_addr8,x1.dmem_addr7,x1.dmem_addr6,x1.dmem_addr5,x1.dmem_addr4,x1.dmem_addr3,x1.dmem_addr2,x1.dmem_addr1,x1.dmem_addr0
 WD[15..0];x1.rdst15,x1.rdst14,x1.rdst13,x1.rdst12,x1.rdst11,x1.rdst10,x1.rdst9,x1.rdst8,x1.rdst7,x1.rdst6,x1.rdst5,x1.rdst4,x1.rdst3,x1.rdst2,x1.rdst1,x1.rdst0
 "
-rawfile=$netlist_dir/tb_arith.raw}
+rawfile=/foss/designs/engn1600-team1/CAD7/tb_arith.raw}
 B 2 -1000 -600 1000 -200 {flags=graph
 y1=0
 y2=2
@@ -63,7 +63,7 @@ WE;x1.mem_write
 WA[15..0];x1.dmem_addr15,x1.dmem_addr14,x1.dmem_addr13,x1.dmem_addr12,x1.dmem_addr11,x1.dmem_addr10,x1.dmem_addr9,x1.dmem_addr8,x1.dmem_addr7,x1.dmem_addr6,x1.dmem_addr5,x1.dmem_addr4,x1.dmem_addr3,x1.dmem_addr2,x1.dmem_addr1,x1.dmem_addr0
 WD[15..0];x1.rdst15,x1.rdst14,x1.rdst13,x1.rdst12,x1.rdst11,x1.rdst10,x1.rdst9,x1.rdst8,x1.rdst7,x1.rdst6,x1.rdst5,x1.rdst4,x1.rdst3,x1.rdst2,x1.rdst1,x1.rdst0
 "
-rawfile=$netlist_dir/tb_arith.raw}
+rawfile=/foss/designs/engn1600-team1/CAD7/tb_arith.raw}
 C {engn1600-team1/CAD7/processor.sym} 0 0 0 0 {name=x1}
 C {devices/code_shown.sym} 480 -30 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"

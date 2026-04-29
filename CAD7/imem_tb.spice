@@ -1,0 +1,102 @@
+* Mixed-signal (d_cosim) testbench for CAD7/imem.v
+*
+* Scans the first 16 instructions (16-bit words = 2 bytes each): PC = 0..15.
+* Notes:
+* - This uses ngspice's d_cosim wrapper built from imem.v as CAD7/imem.so.
+* - The contents depend on how imem.so was built (see CAD7/Makefile build-<bench>).
+*
+.option nomod
+
+.param VDD=3.3
+.param TSTEP=10n
+
+* --- PC stimulus ----------------------------------------------------------
+* Hold PC=0 for the first TSTEP, then increment once per TSTEP.
+* Addressing is byte-based; instructions are 2 bytes, so scan addresses:
+*   0, 2, 4, ..., 30
+* i.e. the effective word index is PC[15:1] and PC[4:1] forms a 4-bit count 0..15.
+*
+* Note on cosim stability:
+* `imem.so` is evaluated by the d_cosim wrapper when its inputs change.
+* During binary counting, multiple PC bits can toggle at the same time, and
+* the wrapper can temporarily latch an intermediate address. Since `imem.v`
+* ignores PC0 (pc[15:1]), we use PC0 as a harmless "strobe" pulse to force a
+* re-evaluation after the address bits have settled.
+*
+* PC0 "strobe": short pulse once per address step (10 ns period), offset so it
+* occurs after the PC[4:1] transitions. PC0 is ignored by word_addr.
+VPC0  PC0   0 PULSE(0 {VDD} 2n 1p 1p 0.5n {TSTEP})
+
+* Counter on PC[4:1] (PULSE starts after its delay)
+* Small skews prevent multiple bits from toggling at the exact same instant.
+VPC1  PC1   0 PULSE(0 {VDD} {1*TSTEP}          1p 1p {1*TSTEP} {2*TSTEP})
+VPC2  PC2   0 PULSE(0 {VDD} {2*TSTEP + 0.2n}   1p 1p {2*TSTEP} {4*TSTEP})
+VPC3  PC3   0 PULSE(0 {VDD} {4*TSTEP + 0.4n}   1p 1p {4*TSTEP} {8*TSTEP})
+VPC4  PC4   0 PULSE(0 {VDD} {8*TSTEP + 0.6n}   1p 1p {8*TSTEP} {16*TSTEP})
+
+* Upper bits stay 0 (scan only the first 16 instructions)
+VPC5  PC5   0 0
+VPC6  PC6   0 0
+VPC7  PC7   0 0
+VPC8  PC8   0 0
+VPC9  PC9   0 0
+VPC10 PC10  0 0
+VPC11 PC11  0 0
+VPC12 PC12  0 0
+VPC13 PC13  0 0
+VPC14 PC14  0 0
+VPC15 PC15  0 0
+
+* --- IMEM mixed-signal (Verilog via d_cosim) ------------------------------
+* Keep this instantiation self-contained (mirrors instantiate.py output).
+* The signal naming (PC15..PC0, IMEM_Q15..IMEM_Q0) must match the wrapper.
+
+aimem [ PC15 PC14 PC13 PC12 PC11 PC10 PC9 PC8 PC7 PC6 PC5 PC4 PC3 PC2 PC1 PC0 ] [ IMEM_Q15 IMEM_Q14 IMEM_Q13 IMEM_Q12 IMEM_Q11 IMEM_Q10 IMEM_Q9 IMEM_Q8 IMEM_Q7 IMEM_Q6 IMEM_Q5 IMEM_Q4 IMEM_Q3 IMEM_Q2 IMEM_Q1 IMEM_Q0 ] null imem
+.model imem d_cosim simulation="/foss/designs/engn1600-team1/CAD7/imem.so" delay=10p irreversible=3
+
+* Weak terminations for numerical stability / plotting convenience
+Rterm_PC0  PC0  0 1G
+Rterm_PC1  PC1  0 1G
+Rterm_PC2  PC2  0 1G
+Rterm_PC3  PC3  0 1G
+Rterm_PC4  PC4  0 1G
+Rterm_PC5  PC5  0 1G
+Rterm_PC6  PC6  0 1G
+Rterm_PC7  PC7  0 1G
+Rterm_PC8  PC8  0 1G
+Rterm_PC9  PC9  0 1G
+Rterm_PC10 PC10 0 1G
+Rterm_PC11 PC11 0 1G
+Rterm_PC12 PC12 0 1G
+Rterm_PC13 PC13 0 1G
+Rterm_PC14 PC14 0 1G
+Rterm_PC15 PC15 0 1G
+
+Rterm_Q0   IMEM_Q0  0 1G
+Rterm_Q1   IMEM_Q1  0 1G
+Rterm_Q2   IMEM_Q2  0 1G
+Rterm_Q3   IMEM_Q3  0 1G
+Rterm_Q4   IMEM_Q4  0 1G
+Rterm_Q5   IMEM_Q5  0 1G
+Rterm_Q6   IMEM_Q6  0 1G
+Rterm_Q7   IMEM_Q7  0 1G
+Rterm_Q8   IMEM_Q8  0 1G
+Rterm_Q9   IMEM_Q9  0 1G
+Rterm_Q10  IMEM_Q10 0 1G
+Rterm_Q11  IMEM_Q11 0 1G
+Rterm_Q12  IMEM_Q12 0 1G
+Rterm_Q13  IMEM_Q13 0 1G
+Rterm_Q14  IMEM_Q14 0 1G
+Rterm_Q15  IMEM_Q15 0 1G
+
+.control
+save all
+
+* Run long enough to cover 16*TSTEP (160 ns) and give a bit of settle time.
+* NOTE: In ngspice .control, the stop time here must be a concrete value.
+tran 0.1n 162n
+
+write imem_tb.raw
+.endc
+
+.end

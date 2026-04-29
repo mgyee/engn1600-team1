@@ -28,7 +28,6 @@ run-%: build-% processor_tb.spice
 	@set -e; \
 	name="$*"; \
 	ngspice -b processor_tb.spice && \
-	cp tb_$${name}.raw /headless/.xschem/simulations; \
 	echo "Simulated $${name} and wrote tb_$${name}.raw";
 
 # Usage: make build-arith
