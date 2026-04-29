@@ -12,7 +12,7 @@ lib: $(RTL:%=%.so) lib.spice
 lib.spice: $(RTL:%=%.v)
 	@echo "Generating SPICE instantiations: $@"
 	@rm -f $@
-	@i=1; \
+	@i=2; \
 	for file in $^; do \
 		python3 instantiate.py --irreversible $$i $$file >> $@; \
 		i=$$((i+1)); \
