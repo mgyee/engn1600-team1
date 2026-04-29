@@ -1,7 +1,8 @@
 MAKEFILE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 RTL := control dmem imem
+SLOWDOWN ?= 2
 
-.PHONY: lib lib.spice processor_tb.spice clean build-%
+.PHONY: lib lib.spice clean build-% run-%
 
 lib: $(RTL:%=%.so) lib.spice
 
@@ -17,6 +18,9 @@ lib.spice: $(RTL:%=%.v)
 		i=$$((i+1)); \
 	done
 
+benches/tb_%.spice: benches/tb_%.v tb_spice.py
+	python3 tb_spice.py $< $(SLOWDOWN)
+
 # Usage: make run-arith
 # - Builds imem.so for bench_arith.memh and writes tb_tmp.spice
 # - Simulates processor_tb.spice with ngspice, writing tb_run-arith.raw
@@ -31,13 +35,11 @@ run-%: build-% processor_tb.spice
 # - Rebuilds imem.so
 # - Restores imem.v
 # - Copies benches/tb_<name>.spice -> tb_tmp.spice
-build-%: lib
+build-%: lib benches/bench_%.memh benches/tb_%.spice
 	@set -e; \
 	name="$*"; \
 	memfile="benches/bench_$${name}.memh"; \
 	tbspice="benches/tb_$${name}.spice"; \
-	if [ ! -f "$$memfile" ]; then echo "Missing $$memfile" >&2; exit 1; fi; \
-	if [ ! -f "$$tbspice" ]; then echo "Missing $$tbspice" >&2; exit 1; fi; \
 	backup="$$(mktemp imem.v.XXXXXX.bak)"; \
 	cp imem.v "$$backup"; \
 	trap 'mv "$$backup" imem.v' EXIT INT TERM; \

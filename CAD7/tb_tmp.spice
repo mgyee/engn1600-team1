@@ -6,7 +6,7 @@ alter @VCLK[PULSE] = [ 0 3.3 10n 0 0 10n 20n 0 ]
 ** RSTn
 alter @VRSTn[PWL] = [ 0 0 24n 0 24n 3.3 ]
 
-tran 0.5n 830n
+tran 0.5n 270n
 
 write tb_arith.raw
 .endc
