@@ -6,10 +6,10 @@ S {}
 E {}
 N 1100 -300 1130 -300 {lab=DMEM_Q[15..0]
 bus=true}
-C {engn1600-team1/CAD4/alu.sym} 780 0 0 0 {name=x1}
-C {engn1600-team1/CAD3/rf.sym} -220 0 0 0 {name=x2}
-C {engn1600-team1/CAD6/pc.sym} -920 0 0 0 {name=x3}
-C {engn1600-team1/CAD5/shifter.sym} 780 200 0 0 {name=x4}
+C {engn1600-team1/CAD4/alu.sym} 780 0 0 0 {name=xalu}
+C {engn1600-team1/CAD3/rf.sym} -220 0 0 0 {name=xrf}
+C {engn1600-team1/CAD6/pc.sym} -920 0 0 0 {name=xpc}
+C {engn1600-team1/CAD5/shifter.sym} 780 200 0 0 {name=xshifter}
 C {lab_pin.sym} -770 -70 0 1 {name=p1 sig_type=std_logic lab=VDD
 }
 C {lab_pin.sym} 930 -50 0 1 {name=p2 sig_type=std_logic lab=VDD

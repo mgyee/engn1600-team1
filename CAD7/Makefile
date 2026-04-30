@@ -29,7 +29,9 @@ run-%: build-% processor_tb.spice
 	@set -e; \
 	name="$*"; \
 	ngspice -b processor_tb.spice && \
-	echo "Simulated $${name} and wrote tb_$${name}.raw";
+	echo "Simulated $${name} and wrote tb_$${name}.raw" && \
+	python3 raw2vcd.py tb_$${name}.raw && \
+	echo "Converted tb_$${name}.raw to tb_$${name}.vcd"
 
 # Usage: make build-arith
 # - Temporarily patches imem.v so MEMFILE defaults to benches/bench_<name>.memh
