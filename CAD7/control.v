@@ -1,7 +1,5 @@
 module control (
     input [15:0] instr,
-
-
     input alu_z,
     input alu_n,
     input alu_f,
@@ -24,41 +22,89 @@ module control (
 
     // Shift
     output reg shift_val_src,  // 0: reg, 1: imm
-    output reg is_lui,  // 0: shift amt 8, 1: shift amt imm
+    output reg is_lui,         // 0: shift amt 8, 1: shift amt imm
     output reg shift_amt_src,  // 0: reg, 1: imm
 
     // Memory Signals
     output reg mem_write,
-
     output reg [3:0] data_out,  // 0001: Mem, 0010: ALU, 0100: Shifter, 1000: PC
-
 
     // Outputs to PC
     output reg pc_br,  // For Branch
     output reg pc_jmp  // For Jump
 );
 
+  // --- SPICE Initialization ---
+  initial begin
+    reg_write     = 0;
+    alu_sel       = 2'b00;
+    alu_src_b     = 0;
+    alu_src_a     = 0;
+    alu_cin       = 0;
+    extend        = 0;
+    shift_val_src = 0;
+    is_lui        = 0;
+    shift_amt_src = 0;
+    mem_write     = 0;
+    data_out      = 4'b0010;
+    pc_br         = 0;
+    pc_jmp        = 0;
+  end
+
   wire [3:0] opcode = instr[15:12];
   wire [3:0] rdest = instr[11:8];
+  wire [3:0] cond = instr[11:8];
   wire [3:0] ext = instr[7:4];
   wire [3:0] rsrc = instr[3:0];
 
-  reg psr_z_internal;
-  reg psr_n_internal;
-  reg psr_f_internal;
+  // ==========================================
+  // 1. INSTRUCTION DECODING
+  // ==========================================
+  // Register-Register
+  wire       is_add = (opcode == 4'b0000 && ext == 4'b0101);
+  wire       is_sub = (opcode == 4'b0000 && ext == 4'b1001);
+  wire       is_cmp = (opcode == 4'b0000 && ext == 4'b1011);
+  wire       is_and = (opcode == 4'b0000 && ext == 4'b0001);
+  wire       is_or = (opcode == 4'b0000 && ext == 4'b0010);
+  wire       is_xor = (opcode == 4'b0000 && ext == 4'b0011);
+  wire       is_mov = (opcode == 4'b0000 && ext == 4'b1101);
 
-  reg psr_z_next;
-  reg psr_n_next;
-  reg psr_f_next;
+  // Immediates
+  wire       is_addi = (opcode == 4'b0101);
+  wire       is_subi = (opcode == 4'b1001);
+  wire       is_cmpi = (opcode == 4'b1011);
+  wire       is_andi = (opcode == 4'b0001);
+  wire       is_ori = (opcode == 4'b0010);
+  wire       is_xori = (opcode == 4'b0011);
+  wire       is_movi = (opcode == 4'b1101);
+
+  // Shifts & LUI
+  wire       is_lsh = (opcode == 4'b1000 && ext == 4'b0100);
+  wire       is_lshi_zext = (opcode == 4'b1000 && ext == 4'b0000);
+  wire       is_lshi_sext = (opcode == 4'b1000 && ext == 4'b0001);
+  wire       is_lui_op = (opcode == 4'b1111);
+
+  // Memory & Control
+  wire       is_load = (opcode == 4'b0100 && ext == 4'b0000);
+  wire       is_stor = (opcode == 4'b0100 && ext == 4'b0100);
+  wire       is_jcond = (opcode == 4'b0100 && ext == 4'b1100);
+  wire       is_jal = (opcode == 4'b0100 && ext == 4'b1000);
+  wire       is_bcond = (opcode == 4'b1100);
+
+  // ==========================================
+  // 2. PSR (Program Status Register) LOGIC
+  // ==========================================
+  reg        psr_z_internal = 0;
+  reg        psr_n_internal = 0;
+  reg        psr_f_internal = 0;
+  reg psr_z_next, psr_n_next, psr_f_next;
 
   always @(*) begin
-    // CMP only
-    if (opcode == 4'b0000 && ext == 4'b1011) begin
+    if (is_cmp || is_cmpi) begin
       psr_z_next = alu_z;
       psr_n_next = alu_n;
       psr_f_next = alu_f;
-    end
-    begin
+    end else begin
       psr_z_next = psr_z_internal;
       psr_n_next = psr_n_internal;
       psr_f_next = psr_f_internal;
@@ -71,23 +117,15 @@ module control (
     psr_f_internal <= psr_f_next;
   end
 
-
-  assign ra = 1 << rsrc;
-  assign rb = 1 << rdest;
-  assign we = {15'd0, reg_write} << rdest;
-  wire [3:0] cond = instr[11:8];
+  // ==========================================
+  // 3. CONDITION EVALUATION
+  // ==========================================
   reg cond_met;
   always @(*) begin
     case (cond)
       4'b0000: cond_met = psr_z_internal;  // EQ
       4'b0001: cond_met = !psr_z_internal;  // NE
       4'b1101: cond_met = (psr_n_internal || psr_z_internal);  // GE
-      // 4'b0010: cond_met = psr_f;  // CS
-      // 4'b0011: cond_met = !psr_f;  // CC
-      // 4'b0100: cond_met = psr_l;  // HI
-      // 4'b0101: cond_met = !psr_l;  // LS
-      // 4'b1010: cond_met = (!psr_l && !psr_z);  // LO
-      // 4'b1011: cond_met = (psr_l || psr_z);  // HS
       4'b0110: cond_met = psr_n_internal;  // GT
       4'b0111: cond_met = !psr_n_internal;  // LE
       4'b1000: cond_met = psr_f_internal;  // FS
@@ -99,195 +137,383 @@ module control (
     endcase
   end
 
+  // ==========================================
+  // 4. REGISTER FILE ADDRESSING
+  // ==========================================
+  assign ra = 1 << rsrc;
+  assign rb = 1 << rdest;
+  assign we = (reg_write) ? (1 << rdest) : 16'h0000;
+
+  // ==========================================
+  // 5. MAIN CONTROL LOGIC
+  // ==========================================
   always @(*) begin
-    reg_write = 0;
-    alu_sel = 2'b00;
-    alu_src_b = 0;
-    alu_src_a = 0;
-    alu_cin = 0;
-    extend = 0;
-    mem_write = 0;
-    data_out = 4'b0010;
-    pc_br = 0;
-    pc_jmp = 0;
-    shift_val_src = 0;
-    shift_amt_src = 0;
-
-    case (opcode)
-      4'b0000: begin  // Register
-        reg_write = 1;
-        alu_src_b = 0;
-        alu_src_a = 0;
-        alu_cin = 0;
-        extend = 0;
-        mem_write = 0;
-        data_out = 4'b0010;
-
-        case (ext)
-          4'b0101: alu_sel = 2'b00;  // ADD
-          4'b1001: begin
-            alu_sel = 2'b00;  // SUB
-            alu_cin = 1;
-          end
-          4'b1011: begin  // CMP (Subtract but no writeback)
-            reg_write = 0;
-            alu_sel   = 2'b00;
-            alu_cin   = 1;
-          end
-          4'b0001: alu_sel = 2'b01;  // AND
-          4'b0010: alu_sel = 2'b10;  // OR
-          4'b0011: alu_sel = 2'b11;  // XOR
-          4'b1101: begin
-            alu_sel   = 2'b00;  // MOV
-            alu_src_a = 1;
-          end
-          default: begin
-          end
-        endcase
+    case (1'b1)
+      is_add: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_sub: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 1;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_cmp: begin
+        reg_write     = 0;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 1;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_and: begin
+        reg_write     = 1;
+        alu_sel       = 2'b01;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_or: begin
+        reg_write     = 1;
+        alu_sel       = 2'b10;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_xor: begin
+        reg_write     = 1;
+        alu_sel       = 2'b11;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_mov: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 1;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
       end
 
-      4'b0101: begin  // ADDI
-        reg_write = 1;
-        alu_src_b = 1;
-        alu_src_a = 0;
-        alu_sel = 2'b00;
-        alu_cin = 0;
-        extend = 1;
-        mem_write = 0;
-        data_out = 4'b0010;
+      is_addi: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 1;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 1;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_subi: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 1;
+        alu_src_a     = 0;
+        alu_cin       = 1;
+        extend        = 1;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_cmpi: begin
+        reg_write     = 0;
+        alu_sel       = 2'b00;
+        alu_src_b     = 1;
+        alu_src_a     = 0;
+        alu_cin       = 1;
+        extend        = 1;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_andi: begin
+        reg_write     = 1;
+        alu_sel       = 2'b01;
+        alu_src_b     = 1;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_ori: begin
+        reg_write     = 1;
+        alu_sel       = 2'b10;
+        alu_src_b     = 1;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_xori: begin
+        reg_write     = 1;
+        alu_sel       = 2'b11;
+        alu_src_b     = 1;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_movi: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 1;
+        alu_src_a     = 1;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
       end
 
-      4'b1001: begin  // SUBI
-        reg_write = 1;
-        alu_src_b = 1;
-        alu_src_a = 0;
-        alu_sel = 2'b00;
-        alu_cin = 1;
-        extend = 1;
-        mem_write = 0;
-        data_out = 4'b0010;
+      is_lsh: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0100;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
       end
-
-      4'b1101: begin  // CMPI
-        reg_write = 0;
-        alu_src_b = 1;
-        alu_src_a = 0;
-        alu_sel = 2'b00;
-        alu_cin = 1;
-        extend = 1;
-        mem_write = 0;
-        data_out = 4'b0010;
+      is_lshi_zext: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0100;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 1;
       end
-
-      4'b0001: begin  // ANDI
-        reg_write = 1;
-        alu_src_b = 1;
-        alu_src_a = 0;
-        alu_sel = 2'b01;
-        alu_cin = 0;
-        extend = 0;
-        mem_write = 0;
-        data_out = 4'b0010;
-      end
-
-      4'b0010: begin  // ORI
-        reg_write = 1;
-        alu_src_b = 1;
-        alu_src_a = 0;
-        alu_sel = 2'b10;
-        alu_cin = 0;
-        extend = 0;
-        mem_write = 0;
-        data_out = 4'b0010;
-      end
-
-      4'b0011: begin  // XORI
-        reg_write = 1;
-        alu_src_b = 1;
-        alu_src_a = 0;
-        alu_sel = 2'b11;
-        alu_cin = 0;
-        extend = 0;
-        mem_write = 0;
-        data_out = 4'b0010;
-      end
-
-      4'b1011: begin  // MOVI
-        reg_write = 1;
-        alu_src_b = 1;
-        alu_src_a = 1;
-        alu_sel = 2'b00;
-        alu_cin = 0;
-        extend = 0;
-        mem_write = 0;
-        data_out = 4'b0010;
-      end
-
-      4'b1000: begin  // SHIFT
-        reg_write = 1;
-        mem_write = 0;
-        data_out  = 4'b0100;
-        case (ext)
-          4'b0100: begin  // LSH
-            shift_val_src = 0;
-            is_lui = 0;
-            shift_amt_src = 0;
-          end
-          4'b0000: begin  // LSHI 0 extend?
-            extend = 0;
-            shift_val_src = 0;
-            is_lui = 0;
-            shift_amt_src = 1;
-          end
-          4'b0001: begin  // LSHI 2s comp extend
-            extend = 1;
-            shift_val_src = 0;
-            is_lui = 0;
-            shift_amt_src = 1;
-          end
-          default: begin
-          end
-        endcase
-      end
-
-      4'b1111: begin  // LUI
-        reg_write = 1;
-        mem_write = 0;
-        data_out = 4'b0100;
-        extend = 0;
-        shift_val_src = 1;
-        is_lui = 1;
+      is_lshi_sext: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 1;
+        mem_write     = 0;
+        data_out      = 4'b0100;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
         shift_amt_src = 1;
       end
 
-
-      4'b0100: begin
-        case (ext)
-          4'b0000: begin  // LOAD
-            reg_write = 1;
-            data_out  = 4'b0001;
-          end
-          4'b0100: begin  // STOR
-            reg_write = 0;
-            mem_write = 1;
-          end
-          4'b1100: begin  // JCOND
-            if (cond_met) pc_jmp = 1;
-          end
-          4'b1000: begin
-            pc_jmp = 1;  // JAL
-            reg_write = 1;
-            data_out = 4'b1000;
-          end
-          default: begin
-          end
-        endcase
+      is_lui_op: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0100;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 1;
+        is_lui        = 1;
+        shift_amt_src = 1;
       end
 
-      4'b1100: begin  // Bcond
-        if (cond_met) pc_br = 1;
+      is_load: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0001;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
       end
+      is_stor: begin
+        reg_write     = 0;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 1;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+
+      is_jcond: begin
+        reg_write     = 0;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = cond_met;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_jal: begin
+        reg_write     = 1;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b1000;
+        pc_br         = 0;
+        pc_jmp        = 1;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+      is_bcond: begin
+        reg_write     = 0;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = cond_met;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
+      end
+
       default: begin
+        reg_write     = 0;
+        alu_sel       = 2'b00;
+        alu_src_b     = 0;
+        alu_src_a     = 0;
+        alu_cin       = 0;
+        extend        = 0;
+        mem_write     = 0;
+        data_out      = 4'b0010;
+        pc_br         = 0;
+        pc_jmp        = 0;
+        shift_val_src = 0;
+        is_lui        = 0;
+        shift_amt_src = 0;
       end
     endcase
   end

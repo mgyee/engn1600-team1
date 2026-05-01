@@ -2,11 +2,11 @@
 save all
 
 ** CLK
-alter @VCLK[PULSE] = [ 0 3.3 10n 1p 1p 10n 20n 0 ]
+alter @VCLK[PULSE] = [ 0 3.3 10n 0 0 10n 20n 0 ]
 ** RSTn
-alter @VRSTn[PWL] = [ 0 0 24n 0 24.001n 3.3 ]
+alter @VRSTn[PWL] = [ 0 0 24n 0 24n 3.3 ]
 
-tran 0.1n 270n
+tran 0.5n 270n
 
 write tb_arith.raw
 .endc

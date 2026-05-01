@@ -3,6 +3,7 @@
 
 import argparse
 import re
+import sys
 from pathlib import Path
 
 MODULE_RE = re.compile(

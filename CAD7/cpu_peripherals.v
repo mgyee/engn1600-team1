@@ -33,13 +33,13 @@ module cpu_peripherals (
 
     // Outputs to PC
     output wire        pc_br,
-    output wire        pc_jmp,
 
     // DMEM
     input  wire [15:0] dmem_addr,
     input  wire [15:0] rdst,
     output wire [15:0] dmem_q,
 
+    output wire        pc_jmp,
     // IMEM
     input  wire [15:0] pc,
     output wire [15:0] imem_q
