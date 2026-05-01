@@ -9,7 +9,7 @@ C {iopin.sym} 50 -240 2 0 {name=p2 lab=VSS}
 C {ipin.sym} 50 -220 0 0 {name=p3 lab=A[15..0]}
 C {ipin.sym} 50 -200 0 0 {name=p4 lab=B[15..0]}
 C {ipin.sym} 50 -160 0 0 {name=p5 lab=SEL[1..0]}
-C {opin.sym} 50 -140 2 0 {name=p6 lab=Y[15..0]}
+C {opin.sym} 50 -140 2 0 {name=p6 lab=Y[15..0]b}
 C {opin.sym} 50 -120 2 0 {name=p7 lab=F}
 C {opin.sym} 50 -100 2 0 {name=p8 lab=Z}
 C {opin.sym} 50 -80 2 0 {name=p9 lab=N}
@@ -57,8 +57,8 @@ C {lab_pin.sym} 380 -400 0 0 {name=p44 lab=NAND[15..0]}
 C {engn1600-team1/CAD4/alu_inv.sym} 400 -180 0 0 {name=x11[15..0]}
 C {lab_pin.sym} 420 -140 0 1 {name=p45 lab=VSS}
 C {lab_pin.sym} 420 -220 0 1 {name=p46 lab=VDD}
-C {lab_pin.sym} 380 -180 0 0 {name=p47 lab=Y[15..0]b}
-C {lab_pin.sym} 490 -180 0 1 {name=p48 lab=Y[15..0]}
+C {lab_pin.sym} 380 -180 0 0 {name=p47 lab=Y15b}
+C {lab_pin.sym} 490 -180 0 1 {name=p48 lab=Y15}
 C {engn1600-team1/CAD4/logic.sym} 720 -590 0 0 {name=x8}
 C {lab_pin.sym} 720 -510 0 1 {name=p49 lab=VSS}
 C {lab_pin.sym} 780 -600 0 1 {name=p50 lab=NOR1}
