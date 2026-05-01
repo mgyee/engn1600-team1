@@ -53,7 +53,7 @@ def convert_all_raw_to_vcd_fast(raw_filename):
     )
 
     # 2. Map EVERY trace name to its column index
-    bus_pattern = re.compile(r"^(.*?)[\[\(_-]?(\d+)[\]\)_]?$")
+    bus_pattern = re.compile(r"^(.*?)[\[\(_-]?(\d+)[\]\)_]*([a-zA-Z_]*)$")
 
     buses_temp = {}
     scalars = {}
@@ -68,8 +68,11 @@ def convert_all_raw_to_vcd_fast(raw_filename):
         match = bus_pattern.match(cname)
 
         if match:
-            base, bit_str = match.groups()
+            prefix, bit_str, suffix = match.groups()
             bit_idx = int(bit_str)
+
+            base = prefix + suffix
+
             if base not in buses_temp:
                 buses_temp[base] = {}
             buses_temp[base][bit_idx] = idx
@@ -156,4 +159,3 @@ if __name__ == "__main__":
         sys.exit(1)
 
     convert_all_raw_to_vcd_fast(sys.argv[1])
-
