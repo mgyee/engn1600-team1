@@ -14,7 +14,7 @@ def clean_trace_name(name):
     return name
 
 
-def convert_all_raw_to_vcd_fast(raw_filename):
+def convert_all_raw_to_vcd_fast(raw_filename, keep_analog_reals=False):
     vcd_filename = os.path.splitext(raw_filename)[0] + ".vcd"
 
     print("Parsing SPICE header directly...")
@@ -92,7 +92,10 @@ def convert_all_raw_to_vcd_fast(raw_filename):
         print("Error: 'time' variable not found in raw file.")
         return
 
-    print(f"Grouped into {len(buses)} digital buses and {len(scalars)} analog scalars.")
+    if keep_analog_reals:
+        print(f"Grouped into {len(buses)} digital buses and {len(scalars)} analog scalars (keeping as reals).")
+    else:
+        print(f"Grouped into {len(buses)} digital buses and {len(scalars)} analog scalars (converting to 1-bit wires).")
 
     # 3. Memory-Map the binary payload (0 MB RAM overhead)
     print("Memory-mapping binary payload...")
@@ -120,9 +123,14 @@ def convert_all_raw_to_vcd_fast(raw_filename):
         # Register all scalars
         for trace_name in scalars.keys():
             cname = clean_trace_name(trace_name)
-            vcd_vars[trace_name] = writer.register_var(
-                scope="ngspice", name=cname, var_type="real", size=64
-            )
+            if keep_analog_reals:
+                vcd_vars[trace_name] = writer.register_var(
+                    scope="ngspice", name=cname, var_type="real", size=64
+                )
+            else:
+                vcd_vars[trace_name] = writer.register_var(
+                    scope="ngspice", name=cname, var_type="wire", size=1
+                )
 
         percent_interval = max(1, num_points // 10)
 
@@ -146,7 +154,12 @@ def convert_all_raw_to_vcd_fast(raw_filename):
 
             # Write scalars
             for trace_name, col_idx in scalars.items():
-                writer.change(vcd_vars[trace_name], t_ps, raw_data[i, col_idx])
+                val = raw_data[i, col_idx]
+                if keep_analog_reals:
+                    writer.change(vcd_vars[trace_name], t_ps, val)
+                else:
+                    bit_val = "1" if val >= V_TH else "0"
+                    writer.change(vcd_vars[trace_name], t_ps, bit_val)
 
     # Clean up the memmap object
     del raw_data
@@ -154,8 +167,11 @@ def convert_all_raw_to_vcd_fast(raw_filename):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python raw2vcd.py <input.raw>")
+    if len(sys.argv) < 2:
+        print("Usage: python raw2vcd.py [--keep-analog-reals] <input.raw>")
         sys.exit(1)
-
-    convert_all_raw_to_vcd_fast(sys.argv[1])
+    
+    keep_analog_reals = "--keep-analog-reals" in sys.argv
+    raw_filename = sys.argv[-1]
+    
+    convert_all_raw_to_vcd_fast(raw_filename, keep_analog_reals)
