@@ -9,10 +9,10 @@ lib: $(RTL:%=%.so) lib.spice
 # The wrapper pulls in control/dmem/imem via `include`, so make sure changes in
 # any of those files (or MEMFILE patching) will trigger a rebuild.
 cpu_peripherals.so: cpu_peripherals.v control.v dmem.v imem.v
-	ngspice vlnggen cpu_peripherals.v
+	ngspice -b vlnggen cpu_peripherals.v
 
 %.so: %.v
-	ngspice vlnggen $<
+	ngspice -b vlnggen $<
 
 lib.spice: $(RTL:%=%.v)
 	@echo "Generating SPICE instantiations: $@"

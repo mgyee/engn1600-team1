@@ -204,7 +204,7 @@ C {lab_pin.sym} -1060 580 0 1 {name=p126 lab=VSS}
 C {lab_pin.sym} -990 540 2 0 {name=p127 sig_type=std_logic lab=CLK[15..0]b
 }
 C {ipin.sym} 630 10 0 0 {name=p47 lab=ALU_SEL[1..0]}
-C {ipin.sym} -580 -280 0 0 {name=p10 lab=REG_WRITE}
+C {ipin.sym} -580 -230 0 0 {name=p10 lab=REG_WRITE}
 C {ipin.sym} 630 -10 0 0 {name=p45 lab=ALU_CIN}
 C {engn1600-team1/CAD7/datapath_inv.sym} 650 -460 0 0 {name=x20[15..0] kINV=1}
 C {lab_pin.sym} 670 -500 0 1 {name=p129 lab=VDD}
@@ -224,8 +224,8 @@ C {lab_pin.sym} -770 -10 0 1 {name=p137 lab=PC_NEXT15}
 C {ipin.sym} 1220 140 3 0 {name=p138 lab=DATA_OUT[3..0]}
 C {lab_pin.sym} -370 -30 0 0 {name=p88 sig_type=std_logic lab=WEM
 }
-C {engn1600-team1/CAD7/datapath_nand2.sym} -630 -210 0 0 {name=x1}
-C {lab_pin.sym} -540 -330 0 1 {name=p89 lab=VDD}
-C {lab_pin.sym} -480 -290 0 1 {name=p139 lab=WEM}
-C {lab_pin.sym} -540 -250 0 1 {name=p142 lab=VSS}
-C {lab_pin.sym} -580 -300 0 0 {name=p140 lab=CLK}
+C {engn1600-team1/CAD7/datapath_nand2.sym} -630 -160 0 0 {name=x1}
+C {lab_pin.sym} -540 -280 0 1 {name=p89 lab=VDD}
+C {lab_pin.sym} -480 -240 0 1 {name=p139 lab=WEM}
+C {lab_pin.sym} -540 -200 0 1 {name=p142 lab=VSS}
+C {lab_pin.sym} -580 -250 0 0 {name=p140 lab=CLK}
