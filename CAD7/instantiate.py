@@ -1,24 +1,18 @@
 #!/usr/bin/env python3
-# Converts a Verilog module into a SPICE subcircuit instantiation.
+# Converts Verilator-generated header files into a SPICE subcircuit instantiation.
 
 import argparse
 import re
-import sys
 from pathlib import Path
 
-MODULE_RE = re.compile(
-    r"module\s+(\w+)\s*(?:#\s*\(.*?\)\s*)?\((.*?)\)\s*;.*?endmodule",
-    re.S,
-)
-
-PORT_RE = re.compile(
-    r"\b(input|output|inout)\b\s*(?:wire|reg)?\s*(?:\[(\d+):(\d+)\])?\s*([\w]+)",
-)
+# Parse VL_DATA entries from generated header files
+# Format: VL_DATA(width, name, msb, lsb)
+VL_DATA_RE = re.compile(r"VL_DATA\(\d+,(\w+),(\d+),(\d+)\)")
 
 
 def expand_bus(name, msb, lsb):
-    name = name.upper()
-    if not msb:
+    """Expand a bus signal into individual bit signals."""
+    if msb == lsb:
         return [name]
 
     msb = int(msb)
@@ -27,20 +21,20 @@ def expand_bus(name, msb, lsb):
     return [f"{name}{i}" for i in range(msb, lsb + step, step)]
 
 
-def parse_ports(port_block):
+def parse_header_files(inputs_h_path, outputs_h_path):
+    """Parse inputs.h and outputs.h to extract port order and expand buses."""
     inputs = []
     outputs = []
 
-    for direction, msb, lsb, name in PORT_RE.findall(port_block):
+    inputs_text = inputs_h_path.read_text()
+    for name, msb, lsb in VL_DATA_RE.findall(inputs_text):
         expanded = expand_bus(name, msb, lsb)
+        inputs.extend(expanded)
 
-        if direction == "input":
-            inputs.extend(expanded)
-        elif direction == "output":
-            outputs.extend(expanded)
-        elif direction == "inout":
-            inputs.extend(expanded)
-            outputs.extend(expanded)
+    outputs_text = outputs_h_path.read_text()
+    for name, msb, lsb in VL_DATA_RE.findall(outputs_text):
+        expanded = expand_bus(name, msb, lsb)
+        outputs.extend(expanded)
 
     return inputs, outputs
 
@@ -60,9 +54,26 @@ def emit_terminations(inputs, outputs, model_name):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Convert a Verilog module into a SPICE subcircuit instantiation."
+        description="Convert Verilator-generated header files into a SPICE subcircuit instantiation."
     )
-    parser.add_argument("file", type=Path, help="Path to Verilog .v file")
+    parser.add_argument(
+        "--inputs-h",
+        type=Path,
+        required=True,
+        help="Path to generated inputs.h header file"
+    )
+    parser.add_argument(
+        "--outputs-h",
+        type=Path,
+        required=True,
+        help="Path to generated outputs.h header file"
+    )
+    parser.add_argument(
+        "--module-name",
+        type=str,
+        required=True,
+        help="Module name to use in SPICE instantiation"
+    )
     parser.add_argument(
         "--irreversible",
         type=int,
@@ -72,18 +83,8 @@ def main():
 
     args = parser.parse_args()
 
-    path = args.file
-    text = path.read_text()
-
-    m = MODULE_RE.search(text)
-    if not m:
-        print("no module found")
-        sys.exit(1)
-
-    module_name = m.group(1)
-    port_block = m.group(2)
-
-    inputs, outputs = parse_ports(port_block)
+    inputs, outputs = parse_header_files(args.inputs_h, args.outputs_h)
+    module_name = args.module_name
 
     in_str = " ".join(inputs)
     out_str = " ".join(outputs)
@@ -102,8 +103,6 @@ def main():
     print("* Termination")
     for line in emit_terminations(inputs, outputs, module_name):
         print(line)
-
-    print()
 
 
 if __name__ == "__main__":

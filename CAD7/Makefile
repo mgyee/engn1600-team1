@@ -2,22 +2,25 @@ MAKEFILE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 RTL := cpu_peripherals
 SLOWDOWN ?= 2
 
-.PHONY: lib lib.spice clean build-% run-%
+.PHONY: lib run-% build-% clean
 
 lib: $(RTL:%=%.so) lib.spice
 
 # The wrapper pulls in control/dmem/imem via `include`, so make sure changes in
 # any of those files (or MEMFILE patching) will trigger a rebuild.
 cpu_peripherals.so: cpu_peripherals.v control.v dmem.v imem.v
-	ngspice vlnggen cpu_peripherals.v
+	ngspice -b vlnggen cpu_peripherals.v
 
 %.so: %.v
-	ngspice vlnggen $<
+	ngspice -b vlnggen $<
 
-lib.spice: $(RTL:%=%.v)
+lib.spice: cpu_peripherals.so cpu_peripherals_obj_dir/inputs.h cpu_peripherals_obj_dir/outputs.h
 	@echo "Generating SPICE instantiations: $@"
 	@rm -f $@
-	@python3 instantiate.py --irreversible 2 $< >> $@
+	@python3 instantiate.py \
+	--inputs-h cpu_peripherals_obj_dir/inputs.h \
+	--outputs-h cpu_peripherals_obj_dir/outputs.h \
+	--module-name cpu_peripherals --irreversible 2 >> $@
 
 benches/tb_%.spice: benches/tb_%.v tb_spice.py
 	python3 tb_spice.py $< $(SLOWDOWN)
@@ -51,12 +54,18 @@ build-%: lib benches/bench_%.memh benches/tb_%.spice
 	cp "$$tbspice" tb_tmp.spice; \
 	echo "Built cpu_peripherals.so for $$name and wrote tb_tmp.spice";
 
-processor_tb.spice: processor_tb.sch
+processor_tb.spice: processor_tb.sch datapath.spice
+	cd /foss/designs && \
+	DISPLAY= xschem -n -q -o $(MAKEFILE_DIR) $(MAKEFILE_DIR)$< ; \
+	rc=$$? ; \
+	echo "xschem exit code: $$rc"
+
+datapath.spice: datapath.sch
 	cd /foss/designs && \
 	DISPLAY= xschem -n -q -o $(MAKEFILE_DIR) $(MAKEFILE_DIR)$< ; \
 	rc=$$? ; \
 	echo "xschem exit code: $$rc"
 
 clean:
-	rm -f $(RTL:%=%.so) imem.so lib.spice processor_tb.spice tb_tmp.spice
-	rm -rf $(RTL:%=%_obj_dir) imem_obj_dir
+	rm -f *.so datapath.spice lib.spice processor_tb.spice tb_tmp.spice
+	rm -rf *_obj_dir
