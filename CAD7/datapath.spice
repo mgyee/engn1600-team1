@@ -276,6 +276,7 @@ x183 VDD PC3 PC3b VSS datapath_inv kINV=1
 x182 VDD PC2 PC2b VSS datapath_inv kINV=1
 x181 VDD PC1 PC1b VSS datapath_inv kINV=1
 x180 VDD PC0 PC0b VSS datapath_inv kINV=1
+x1916 VDD CLK CLK16b VSS datapath_inv kINV=1
 x1915 VDD CLK CLK15b VSS datapath_inv kINV=1
 x1914 VDD CLK CLK14b VSS datapath_inv kINV=1
 x1913 VDD CLK CLK13b VSS datapath_inv kINV=1
@@ -308,23 +309,8 @@ x203 VDD RDST3b RDST3 VSS datapath_inv kINV=1
 x202 VDD RDST2b RDST2 VSS datapath_inv kINV=1
 x201 VDD RDST1b RDST1 VSS datapath_inv kINV=1
 x200 VDD RDST0b RDST0 VSS datapath_inv kINV=1
-x1 VDD net1 CLK0b REG_WRITE VSS datapath_nand2
-x1315 VDD net1 WEM VSS datapath_inv kINV=1
-x1314 VDD net1 WEM VSS datapath_inv kINV=1
-x1313 VDD net1 WEM VSS datapath_inv kINV=1
-x1312 VDD net1 WEM VSS datapath_inv kINV=1
-x1311 VDD net1 WEM VSS datapath_inv kINV=1
-x1310 VDD net1 WEM VSS datapath_inv kINV=1
-x139 VDD net1 WEM VSS datapath_inv kINV=1
-x138 VDD net1 WEM VSS datapath_inv kINV=1
-x137 VDD net1 WEM VSS datapath_inv kINV=1
-x136 VDD net1 WEM VSS datapath_inv kINV=1
-x135 VDD net1 WEM VSS datapath_inv kINV=1
-x134 VDD net1 WEM VSS datapath_inv kINV=1
-x133 VDD net1 WEM VSS datapath_inv kINV=1
-x132 VDD net1 WEM VSS datapath_inv kINV=1
-x131 VDD net1 WEM VSS datapath_inv kINV=1
-x130 VDD net1 WEM VSS datapath_inv kINV=1
+x1 VDD net1 CLK16b REG_WRITE VSS datapath_nand2
+x2 VDD net1 WEM VSS four_inv
 **.ends
 
 * expanding   symbol:  engn1600-team1/CAD4/alu.sym # of pins=10
@@ -1288,6 +1274,21 @@ XM2 OUT IN0 net1 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0
 XM3 OUT IN1 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM4 OUT IN0 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  engn1600-team1/CAD7/four_inv.sym # of pins=4
+** sym_path: /foss/designs/engn1600-team1/CAD7/four_inv.sym
+** sch_path: /foss/designs/engn1600-team1/CAD7/four_inv.sch
+.subckt four_inv VDD IN OUT VSS
+*.ipin IN
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XM1 OUT IN VDD VDD pfet_03v3 L=0.28u W='4*0.72u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 OUT IN VSS VSS nfet_03v3 L=0.28u W='4*0.36u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 .ends
 
