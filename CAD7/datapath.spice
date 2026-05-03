@@ -721,55 +721,55 @@ x15_12 VDD VSS QA12 WE15CLK WE15CLKb RA15 RB15 QB12 N12 slave_latch kQ='kQ'
 x15_13 VDD VSS QA13 WE15CLK WE15CLKb RA15 RB15 QB13 N13 slave_latch kQ='kQ'
 x15_14 VDD VSS QA14 WE15CLK WE15CLKb RA15 RB15 QB14 N14 slave_latch kQ='kQ'
 x15_15 VDD VSS QA15 WE15CLK WE15CLKb RA15 RB15 QB15 N15 slave_latch kQ='kQ'
-x1 VDD VSS N0 WEM WEMb D0 master_latch kN='kN'
-x2 VDD VSS N1 WEM WEMb D1 master_latch kN='kN'
-x3 VDD VSS N2 WEM WEMb D2 master_latch kN='kN'
-x4 VDD VSS N3 WEM WEMb D3 master_latch kN='kN'
-x5 VDD VSS N4 WEM WEMb D4 master_latch kN='kN'
-x6 VDD VSS N5 WEM WEMb D5 master_latch kN='kN'
-x7 VDD VSS N6 WEM WEMb D6 master_latch kN='kN'
-x8 VDD VSS N7 WEM WEMb D7 master_latch kN='kN'
-x9 VDD VSS N8 WEM WEMb D8 master_latch kN='kN'
-x10 VDD VSS N9 WEM WEMb D9 master_latch kN='kN'
-x11 VDD VSS N10 WEM WEMb D10 master_latch kN='kN'
-x12 VDD VSS N11 WEM WEMb D11 master_latch kN='kN'
-x13 VDD VSS N12 WEM WEMb D12 master_latch kN='kN'
-x14 VDD VSS N13 WEM WEMb D13 master_latch kN='kN'
-x15 VDD VSS N14 WEM WEMb D14 master_latch kN='kN'
-x16 VDD VSS N15 WEM WEMb D15 master_latch kN='kN'
-x17 CLK WE15 WE15CLKb VDD VSS WE15CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x18 CLK WE14 WE14CLKb VDD VSS WE14CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x19 CLK WE13 WE13CLKb VDD VSS WE13CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x20 CLK WE12 WE12CLKb VDD VSS WE12CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x21 CLK WE11 WE11CLKb VDD VSS WE11CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x22 CLK WE10 WE10CLKb VDD VSS WE10CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x23 CLK WE9 WE9CLKb VDD VSS WE9CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x24 CLK WE8 WE8CLKb VDD VSS WE8CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x25 CLK WE7 WE7CLKb VDD VSS WE7CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x26 CLK WE6 WE6CLKb VDD VSS WE6CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x27 CLK WE5 WE5CLKb VDD VSS WE5CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x28 CLK WE4 WE4CLKb VDD VSS WE4CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x29 CLK WE3 WE3CLKb VDD VSS WE3CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x30 CLK WE2 WE2CLKb VDD VSS WE2CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x31 CLK WE1 WE1CLKb VDD VSS WE1CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x32 CLK WE0 WE0CLKb VDD VSS WE0CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
-x33 VDD VSS QA0b QA0 QB0 QB0b output_inverter
-x34 VDD VSS QA1b QA1 QB1 QB1b output_inverter
-x35 VDD VSS QA2b QA2 QB2 QB2b output_inverter
-x36 VDD VSS QA3b QA3 QB3 QB3b output_inverter
-x37 VDD VSS QA4b QA4 QB4 QB4b output_inverter
-x38 VDD VSS QA5b QA5 QB5 QB5b output_inverter
-x39 VDD VSS QA6b QA6 QB6 QB6b output_inverter
-x40 VDD VSS QA7b QA7 QB7 QB7b output_inverter
-x41 VDD VSS QA8b QA8 QB8 QB8b output_inverter
-x42 VDD VSS QA9b QA9 QB9 QB9b output_inverter
-x43 VDD VSS QA10b QA10 QB10 QB10b output_inverter
-x44 VDD VSS QA11b QA11 QB11 QB11b output_inverter
-x45 VDD VSS QA12b QA12 QB12 QB12b output_inverter
-x46 VDD VSS QA13b QA13 QB13 QB13b output_inverter
-x47 VDD VSS QA14b QA14 QB14 QB14b output_inverter
-x48 VDD VSS QA15b QA15 QB15 QB15b output_inverter
-x49 VDD WEM WEMb VSS wem_inverter kWEMb='kWEMb'
+x0 VDD VSS N0 WEM WEMb D0 master_latch kN='kN'
+x1 VDD VSS N1 WEM WEMb D1 master_latch kN='kN'
+x2 VDD VSS N2 WEM WEMb D2 master_latch kN='kN'
+x3 VDD VSS N3 WEM WEMb D3 master_latch kN='kN'
+x4 VDD VSS N4 WEM WEMb D4 master_latch kN='kN'
+x5 VDD VSS N5 WEM WEMb D5 master_latch kN='kN'
+x6 VDD VSS N6 WEM WEMb D6 master_latch kN='kN'
+x7 VDD VSS N7 WEM WEMb D7 master_latch kN='kN'
+x8 VDD VSS N8 WEM WEMb D8 master_latch kN='kN'
+x9 VDD VSS N9 WEM WEMb D9 master_latch kN='kN'
+x10 VDD VSS N10 WEM WEMb D10 master_latch kN='kN'
+x11 VDD VSS N11 WEM WEMb D11 master_latch kN='kN'
+x12 VDD VSS N12 WEM WEMb D12 master_latch kN='kN'
+x13 VDD VSS N13 WEM WEMb D13 master_latch kN='kN'
+x14 VDD VSS N14 WEM WEMb D14 master_latch kN='kN'
+x15 VDD VSS N15 WEM WEMb D15 master_latch kN='kN'
+x16 CLK WE15 WE15CLKb VDD VSS WE15CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x17 CLK WE14 WE14CLKb VDD VSS WE14CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x18 CLK WE13 WE13CLKb VDD VSS WE13CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x19 CLK WE12 WE12CLKb VDD VSS WE12CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x20 CLK WE11 WE11CLKb VDD VSS WE11CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x21 CLK WE10 WE10CLKb VDD VSS WE10CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x22 CLK WE9 WE9CLKb VDD VSS WE9CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x23 CLK WE8 WE8CLKb VDD VSS WE8CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x24 CLK WE7 WE7CLKb VDD VSS WE7CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x25 CLK WE6 WE6CLKb VDD VSS WE6CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x26 CLK WE5 WE5CLKb VDD VSS WE5CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x27 CLK WE4 WE4CLKb VDD VSS WE4CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x28 CLK WE3 WE3CLKb VDD VSS WE3CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x29 CLK WE2 WE2CLKb VDD VSS WE2CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x30 CLK WE1 WE1CLKb VDD VSS WE1CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x31 CLK WE0 WE0CLKb VDD VSS WE0CLK driver_cell kWECLK='kWECLK' kWECLKb='kWECLKb'
+x32 VDD VSS QA0b QA0 QB0 QB0b output_inverter
+x33 VDD VSS QA1b QA1 QB1 QB1b output_inverter
+x34 VDD VSS QA2b QA2 QB2 QB2b output_inverter
+x35 VDD VSS QA3b QA3 QB3 QB3b output_inverter
+x36 VDD VSS QA4b QA4 QB4 QB4b output_inverter
+x37 VDD VSS QA5b QA5 QB5 QB5b output_inverter
+x38 VDD VSS QA6b QA6 QB6 QB6b output_inverter
+x39 VDD VSS QA7b QA7 QB7 QB7b output_inverter
+x40 VDD VSS QA8b QA8 QB8 QB8b output_inverter
+x41 VDD VSS QA9b QA9 QB9 QB9b output_inverter
+x42 VDD VSS QA10b QA10 QB10 QB10b output_inverter
+x43 VDD VSS QA11b QA11 QB11 QB11b output_inverter
+x44 VDD VSS QA12b QA12 QB12 QB12b output_inverter
+x45 VDD VSS QA13b QA13 QB13 QB13b output_inverter
+x46 VDD VSS QA14b QA14 QB14 QB14b output_inverter
+x47 VDD VSS QA15b QA15 QB15 QB15b output_inverter
+x48 VDD WEM WEMb VSS wem_inverter kWEMb='kWEMb'
 **** begin user architecture code
 
 
@@ -1265,13 +1265,13 @@ x2 VDD net3 EXTEND IN VSS datapath_nand2
 *.ipin IN0
 *.ipin IN1
 *.opin OUT
-XM1 net1 IN1 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM1 net1 IN1 VSS VSS nfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM2 OUT IN0 net1 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM2 OUT IN0 net1 VSS nfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM3 OUT IN1 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM3 OUT IN1 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM4 OUT IN0 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM4 OUT IN0 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 .ends
 
@@ -1624,11 +1624,11 @@ XM2 net1 D VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.1
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM3 net3 net2 VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM4 net4 net2 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM4 DATA net2 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM5 VDD WECLK net8 VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM5 VDD WECLK net7 VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM6 net8 net4 net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM6 net7 DATA net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM7 net1 D VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
@@ -1636,27 +1636,27 @@ XM8 net1 WECLK net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf 
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM9 net3 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM10 net4 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM10 DATA net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM11 net7 net4 net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM11 net6 DATA net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM12 VSS WECLKb net7 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM12 VSS WECLKb net6 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM13 net3 net5 QB VDD pfet_03v3 L=0.28u W='kQ*0.36u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM13 net3 net4 QB VDD pfet_03v3 L=0.28u W='kQ*0.36u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM14 net3 RB QB VSS nfet_03v3 L=0.28u W='kQ*0.36u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM15 net5 RB VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM15 net4 RB VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM16 net5 RB VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM16 net4 RB VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM21 net3 net6 QA VDD pfet_03v3 L=0.28u W='kQ*0.36u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM21 net3 net5 QA VDD pfet_03v3 L=0.28u W='kQ*0.36u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM22 net3 RA QA VSS nfet_03v3 L=0.28u W='kQ*0.36u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM23 net6 RA VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM23 net5 RA VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM24 net6 RA VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM24 net5 RA VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 **** begin user architecture code
 
@@ -1684,11 +1684,11 @@ XM7 net1 D VDD VDD pfet_03v3 L=0.28u W=0.72u nf=1 ad='int((nf+1)/2) * W/nf * 0.1
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM8 Q net2 VDD VDD pfet_03v3 L=0.28u W='kN*0.72u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM9 net3 net2 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM9 DATA net2 VDD VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM10 VDD WEM net5 VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM10 VDD WEM net4 VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM12 net5 net3 net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM12 net4 DATA net2 VDD pfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM19 net1 D VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
@@ -1696,11 +1696,11 @@ XM20 net1 WEM net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf *
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM21 Q net2 VSS VSS nfet_03v3 L=0.28u W='kN*0.36u' nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM22 net3 net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM22 DATA net2 VSS VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM23 net4 net3 net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM23 net3 DATA net2 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM24 VSS WEMb net4 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM24 VSS WEMb net3 VSS nfet_03v3 L=0.28u W=0.36u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 **** begin user architecture code
 

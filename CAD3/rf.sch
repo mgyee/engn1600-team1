@@ -2580,22 +2580,22 @@ C {lab_wire.sym} 3880 2520 0 0 {name=p2299 sig_type=std_logic lab=RB15}
 C {lab_wire.sym} 3880 2540 0 0 {name=p2300 sig_type=std_logic lab=N15}
 C {lab_wire.sym} 4020 2470 0 0 {name=p2303 sig_type=std_logic lab=QA15}
 C {lab_wire.sym} 4020 2490 0 0 {name=p2304 sig_type=std_logic lab=QB15}
-C {engn1600-team1/CAD3/master_latch.sym} 0 2720 0 0 {name=x1 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 260 2720 0 0 {name=x2 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 520 2720 0 0 {name=x3 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 780 2720 0 0 {name=x4 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 1040 2720 0 0 {name=x5 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 1300 2720 0 0 {name=x6 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 1560 2720 0 0 {name=x7 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 1820 2720 0 0 {name=x8 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 2080 2720 0 0 {name=x9 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 2340 2720 0 0 {name=x10 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 2600 2720 0 0 {name=x11 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 2860 2720 0 0 {name=x12 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 3120 2720 0 0 {name=x13 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 3380 2720 0 0 {name=x14 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 3640 2720 0 0 {name=x15 kN="'kN'"}
-C {engn1600-team1/CAD3/master_latch.sym} 3900 2720 0 0 {name=x16 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 0 2720 0 0 {name=x0 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 260 2720 0 0 {name=x1 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 520 2720 0 0 {name=x2 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 780 2720 0 0 {name=x3 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 1040 2720 0 0 {name=x4 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 1300 2720 0 0 {name=x5 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 1560 2720 0 0 {name=x6 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 1820 2720 0 0 {name=x7 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 2080 2720 0 0 {name=x8 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 2340 2720 0 0 {name=x9 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 2600 2720 0 0 {name=x10 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 2860 2720 0 0 {name=x11 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 3120 2720 0 0 {name=x12 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 3380 2720 0 0 {name=x13 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 3640 2720 0 0 {name=x14 kN="'kN'"}
+C {engn1600-team1/CAD3/master_latch.sym} 3900 2720 0 0 {name=x15 kN="'kN'"}
 C {lab_wire.sym} -20 2710 0 0 {name=p2305 sig_type=std_logic lab=D0}
 C {lab_wire.sym} 240 2710 0 0 {name=p2306 sig_type=std_logic lab=D1}
 C {lab_wire.sym} 500 2710 0 0 {name=p2307 sig_type=std_logic lab=D2}
@@ -2697,7 +2697,7 @@ C {lab_wire.sym} 3620 2710 0 0 {name=p2398 sig_type=std_logic lab=D14}
 C {lab_wire.sym} 3760 2640 0 0 {name=p2399 sig_type=std_logic lab=N14}
 C {lab_wire.sym} 3880 2710 0 0 {name=p2400 sig_type=std_logic lab=D15}
 C {lab_wire.sym} 4020 2640 0 0 {name=p2401 sig_type=std_logic lab=N15}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 2520 0 0 {name=x17
+C {engn1600-team1/CAD3/driver_cell.sym} -340 2520 0 0 {name=x16
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2707,7 +2707,7 @@ C {devices/lab_wire.sym} -360 2480 0 0 {name=lw_we17 lab=CLK}
 C {devices/lab_wire.sym} -360 2500 0 0 {name=lw_we18 lab=WE15}
 C {devices/lab_wire.sym} -220 2480 0 0 {name=lw_we19 lab=WE15CLK}
 C {devices/lab_wire.sym} -220 2500 0 0 {name=lw_we20 lab=WE15CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 2350 0 0 {name=x18
+C {engn1600-team1/CAD3/driver_cell.sym} -340 2350 0 0 {name=x17
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2717,7 +2717,7 @@ C {devices/lab_wire.sym} -360 2310 0 0 {name=lw_we21 lab=CLK}
 C {devices/lab_wire.sym} -360 2330 0 0 {name=lw_we22 lab=WE14}
 C {devices/lab_wire.sym} -220 2310 0 0 {name=lw_we23 lab=WE14CLK}
 C {devices/lab_wire.sym} -220 2330 0 0 {name=lw_we24 lab=WE14CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 2180 0 0 {name=x19
+C {engn1600-team1/CAD3/driver_cell.sym} -340 2180 0 0 {name=x18
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2727,7 +2727,7 @@ C {devices/lab_wire.sym} -360 2140 0 0 {name=lw_we25 lab=CLK}
 C {devices/lab_wire.sym} -360 2160 0 0 {name=lw_we26 lab=WE13}
 C {devices/lab_wire.sym} -220 2140 0 0 {name=lw_we27 lab=WE13CLK}
 C {devices/lab_wire.sym} -220 2160 0 0 {name=lw_we28 lab=WE13CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 2010 0 0 {name=x20
+C {engn1600-team1/CAD3/driver_cell.sym} -340 2010 0 0 {name=x19
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2737,7 +2737,7 @@ C {devices/lab_wire.sym} -360 1970 0 0 {name=lw_we29 lab=CLK}
 C {devices/lab_wire.sym} -360 1990 0 0 {name=lw_we30 lab=WE12}
 C {devices/lab_wire.sym} -220 1970 0 0 {name=lw_we31 lab=WE12CLK}
 C {devices/lab_wire.sym} -220 1990 0 0 {name=lw_we32 lab=WE12CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 1840 0 0 {name=x21
+C {engn1600-team1/CAD3/driver_cell.sym} -340 1840 0 0 {name=x20
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2747,7 +2747,7 @@ C {devices/lab_wire.sym} -360 1800 0 0 {name=lw_we33 lab=CLK}
 C {devices/lab_wire.sym} -360 1820 0 0 {name=lw_we34 lab=WE11}
 C {devices/lab_wire.sym} -220 1800 0 0 {name=lw_we35 lab=WE11CLK}
 C {devices/lab_wire.sym} -220 1820 0 0 {name=lw_we36 lab=WE11CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 1670 0 0 {name=x22
+C {engn1600-team1/CAD3/driver_cell.sym} -340 1670 0 0 {name=x21
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2757,7 +2757,7 @@ C {devices/lab_wire.sym} -360 1630 0 0 {name=lw_we37 lab=CLK}
 C {devices/lab_wire.sym} -360 1650 0 0 {name=lw_we38 lab=WE10}
 C {devices/lab_wire.sym} -220 1630 0 0 {name=lw_we39 lab=WE10CLK}
 C {devices/lab_wire.sym} -220 1650 0 0 {name=lw_we40 lab=WE10CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 1500 0 0 {name=x23
+C {engn1600-team1/CAD3/driver_cell.sym} -340 1500 0 0 {name=x22
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2767,7 +2767,7 @@ C {devices/lab_wire.sym} -360 1460 0 0 {name=lw_we41 lab=CLK}
 C {devices/lab_wire.sym} -360 1480 0 0 {name=lw_we42 lab=WE9}
 C {devices/lab_wire.sym} -220 1460 0 0 {name=lw_we43 lab=WE9CLK}
 C {devices/lab_wire.sym} -220 1480 0 0 {name=lw_we44 lab=WE9CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 1330 0 0 {name=x24
+C {engn1600-team1/CAD3/driver_cell.sym} -340 1330 0 0 {name=x23
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2777,7 +2777,7 @@ C {devices/lab_wire.sym} -360 1290 0 0 {name=lw_we45 lab=CLK}
 C {devices/lab_wire.sym} -360 1310 0 0 {name=lw_we46 lab=WE8}
 C {devices/lab_wire.sym} -220 1290 0 0 {name=lw_we47 lab=WE8CLK}
 C {devices/lab_wire.sym} -220 1310 0 0 {name=lw_we48 lab=WE8CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 1160 0 0 {name=x25
+C {engn1600-team1/CAD3/driver_cell.sym} -340 1160 0 0 {name=x24
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2787,7 +2787,7 @@ C {devices/lab_wire.sym} -360 1120 0 0 {name=lw_we49 lab=CLK}
 C {devices/lab_wire.sym} -360 1140 0 0 {name=lw_we50 lab=WE7}
 C {devices/lab_wire.sym} -220 1120 0 0 {name=lw_we51 lab=WE7CLK}
 C {devices/lab_wire.sym} -220 1140 0 0 {name=lw_we52 lab=WE7CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 990 0 0 {name=x26
+C {engn1600-team1/CAD3/driver_cell.sym} -340 990 0 0 {name=x25
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2797,7 +2797,7 @@ C {devices/lab_wire.sym} -360 950 0 0 {name=lw_we53 lab=CLK}
 C {devices/lab_wire.sym} -360 970 0 0 {name=lw_we54 lab=WE6}
 C {devices/lab_wire.sym} -220 950 0 0 {name=lw_we55 lab=WE6CLK}
 C {devices/lab_wire.sym} -220 970 0 0 {name=lw_we56 lab=WE6CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 820 0 0 {name=x27
+C {engn1600-team1/CAD3/driver_cell.sym} -340 820 0 0 {name=x26
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2807,7 +2807,7 @@ C {devices/lab_wire.sym} -360 780 0 0 {name=lw_we57 lab=CLK}
 C {devices/lab_wire.sym} -360 800 0 0 {name=lw_we58 lab=WE5}
 C {devices/lab_wire.sym} -220 780 0 0 {name=lw_we59 lab=WE5CLK}
 C {devices/lab_wire.sym} -220 800 0 0 {name=lw_we60 lab=WE5CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 650 0 0 {name=x28
+C {engn1600-team1/CAD3/driver_cell.sym} -340 650 0 0 {name=x27
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2817,7 +2817,7 @@ C {devices/lab_wire.sym} -360 610 0 0 {name=lw_we61 lab=CLK}
 C {devices/lab_wire.sym} -360 630 0 0 {name=lw_we62 lab=WE4}
 C {devices/lab_wire.sym} -220 610 0 0 {name=lw_we63 lab=WE4CLK}
 C {devices/lab_wire.sym} -220 630 0 0 {name=lw_we64 lab=WE4CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 480 0 0 {name=x29
+C {engn1600-team1/CAD3/driver_cell.sym} -340 480 0 0 {name=x28
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2827,7 +2827,7 @@ C {devices/lab_wire.sym} -360 440 0 0 {name=lw_we65 lab=CLK}
 C {devices/lab_wire.sym} -360 460 0 0 {name=lw_we66 lab=WE3}
 C {devices/lab_wire.sym} -220 440 0 0 {name=lw_we67 lab=WE3CLK}
 C {devices/lab_wire.sym} -220 460 0 0 {name=lw_we68 lab=WE3CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 310 0 0 {name=x30
+C {engn1600-team1/CAD3/driver_cell.sym} -340 310 0 0 {name=x29
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2837,7 +2837,7 @@ C {devices/lab_wire.sym} -360 270 0 0 {name=lw_we69 lab=CLK}
 C {devices/lab_wire.sym} -360 290 0 0 {name=lw_we70 lab=WE2}
 C {devices/lab_wire.sym} -220 270 0 0 {name=lw_we71 lab=WE2CLK}
 C {devices/lab_wire.sym} -220 290 0 0 {name=lw_we72 lab=WE2CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 140 0 0 {name=x31
+C {engn1600-team1/CAD3/driver_cell.sym} -340 140 0 0 {name=x30
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2847,7 +2847,7 @@ C {devices/lab_wire.sym} -360 100 0 0 {name=lw_we73 lab=CLK}
 C {devices/lab_wire.sym} -360 120 0 0 {name=lw_we74 lab=WE1}
 C {devices/lab_wire.sym} -220 100 0 0 {name=lw_we75 lab=WE1CLK}
 C {devices/lab_wire.sym} -220 120 0 0 {name=lw_we76 lab=WE1CLKb}
-C {engn1600-team1/CAD3/driver_cell.sym} -340 -30 0 0 {name=x32
+C {engn1600-team1/CAD3/driver_cell.sym} -340 -30 0 0 {name=x31
 kWECLK="'kWECLK'"
 kWECLKb="'kWECLKb'"
 }
@@ -2866,119 +2866,119 @@ C {devices/lab_wire.sym} -300 2660 0 0 {name=lw_we82 lab=WEM}
 C {devices/lab_wire.sym} -170 2660 0 0 {name=lw_we83 lab=WEMb}
 C {devices/ipin.sym} -470 2810 0 0 {name=pin_we18 lab=D[15..0]}
 C {devices/lab_wire.sym} -450 2810 2 0 {name=lw_we16 lab=D[15..0]}
-C {engn1600-team1/CAD3/output_inverter.sym} -10 2770 0 0 {name=x33}
+C {engn1600-team1/CAD3/output_inverter.sym} -10 2770 0 0 {name=x32}
 C {lab_wire.sym} 50 2770 0 0 {name=p2165 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 50 2900 0 0 {name=p2301 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -10 2810 0 0 {name=p2302 sig_type=std_logic lab=QA0}
 C {lab_wire.sym} -10 2830 0 0 {name=p2564 sig_type=std_logic lab=QB0}
 C {devices/lab_wire.sym} 110 2810 0 0 {name=p2565 lab=QA0b}
 C {devices/lab_wire.sym} 110 2830 0 0 {name=p2566 lab=QB0b}
-C {engn1600-team1/CAD3/output_inverter.sym} 250 2770 0 0 {name=x34}
+C {engn1600-team1/CAD3/output_inverter.sym} 250 2770 0 0 {name=x33}
 C {lab_wire.sym} 310 2770 0 0 {name=p2436 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 310 2900 0 0 {name=p2437 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 250 2810 0 0 {name=p2438 sig_type=std_logic lab=QA1}
 C {lab_wire.sym} 250 2830 0 0 {name=p2439 sig_type=std_logic lab=QB1}
 C {devices/lab_wire.sym} 370 2810 0 0 {name=p2440 lab=QA1b}
 C {devices/lab_wire.sym} 370 2830 0 0 {name=p2441 lab=QB1b}
-C {engn1600-team1/CAD3/output_inverter.sym} 510 2770 0 0 {name=x35}
+C {engn1600-team1/CAD3/output_inverter.sym} 510 2770 0 0 {name=x34}
 C {lab_wire.sym} 570 2770 0 0 {name=p2442 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 570 2900 0 0 {name=p2443 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 510 2810 0 0 {name=p2444 sig_type=std_logic lab=QA2}
 C {lab_wire.sym} 510 2830 0 0 {name=p2445 sig_type=std_logic lab=QB2}
 C {devices/lab_wire.sym} 630 2810 0 0 {name=p2446 lab=QA2b}
 C {devices/lab_wire.sym} 630 2830 0 0 {name=p2447 lab=QB2b}
-C {engn1600-team1/CAD3/output_inverter.sym} 770 2770 0 0 {name=x36}
+C {engn1600-team1/CAD3/output_inverter.sym} 770 2770 0 0 {name=x35}
 C {lab_wire.sym} 830 2770 0 0 {name=p2448 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 830 2900 0 0 {name=p2449 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 770 2810 0 0 {name=p2450 sig_type=std_logic lab=QA3}
 C {lab_wire.sym} 770 2830 0 0 {name=p2451 sig_type=std_logic lab=QB3}
 C {devices/lab_wire.sym} 890 2810 0 0 {name=p2452 lab=QA3b}
 C {devices/lab_wire.sym} 890 2830 0 0 {name=p2453 lab=QB3b}
-C {engn1600-team1/CAD3/output_inverter.sym} 1030 2770 0 0 {name=x37}
+C {engn1600-team1/CAD3/output_inverter.sym} 1030 2770 0 0 {name=x36}
 C {lab_wire.sym} 1090 2770 0 0 {name=p2454 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1090 2900 0 0 {name=p2455 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1030 2810 0 0 {name=p2456 sig_type=std_logic lab=QA4}
 C {lab_wire.sym} 1030 2830 0 0 {name=p2457 sig_type=std_logic lab=QB4}
 C {devices/lab_wire.sym} 1150 2810 0 0 {name=p2458 lab=QA4b}
 C {devices/lab_wire.sym} 1150 2830 0 0 {name=p2459 lab=QB4b}
-C {engn1600-team1/CAD3/output_inverter.sym} 1290 2770 0 0 {name=x38}
+C {engn1600-team1/CAD3/output_inverter.sym} 1290 2770 0 0 {name=x37}
 C {lab_wire.sym} 1350 2770 0 0 {name=p2460 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1350 2900 0 0 {name=p2461 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1290 2810 0 0 {name=p2462 sig_type=std_logic lab=QA5}
 C {lab_wire.sym} 1290 2830 0 0 {name=p2463 sig_type=std_logic lab=QB5}
 C {devices/lab_wire.sym} 1410 2810 0 0 {name=p2464 lab=QA5b}
 C {devices/lab_wire.sym} 1410 2830 0 0 {name=p2465 lab=QB5b}
-C {engn1600-team1/CAD3/output_inverter.sym} 1550 2770 0 0 {name=x39}
+C {engn1600-team1/CAD3/output_inverter.sym} 1550 2770 0 0 {name=x38}
 C {lab_wire.sym} 1610 2770 0 0 {name=p2466 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1610 2900 0 0 {name=p2467 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1550 2810 0 0 {name=p2468 sig_type=std_logic lab=QA6}
 C {lab_wire.sym} 1550 2830 0 0 {name=p2469 sig_type=std_logic lab=QB6}
 C {devices/lab_wire.sym} 1670 2810 0 0 {name=p2470 lab=QA6b}
 C {devices/lab_wire.sym} 1670 2830 0 0 {name=p2471 lab=QB6b}
-C {engn1600-team1/CAD3/output_inverter.sym} 1810 2770 0 0 {name=x40}
+C {engn1600-team1/CAD3/output_inverter.sym} 1810 2770 0 0 {name=x39}
 C {lab_wire.sym} 1870 2770 0 0 {name=p2472 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1870 2900 0 0 {name=p2473 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1810 2810 0 0 {name=p2474 sig_type=std_logic lab=QA7}
 C {lab_wire.sym} 1810 2830 0 0 {name=p2475 sig_type=std_logic lab=QB7}
 C {devices/lab_wire.sym} 1930 2810 0 0 {name=p2476 lab=QA7b}
 C {devices/lab_wire.sym} 1930 2830 0 0 {name=p2477 lab=QB7b}
-C {engn1600-team1/CAD3/output_inverter.sym} 2070 2770 0 0 {name=x41}
+C {engn1600-team1/CAD3/output_inverter.sym} 2070 2770 0 0 {name=x40}
 C {lab_wire.sym} 2130 2770 0 0 {name=p2478 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2130 2900 0 0 {name=p2479 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2070 2810 0 0 {name=p2480 sig_type=std_logic lab=QA8}
 C {lab_wire.sym} 2070 2830 0 0 {name=p2481 sig_type=std_logic lab=QB8}
 C {devices/lab_wire.sym} 2190 2810 0 0 {name=p2482 lab=QA8b}
 C {devices/lab_wire.sym} 2190 2830 0 0 {name=p2483 lab=QB8b}
-C {engn1600-team1/CAD3/output_inverter.sym} 2330 2770 0 0 {name=x42}
+C {engn1600-team1/CAD3/output_inverter.sym} 2330 2770 0 0 {name=x41}
 C {lab_wire.sym} 2390 2770 0 0 {name=p2484 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2390 2900 0 0 {name=p2485 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2330 2810 0 0 {name=p2486 sig_type=std_logic lab=QA9}
 C {lab_wire.sym} 2330 2830 0 0 {name=p2487 sig_type=std_logic lab=QB9}
 C {devices/lab_wire.sym} 2450 2810 0 0 {name=p2488 lab=QA9b}
 C {devices/lab_wire.sym} 2450 2830 0 0 {name=p2489 lab=QB9b}
-C {engn1600-team1/CAD3/output_inverter.sym} 2590 2770 0 0 {name=x43}
+C {engn1600-team1/CAD3/output_inverter.sym} 2590 2770 0 0 {name=x42}
 C {lab_wire.sym} 2650 2770 0 0 {name=p2490 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2650 2900 0 0 {name=p2491 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2590 2810 0 0 {name=p2492 sig_type=std_logic lab=QA10}
 C {lab_wire.sym} 2590 2830 0 0 {name=p2493 sig_type=std_logic lab=QB10}
 C {devices/lab_wire.sym} 2710 2810 0 0 {name=p2494 lab=QA10b}
 C {devices/lab_wire.sym} 2710 2830 0 0 {name=p2495 lab=QB10b}
-C {engn1600-team1/CAD3/output_inverter.sym} 2850 2770 0 0 {name=x44}
+C {engn1600-team1/CAD3/output_inverter.sym} 2850 2770 0 0 {name=x43}
 C {lab_wire.sym} 2910 2770 0 0 {name=p2496 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2910 2900 0 0 {name=p2497 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2850 2810 0 0 {name=p2498 sig_type=std_logic lab=QA11}
 C {lab_wire.sym} 2850 2830 0 0 {name=p2499 sig_type=std_logic lab=QB11}
 C {devices/lab_wire.sym} 2970 2810 0 0 {name=p2500 lab=QA11b}
 C {devices/lab_wire.sym} 2970 2830 0 0 {name=p2501 lab=QB11b}
-C {engn1600-team1/CAD3/output_inverter.sym} 3110 2770 0 0 {name=x45}
+C {engn1600-team1/CAD3/output_inverter.sym} 3110 2770 0 0 {name=x44}
 C {lab_wire.sym} 3170 2770 0 0 {name=p2502 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 3170 2900 0 0 {name=p2503 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 3110 2810 0 0 {name=p2504 sig_type=std_logic lab=QA12}
 C {lab_wire.sym} 3110 2830 0 0 {name=p2505 sig_type=std_logic lab=QB12}
 C {devices/lab_wire.sym} 3230 2810 0 0 {name=p2506 lab=QA12b}
 C {devices/lab_wire.sym} 3230 2830 0 0 {name=p2507 lab=QB12b}
-C {engn1600-team1/CAD3/output_inverter.sym} 3370 2770 0 0 {name=x46}
+C {engn1600-team1/CAD3/output_inverter.sym} 3370 2770 0 0 {name=x45}
 C {lab_wire.sym} 3430 2770 0 0 {name=p2508 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 3430 2900 0 0 {name=p2509 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 3370 2810 0 0 {name=p2510 sig_type=std_logic lab=QA13}
 C {lab_wire.sym} 3370 2830 0 0 {name=p2511 sig_type=std_logic lab=QB13}
 C {devices/lab_wire.sym} 3490 2810 0 0 {name=p2512 lab=QA13b}
 C {devices/lab_wire.sym} 3490 2830 0 0 {name=p2513 lab=QB13b}
-C {engn1600-team1/CAD3/output_inverter.sym} 3630 2770 0 0 {name=x47}
+C {engn1600-team1/CAD3/output_inverter.sym} 3630 2770 0 0 {name=x46}
 C {lab_wire.sym} 3690 2770 0 0 {name=p2514 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 3690 2900 0 0 {name=p2515 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 3630 2810 0 0 {name=p2516 sig_type=std_logic lab=QA14}
 C {lab_wire.sym} 3630 2830 0 0 {name=p2517 sig_type=std_logic lab=QB14}
 C {devices/lab_wire.sym} 3750 2810 0 0 {name=p2518 lab=QA14b}
 C {devices/lab_wire.sym} 3750 2830 0 0 {name=p2519 lab=QB14b}
-C {engn1600-team1/CAD3/output_inverter.sym} 3890 2770 0 0 {name=x48}
+C {engn1600-team1/CAD3/output_inverter.sym} 3890 2770 0 0 {name=x47}
 C {lab_wire.sym} 3950 2770 0 0 {name=p2520 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 3950 2900 0 0 {name=p2521 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 3890 2810 0 0 {name=p2522 sig_type=std_logic lab=QA15}
 C {lab_wire.sym} 3890 2830 0 0 {name=p2523 sig_type=std_logic lab=QB15}
 C {devices/lab_wire.sym} 4010 2810 0 0 {name=p2524 lab=QA15b}
 C {devices/lab_wire.sym} 4010 2830 0 0 {name=p2525 lab=QB15b}
-C {engn1600-team1/CAD3/wem_inverter.sym} -320 2800 0 0 {name=x49 kWEMb="'kWEMb'"}
+C {engn1600-team1/CAD3/wem_inverter.sym} -320 2800 0 0 {name=x48 kWEMb="'kWEMb'"}
 C {lab_wire.sym} 2650 2600 0 0 {name=p2526 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2650 2740 0 0 {name=p2527 sig_type=std_logic lab=VSS}
 C {iopin.sym} -470 2660 2 0 {name=p2528 lab=VDD}

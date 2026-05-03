@@ -9,7 +9,7 @@ module control (
     output reg        reg_write,
     output     [15:0] ra,
     output     [15:0] rb,
-    output     [15:0] we,
+    output reg [15:0] we,
 
     // ALU
     output reg [1:0] alu_sel,    // 00: ADD, 01: AND, 10: OR, 11: XOR
@@ -142,7 +142,9 @@ module control (
   // ==========================================
   assign ra = 1 << rsrc;
   assign rb = 1 << rdest;
-  assign we = (reg_write) ? (1 << rdest) : 16'h0000;
+  always @(negedge clk) begin
+    we <= reg_write ? (1 << rdest) : 16'h0000;
+  end
 
   reg flush;
 

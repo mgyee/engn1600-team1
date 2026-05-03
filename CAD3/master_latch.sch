@@ -32,7 +32,7 @@ N 110 -100 110 -80 {lab=WEMb}
 N 110 80 110 100 {lab=WEM}
 N -50 0 60 0 {lab=#net1}
 N 290 -20 290 20 {lab=Q}
-N 290 -320 290 -280 {lab=#net3}
+N 290 -320 290 -280 {lab=DATA}
 N 290 -50 310 -50 {lab=VDD}
 N 310 -100 310 -50 {lab=VDD}
 N 290 -100 310 -100 {lab=VDD}
@@ -74,19 +74,19 @@ N 290 -560 290 -540 {lab=VSS}
 N 290 -540 290 -520 {lab=VSS}
 N 190 -300 230 -300 {lab=#net2}
 N 190 -300 190 0 {lab=#net2}
-N 290 -300 410 -300 {lab=#net3}
-N 410 -720 410 -300 {lab=#net3}
+N 290 -300 410 -300 {lab=DATA}
+N 410 -720 410 -300 {lab=DATA}
 N 190 -720 190 -300 {lab=#net2}
-N 330 -770 330 -670 {lab=#net3}
+N 330 -770 330 -670 {lab=DATA}
 N 190 -720 290 -720 {lab=#net2}
-N 330 -720 410 -720 {lab=#net3}
+N 330 -720 410 -720 {lab=DATA}
 N 330 -590 350 -590 {lab=WEMb}
 N 330 -850 350 -850 {lab=WEM}
 N 290 -420 290 -400 {lab=VDD}
-N 290 -640 290 -620 {lab=#net4}
+N 290 -640 290 -620 {lab=#net3}
 N 270 -670 290 -670 {lab=VSS}
 N 270 -670 270 -640 {lab=VSS}
-N 290 -820 290 -800 {lab=#net5}
+N 290 -820 290 -800 {lab=#net4}
 N 270 -800 270 -770 {lab=VDD}
 N 270 -770 290 -770 {lab=VDD}
 N -40 -340 0 -340 {lab=WEM}
@@ -295,3 +295,4 @@ C {opin.sym} 350 0 0 0 {name=p44 lab=Q}
 C {code_shown.sym} -120 -690 0 0 {name=s1 only_toplevel=false value="
 .param kN=1
 "}
+C {lab_wire.sym} 410 -510 2 0 {name=p1 sig_type=std_logic lab=DATA}
