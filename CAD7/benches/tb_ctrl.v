@@ -14,7 +14,7 @@ module tb_ctrl;
 
     initial begin
         #12 rst = 0;
-        repeat (50) @(posedge clk);
+        repeat (15) @(posedge clk);
 
         if (dut.u_dmem.mem[16'h0000] !== 16'h0002) begin
             $display("FAIL branch/jump: mem[0] = %h, expected 0002", dut.u_dmem.mem[16'h0000]);

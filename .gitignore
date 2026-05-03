@@ -4,3 +4,6 @@
 
 *_obj_dir
 *.so
+
+*.raw
+*.vcd

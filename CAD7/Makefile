@@ -67,5 +67,5 @@ datapath.spice: datapath.sch
 	echo "xschem exit code: $$rc"
 
 clean:
-	rm -f *.so datapath.spice lib.spice processor_tb.spice tb_tmp.spice
+	rm -f *.so *.raw *.vcd datapath.spice lib.spice processor_tb.spice tb_tmp.spice
 	rm -rf *_obj_dir
