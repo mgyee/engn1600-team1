@@ -1,61 +1,47 @@
 module cpu_peripherals (
-    input  wire        clk,
-
+    input  wire [15:0] instr,
     input  wire        alu_z,
     input  wire        alu_n,
     input  wire        alu_f,
+    input  wire        clk,
 
     // Register File
     output wire        reg_write,
+    output wire [15:0] ra,
+    output wire [15:0] rb,
+    output wire [15:0] we,
+    
+    // ALU
     output wire [1:0]  alu_sel,
     output wire        alu_src_b,
     output wire        alu_src_a,
     output wire        alu_cin,
+    
+    // Imm Gen
     output wire        extend,
 
 
+    // Shift
     output wire        shift_val_src,
     output wire        is_lui,
     output wire        shift_amt_src,
-
-
+    
+    // Memory Signals
     output wire        mem_write,
-
     output wire [3:0]  data_out,
 
+    // Outputs to PC
     output wire        pc_br,
     output wire        pc_jmp,
 
-
-    input  wire [15:0] instr,
-
-    output wire [15:0] ra,
-    output wire [15:0] rb,
-    output wire [15:0] we,
-
-
-
+    // DMEM
     input  wire [15:0] dmem_addr,
-
-
     input  wire [15:0] rdst,
     output wire [15:0] dmem_q,
 
     // IMEM
     input  wire [15:0] pc,
     output wire [15:0] imem_q
-
-    // ALU
-
-    // Imm Gen
-
-    // Shift
-
-    // Memory Signals
-
-    // Outputs to PC
-
-    // DMEM
 );
 
   control u_control (
