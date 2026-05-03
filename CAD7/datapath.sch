@@ -46,7 +46,7 @@ C {engn1600-team1/CAD7/datapath_4x1_mux.sym} 1360 0 0 0 {name=x5[15..0]}
 C {lab_pin.sym} 1360 -80 3 1 {name=p17 sig_type=std_logic lab=VSS
 
 }
-C {lab_pin.sym} 1300 30 0 0 {name=p18 sig_type=std_logic lab=PC[15..0]b
+C {lab_pin.sym} 1300 30 0 0 {name=p18 sig_type=std_logic lab=VDD,PC[15..1]b
 
 }
 C {lab_pin.sym} 930 -10 0 1 {name=p19 sig_type=std_logic lab=ALU_Y[15..0]b

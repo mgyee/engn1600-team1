@@ -12,7 +12,7 @@ C {lab_pin.sym} 70 -310 0 1 {name=p4 lab=S0}
 C {lab_pin.sym} 60 -290 0 1 {name=p5 lab=S0b}
 C {lab_pin.sym} -70 -310 2 1 {name=p7 lab=VDD}
 C {lab_pin.sym} -60 -290 0 0 {name=p8 lab=VSS}
-C {lab_pin.sym} 10 -340 0 1 {name=p9 lab=D[14..0]b,VDD}
+C {lab_pin.sym} 10 -340 0 1 {name=p9 lab=D[14..0]b,VSS}
 C {ipin.sym} -350 -160 0 0 {name=p11 lab=D[15..0]}
 C {opin.sym} -350 -80 0 1 {name=p6 lab=Q[15..0]}
 C {ipin.sym} -350 -120 0 0 {name=p10 lab=R[3..0]}
@@ -36,21 +36,21 @@ C {lab_pin.sym} 70 -110 0 1 {name=p26 lab=S1}
 C {lab_pin.sym} 60 -90 0 1 {name=p27 lab=S1b}
 C {lab_pin.sym} -70 -110 2 1 {name=p28 lab=VDD}
 C {lab_pin.sym} -60 -90 0 0 {name=p29 lab=VSS}
-C {lab_pin.sym} 10 -140 0 1 {name=p30 lab=X[13..0]b,VDD*2}
+C {lab_pin.sym} 10 -140 0 1 {name=p30 lab=X[13..0]b,VSS*2}
 C {engn1600-team1/CAD5/shifter_2x1_mux.sym} 0 100 3 1 {name=x10[15..0] kI=1 kYb=1}
 C {lab_pin.sym} -10 60 2 1 {name=p25 lab=Y[15..0]b}
 C {lab_pin.sym} 70 90 0 1 {name=p32 lab=S2}
 C {lab_pin.sym} 60 110 0 1 {name=p33 lab=S2b}
 C {lab_pin.sym} -70 90 2 1 {name=p34 lab=VDD}
 C {lab_pin.sym} -60 110 0 0 {name=p35 lab=VSS}
-C {lab_pin.sym} 10 60 0 1 {name=p36 lab=Y[11..0]b,VDD*4}
+C {lab_pin.sym} 10 60 0 1 {name=p36 lab=Y[11..0]b,VSS*4}
 C {lab_pin.sym} -10 260 0 0 {name=p37 lab=Z[15..0]b}
 C {engn1600-team1/CAD5/shifter_2x1_mux.sym} 0 300 3 1 {name=x4[15..0] kI=1 kYb=1 }
 C {lab_pin.sym} 70 290 0 1 {name=p38 lab=S3}
 C {lab_pin.sym} 60 310 0 1 {name=p39 lab=S3b}
 C {lab_pin.sym} -70 290 2 1 {name=p40 lab=VDD}
 C {lab_pin.sym} -60 310 0 0 {name=p41 lab=VSS}
-C {lab_pin.sym} 10 260 0 1 {name=p42 lab=Z[7..0]b,VDD*8}
+C {lab_pin.sym} 10 260 0 1 {name=p42 lab=Z[7..0]b,VSS*8}
 C {lab_pin.sym} 0 340 3 0 {name=p43 lab=Q[15..0]b}
 C {lab_pin.sym} -10 -140 0 0 {name=p44 lab=X[15..0]b}
 C {lab_pin.sym} 0 -60 1 1 {name=p51 lab=Y[15..0]b}

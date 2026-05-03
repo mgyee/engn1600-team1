@@ -14,7 +14,7 @@ module tb_memshift_jal;
 
     initial begin
         #12 rst = 0;
-        repeat (60) @(posedge clk);
+        repeat (15) @(posedge clk);
 
         if (dut.u_dmem.mem[16'h0000] !== 16'h0010) begin
             $display("FAIL load/shift/store: mem[0] = %h, expected 0010", dut.u_dmem.mem[16'h0000]);
