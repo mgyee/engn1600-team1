@@ -144,6 +144,12 @@ module control (
   assign rb = 1 << rdest;
   assign we = (reg_write) ? (1 << rdest) : 16'h0000;
 
+  reg flush;
+
+  always @(posedge clk) begin
+    flush <= (pc_br | pc_jmp);
+  end
+
   // ==========================================
   // 5. MAIN CONTROL LOGIC
   // ==========================================
@@ -516,5 +522,12 @@ module control (
         shift_amt_src = 0;
       end
     endcase
+
+    if (flush) begin
+      reg_write = 0;
+      mem_write = 0;
+      pc_br     = 0;
+      pc_jmp    = 0;
+    end
   end
 endmodule
