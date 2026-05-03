@@ -7,13 +7,13 @@ E {}
 C {ipin.sym} -100 20 0 0 {name=p1 lab=JMP}
 C {ipin.sym} -100 -20 0 0 {name=p3 lab=BR}
 C {iopin.sym} -100 -100 2 0 {name=p4 lab=VDD}
-C {ipin.sym} -100 0 0 0 {name=p6 lab=DISP[7..0]}
+C {ipin.sym} -100 0 0 0 {name=p6 lab=DISP[8..1]}
 C {engn1600-team1/CAD6/sign_extend.sym} -50 310 0 0 {name=x1}
 C {lab_pin.sym} 70 180 0 1 {name=p7 lab=VDD}
 C {lab_pin.sym} 70 290 0 1 {name=p8 lab=VSS}
 C {lab_pin.sym} 140 230 0 1 {name=p9 lab=DISP_SE}
-C {lab_pin.sym} 0 230 0 0 {name=p10 lab=DISP7}
-C {lab_pin.sym} 810 220 0 0 {name=p2 lab=DISP_SE*9,DISP[6..0]}
+C {lab_pin.sym} 0 230 0 0 {name=p10 lab=DISP8}
+C {lab_pin.sym} 810 220 0 0 {name=p2 lab=DISP_SE*8,DISP[7..1],VSS}
 C {engn1600-team1/CAD6/pc_2x1_mux.sym} 850 210 0 0 {name=x2[15..0]}
 C {engn1600-team1/CAD6/pc_inv.sym} 20 -230 0 0 {name=x8[15..0] kINV=1}
 C {lab_pin.sym} 40 -270 0 1 {name=p11 lab=VDD}
@@ -30,7 +30,7 @@ C {lab_pin.sym} 40 -120 0 1 {name=p20 lab=VDD}
 C {lab_pin.sym} 110 -80 0 1 {name=p21 lab=JMP[15..0]b}
 C {lab_pin.sym} 40 -40 0 1 {name=p22 lab=VSS}
 C {engn1600-team1/CAD6/pc_2x1_mux.sym} 450 0 0 0 {name=x5[15..0]}
-C {lab_pin.sym} 410 10 0 0 {name=p23 lab=DEST[15..0]}
+C {lab_pin.sym} 410 10 0 0 {name=p23 lab=DEST[15..1],VSS}
 C {lab_pin.sym} 440 70 3 0 {name=p24 lab=JMP}
 C {lab_pin.sym} 460 60 3 0 {name=p25 lab=JMP[15..0]b}
 C {lab_pin.sym} 440 -70 1 0 {name=p27 lab=VDD}
@@ -42,7 +42,7 @@ C {opin.sym} -100 100 2 0 {name=p31 lab=PC[15..0]}
 C {ipin.sym} -100 60 0 0 {name=p32 lab=SI}
 C {ipin.sym} -100 80 0 0 {name=p33 lab=SE}
 C {lab_pin.sym} 490 0 2 0 {name=p34 lab=PCJ[15..0]}
-C {ipin.sym} -100 40 0 0 {name=p35 lab=DEST[15..0]}
+C {ipin.sym} -100 40 0 0 {name=p35 lab=DEST[15..1]}
 C {engn1600-team1/CAD6/pc_dff.sym} 850 0 0 0 {name=x3[15..0]}
 C {lab_pin.sym} 850 60 0 0 {name=p36 lab=CLK[15..0]b}
 C {lab_pin.sym} 800 -20 0 0 {name=p37 lab=PC_NEXT[15..0]}
