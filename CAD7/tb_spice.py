@@ -247,11 +247,11 @@ def generate_spice_control(
     lines.append("** CLK")
     lines.append(
         "alter @VCLK[PULSE] = [ "
-        f"{v1:g} {v2:g} {_fmt_ns(clk_td_ns)} 0 0 {_fmt_ns(clk_pw_ns)} {_fmt_ns(period_ns)} 0 "
+        f"{v1:g} {v2:g} {_fmt_ns(clk_td_ns)} 1p 1p {_fmt_ns(clk_pw_ns)} {_fmt_ns(period_ns)} 0 "
         "]"
     )
     lines.append("** RSTn")
-    lines.append("alter @VRSTn[PWL] = [ " + f"0 {rstn_initial * vdd:g} {_fmt_ns(rstn_deassert_ns)} {rstn_initial * vdd:g} {_fmt_ns(rstn_deassert_ns)} {(1-rstn_initial) * vdd:g} " + "]")
+    lines.append("alter @VRSTn[PWL] = [ " + f"0 {rstn_initial * vdd:g} {_fmt_ns(rstn_deassert_ns)} {rstn_initial * vdd:g} {_fmt_ns(rstn_deassert_ns + 0.001)} {(1-rstn_initial) * vdd:g} " + "]")
     lines.append("")
     lines.append(f"tran {_fmt_ns(tran_step_ns)} {_fmt_ns(tran_stop_ns)}")
     lines.append("")
@@ -265,7 +265,7 @@ def main() -> int:
     ap.add_argument("verilog_tb", type=Path, help="Path to .v testbench (typically benches/tb_*.v)")
     ap.add_argument("period_multiplier", type=float, help="Multiplier applied to the inferred clk period")
     ap.add_argument("--vdd", type=float, default=3.3, help="Clock/reset high voltage (default: 3.3)")
-    ap.add_argument("--tran-step-ns", type=float, default=0.5, help="Transient step in ns (default: 0.5)")
+    ap.add_argument("--tran-step-ns", type=float, default=0.1, help="Transient step in ns (default: 0.1)")
     ap.add_argument("--extra-cycles", type=int, default=0, help="Extra cycles to add to inferred repeat() count")
     args = ap.parse_args()
 

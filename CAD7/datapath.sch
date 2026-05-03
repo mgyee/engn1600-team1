@@ -153,7 +153,7 @@ C {opin.sym} -1050 360 0 0 {name=p32 lab=PC[15..0]}
 C {lab_pin.sym} -1070 -70 0 0 {name=p33 lab=CLK}
 C {lab_pin.sym} -1070 -50 0 0 {name=p36 lab=RSTn}
 C {lab_pin.sym} -1070 -10 0 0 {name=p38 lab=INSTR[7..0]}
-C {lab_pin.sym} -1070 30 0 0 {name=p96 lab=DEST[15..0]}
+C {lab_pin.sym} -1070 30 0 0 {name=p96 lab=DEST[15..1]}
 C {lab_pin.sym} -770 -30 0 1 {name=p99 lab=PC[15..0]}
 C {ipin.sym} -790 360 0 0 {name=p9 lab=IMEM_Q[15..0]}
 C {engn1600-team1/CAD7/datapath_dff.sym} -550 360 0 0 {name=x16[15..0]}
@@ -164,12 +164,12 @@ C {lab_pin.sym} -600 360 0 0 {name=p30 lab=RSTn}
 C {lab_pin.sym} -550 300 0 0 {name=p31 lab=CLK}
 C {lab_pin.sym} -600 380 0 0 {name=p100 lab=VDD}
 C {lab_pin.sym} -500 380 0 1 {name=p101 lab=VSS}
-C {lab_pin.sym} -1430 0 0 0 {name=p37 sig_type=std_logic lab=RSRC[15..0]b
+C {lab_pin.sym} -1430 0 0 0 {name=p37 sig_type=std_logic lab=RSRC[14..0]b
 }
-C {engn1600-team1/CAD7/datapath_inv.sym} -1410 0 0 0 {name=x15[15..0] kINV=1}
+C {engn1600-team1/CAD7/datapath_inv.sym} -1410 0 0 0 {name=x15[14..0] kINV=1}
 C {lab_pin.sym} -1390 -40 0 1 {name=p39 lab=VDD}
 C {lab_pin.sym} -1390 40 0 1 {name=p97 lab=VSS}
-C {lab_pin.sym} -1320 0 2 0 {name=p98 sig_type=std_logic lab=DEST[15..0]
+C {lab_pin.sym} -1320 0 2 0 {name=p98 sig_type=std_logic lab=DEST[15..1]
 }
 C {opin.sym} -750 180 0 0 {name=p102 lab=INSTR[15..0]}
 C {engn1600-team1/CAD7/sign_zero_extender.sym} -580 540 0 0 {name=x5}
