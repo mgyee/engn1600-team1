@@ -14,7 +14,7 @@ module tb_fib;
 
     initial begin
         #12 rst = 0;
-        repeat (140) @(posedge clk);
+        repeat (100) @(posedge clk);
 
         if (dut.u_dmem.mem[16'h0000] !== 16'd55) begin
             $display("FAIL fib: mem[0] = %h, expected 0037", dut.u_dmem.mem[16'h0000]);
