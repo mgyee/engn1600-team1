@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {Where the fuck does the output of the inverter go?} 490 -570 0 0 0.4 0.4 {}
 N 1100 -300 1130 -300 {lab=DMEM_Q[15..0]
 bus=true}
 C {engn1600-team1/CAD4/alu.sym} 780 0 0 0 {name=xalu}
