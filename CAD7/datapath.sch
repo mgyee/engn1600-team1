@@ -6,6 +6,7 @@ S {}
 E {}
 N 1100 -300 1130 -300 {lab=DMEM_Q[15..0]
 bus=true}
+N -480 -240 -400 -240 {lab=#net1}
 C {engn1600-team1/CAD4/alu.sym} 780 0 0 0 {name=xalu}
 C {engn1600-team1/CAD3/rf.sym} -220 0 0 0 {name=xrf}
 C {engn1600-team1/CAD6/pc.sym} -920 0 0 0 {name=xpc}
@@ -226,6 +227,9 @@ C {lab_pin.sym} -370 -30 0 0 {name=p88 sig_type=std_logic lab=WEM
 }
 C {engn1600-team1/CAD7/datapath_nand2.sym} -630 -160 0 0 {name=x1}
 C {lab_pin.sym} -540 -280 0 1 {name=p89 lab=VDD}
-C {lab_pin.sym} -480 -240 0 1 {name=p139 lab=WEM}
 C {lab_pin.sym} -540 -200 0 1 {name=p142 lab=VSS}
-C {lab_pin.sym} -580 -250 0 0 {name=p140 lab=CLK}
+C {lab_pin.sym} -580 -250 0 0 {name=p140 lab=CLK0b}
+C {engn1600-team1/CAD7/datapath_inv.sym} -380 -240 0 0 {name=x13[15..0] kINV=1}
+C {lab_pin.sym} -290 -240 0 1 {name=p141 lab=WEM}
+C {lab_pin.sym} -360 -280 0 1 {name=p143 lab=VDD}
+C {lab_pin.sym} -360 -200 0 1 {name=p145 lab=VSS}

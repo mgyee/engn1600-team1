@@ -55,38 +55,38 @@ xshifter VDD VSS SHIFTER_D15b SHIFTER_D14b SHIFTER_D13b SHIFTER_D12b SHIFTER_D11
 + SHIFTER_D6b SHIFTER_D5b SHIFTER_D4b SHIFTER_D3b SHIFTER_D2b SHIFTER_D1b SHIFTER_D0b SHIFTER_I3 SHIFTER_I2 SHIFTER_I1 SHIFTER_I0 SHIFTER_R3
 + SHIFTER_R2 SHIFTER_R1 SHIFTER_R0 SHIFT_AMT_SRC SHIFTER_Q15b SHIFTER_Q14b SHIFTER_Q13b SHIFTER_Q12b SHIFTER_Q11b SHIFTER_Q10b SHIFTER_Q9b
 + SHIFTER_Q8b SHIFTER_Q7b SHIFTER_Q6b SHIFTER_Q5b SHIFTER_Q4b SHIFTER_Q3b SHIFTER_Q2b SHIFTER_Q1b SHIFTER_Q0b shifter
-x515 DATA_OUT0 DMEM_Q15b DATA_OUT1 ALU_Y15b VSS net1[15] DATA_OUT2 SHIFTER_Q15b DATA_OUT3 PC15b datapath_4x1_mux
-x514 DATA_OUT0 DMEM_Q14b DATA_OUT1 ALU_Y14b VSS net1[14] DATA_OUT2 SHIFTER_Q14b DATA_OUT3 PC14b datapath_4x1_mux
-x513 DATA_OUT0 DMEM_Q13b DATA_OUT1 ALU_Y13b VSS net1[13] DATA_OUT2 SHIFTER_Q13b DATA_OUT3 PC13b datapath_4x1_mux
-x512 DATA_OUT0 DMEM_Q12b DATA_OUT1 ALU_Y12b VSS net1[12] DATA_OUT2 SHIFTER_Q12b DATA_OUT3 PC12b datapath_4x1_mux
-x511 DATA_OUT0 DMEM_Q11b DATA_OUT1 ALU_Y11b VSS net1[11] DATA_OUT2 SHIFTER_Q11b DATA_OUT3 PC11b datapath_4x1_mux
-x510 DATA_OUT0 DMEM_Q10b DATA_OUT1 ALU_Y10b VSS net1[10] DATA_OUT2 SHIFTER_Q10b DATA_OUT3 PC10b datapath_4x1_mux
-x59 DATA_OUT0 DMEM_Q9b DATA_OUT1 ALU_Y9b VSS net1[9] DATA_OUT2 SHIFTER_Q9b DATA_OUT3 PC9b datapath_4x1_mux
-x58 DATA_OUT0 DMEM_Q8b DATA_OUT1 ALU_Y8b VSS net1[8] DATA_OUT2 SHIFTER_Q8b DATA_OUT3 PC8b datapath_4x1_mux
-x57 DATA_OUT0 DMEM_Q7b DATA_OUT1 ALU_Y7b VSS net1[7] DATA_OUT2 SHIFTER_Q7b DATA_OUT3 PC7b datapath_4x1_mux
-x56 DATA_OUT0 DMEM_Q6b DATA_OUT1 ALU_Y6b VSS net1[6] DATA_OUT2 SHIFTER_Q6b DATA_OUT3 PC6b datapath_4x1_mux
-x55 DATA_OUT0 DMEM_Q5b DATA_OUT1 ALU_Y5b VSS net1[5] DATA_OUT2 SHIFTER_Q5b DATA_OUT3 PC5b datapath_4x1_mux
-x54 DATA_OUT0 DMEM_Q4b DATA_OUT1 ALU_Y4b VSS net1[4] DATA_OUT2 SHIFTER_Q4b DATA_OUT3 PC4b datapath_4x1_mux
-x53 DATA_OUT0 DMEM_Q3b DATA_OUT1 ALU_Y3b VSS net1[3] DATA_OUT2 SHIFTER_Q3b DATA_OUT3 PC3b datapath_4x1_mux
-x52 DATA_OUT0 DMEM_Q2b DATA_OUT1 ALU_Y2b VSS net1[2] DATA_OUT2 SHIFTER_Q2b DATA_OUT3 PC2b datapath_4x1_mux
-x51 DATA_OUT0 DMEM_Q1b DATA_OUT1 ALU_Y1b VSS net1[1] DATA_OUT2 SHIFTER_Q1b DATA_OUT3 PC1b datapath_4x1_mux
-x50 DATA_OUT0 DMEM_Q0b DATA_OUT1 ALU_Y0b VSS net1[0] DATA_OUT2 SHIFTER_Q0b DATA_OUT3 PC0b datapath_4x1_mux
-x115 VDD net1[15] RF_D15 VSS datapath_inv kINV=1
-x114 VDD net1[14] RF_D14 VSS datapath_inv kINV=1
-x113 VDD net1[13] RF_D13 VSS datapath_inv kINV=1
-x112 VDD net1[12] RF_D12 VSS datapath_inv kINV=1
-x111 VDD net1[11] RF_D11 VSS datapath_inv kINV=1
-x110 VDD net1[10] RF_D10 VSS datapath_inv kINV=1
-x19 VDD net1[9] RF_D9 VSS datapath_inv kINV=1
-x18 VDD net1[8] RF_D8 VSS datapath_inv kINV=1
-x17 VDD net1[7] RF_D7 VSS datapath_inv kINV=1
-x16 VDD net1[6] RF_D6 VSS datapath_inv kINV=1
-x15 VDD net1[5] RF_D5 VSS datapath_inv kINV=1
-x14 VDD net1[4] RF_D4 VSS datapath_inv kINV=1
-x13 VDD net1[3] RF_D3 VSS datapath_inv kINV=1
-x12 VDD net1[2] RF_D2 VSS datapath_inv kINV=1
-x11 VDD net1[1] RF_D1 VSS datapath_inv kINV=1
-x10 VDD net1[0] RF_D0 VSS datapath_inv kINV=1
+x515 DATA_OUT0 DMEM_Q15b DATA_OUT1 ALU_Y15b VSS net2[15] DATA_OUT2 SHIFTER_Q15b DATA_OUT3 PC15b datapath_4x1_mux
+x514 DATA_OUT0 DMEM_Q14b DATA_OUT1 ALU_Y14b VSS net2[14] DATA_OUT2 SHIFTER_Q14b DATA_OUT3 PC14b datapath_4x1_mux
+x513 DATA_OUT0 DMEM_Q13b DATA_OUT1 ALU_Y13b VSS net2[13] DATA_OUT2 SHIFTER_Q13b DATA_OUT3 PC13b datapath_4x1_mux
+x512 DATA_OUT0 DMEM_Q12b DATA_OUT1 ALU_Y12b VSS net2[12] DATA_OUT2 SHIFTER_Q12b DATA_OUT3 PC12b datapath_4x1_mux
+x511 DATA_OUT0 DMEM_Q11b DATA_OUT1 ALU_Y11b VSS net2[11] DATA_OUT2 SHIFTER_Q11b DATA_OUT3 PC11b datapath_4x1_mux
+x510 DATA_OUT0 DMEM_Q10b DATA_OUT1 ALU_Y10b VSS net2[10] DATA_OUT2 SHIFTER_Q10b DATA_OUT3 PC10b datapath_4x1_mux
+x59 DATA_OUT0 DMEM_Q9b DATA_OUT1 ALU_Y9b VSS net2[9] DATA_OUT2 SHIFTER_Q9b DATA_OUT3 PC9b datapath_4x1_mux
+x58 DATA_OUT0 DMEM_Q8b DATA_OUT1 ALU_Y8b VSS net2[8] DATA_OUT2 SHIFTER_Q8b DATA_OUT3 PC8b datapath_4x1_mux
+x57 DATA_OUT0 DMEM_Q7b DATA_OUT1 ALU_Y7b VSS net2[7] DATA_OUT2 SHIFTER_Q7b DATA_OUT3 PC7b datapath_4x1_mux
+x56 DATA_OUT0 DMEM_Q6b DATA_OUT1 ALU_Y6b VSS net2[6] DATA_OUT2 SHIFTER_Q6b DATA_OUT3 PC6b datapath_4x1_mux
+x55 DATA_OUT0 DMEM_Q5b DATA_OUT1 ALU_Y5b VSS net2[5] DATA_OUT2 SHIFTER_Q5b DATA_OUT3 PC5b datapath_4x1_mux
+x54 DATA_OUT0 DMEM_Q4b DATA_OUT1 ALU_Y4b VSS net2[4] DATA_OUT2 SHIFTER_Q4b DATA_OUT3 PC4b datapath_4x1_mux
+x53 DATA_OUT0 DMEM_Q3b DATA_OUT1 ALU_Y3b VSS net2[3] DATA_OUT2 SHIFTER_Q3b DATA_OUT3 PC3b datapath_4x1_mux
+x52 DATA_OUT0 DMEM_Q2b DATA_OUT1 ALU_Y2b VSS net2[2] DATA_OUT2 SHIFTER_Q2b DATA_OUT3 PC2b datapath_4x1_mux
+x51 DATA_OUT0 DMEM_Q1b DATA_OUT1 ALU_Y1b VSS net2[1] DATA_OUT2 SHIFTER_Q1b DATA_OUT3 PC1b datapath_4x1_mux
+x50 DATA_OUT0 DMEM_Q0b DATA_OUT1 ALU_Y0b VSS net2[0] DATA_OUT2 SHIFTER_Q0b DATA_OUT3 PC0b datapath_4x1_mux
+x115 VDD net2[15] RF_D15 VSS datapath_inv kINV=1
+x114 VDD net2[14] RF_D14 VSS datapath_inv kINV=1
+x113 VDD net2[13] RF_D13 VSS datapath_inv kINV=1
+x112 VDD net2[12] RF_D12 VSS datapath_inv kINV=1
+x111 VDD net2[11] RF_D11 VSS datapath_inv kINV=1
+x110 VDD net2[10] RF_D10 VSS datapath_inv kINV=1
+x19 VDD net2[9] RF_D9 VSS datapath_inv kINV=1
+x18 VDD net2[8] RF_D8 VSS datapath_inv kINV=1
+x17 VDD net2[7] RF_D7 VSS datapath_inv kINV=1
+x16 VDD net2[6] RF_D6 VSS datapath_inv kINV=1
+x15 VDD net2[5] RF_D5 VSS datapath_inv kINV=1
+x14 VDD net2[4] RF_D4 VSS datapath_inv kINV=1
+x13 VDD net2[3] RF_D3 VSS datapath_inv kINV=1
+x12 VDD net2[2] RF_D2 VSS datapath_inv kINV=1
+x11 VDD net2[1] RF_D1 VSS datapath_inv kINV=1
+x10 VDD net2[0] RF_D0 VSS datapath_inv kINV=1
 x23 INSTR3 IS_LUI IS_LUI3b SHIFTER_I3 VDD VSS VDD datapath_2x1_mux
 x22 INSTR2 IS_LUI IS_LUI2b SHIFTER_I2 VDD VSS VSS datapath_2x1_mux
 x21 INSTR1 IS_LUI IS_LUI1b SHIFTER_I1 VDD VSS VSS datapath_2x1_mux
@@ -95,70 +95,70 @@ x33 VDD RSRC3b SHIFTER_R3 VSS datapath_inv kINV=1
 x32 VDD RSRC2b SHIFTER_R2 VSS datapath_inv kINV=1
 x31 VDD RSRC1b SHIFTER_R1 VSS datapath_inv kINV=1
 x30 VDD RSRC0b SHIFTER_R0 VSS datapath_inv kINV=1
-x415 RDST15b ALU_SRC_A net2[15] VDD VSS VDD 2x1_mux_pass
-x414 RDST14b ALU_SRC_A net2[14] VDD VSS VDD 2x1_mux_pass
-x413 RDST13b ALU_SRC_A net2[13] VDD VSS VDD 2x1_mux_pass
-x412 RDST12b ALU_SRC_A net2[12] VDD VSS VDD 2x1_mux_pass
-x411 RDST11b ALU_SRC_A net2[11] VDD VSS VDD 2x1_mux_pass
-x410 RDST10b ALU_SRC_A net2[10] VDD VSS VDD 2x1_mux_pass
-x49 RDST9b ALU_SRC_A net2[9] VDD VSS VDD 2x1_mux_pass
-x48 RDST8b ALU_SRC_A net2[8] VDD VSS VDD 2x1_mux_pass
-x47 RDST7b ALU_SRC_A net2[7] VDD VSS VDD 2x1_mux_pass
-x46 RDST6b ALU_SRC_A net2[6] VDD VSS VDD 2x1_mux_pass
-x45 RDST5b ALU_SRC_A net2[5] VDD VSS VDD 2x1_mux_pass
-x44 RDST4b ALU_SRC_A net2[4] VDD VSS VDD 2x1_mux_pass
-x43 RDST3b ALU_SRC_A net2[3] VDD VSS VDD 2x1_mux_pass
-x42 RDST2b ALU_SRC_A net2[2] VDD VSS VDD 2x1_mux_pass
-x41 RDST1b ALU_SRC_A net2[1] VDD VSS VDD 2x1_mux_pass
-x40 RDST0b ALU_SRC_A net2[0] VDD VSS VDD 2x1_mux_pass
-x615 VDD net2[15] ALU_A15 VSS datapath_inv kINV=1
-x614 VDD net2[14] ALU_A14 VSS datapath_inv kINV=1
-x613 VDD net2[13] ALU_A13 VSS datapath_inv kINV=1
-x612 VDD net2[12] ALU_A12 VSS datapath_inv kINV=1
-x611 VDD net2[11] ALU_A11 VSS datapath_inv kINV=1
-x610 VDD net2[10] ALU_A10 VSS datapath_inv kINV=1
-x69 VDD net2[9] ALU_A9 VSS datapath_inv kINV=1
-x68 VDD net2[8] ALU_A8 VSS datapath_inv kINV=1
-x67 VDD net2[7] ALU_A7 VSS datapath_inv kINV=1
-x66 VDD net2[6] ALU_A6 VSS datapath_inv kINV=1
-x65 VDD net2[5] ALU_A5 VSS datapath_inv kINV=1
-x64 VDD net2[4] ALU_A4 VSS datapath_inv kINV=1
-x63 VDD net2[3] ALU_A3 VSS datapath_inv kINV=1
-x62 VDD net2[2] ALU_A2 VSS datapath_inv kINV=1
-x61 VDD net2[1] ALU_A1 VSS datapath_inv kINV=1
-x60 VDD net2[0] ALU_A0 VSS datapath_inv kINV=1
-x715 RSRC15b ALU_SRC_B net3[15] VDD VSS IMM15b 2x1_mux_pass
-x714 RSRC14b ALU_SRC_B net3[14] VDD VSS IMM14b 2x1_mux_pass
-x713 RSRC13b ALU_SRC_B net3[13] VDD VSS IMM13b 2x1_mux_pass
-x712 RSRC12b ALU_SRC_B net3[12] VDD VSS IMM12b 2x1_mux_pass
-x711 RSRC11b ALU_SRC_B net3[11] VDD VSS IMM11b 2x1_mux_pass
-x710 RSRC10b ALU_SRC_B net3[10] VDD VSS IMM10b 2x1_mux_pass
-x79 RSRC9b ALU_SRC_B net3[9] VDD VSS IMM9b 2x1_mux_pass
-x78 RSRC8b ALU_SRC_B net3[8] VDD VSS IMM8b 2x1_mux_pass
-x77 RSRC7b ALU_SRC_B net3[7] VDD VSS IMM7b 2x1_mux_pass
-x76 RSRC6b ALU_SRC_B net3[6] VDD VSS IMM6b 2x1_mux_pass
-x75 RSRC5b ALU_SRC_B net3[5] VDD VSS IMM5b 2x1_mux_pass
-x74 RSRC4b ALU_SRC_B net3[4] VDD VSS IMM4b 2x1_mux_pass
-x73 RSRC3b ALU_SRC_B net3[3] VDD VSS IMM3b 2x1_mux_pass
-x72 RSRC2b ALU_SRC_B net3[2] VDD VSS IMM2b 2x1_mux_pass
-x71 RSRC1b ALU_SRC_B net3[1] VDD VSS IMM1b 2x1_mux_pass
-x70 RSRC0b ALU_SRC_B net3[0] VDD VSS IMM0b 2x1_mux_pass
-x815 VDD net3[15] ALU_B15 VSS datapath_inv kINV=1
-x814 VDD net3[14] ALU_B14 VSS datapath_inv kINV=1
-x813 VDD net3[13] ALU_B13 VSS datapath_inv kINV=1
-x812 VDD net3[12] ALU_B12 VSS datapath_inv kINV=1
-x811 VDD net3[11] ALU_B11 VSS datapath_inv kINV=1
-x810 VDD net3[10] ALU_B10 VSS datapath_inv kINV=1
-x89 VDD net3[9] ALU_B9 VSS datapath_inv kINV=1
-x88 VDD net3[8] ALU_B8 VSS datapath_inv kINV=1
-x87 VDD net3[7] ALU_B7 VSS datapath_inv kINV=1
-x86 VDD net3[6] ALU_B6 VSS datapath_inv kINV=1
-x85 VDD net3[5] ALU_B5 VSS datapath_inv kINV=1
-x84 VDD net3[4] ALU_B4 VSS datapath_inv kINV=1
-x83 VDD net3[3] ALU_B3 VSS datapath_inv kINV=1
-x82 VDD net3[2] ALU_B2 VSS datapath_inv kINV=1
-x81 VDD net3[1] ALU_B1 VSS datapath_inv kINV=1
-x80 VDD net3[0] ALU_B0 VSS datapath_inv kINV=1
+x415 RDST15b ALU_SRC_A net3[15] VDD VSS VDD 2x1_mux_pass
+x414 RDST14b ALU_SRC_A net3[14] VDD VSS VDD 2x1_mux_pass
+x413 RDST13b ALU_SRC_A net3[13] VDD VSS VDD 2x1_mux_pass
+x412 RDST12b ALU_SRC_A net3[12] VDD VSS VDD 2x1_mux_pass
+x411 RDST11b ALU_SRC_A net3[11] VDD VSS VDD 2x1_mux_pass
+x410 RDST10b ALU_SRC_A net3[10] VDD VSS VDD 2x1_mux_pass
+x49 RDST9b ALU_SRC_A net3[9] VDD VSS VDD 2x1_mux_pass
+x48 RDST8b ALU_SRC_A net3[8] VDD VSS VDD 2x1_mux_pass
+x47 RDST7b ALU_SRC_A net3[7] VDD VSS VDD 2x1_mux_pass
+x46 RDST6b ALU_SRC_A net3[6] VDD VSS VDD 2x1_mux_pass
+x45 RDST5b ALU_SRC_A net3[5] VDD VSS VDD 2x1_mux_pass
+x44 RDST4b ALU_SRC_A net3[4] VDD VSS VDD 2x1_mux_pass
+x43 RDST3b ALU_SRC_A net3[3] VDD VSS VDD 2x1_mux_pass
+x42 RDST2b ALU_SRC_A net3[2] VDD VSS VDD 2x1_mux_pass
+x41 RDST1b ALU_SRC_A net3[1] VDD VSS VDD 2x1_mux_pass
+x40 RDST0b ALU_SRC_A net3[0] VDD VSS VDD 2x1_mux_pass
+x615 VDD net3[15] ALU_A15 VSS datapath_inv kINV=1
+x614 VDD net3[14] ALU_A14 VSS datapath_inv kINV=1
+x613 VDD net3[13] ALU_A13 VSS datapath_inv kINV=1
+x612 VDD net3[12] ALU_A12 VSS datapath_inv kINV=1
+x611 VDD net3[11] ALU_A11 VSS datapath_inv kINV=1
+x610 VDD net3[10] ALU_A10 VSS datapath_inv kINV=1
+x69 VDD net3[9] ALU_A9 VSS datapath_inv kINV=1
+x68 VDD net3[8] ALU_A8 VSS datapath_inv kINV=1
+x67 VDD net3[7] ALU_A7 VSS datapath_inv kINV=1
+x66 VDD net3[6] ALU_A6 VSS datapath_inv kINV=1
+x65 VDD net3[5] ALU_A5 VSS datapath_inv kINV=1
+x64 VDD net3[4] ALU_A4 VSS datapath_inv kINV=1
+x63 VDD net3[3] ALU_A3 VSS datapath_inv kINV=1
+x62 VDD net3[2] ALU_A2 VSS datapath_inv kINV=1
+x61 VDD net3[1] ALU_A1 VSS datapath_inv kINV=1
+x60 VDD net3[0] ALU_A0 VSS datapath_inv kINV=1
+x715 RSRC15b ALU_SRC_B net4[15] VDD VSS IMM15b 2x1_mux_pass
+x714 RSRC14b ALU_SRC_B net4[14] VDD VSS IMM14b 2x1_mux_pass
+x713 RSRC13b ALU_SRC_B net4[13] VDD VSS IMM13b 2x1_mux_pass
+x712 RSRC12b ALU_SRC_B net4[12] VDD VSS IMM12b 2x1_mux_pass
+x711 RSRC11b ALU_SRC_B net4[11] VDD VSS IMM11b 2x1_mux_pass
+x710 RSRC10b ALU_SRC_B net4[10] VDD VSS IMM10b 2x1_mux_pass
+x79 RSRC9b ALU_SRC_B net4[9] VDD VSS IMM9b 2x1_mux_pass
+x78 RSRC8b ALU_SRC_B net4[8] VDD VSS IMM8b 2x1_mux_pass
+x77 RSRC7b ALU_SRC_B net4[7] VDD VSS IMM7b 2x1_mux_pass
+x76 RSRC6b ALU_SRC_B net4[6] VDD VSS IMM6b 2x1_mux_pass
+x75 RSRC5b ALU_SRC_B net4[5] VDD VSS IMM5b 2x1_mux_pass
+x74 RSRC4b ALU_SRC_B net4[4] VDD VSS IMM4b 2x1_mux_pass
+x73 RSRC3b ALU_SRC_B net4[3] VDD VSS IMM3b 2x1_mux_pass
+x72 RSRC2b ALU_SRC_B net4[2] VDD VSS IMM2b 2x1_mux_pass
+x71 RSRC1b ALU_SRC_B net4[1] VDD VSS IMM1b 2x1_mux_pass
+x70 RSRC0b ALU_SRC_B net4[0] VDD VSS IMM0b 2x1_mux_pass
+x815 VDD net4[15] ALU_B15 VSS datapath_inv kINV=1
+x814 VDD net4[14] ALU_B14 VSS datapath_inv kINV=1
+x813 VDD net4[13] ALU_B13 VSS datapath_inv kINV=1
+x812 VDD net4[12] ALU_B12 VSS datapath_inv kINV=1
+x811 VDD net4[11] ALU_B11 VSS datapath_inv kINV=1
+x810 VDD net4[10] ALU_B10 VSS datapath_inv kINV=1
+x89 VDD net4[9] ALU_B9 VSS datapath_inv kINV=1
+x88 VDD net4[8] ALU_B8 VSS datapath_inv kINV=1
+x87 VDD net4[7] ALU_B7 VSS datapath_inv kINV=1
+x86 VDD net4[6] ALU_B6 VSS datapath_inv kINV=1
+x85 VDD net4[5] ALU_B5 VSS datapath_inv kINV=1
+x84 VDD net4[4] ALU_B4 VSS datapath_inv kINV=1
+x83 VDD net4[3] ALU_B3 VSS datapath_inv kINV=1
+x82 VDD net4[2] ALU_B2 VSS datapath_inv kINV=1
+x81 VDD net4[1] ALU_B1 VSS datapath_inv kINV=1
+x80 VDD net4[0] ALU_B0 VSS datapath_inv kINV=1
 x915 VDD RSRC15b DMEM_ADDR15 VSS datapath_inv kINV=1
 x914 VDD RSRC14b DMEM_ADDR14 VSS datapath_inv kINV=1
 x913 VDD RSRC13b DMEM_ADDR13 VSS datapath_inv kINV=1
@@ -308,7 +308,23 @@ x203 VDD RDST3b RDST3 VSS datapath_inv kINV=1
 x202 VDD RDST2b RDST2 VSS datapath_inv kINV=1
 x201 VDD RDST1b RDST1 VSS datapath_inv kINV=1
 x200 VDD RDST0b RDST0 VSS datapath_inv kINV=1
-x1 VDD WEM CLK REG_WRITE VSS datapath_nand2
+x1 VDD net1 CLK0b REG_WRITE VSS datapath_nand2
+x1315 VDD net1 WEM VSS datapath_inv kINV=1
+x1314 VDD net1 WEM VSS datapath_inv kINV=1
+x1313 VDD net1 WEM VSS datapath_inv kINV=1
+x1312 VDD net1 WEM VSS datapath_inv kINV=1
+x1311 VDD net1 WEM VSS datapath_inv kINV=1
+x1310 VDD net1 WEM VSS datapath_inv kINV=1
+x139 VDD net1 WEM VSS datapath_inv kINV=1
+x138 VDD net1 WEM VSS datapath_inv kINV=1
+x137 VDD net1 WEM VSS datapath_inv kINV=1
+x136 VDD net1 WEM VSS datapath_inv kINV=1
+x135 VDD net1 WEM VSS datapath_inv kINV=1
+x134 VDD net1 WEM VSS datapath_inv kINV=1
+x133 VDD net1 WEM VSS datapath_inv kINV=1
+x132 VDD net1 WEM VSS datapath_inv kINV=1
+x131 VDD net1 WEM VSS datapath_inv kINV=1
+x130 VDD net1 WEM VSS datapath_inv kINV=1
 **.ends
 
 * expanding   symbol:  engn1600-team1/CAD4/alu.sym # of pins=10
