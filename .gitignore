@@ -7,3 +7,5 @@
 
 *.raw
 *.vcd
+
+tb_tmp.spice
