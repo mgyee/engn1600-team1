@@ -24,10 +24,41 @@ def op_to_sel(op):
 def build_pwl(events):
     return "[ " + " ".join(f"{t} {v}" for t, v in events) + " ]"
 
+def compute_alu_result(A, B, op):
+    """Compute ALU result and flags (Y, F, Z, N)"""
+
+    Z = "X"
+    N = "X"
+    F = 0
+    
+    if op == "+":
+        result = (A + B) & 0xFFFF
+        # Signed overflow: same-sign inputs, different-sign result
+        F = int((((A ^ result) & (B ^ result)) & 0x8000) != 0)
+    elif op == "-":
+        result = (A - B) & 0xFFFF
+        # Signed overflow: different-sign inputs, result sign differs from A
+        F = int((((A ^ B) & (A ^ result)) & 0x8000) != 0)
+        # Z flag: 1 if result is zero
+        Z = int(result == 0)
+        # N flag: 1 if result is negative (bit 15 set in signed interpretation)
+        N = int((result >> 15) ^ F)
+    elif op == "&":
+        result = A & B
+    elif op == "|":
+        result = A | B
+    elif op == "^":
+        result = A ^ B
+    else:
+        raise ValueError(op)
+    
+    return result, F, Z, N
+
 def generate_summary(tests):
     lines = ["** TEST SUMMARY"]
     for i, (A, B, op) in enumerate(tests):
-        lines.append(f"** {i:02d}: 0x{A:04X} {op} 0x{B:04X}")
+        Y, F, Z, N = compute_alu_result(A, B, op)
+        lines.append(f"** {i:02d}: 0x{A:04X} {op} 0x{B:04X} = 0x{Y:04X} (F{F} Z{Z} N{N})")
     return "\n".join(lines)
 
 def generate_pwl_blocks(tests):
