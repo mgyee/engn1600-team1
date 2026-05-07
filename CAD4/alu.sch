@@ -54,7 +54,7 @@ C {lab_pin.sym} 380 -420 0 0 {name=p41 lab=SUM[15..0]b}
 C {lab_pin.sym} 380 -380 0 0 {name=p42 lab=NOR[15..0]}
 C {lab_pin.sym} 380 -360 0 0 {name=p43 lab=XNOR[15..0]}
 C {lab_pin.sym} 380 -400 0 0 {name=p44 lab=NAND[15..0]}
-C {engn1600-team1/CAD4/alu_inv.sym} 400 -180 0 0 {name=x11[15..0]}
+C {engn1600-team1/CAD4/alu_inv.sym} 400 -180 0 0 {name=x6}
 C {lab_pin.sym} 420 -140 0 1 {name=p45 lab=VSS}
 C {lab_pin.sym} 420 -220 0 1 {name=p46 lab=VDD}
 C {lab_pin.sym} 380 -180 0 0 {name=p47 lab=Y15b}
