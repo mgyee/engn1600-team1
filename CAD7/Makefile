@@ -2,7 +2,7 @@ MAKEFILE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 RTL := cpu_peripherals
 SLOWDOWN ?= 2
 
-.PHONY: lib run-% build-% clean
+.PHONY: lib run-% build-% clean datapath_sim.spice
 
 lib: $(RTL:%=%.so) lib.spice
 
@@ -60,11 +60,11 @@ processor_tb.spice: processor_tb.sch datapath_sim.spice
 	rc=$$? ; \
 	echo "xschem exit code: $$rc"
 
-# datapath.spice: datapath.sch
-#		cd /foss/designs && \
-#		DISPLAY= xschem -n -q -o $(MAKEFILE_DIR) $(MAKEFILE_DIR)$< ; \
-#		rc=$$? ; \
-#		echo "xschem exit code: $$rc"
+datapath_sim.spice: datapath.sch
+	cd /foss/designs && \
+	DISPLAY= xschem -n -q -o $(MAKEFILE_DIR) -N $@ $(MAKEFILE_DIR)$< ; \
+	rc=$$? ; \
+	echo "xschem exit code: $$rc"
 
 clean:
 	rm -f *.so *.raw *.vcd datapath.spice lib.spice processor_tb.spice tb_tmp.spice

@@ -28,7 +28,7 @@ VVSS VSS GND 0
 *.iopin VSS
 **** begin user architecture code
 
-.include /foss/designs/engn1600-team1/CAD7/datapath.spice
+.include /foss/designs/engn1600-team1/CAD7/datapath_sim.spice
 .include /foss/designs/engn1600-team1/CAD7/lib.spice
 
 **** end user architecture code
