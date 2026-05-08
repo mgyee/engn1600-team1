@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Fri May  8 22:36:22 2026
+[*]
+[dumpfile] "/foss/designs/engn1600-team1/CAD7/tb_arith.vcd"
+[dumpfile_mtime] "Fri May  8 21:45:23 2026"
+[dumpfile_size] 134344
+[savefile] "/foss/designs/engn1600-team1/CAD7/tb_arith.gtkw"
+[timestart] 0
+[size] 1512 785
+[pos] -503 -176
+*-15.520158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[sst_width] 228
+[signals_width] 169
+[sst_expanded] 1
+[sst_vpaned_height] 219
+@28
+ngspice.clk
+@22
+ngspice.x1.alu_a[15:0]
+ngspice.x1.alu_b[15:0]
+@62
++{ngspice.x1.alu_y[15:0]} ngspice.x1.alu_yb[15:0]
+@28
+ngspice.x1.alu_z
+ngspice.x1.mem_write
+@22
++{ngspice.x1.dmem_wd[15:0]} ngspice.x1.rdst[15:0]
+ngspice.x1.dmem_addr[15:0]
++{ngspice.x1.xrf.r0[15:0]} ngspice.x1.xrf.x0.data[15:0]
++{ngspice.x1.xrf.r1[15:0]} ngspice.x1.xrf.x1.data[15:0]
++{ngspice.x1.xrf.r2[15:0]} ngspice.x1.xrf.x2.data[15:0]
++{ngspice.x1.xrf.r3[15:0]} ngspice.x1.xrf.x3.data[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

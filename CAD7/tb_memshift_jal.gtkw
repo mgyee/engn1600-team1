@@ -1,0 +1,71 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Fri May  8 22:54:53 2026
+[*]
+[dumpfile] "/foss/designs/engn1600-team1/CAD7/tb_memshift_jal.vcd"
+[dumpfile_mtime] "Fri May  8 21:58:24 2026"
+[dumpfile_size] 155123
+[savefile] "/foss/designs/engn1600-team1/CAD7/tb_memshift_jal.gtkw"
+[timestart] 0
+[size] 1512 785
+[pos] -1 -1
+*-15.722335 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[sst_width] 228
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 219
+@28
+ngspice.clk
+ngspice.x1.mem_write
+@24
++{ngspice.x1.dmem_wd[15:0]} ngspice.x1.rdst[15:0]
+@22
+ngspice.x1.dmem_addr[15:0]
++{ngspice.x1.xrf.r0[15:0]} ngspice.x1.xrf.x0.data[15:0]
+@c00022
++{ngspice.x1.xrf.r1[15:0]} ngspice.x1.xrf.x1.data[15:0]
+@28
+(0)ngspice.x1.xrf.x1.data[15:0]
+(1)ngspice.x1.xrf.x1.data[15:0]
+(2)ngspice.x1.xrf.x1.data[15:0]
+(3)ngspice.x1.xrf.x1.data[15:0]
+(4)ngspice.x1.xrf.x1.data[15:0]
+(5)ngspice.x1.xrf.x1.data[15:0]
+(6)ngspice.x1.xrf.x1.data[15:0]
+(7)ngspice.x1.xrf.x1.data[15:0]
+(8)ngspice.x1.xrf.x1.data[15:0]
+(9)ngspice.x1.xrf.x1.data[15:0]
+(10)ngspice.x1.xrf.x1.data[15:0]
+(11)ngspice.x1.xrf.x1.data[15:0]
+(12)ngspice.x1.xrf.x1.data[15:0]
+(13)ngspice.x1.xrf.x1.data[15:0]
+(14)ngspice.x1.xrf.x1.data[15:0]
+(15)ngspice.x1.xrf.x1.data[15:0]
+@1401200
+-group_end
+@c00022
++{ngspice.x1.xrf.r2[15:0]} ngspice.x1.xrf.x2.data[15:0]
+@28
+(0)ngspice.x1.xrf.x2.data[15:0]
+(1)ngspice.x1.xrf.x2.data[15:0]
+(2)ngspice.x1.xrf.x2.data[15:0]
+(3)ngspice.x1.xrf.x2.data[15:0]
+(4)ngspice.x1.xrf.x2.data[15:0]
+(5)ngspice.x1.xrf.x2.data[15:0]
+(6)ngspice.x1.xrf.x2.data[15:0]
+(7)ngspice.x1.xrf.x2.data[15:0]
+(8)ngspice.x1.xrf.x2.data[15:0]
+(9)ngspice.x1.xrf.x2.data[15:0]
+(10)ngspice.x1.xrf.x2.data[15:0]
+(11)ngspice.x1.xrf.x2.data[15:0]
+(12)ngspice.x1.xrf.x2.data[15:0]
+(13)ngspice.x1.xrf.x2.data[15:0]
+(14)ngspice.x1.xrf.x2.data[15:0]
+(15)ngspice.x1.xrf.x2.data[15:0]
+@1401200
+-group_end
+@22
++{ngspice.x1.xrf.r3[15:0]} ngspice.x1.xrf.x3.data[15:0]
++{ngspice.x1.xrf.r4[15:0]} ngspice.x1.xrf.x4.data[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

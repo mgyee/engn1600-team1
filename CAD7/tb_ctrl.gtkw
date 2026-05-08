@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Fri May  8 22:49:21 2026
+[*]
+[dumpfile] "/foss/designs/engn1600-team1/CAD7/tb_ctrl.vcd"
+[dumpfile_mtime] "Fri May  8 21:51:30 2026"
+[dumpfile_size] 159344
+[savefile] "/foss/designs/engn1600-team1/CAD7/tb_ctrl.gtkw"
+[timestart] 0
+[size] 1512 785
+[pos] -1 -1
+*-15.722178 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[sst_width] 228
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 219
+@28
+ngspice.clk
+@22
+ngspice.x1.pc[15:0]
+@28
+ngspice.x1.mem_write
+@22
++{ngspice.x1.dmem_wd[15:0]} ngspice.x1.rdst[15:0]
+ngspice.x1.dmem_addr[15:0]
+[pattern_trace] 1
+[pattern_trace] 0
