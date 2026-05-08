@@ -45,7 +45,7 @@ class NetlistSpecializer:
                     self.templates[cur_sub]["body"].append(line)
 
     def eval_expr(self, expr, context):
-        """Evaluates SPICE math strings into formatted numerical strings."""
+        """Evaluates SPICE math strings into formatted numerical strings rounded to nearest 0.005."""
         expr = str(expr).strip("'\"")
 
         # Replace variables from context (longest keys first to prevent partial matches)
@@ -62,9 +62,14 @@ class NetlistSpecializer:
             if type(val) in (int, float):
                 # Convert small numbers back to nice SPICE 'u' format
                 if val != 0 and abs(val) < 1e-3:
-                    return f"{val * 1e6:g}u"
+                    val_u = val * 1e6
+                    # Round to nearest 0.005 and clamp to 3 decimal places to avoid float artifacts
+                    rounded_u = round(round(val_u / 0.005) * 0.005, 3)
+                    return f"{rounded_u:g}u"
                 else:
-                    return f"{val:g}"
+                    # Round standard numeric values to nearest 0.005 as well
+                    rounded_val = round(round(val / 0.005) * 0.005, 3)
+                    return f"{rounded_val:g}"
         except:
             pass
         return expr.strip("'\"")
@@ -183,7 +188,7 @@ class NetlistSpecializer:
 # --- Execution Block ---
 if __name__ == "__main__":
     input_filename = "datapath.spice"
-    output_filename = "datapath.spice"
+    output_filename = "datapath_snapped.spice"
 
     with open(input_filename, "r") as f:
         netlist = f.read()
@@ -194,4 +199,6 @@ if __name__ == "__main__":
     with open(output_filename, "w") as f:
         f.write(processed_netlist)
 
-    print(f"Success! Hierarchical parameters resolved. Saved to {output_filename}")
+    print(
+        f"Success! Hierarchical parameters resolved and snapped to 0.005 grid. Saved to {output_filename}"
+    )

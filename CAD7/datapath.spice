@@ -460,7 +460,7 @@ M5 net3 SELb Yb VDD pfet_03v3 L=0.28u W=1.35u nf=1 m=1
 M6 VDD B net3 VDD pfet_03v3 L=0.28u W=1.8u nf=1 m=1
 M7 net4 A VDD VDD pfet_03v3 L=0.28u W=1.8u nf=1 m=1
 M8 Yb SEL net4 VDD pfet_03v3 L=0.28u W=1.35u nf=1 m=1
-M9 VSS Yb Y VSS nfet_03v3 L=0.28u W=0.775001u nf=1 m=1
+M9 VSS Yb Y VSS nfet_03v3 L=0.28u W=0.775u nf=1 m=1
 M10 VDD Yb Y VDD pfet_03v3 L=0.28u W=1.55u nf=1 m=1
 **** begin user architecture code
 **** end user architecture code
