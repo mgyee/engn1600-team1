@@ -2,7 +2,7 @@ MAKEFILE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 RTL := cpu_peripherals
 SLOWDOWN ?= 2
 
-.PHONY: lib run-% build-% clean datapath_sim.spice
+.PHONY: lib run-% build-% clean datapath_sim.spice run-%-postpex
 
 lib: $(RTL:%=%.so) lib.spice
 
@@ -31,6 +31,22 @@ benches/tb_%.spice: benches/tb_%.v tb_spice.py
 run-%: build-% processor_tb.spice
 	@set -e; \
 	name="$*"; \
+	ngspice -b processor_tb.spice && \
+	echo "Simulated $${name} and wrote tb_$${name}.raw" && \
+	python3 raw2vcd.py tb_$${name}.raw && \
+	echo "Converted tb_$${name}.raw to tb_$${name}.vcd"
+
+
+# Usage: make run-<name>-postpex
+# - Builds as in `build-<name>` then generates `datapath_sim.spice` from
+#   `PEX/datapath_pex.spice` (commenting .subckt / + lines and .ends), then
+#   runs the same simulation flow as `run-<name>`.
+run-%-postpex: build-% processor_tb.spice
+	@set -e; \
+	name="$*"; \
+	echo "Generating datapath_sim.spice from PEX/datapath_pex.spice"; \
+	awk 'BEGIN{p=0} /^\.subckt/ {print "*"$$0; p=1; next} p && /^\+/ {print "*"$$0; next} p && !/^\+/ {p=0} { if($$0 ~ /^[[:space:]]*\.ends/) { print "*"$$0 } else print $$0 }' PEX/datapath_pex.spice > datapath_sim.spice; \
+	echo "Wrote datapath_sim.spice"; \
 	ngspice -b processor_tb.spice && \
 	echo "Simulated $${name} and wrote tb_$${name}.raw" && \
 	python3 raw2vcd.py tb_$${name}.raw && \
