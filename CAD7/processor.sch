@@ -7,7 +7,7 @@ E {}
 C {devices/code_shown.sym} 480 -30 0 0 {name=VERILOG only_toplevel=false
 format="tcleval( @value )"
 value="
-.include /foss/designs/engn1600-team1/CAD7/datapath.spice
+.include /foss/designs/engn1600-team1/CAD7/datapath_sim.spice
 .include /foss/designs/engn1600-team1/CAD7/lib.spice
 "}
 C {ipin.sym} -490 -50 0 0 {name=p31 lab=CLK}

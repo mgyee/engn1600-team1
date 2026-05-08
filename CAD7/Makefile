@@ -54,17 +54,17 @@ build-%: lib benches/bench_%.memh benches/tb_%.spice
 	cp "$$tbspice" tb_tmp.spice; \
 	echo "Built cpu_peripherals.so for $$name and wrote tb_tmp.spice";
 
-processor_tb.spice: processor_tb.sch datapath.spice
+processor_tb.spice: processor_tb.sch datapath_sim.spice
 	cd /foss/designs && \
 	DISPLAY= xschem -n -q -o $(MAKEFILE_DIR) $(MAKEFILE_DIR)$< ; \
 	rc=$$? ; \
 	echo "xschem exit code: $$rc"
 
-datapath.spice: datapath.sch
-	cd /foss/designs && \
-	DISPLAY= xschem -n -q -o $(MAKEFILE_DIR) $(MAKEFILE_DIR)$< ; \
-	rc=$$? ; \
-	echo "xschem exit code: $$rc"
+# datapath.spice: datapath.sch
+#		cd /foss/designs && \
+#		DISPLAY= xschem -n -q -o $(MAKEFILE_DIR) $(MAKEFILE_DIR)$< ; \
+#		rc=$$? ; \
+#		echo "xschem exit code: $$rc"
 
 clean:
 	rm -f *.so *.raw *.vcd datapath.spice lib.spice processor_tb.spice tb_tmp.spice
