@@ -1,105 +1,136 @@
-<?xml version="1.0" standalone="yes"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-  width="100%" height="100%" viewBox="0 0 1024 768"
-  style="fill: none; font-family: Helvetica;
- font: Helvetica;
-">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1728 1296">
+  <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke: #005aff;
+      }
 
-<!-- Creator: NGspice -->
+      .st0, .st1, .st2, .st3, .st4 {
+        fill: none;
+        stroke-miterlimit: 6.8;
+        stroke-width: 1.7px;
+      }
 
-<rect x="0" y="0" width="1024" height="768" fill="black" stroke="none"/>
-<text stroke="none" fill="white" font-size="16" x="358" y="752">
-time
-</text>
-<text stroke="none" fill="white" font-size="16" x="10" y="16">
-tran1: ** sch_path: /foss/designs/engn1600-team1/cad3/rf_postpex_tb.sch
-</text>
-<path stroke="white" d="M60 704l0 -637"/>
-<text stroke="none" fill="white" font-size="16" x="45" y="728">
-0.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M210 704l0 -637"/>
-<text stroke="none" fill="white" font-size="16" x="195" y="728">
-5.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M360 704l0 -637"/>
-<text stroke="none" fill="white" font-size="16" x="340" y="728">
-10.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M510 704l0 -637"/>
-<text stroke="none" fill="white" font-size="16" x="490" y="728">
-15.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M660 704l0 -637"/>
-<text stroke="none" fill="white" font-size="16" x="640" y="728">
-20.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M810 704l0 -637"/>
-<text stroke="none" fill="white" font-size="16" x="790" y="728">
-25.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M960 704l0 -637"/>
-<text stroke="none" fill="white" font-size="16" x="940" y="728">
-30.0
-</text>
-<text stroke="none" fill="white" font-size="16" x="614" y="752">
-ns
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M60 704l900 0"/>
-<text stroke="none" fill="white" font-size="16" x="18" y="712">
--2.0
-</text>
-<path stroke="white" d="M60 613l900 0"/>
-<text stroke="none" fill="white" font-size="16" x="28" y="621">
-0.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M60 522l900 0"/>
-<text stroke="none" fill="white" font-size="16" x="28" y="530">
-2.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M60 431l900 0"/>
-<text stroke="none" fill="white" font-size="16" x="28" y="439">
-4.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M60 340l900 0"/>
-<text stroke="none" fill="white" font-size="16" x="28" y="348">
-6.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M60 249l900 0"/>
-<text stroke="none" fill="white" font-size="16" x="28" y="257">
-8.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M60 158l900 0"/>
-<text stroke="none" fill="white" font-size="16" x="18" y="166">
-10.0
-</text>
-<path stroke="white" stroke-dasharray="1,2" d="M60 67l900 0"/>
-<text stroke="none" fill="white" font-size="16" x="18" y="75">
-12.0
-</text>
-<text stroke="none" fill="white" font-size="16" x="10" y="32">
-     
-</text>
-<path stroke="red" d="M450 23l45 0"/>
-<text stroke="none" fill="white" font-size="16" x="505" y="32">
-qa0b
-</text>
-<path stroke="red" d="M60 613l173 0M233 614l0 -1M233 614l1 -1 1 0 0 -1 1 0 0 -2 1 -1 0 -2 1 -1 0 -3 1 -2 0 -8 1 -3 0 -11 1 -7 0 -19 1 -11 0 -36 1 -10 0 -14 1 -5 0 -5 1 -2 0 -3 1 -1 0 -1 1 0 0 -1 1 0 0 -1 412 0 0 -1 4 0M664 463l0 -1M664 463l1 0"/>
-<path stroke="red" d="M665 464l0 -1M665 464l1 1M666 466l0 -1M666 466l1 0M667 469l0 -3M667 469l1 1M668 471l0 -1M668 471l1 2M669 475l0 -2M669 475l1 1M670 480l0 -4M670 480l1 2M671 486l0 -4M671 486l1 2M672 493l0 -5M672 493l1 3M673 508l0 -12M673 508l1 5"/>
-<path stroke="red" d="M674 526l0 -13M674 526l1 7M675 549l0 -16M675 549l1 8M676 583l0 -26M676 583l1 7M677 599l0 -9M677 599l1 2M678 604l0 -3M678 604l1 1M679 606l0 -1M679 606l1 1M680 608l0 -1M680 608l1 0M681 609l0 -1M681 609l1 0M682 610l0 -1M682 610l2 0"/>
-<path stroke="red" d="M684 611l0 -1M684 611l2 0M686 612l0 -1M686 612l4 0M690 613l0 -1M690 613l270 0"/>
-<path stroke="blue" d="M60 23l45 0"/>
-<text stroke="none" fill="white" font-size="16" x="115" y="32">
-qa1b+4
-</text>
-<path stroke="blue" d="M60 281l163 0 1 -1 3 0 1 1M228 282l0 -1M228 282l1 0M229 284l0 -2M229 284l1 1M230 288l0 -3M230 288l1 2M231 293l0 -3M231 293l1 2M232 299l0 -4M232 299l1 2M233 311l0 -10M233 311l1 4M234 326l0 -11M234 326l1 7M235 350l0 -17M235 350l1 9"/>
-<path stroke="blue" d="M236 391l0 -32M236 391l1 10M237 415l0 -14M237 415l1 4M238 423l0 -4M238 423l1 1M239 426l0 -2M239 426l2 2 1 0M242 429l0 -1M242 429l1 0M243 430l0 -1M243 430l3 0M246 431l0 -1M246 431l420 0 0 -1 1 0 0 -1 1 -1 0 -1 1 0 0 -1 1 -1"/>
-<path stroke="blue" d="M670 425l0 -3 1 -1 0 -2 1 -2 0 -3 1 -3 0 -9 1 -4 0 -12 1 -7 0 -16 1 -9 0 -29 1 -8 0 -13 1 -4 0 -6 1 -2 0 -3 1 -1 0 -2 1 0 0 -1 1 -1 0 -1 1 0 0 -1 2 0 0 -1 275 0"/>
-<path stroke="#FFA500" d="M450 39l45 0"/>
-<text stroke="none" fill="white" font-size="16" x="505" y="48">
-ra2+8
-</text>
-<path stroke="#FFA500" d="M60 249l600 0 0 -150 300 0"/>
+      .st5, .st6 {
+        isolation: isolate;
+      }
+
+      .st1 {
+        stroke: #f00;
+      }
+
+      .st7 {
+        fill: #fff;
+      }
+
+      .st2 {
+        stroke-dasharray: 1.7 3.4;
+      }
+
+      .st2, .st4 {
+        stroke: #000;
+      }
+
+      .st6 {
+        font-family: Helvetica, Helvetica;
+        font-size: 27px;
+      }
+
+      .st3 {
+        stroke: aqua;
+      }
+    </style>
+  </defs>
+  <rect class="st7" width="1728" height="1296"/>
+  <g class="st5">
+    <text class="st6" transform="translate(604.1 1269)"><tspan x="0" y="0">time</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st6" transform="translate(16.9 27)"><tspan x="0" y="0">tran1: ** sch_path: /foss/designs/engn1600-team1/cad3/rf_postpex_tb.sch</tspan></text>
+  </g>
+  <path class="st4" d="M101.2,1188V113.1"/>
+  <g class="st5">
+    <text class="st6" transform="translate(75.9 1228.5)"><tspan x="0" y="0">0.0</tspan></text>
+  </g>
+  <path class="st2" d="M354.4,1188V113.1"/>
+  <g class="st5">
+    <text class="st6" transform="translate(329.1 1228.5)"><tspan x="0" y="0">5.0</tspan></text>
+  </g>
+  <path class="st2" d="M607.5,1188V113.1"/>
+  <g class="st5">
+    <text class="st6" transform="translate(573.8 1228.5)"><tspan x="0" y="0">10.0</tspan></text>
+  </g>
+  <path class="st2" d="M860.6,1188V113.1"/>
+  <g class="st5">
+    <text class="st6" transform="translate(826.9 1228.5)"><tspan x="0" y="0">15.0</tspan></text>
+  </g>
+  <path class="st2" d="M1113.8,1188V113.1"/>
+  <g class="st5">
+    <text class="st6" transform="translate(1080 1228.5)"><tspan x="0" y="0">20.0</tspan></text>
+  </g>
+  <path class="st2" d="M1366.9,1188V113.1"/>
+  <g class="st5">
+    <text class="st6" transform="translate(1333.1 1228.5)"><tspan x="0" y="0">25.0</tspan></text>
+  </g>
+  <path class="st2" d="M1620,1188V113.1"/>
+  <g class="st5">
+    <text class="st6" transform="translate(1586.2 1228.5)"><tspan x="0" y="0">30.0</tspan></text>
+  </g>
+  <g class="st5">
+    <text class="st6" transform="translate(1036.1 1269)"><tspan x="0" y="0">ns</tspan></text>
+  </g>
+  <path class="st2" d="M101.2,1188h1518.8"/>
+  <g class="st5">
+    <text class="st6" transform="translate(30.4 1201.5)"><tspan x="0" y="0">-2.0</tspan></text>
+  </g>
+  <path class="st4" d="M101.2,1034.4h1518.8"/>
+  <g class="st5">
+    <text class="st6" transform="translate(47.2 1047.9)"><tspan x="0" y="0">0.0</tspan></text>
+  </g>
+  <path class="st2" d="M101.2,880.9h1518.8"/>
+  <g class="st5">
+    <text class="st6" transform="translate(47.2 894.4)"><tspan x="0" y="0">2.0</tspan></text>
+  </g>
+  <path class="st2" d="M101.2,727.3h1518.8"/>
+  <g class="st5">
+    <text class="st6" transform="translate(47.2 740.8)"><tspan x="0" y="0">4.0</tspan></text>
+  </g>
+  <path class="st2" d="M101.2,573.8h1518.8"/>
+  <g class="st5">
+    <text class="st6" transform="translate(47.2 587.2)"><tspan x="0" y="0">6.0</tspan></text>
+  </g>
+  <path class="st2" d="M101.2,420.2h1518.8"/>
+  <g class="st5">
+    <text class="st6" transform="translate(47.2 433.7)"><tspan x="0" y="0">8.0</tspan></text>
+  </g>
+  <path class="st2" d="M101.2,266.6h1518.8"/>
+  <g class="st5">
+    <text class="st6" transform="translate(30.4 280.1)"><tspan x="0" y="0">10.0</tspan></text>
+  </g>
+  <path class="st2" d="M101.2,113.1h1518.8"/>
+  <g class="st5">
+    <text class="st6" transform="translate(30.4 126.6)"><tspan x="0" y="0">12.0</tspan></text>
+  </g>
+  <path class="st3" d="M759.4,38.8h75.9"/>
+  <g class="st5">
+    <text class="st6" transform="translate(852.2 54)"><tspan x="0" y="0">qa0b</tspan></text>
+  </g>
+  <path class="st3" d="M101.2,1034.4h291.9M393.2,1036.1v-1.7M393.2,1036.1l1.7-1.7h1.7v-1.7h1.7v-3.4l1.7-1.7v-3.4l1.7-1.7v-5.1l1.7-3.4v-13.5l1.7-5.1v-18.6l1.7-11.8v-32.1l1.7-18.6v-60.8l1.7-16.9v-23.6l1.7-8.4v-8.4l1.7-3.4v-5.1l1.7-1.7v-1.7h1.7v-1.7h1.7v-1.7h695.2v-1.7h6.8M1120.5,781.3v-1.7M1120.5,781.3h1.7"/>
+  <path class="st3" d="M1122.2,783v-1.7M1122.2,783l1.7,1.7M1123.9,786.4v-1.7M1123.9,786.4h1.7M1125.6,791.4v-5.1M1125.6,791.4l1.7,1.7M1127.2,794.8v-1.7M1127.2,794.8l1.7,3.4M1128.9,801.6v-3.4M1128.9,801.6l1.7,1.7M1130.6,810v-6.8M1130.6,810l1.7,3.4M1132.3,820.1v-6.8M1132.3,820.1l1.7,3.4M1134,831.9v-8.4M1134,831.9l1.7,5.1M1135.7,857.2v-20.2M1135.7,857.2l1.7,8.4"/>
+  <path class="st3" d="M1137.4,887.6v-21.9M1137.4,887.6l1.7,11.8M1139.1,926.4v-27M1139.1,926.4l1.7,13.5M1140.8,983.8v-43.9M1140.8,983.8l1.7,11.8M1142.4,1010.8v-15.2M1142.4,1010.8l1.7,3.4M1144.1,1019.2v-5.1M1144.1,1019.2l1.7,1.7M1145.8,1022.6v-1.7M1145.8,1022.6l1.7,1.7M1147.5,1026v-1.7M1147.5,1026h1.7M1149.2,1027.7v-1.7M1149.2,1027.7h1.7M1150.9,1029.4v-1.7M1150.9,1029.4h3.4"/>
+  <path class="st3" d="M1154.2,1031.1v-1.7M1154.2,1031.1h3.4M1157.6,1032.8v-1.7M1157.6,1032.8h6.8M1164.4,1034.4v-1.7M1164.4,1034.4h455.6"/>
+  <path class="st1" d="M101.2,38.8h75.9"/>
+  <g class="st5">
+    <text class="st6" transform="translate(194.1 54)"><tspan x="0" y="0">qa1b+4</tspan></text>
+  </g>
+  <path class="st1" d="M101.2,474.2h275.1l1.7-1.7h5.1l1.7,1.7M384.8,475.9v-1.7M384.8,475.9h1.7M386.4,479.2v-3.4M386.4,479.2l1.7,1.7M388.1,486v-5.1M388.1,486l1.7,3.4M389.8,494.4v-5.1M389.8,494.4l1.7,3.4M391.5,504.6v-6.8M391.5,504.6l1.7,3.4M393.2,524.8v-16.9M393.2,524.8l1.7,6.8M394.9,550.1v-18.6M394.9,550.1l1.7,11.8M396.6,590.6v-28.7M396.6,590.6l1.7,15.2"/>
+  <path class="st1" d="M398.2,659.8v-54M398.2,659.8l1.7,16.9M399.9,700.3v-23.6M399.9,700.3l1.7,6.8M401.6,713.8v-6.8M401.6,713.8l1.7,1.7M403.3,718.9v-3.4M403.3,718.9l3.4,3.4h1.7M408.4,723.9v-1.7M408.4,723.9h1.7M410.1,725.6v-1.7M410.1,725.6h5.1M415.1,727.3v-1.7M415.1,727.3h708.8v-1.7h1.7v-1.7l1.7-1.7v-1.7h1.7v-1.7l1.7-1.7"/>
+  <path class="st1" d="M1130.6,717.2v-5.1l1.7-1.7v-3.4l1.7-3.4v-5.1l1.7-5.1v-15.2l1.7-6.8v-20.2l1.7-11.8v-27l1.7-15.2v-48.9l1.7-13.5v-21.9l1.7-6.8v-10.1l1.7-3.4v-5.1l1.7-1.7v-3.4h1.7v-1.7l1.7-1.7v-1.7h1.7v-1.7h3.4v-1.7h464.1"/>
+  <path class="st0" d="M759.4,65.8h75.9"/>
+  <g class="st5">
+    <text class="st6" transform="translate(852.2 81)"><tspan x="0" y="0">ra2+8</tspan></text>
+  </g>
+  <path class="st0" d="M101.2,420.2h1012.5v-253.1h506.2"/>
 </svg>
